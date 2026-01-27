@@ -24,10 +24,14 @@ import {
 } from "./data-layer";
 
 let FakeIndexedDB: IDBFactory | undefined;
+let FakeIDBKeyRange: typeof IDBKeyRange | undefined;
 
 if (typeof globalThis.indexedDB === "undefined") {
   try {
-    FakeIndexedDB = (await import("fake-indexeddb")).default;
+    const { default: fakeIDB, IDBKeyRange: fakeIDBKeyRange } =
+      await import("fake-indexeddb");
+    FakeIndexedDB = fakeIDB;
+    FakeIDBKeyRange = fakeIDBKeyRange;
   } catch {
     // Browser environment, fake-indexeddb not available
   }
@@ -43,6 +47,18 @@ function getIndexedDB(): IDBFactory {
   }
 
   return FakeIndexedDB;
+}
+
+function getIDBKeyRange(): typeof IDBKeyRange {
+  if (typeof globalThis !== "undefined" && globalThis.IDBKeyRange) {
+    return globalThis.IDBKeyRange;
+  }
+
+  if (!FakeIDBKeyRange) {
+    throw new Error("IDBKeyRange not available in this environment");
+  }
+
+  return FakeIDBKeyRange;
 }
 // ============================================================================
 // Constants
@@ -363,7 +379,7 @@ export class IndexedDBLayer implements IDatabase {
           STORE_NAMES.ORIGINAL_QUESTIONS,
         );
         const questionsIndex = questionsStore.index("course_id");
-        questionsIndex.openCursor(IDBKeyRange.only(courseId)).onsuccess = (
+        questionsIndex.openCursor(getIDBKeyRange().only(courseId)).onsuccess = (
           event,
         ) => {
           const cursor = (event.target as IDBRequest).result;
@@ -378,7 +394,7 @@ export class IndexedDBLayer implements IDatabase {
         );
         const statesIndex = statesStore.index("course_id_pool");
         statesIndex.openCursor(
-          IDBKeyRange.bound([courseId], [courseId, "\uffff"]),
+          getIDBKeyRange().bound([courseId], [courseId, "\uffff"]),
         ).onsuccess = (event) => {
           const cursor = (event.target as IDBRequest).result;
           if (cursor) {
@@ -395,7 +411,7 @@ export class IndexedDBLayer implements IDatabase {
           "course_id_question_id_timestamp",
         );
         interactionsIndex.openCursor(
-          IDBKeyRange.bound([courseId], [courseId, "\uffff"]),
+          getIDBKeyRange().bound([courseId], [courseId, "\uffff"]),
         ).onsuccess = (event) => {
           const cursor = (event.target as IDBRequest).result;
           if (cursor) {
@@ -407,7 +423,7 @@ export class IndexedDBLayer implements IDatabase {
         const logsStore = transaction.objectStore(STORE_NAMES.LOGS);
         const logsIndex = logsStore.index("course_id_timestamp");
         logsIndex.openCursor(
-          IDBKeyRange.bound([courseId], [courseId, Infinity]),
+          getIDBKeyRange().bound([courseId], [courseId, Infinity]),
         ).onsuccess = (event) => {
           const cursor = (event.target as IDBRequest).result;
           if (cursor) {
@@ -449,7 +465,7 @@ export class IndexedDBLayer implements IDatabase {
 
         // Reset all question states
         statesIndex.openCursor(
-          IDBKeyRange.bound([courseId], [courseId, "\uffff"]),
+          getIDBKeyRange().bound([courseId], [courseId, "\uffff"]),
         ).onsuccess = (event) => {
           const cursor = (event.target as IDBRequest).result;
           if (cursor) {
@@ -474,7 +490,7 @@ export class IndexedDBLayer implements IDatabase {
           "course_id_question_id_timestamp",
         );
         interactionsIndex.openCursor(
-          IDBKeyRange.bound([courseId], [courseId, "\uffff"]),
+          getIDBKeyRange().bound([courseId], [courseId, "\uffff"]),
         ).onsuccess = (event) => {
           const cursor = (event.target as IDBRequest).result;
           if (cursor) {
@@ -658,7 +674,7 @@ export class IndexedDBLayer implements IDatabase {
       .objectStore(STORE_NAMES.INTERACTIONS);
 
     const index = store.index("course_id_question_id_timestamp");
-    const range = IDBKeyRange.bound(
+    const range = getIDBKeyRange().bound(
       [courseId, questionId],
       [courseId, questionId, Infinity],
     );
@@ -767,7 +783,7 @@ export class IndexedDBLayer implements IDatabase {
       .objectStore(STORE_NAMES.QUESTION_STATES);
 
     const index = store.index("course_id_pool");
-    const range = IDBKeyRange.bound([courseId, pool], [courseId, pool]);
+    const range = getIDBKeyRange().bound([courseId, pool], [courseId, pool]);
 
     const states = await this.getAllFromIndex<QuestionState>(index, range);
 
@@ -822,7 +838,7 @@ export class IndexedDBLayer implements IDatabase {
       .objectStore(STORE_NAMES.LOGS);
 
     const index = store.index("course_id_timestamp");
-    const range = IDBKeyRange.bound([courseId], [courseId, Infinity]);
+    const range = getIDBKeyRange().bound([courseId], [courseId, Infinity]);
 
     const allLogs = await this.getAllFromIndex<LogEntry>(index, range);
 
