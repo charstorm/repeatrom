@@ -580,6 +580,27 @@ export class IndexedDBLayer implements IDatabase {
     });
   }
 
+  async getQuestionState(
+    courseId: string,
+    questionId: number,
+  ): Promise<QuestionState | undefined> {
+    if (!this.db) throw new Error("Database not initialized");
+
+    const store = this.db
+      .transaction(STORE_NAMES.QUESTION_STATES, "readonly")
+      .objectStore(STORE_NAMES.QUESTION_STATES);
+
+    return new Promise((resolve, reject) => {
+      const request = store.get([courseId, questionId]);
+      request.onsuccess = () => {
+        resolve(request.result as QuestionState | undefined);
+      };
+      request.onerror = () => {
+        reject(new Error(`Failed to get question state: ${request.error}`));
+      };
+    });
+  }
+
   async updateQuestionState(
     courseId: string,
     questionId: number,
@@ -636,6 +657,7 @@ export class IndexedDBLayer implements IDatabase {
     correct: boolean,
     strategy: SelectionStrategy,
     pool: Pool,
+    snooze_duration: number,
   ): Promise<void> {
     if (!this.db) throw new Error("Database not initialized");
 
@@ -649,7 +671,7 @@ export class IndexedDBLayer implements IDatabase {
       timestamp: Date.now(),
       answer_given: answer,
       correct,
-      snooze_duration: 0,
+      snooze_duration,
       selection_strategy: strategy,
       pool_at_time: pool,
     };
@@ -689,11 +711,56 @@ export class IndexedDBLayer implements IDatabase {
   async findNextQuestion(courseId: string): Promise<NextQuestionResult | null> {
     if (!this.db) throw new Error("Database not initialized");
 
-    // This is a placeholder implementation
-    // The actual selection algorithm would be implemented here
-    // based on the two-tier probabilistic selection process
+    // This implements the two-tier probabilistic selection process
+    // with latent auto-population
 
     const config = await this.getConfig();
+
+    // Step 0: Auto-populate the test pool from latent if below threshold
+    const stats = await this.getCourseStats(courseId);
+    if (stats.test_count < config.latent_promotion_threshold) {
+      const latentAvailable = await this.getAvailableQuestions(
+        courseId,
+        "latent",
+      );
+      const toPromote = Math.min(
+        latentAvailable.length,
+        config.test_pool_target_size - stats.test_count,
+      );
+
+      for (let i = 0; i < toPromote; i++) {
+        const state = latentAvailable[i];
+        await this.updateQuestionState(courseId, state.question_id, {
+          pool: "test",
+        });
+      }
+
+      // Update stats
+      const transaction = this.db.transaction(STORE_NAMES.COURSES, "readwrite");
+      const coursesStore = transaction.objectStore(STORE_NAMES.COURSES);
+      const getRequest = coursesStore.get(courseId);
+      getRequest.onsuccess = () => {
+        const currentStats = getRequest.result as CourseStats;
+        coursesStore.put({
+          ...currentStats,
+          latent_count: currentStats.latent_count - toPromote,
+          test_count: currentStats.test_count + toPromote,
+        });
+      };
+
+      await new Promise<void>((resolve, reject) => {
+        transaction.oncomplete = () => resolve();
+        transaction.onerror = () => reject(new Error("Failed to update stats"));
+      });
+
+      if (toPromote > 0) {
+        await this.logEvent(courseId, "latent_promotion", {
+          promoted_count: toPromote,
+          source: "latent",
+          target: "test",
+        });
+      }
+    }
 
     // Step 1: Select pool
     const rand = Math.random() * 100;
@@ -746,11 +813,8 @@ export class IndexedDBLayer implements IDatabase {
         return prevTime < currTime ? prev : curr;
       });
     } else if (strategy === "recovery") {
-      // Find previously mastered questions now demoted
-      const recovered = available.filter(() => {
-        // This would need additional tracking to identify recovered questions
-        return false;
-      });
+      // Find previously mastered questions now demoted (approximated by high interaction count)
+      const recovered = available.filter((s) => s.total_interactions >= 4);
       if (recovered.length > 0) {
         selected = recovered[Math.floor(Math.random() * recovered.length)];
       } else {

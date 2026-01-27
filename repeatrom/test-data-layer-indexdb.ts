@@ -179,9 +179,25 @@ async function runTests(): Promise<void> {
     // ========================================================================
 
     log("Testing interaction recording...");
-    await db.recordInteraction(courseId, 2, "4", true, "random", "latent");
-    await db.recordInteraction(courseId, 3, "Jupiter", true, "oldest", "test");
-    await db.recordInteraction(courseId, 4, "Ag", false, "recovery", "learned");
+    await db.recordInteraction(courseId, 2, "4", true, "random", "latent", 0);
+    await db.recordInteraction(
+      courseId,
+      3,
+      "Jupiter",
+      true,
+      "oldest",
+      "test",
+      0,
+    );
+    await db.recordInteraction(
+      courseId,
+      4,
+      "Ag",
+      false,
+      "recovery",
+      "learned",
+      0,
+    );
     log("✓ Interaction recording passed");
 
     log("Testing interaction history...");
@@ -200,21 +216,19 @@ async function runTests(): Promise<void> {
 
     log("Testing question selection...");
     const nextQuestion = await db.findNextQuestion(courseId);
-    // Note: Selection algorithm may return null if no questions are available
-    // This is a placeholder implementation that may need adjustment based on implementation details
-    if (nextQuestion !== null) {
-      assert(nextQuestion.question !== undefined, "Should have question data");
-      assert(nextQuestion.state !== undefined, "Should have state data");
-      assert(typeof nextQuestion.strategy === "string", "Should have strategy");
-    } else {
-      log("Note: No question selected (expected for placeholder algorithm)");
-    }
+    assert(
+      nextQuestion !== null,
+      "Should select a question (latent promotion ensures availability)",
+    );
+    assert(nextQuestion!.question !== undefined, "Should have question data");
+    assert(nextQuestion!.state !== undefined, "Should have state data");
+    assert(typeof nextQuestion!.strategy === "string", "Should have strategy");
 
-    log("Testing pool availability...");
+    log("Testing pool availability after latent promotion...");
     const availableLatent = await db.getAvailableQuestions(courseId, "latent");
     assert(
-      availableLatent.length > 0,
-      "Should have latent questions available",
+      availableLatent.length === 0,
+      "Should have no latent questions available after promotion",
     );
     const availableTest2 = await db.getAvailableQuestions(courseId, "test");
     // Question 1 is hidden, question 3 is in test but may be snoozed or not

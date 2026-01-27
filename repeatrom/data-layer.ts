@@ -136,6 +136,10 @@ export interface IDatabase {
     courseId: string,
     questionId: number,
   ): Promise<OriginalQuestion | undefined>;
+  getQuestionState(
+    courseId: string,
+    questionId: number,
+  ): Promise<QuestionState | undefined>;
   updateQuestionState(
     courseId: string,
     questionId: number,
@@ -156,6 +160,7 @@ export interface IDatabase {
     correct: boolean,
     strategy: SelectionStrategy,
     pool: Pool,
+    snooze_duration: number,
   ): Promise<void>;
   getQuestionHistory(
     courseId: string,
@@ -248,12 +253,7 @@ export class DataLayer {
     courseId: string,
     questionId: number,
   ): Promise<QuestionState | undefined> {
-    const question = await this.db.getQuestion(courseId, questionId);
-    if (!question) return undefined;
-
-    // This would need to be implemented in the database layer
-    // For now, we return undefined as a placeholder
-    return undefined;
+    return this.db.getQuestionState(courseId, questionId);
   }
 
   async updateQuestionState(
@@ -287,6 +287,7 @@ export class DataLayer {
     correct: boolean,
     strategy: SelectionStrategy,
     pool: Pool,
+    snooze_duration: number,
   ): Promise<void> {
     return this.db.recordInteraction(
       courseId,
@@ -295,6 +296,7 @@ export class DataLayer {
       correct,
       strategy,
       pool,
+      snooze_duration,
     );
   }
 
