@@ -859,6 +859,22 @@ export class IndexedDBLayer implements IDatabase {
     );
   }
 
+  async getAllQuestions(
+    courseId: string,
+    pool: Pool,
+  ): Promise<QuestionState[]> {
+    if (!this.db) throw new Error("Database not initialized");
+
+    const store = this.db
+      .transaction(STORE_NAMES.QUESTION_STATES, "readonly")
+      .objectStore(STORE_NAMES.QUESTION_STATES);
+
+    const index = store.index("course_id_pool");
+    const range = getIDBKeyRange().bound([courseId, pool], [courseId, pool]);
+
+    return await this.getAllFromIndex<QuestionState>(index, range);
+  }
+
   // ========================================================================
   // Logging Operations
   // ========================================================================

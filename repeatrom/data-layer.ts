@@ -170,6 +170,7 @@ export interface IDatabase {
   // Selection Operations
   findNextQuestion(courseId: string): Promise<NextQuestionResult | null>;
   getAvailableQuestions(courseId: string, pool: Pool): Promise<QuestionState[]>;
+  getAllQuestions(courseId: string, pool: Pool): Promise<QuestionState[]>;
 
   // Logging Operations
   logEvent(
@@ -320,6 +321,13 @@ export class DataLayer {
     pool: Pool,
   ): Promise<QuestionState[]> {
     return this.db.getAvailableQuestions(courseId, pool);
+  }
+
+  async getAllQuestions(
+    courseId: string,
+    pool: Pool,
+  ): Promise<QuestionState[]> {
+    return this.db.getAllQuestions(courseId, pool);
   }
 
   // ========================================================================
