@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "options": ["Paris", "London", "Berlin", "Madrid"],
+    "correct_option": "Paris",
+    "explanation": "Paris is the capital and most populous city of France."
+  },
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+    "correct_option": "Mars",
+    "explanation": "Mars is called the Red Planet because of the iron oxide on its surface."
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+    "correct_option": "Pacific Ocean",
+    "explanation": "The Pacific Ocean is the largest ocean, covering about 46.6% of Earth\\'s water surface."
+  },
+  {
+    "question": "Who wrote Romeo and Juliet?",
+    "options": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+    "correct_option": "William Shakespeare",
+    "explanation": "Romeo and Juliet was written by William Shakespeare around 1595."
+  },
+  {
+    "question": "What is 2 + 2?",
+    "options": ["3", "4", "5", "6"],
+    "correct_option": "4",
+    "explanation": "2 + 2 equals 4 in basic arithmetic."
+  }
+]
