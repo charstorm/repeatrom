@@ -16,7 +16,13 @@ interface QuestionData {
   shuffled: string[];
 }
 
-export function StudyScreen({ courseId, courseName }: { courseId: string; courseName: string }) {
+export function StudyScreen({
+  courseId,
+  courseName,
+}: {
+  courseId: string;
+  courseName: string;
+}) {
   const { dataLayer, setScreen, processAnswer } = useApp();
   const [questionData, setQuestionData] = useState<QuestionData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -34,28 +40,55 @@ export function StudyScreen({ courseId, courseName }: { courseId: string; course
         setScreen({ type: "no_questions", courseId, courseName });
         return;
       }
-      setQuestionData({ result, shuffled: shuffleArray(result.question.options) });
+      setQuestionData({
+        result,
+        shuffled: shuffleArray(result.question.options),
+      });
       setLoading(false);
     });
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [dataLayer, courseId, courseName, setScreen]);
 
   const handleSubmit = async () => {
     if (!selected || !questionData || submitting) return;
     setSubmitting(true);
-    const correct = await processAnswer(courseId, questionData.result, selected);
-    setScreen({ type: "feedback", courseId, courseName, result: questionData.result, selectedAnswer: selected, correct });
+    const correct = await processAnswer(
+      courseId,
+      questionData.result,
+      selected,
+    );
+    setScreen({
+      type: "feedback",
+      courseId,
+      courseName,
+      result: questionData.result,
+      selectedAnswer: selected,
+      correct,
+    });
   };
 
   const handleDoubleClick = async (option: string) => {
     if (!questionData || submitting) return;
     setSubmitting(true);
     const correct = await processAnswer(courseId, questionData.result, option);
-    setScreen({ type: "feedback", courseId, courseName, result: questionData.result, selectedAnswer: option, correct });
+    setScreen({
+      type: "feedback",
+      courseId,
+      courseName,
+      result: questionData.result,
+      selectedAnswer: option,
+      correct,
+    });
   };
 
   if (loading) {
-    return <div className="flex items-center justify-center min-h-screen"><p className="text-gray-500">Loading question...</p></div>;
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <p className="text-gray-500">Loading question...</p>
+      </div>
+    );
   }
 
   if (!questionData) return null;
@@ -64,7 +97,15 @@ export function StudyScreen({ courseId, courseName }: { courseId: string; course
     <div className="max-w-2xl mx-auto p-6">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-lg font-semibold text-gray-700">{courseName}</h2>
-        <button onClick={() => { dataLayer.logEvent(courseId, "session_ended", {}); setScreen({ type: "course_list" }); }} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">End Session</button>
+        <button
+          onClick={() => {
+            dataLayer.logEvent(courseId, "session_ended", {});
+            setScreen({ type: "course_list" });
+          }}
+          className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+        >
+          End Session
+        </button>
       </div>
 
       <div className="bg-white border rounded-lg p-6 mb-4">
@@ -73,17 +114,22 @@ export function StudyScreen({ courseId, courseName }: { courseId: string; course
 
       <div className="space-y-2 mb-6">
         {questionData.shuffled.map((opt, idx) => (
-          <button key={idx}
+          <button
+            key={idx}
             onClick={() => setSelected(opt)}
             onDoubleClick={() => handleDoubleClick(opt)}
-            className={`w-full text-left p-4 rounded-lg border transition ${selected === opt ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200" : "border-gray-200 bg-white hover:bg-gray-50"}`}>
+            className={`w-full text-left p-4 rounded-lg border transition ${selected === opt ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200" : "border-gray-200 bg-white hover:bg-gray-50"}`}
+          >
             {opt}
           </button>
         ))}
       </div>
 
-      <button onClick={handleSubmit} disabled={!selected || submitting}
-        className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">
+      <button
+        onClick={handleSubmit}
+        disabled={!selected || submitting}
+        className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
         {submitting ? "Submitting..." : "Submit Answer"}
       </button>
     </div>

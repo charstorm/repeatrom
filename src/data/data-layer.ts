@@ -111,25 +111,71 @@ export interface NextQuestionResult {
 export interface IDatabase {
   initDatabase(): Promise<void>;
   isInitialized(): Promise<boolean>;
-  createCourse(name: string, questionsJson: unknown): Promise<CourseCreationResult>;
+  createCourse(
+    name: string,
+    questionsJson: unknown,
+  ): Promise<CourseCreationResult>;
   listCourses(): Promise<(CourseMetadata & CourseStats)[]>;
   deleteCourse(courseId: string): Promise<void>;
   resetCourse(courseId: string): Promise<void>;
   getCourseStats(courseId: string): Promise<CourseStats>;
-  getQuestion(courseId: string, questionId: number): Promise<OriginalQuestion | undefined>;
-  getQuestionState(courseId: string, questionId: number): Promise<QuestionState | undefined>;
-  updateQuestionState(courseId: string, questionId: number, updates: Partial<QuestionState>): Promise<void>;
+  getQuestion(
+    courseId: string,
+    questionId: number,
+  ): Promise<OriginalQuestion | undefined>;
+  getQuestionState(
+    courseId: string,
+    questionId: number,
+  ): Promise<QuestionState | undefined>;
+  updateQuestionState(
+    courseId: string,
+    questionId: number,
+    updates: Partial<QuestionState>,
+  ): Promise<void>;
+  updateQuestionStateWithPoolTransition(
+    courseId: string,
+    questionId: number,
+    updates: Partial<QuestionState>,
+    oldPool: Pool,
+    newPool: Pool,
+  ): Promise<void>;
   hideQuestion(courseId: string, questionId: number): Promise<void>;
-  updateNotes(courseId: string, questionId: number, notes: string): Promise<void>;
-  recordInteraction(courseId: string, questionId: number, answer: string, correct: boolean, strategy: SelectionStrategy, pool: Pool, snooze_duration: number): Promise<void>;
-  getQuestionHistory(courseId: string, questionId: number): Promise<Interaction[]>;
+  updateNotes(
+    courseId: string,
+    questionId: number,
+    notes: string,
+  ): Promise<void>;
+  recordInteraction(
+    courseId: string,
+    questionId: number,
+    answer: string,
+    correct: boolean,
+    strategy: SelectionStrategy,
+    pool: Pool,
+    snooze_duration: number,
+  ): Promise<void>;
+  getQuestionHistory(
+    courseId: string,
+    questionId: number,
+  ): Promise<Interaction[]>;
   findNextQuestion(courseId: string): Promise<NextQuestionResult | null>;
   getAvailableQuestions(courseId: string, pool: Pool): Promise<QuestionState[]>;
   getAllQuestions(courseId: string, pool: Pool): Promise<QuestionState[]>;
-  updateCourseStats(courseId: string, updates: Partial<CourseStats>): Promise<void>;
+  updateCourseStats(
+    courseId: string,
+    updates: Partial<CourseStats>,
+  ): Promise<void>;
   updateLastAccessed(courseId: string): Promise<void>;
-  logEvent(courseId: string, type: EventType, details: Record<string, unknown>): Promise<void>;
-  getEventLog(courseId: string, limit?: number, offset?: number): Promise<LogEntry[]>;
+  logEvent(
+    courseId: string,
+    type: EventType,
+    details: Record<string, unknown>,
+  ): Promise<void>;
+  getEventLog(
+    courseId: string,
+    limit?: number,
+    offset?: number,
+  ): Promise<LogEntry[]>;
   getConfig(): Promise<Configuration>;
   updateConfig(updates: Partial<Configuration>): Promise<void>;
 }
@@ -149,7 +195,10 @@ export class DataLayer {
     return this.db.isInitialized();
   }
 
-  async createCourse(name: string, questionsJson: unknown): Promise<CourseCreationResult> {
+  async createCourse(
+    name: string,
+    questionsJson: unknown,
+  ): Promise<CourseCreationResult> {
     return this.db.createCourse(name, questionsJson);
   }
 
@@ -169,31 +218,80 @@ export class DataLayer {
     return this.db.getCourseStats(courseId);
   }
 
-  async getQuestion(courseId: string, questionId: number): Promise<OriginalQuestion | undefined> {
+  async getQuestion(
+    courseId: string,
+    questionId: number,
+  ): Promise<OriginalQuestion | undefined> {
     return this.db.getQuestion(courseId, questionId);
   }
 
-  async getQuestionState(courseId: string, questionId: number): Promise<QuestionState | undefined> {
+  async getQuestionState(
+    courseId: string,
+    questionId: number,
+  ): Promise<QuestionState | undefined> {
     return this.db.getQuestionState(courseId, questionId);
   }
 
-  async updateQuestionState(courseId: string, questionId: number, updates: Partial<QuestionState>): Promise<void> {
+  async updateQuestionState(
+    courseId: string,
+    questionId: number,
+    updates: Partial<QuestionState>,
+  ): Promise<void> {
     return this.db.updateQuestionState(courseId, questionId, updates);
+  }
+
+  async updateQuestionStateWithPoolTransition(
+    courseId: string,
+    questionId: number,
+    updates: Partial<QuestionState>,
+    oldPool: Pool,
+    newPool: Pool,
+  ): Promise<void> {
+    return this.db.updateQuestionStateWithPoolTransition(
+      courseId,
+      questionId,
+      updates,
+      oldPool,
+      newPool,
+    );
   }
 
   async hideQuestion(courseId: string, questionId: number): Promise<void> {
     return this.db.hideQuestion(courseId, questionId);
   }
 
-  async updateNotes(courseId: string, questionId: number, notes: string): Promise<void> {
+  async updateNotes(
+    courseId: string,
+    questionId: number,
+    notes: string,
+  ): Promise<void> {
     return this.db.updateNotes(courseId, questionId, notes);
   }
 
-  async recordInteraction(courseId: string, questionId: number, answer: string, correct: boolean, strategy: SelectionStrategy, pool: Pool, snooze_duration: number): Promise<void> {
-    return this.db.recordInteraction(courseId, questionId, answer, correct, strategy, pool, snooze_duration);
+  async recordInteraction(
+    courseId: string,
+    questionId: number,
+    answer: string,
+    correct: boolean,
+    strategy: SelectionStrategy,
+    pool: Pool,
+    snooze_duration: number,
+  ): Promise<void> {
+    return this.db.recordInteraction(
+      courseId,
+      questionId,
+      answer,
+      correct,
+      strategy,
+      pool,
+      snooze_duration,
+    );
   }
 
-  async getQuestionHistory(courseId: string, questionId: number): Promise<Interaction[]> {
+  async getQuestionHistory(
+    courseId: string,
+    questionId: number,
+  ): Promise<Interaction[]> {
     return this.db.getQuestionHistory(courseId, questionId);
   }
 
@@ -201,15 +299,24 @@ export class DataLayer {
     return this.db.findNextQuestion(courseId);
   }
 
-  async getAvailableQuestions(courseId: string, pool: Pool): Promise<QuestionState[]> {
+  async getAvailableQuestions(
+    courseId: string,
+    pool: Pool,
+  ): Promise<QuestionState[]> {
     return this.db.getAvailableQuestions(courseId, pool);
   }
 
-  async getAllQuestions(courseId: string, pool: Pool): Promise<QuestionState[]> {
+  async getAllQuestions(
+    courseId: string,
+    pool: Pool,
+  ): Promise<QuestionState[]> {
     return this.db.getAllQuestions(courseId, pool);
   }
 
-  async updateCourseStats(courseId: string, updates: Partial<CourseStats>): Promise<void> {
+  async updateCourseStats(
+    courseId: string,
+    updates: Partial<CourseStats>,
+  ): Promise<void> {
     return this.db.updateCourseStats(courseId, updates);
   }
 
@@ -217,11 +324,19 @@ export class DataLayer {
     return this.db.updateLastAccessed(courseId);
   }
 
-  async logEvent(courseId: string, type: EventType, details: Record<string, unknown>): Promise<void> {
+  async logEvent(
+    courseId: string,
+    type: EventType,
+    details: Record<string, unknown>,
+  ): Promise<void> {
     return this.db.logEvent(courseId, type, details);
   }
 
-  async getEventLog(courseId: string, limit?: number, offset?: number): Promise<LogEntry[]> {
+  async getEventLog(
+    courseId: string,
+    limit?: number,
+    offset?: number,
+  ): Promise<LogEntry[]> {
     return this.db.getEventLog(courseId, limit, offset);
   }
 
@@ -233,7 +348,10 @@ export class DataLayer {
     return this.db.updateConfig(updates);
   }
 
-  static validateQuestion(question: unknown): { valid: boolean; error?: string } {
+  static validateQuestion(question: unknown): {
+    valid: boolean;
+    error?: string;
+  } {
     if (typeof question !== "object" || question === null) {
       return { valid: false, error: "Question must be an object" };
     }
@@ -242,35 +360,53 @@ export class DataLayer {
       return { valid: false, error: "Missing or invalid 'question' field" };
     }
     if (!Array.isArray(q.options) || q.options.length < 2) {
-      return { valid: false, error: "Options must be an array with at least 2 items" };
+      return {
+        valid: false,
+        error: "Options must be an array with at least 2 items",
+      };
     }
     if (new Set(q.options.map(String)).size !== q.options.length) {
       return { valid: false, error: "Options must not contain duplicates" };
     }
     if (typeof q.correct_option !== "string") {
-      return { valid: false, error: "Missing or invalid 'correct_option' field" };
+      return {
+        valid: false,
+        error: "Missing or invalid 'correct_option' field",
+      };
     }
     if (typeof q.explanation !== "string") {
       return { valid: false, error: "Missing or invalid 'explanation' field" };
     }
     if (!q.options.includes(q.correct_option)) {
-      return { valid: false, error: "correct_option must match one of the options exactly" };
+      return {
+        valid: false,
+        error: "correct_option must match one of the options exactly",
+      };
     }
     return { valid: true };
   }
 
-  static parseQuestionsJson(json: unknown): { questions: Record<string, unknown>[]; errors: ValidationError[] } {
+  static parseQuestionsJson(json: unknown): {
+    questions: Record<string, unknown>[];
+    errors: ValidationError[];
+  } {
     const questions: Record<string, unknown>[] = [];
     const errors: ValidationError[] = [];
     if (!Array.isArray(json)) {
-      return { questions: [], errors: [{ index: 0, reason: "Input must be an array" }] };
+      return {
+        questions: [],
+        errors: [{ index: 0, reason: "Input must be an array" }],
+      };
     }
     json.forEach((item, index) => {
       const validation = DataLayer.validateQuestion(item);
       if (validation.valid) {
         questions.push(item as Record<string, unknown>);
       } else {
-        errors.push({ index, reason: validation.error || "Unknown validation error" });
+        errors.push({
+          index,
+          reason: validation.error || "Unknown validation error",
+        });
       }
     });
     return { questions, errors };
@@ -284,7 +420,10 @@ export class DataLayer {
     return days * 24 * 60;
   }
 
-  static calculateSnoozeUntil(currentTime: number, durationMinutes: number): number {
+  static calculateSnoozeUntil(
+    currentTime: number,
+    durationMinutes: number,
+  ): number {
     return currentTime + durationMinutes * 60 * 1000;
   }
 

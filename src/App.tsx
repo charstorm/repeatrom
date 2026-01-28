@@ -15,13 +15,36 @@ function Router() {
     case "course_manage":
       return <CourseManageScreen focusCourseId={screen.courseId} />;
     case "study":
-      return <StudyScreen courseId={screen.courseId} courseName={screen.courseName} />;
+      return (
+        <StudyScreen
+          courseId={screen.courseId}
+          courseName={screen.courseName}
+        />
+      );
     case "feedback":
-      return <FeedbackScreen courseId={screen.courseId} courseName={screen.courseName} result={screen.result} selectedAnswer={screen.selectedAnswer} correct={screen.correct} />;
+      return (
+        <FeedbackScreen
+          courseId={screen.courseId}
+          courseName={screen.courseName}
+          result={screen.result}
+          selectedAnswer={screen.selectedAnswer}
+          correct={screen.correct}
+        />
+      );
     case "no_questions":
-      return <NoQuestionsScreen courseId={screen.courseId} courseName={screen.courseName} />;
+      return (
+        <NoQuestionsScreen
+          courseId={screen.courseId}
+          courseName={screen.courseName}
+        />
+      );
     case "expert":
-      return <ExpertScreen courseId={screen.courseId} courseName={screen.courseName} />;
+      return (
+        <ExpertScreen
+          courseId={screen.courseId}
+          courseName={screen.courseName}
+        />
+      );
   }
 }
 

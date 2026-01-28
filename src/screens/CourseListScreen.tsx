@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useApp } from "../context/AppContext.tsx";
 import { ConfirmDialog } from "../components/ConfirmDialog.tsx";
 
@@ -30,7 +30,9 @@ export function CourseListScreen() {
         setCourseName("");
         if (fileRef.current) fileRef.current.value = "";
         if (result.total_skipped > 0) {
-          setInfo(`Course created: ${result.total_loaded} questions loaded, ${result.total_skipped} skipped due to validation errors.`);
+          setInfo(
+            `Course created: ${result.total_loaded} questions loaded, ${result.total_skipped} skipped due to validation errors.`,
+          );
         } else {
           setInfo(`Course created: ${result.total_loaded} questions loaded.`);
         }
@@ -49,7 +51,12 @@ export function CourseListScreen() {
     await refreshCourses();
   };
 
-  const [now] = useState(() => Date.now());
+  const [now, setNow] = useState(() => Date.now());
+
+  useEffect(() => {
+    const interval = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const formatTime = (ts: number) => {
     const diff = now - ts;
@@ -70,20 +77,58 @@ export function CourseListScreen() {
           <h2 className="text-lg font-semibold mb-3">Your Courses</h2>
           <div className="space-y-2">
             {courses.map((c) => (
-              <div key={c.id} className="flex items-center justify-between bg-white border rounded-lg p-4">
-                <div className="flex-1 cursor-pointer" onClick={() => { dataLayer.logEvent(c.id, "session_started", {}); setScreen({ type: "study", courseId: c.id, courseName: c.name }); }}>
+              <div
+                key={c.id}
+                className="flex items-center justify-between bg-white border rounded-lg p-4"
+              >
+                <div
+                  className="flex-1 cursor-pointer"
+                  onClick={() => {
+                    dataLayer.logEvent(c.id, "session_started", {});
+                    setScreen({
+                      type: "study",
+                      courseId: c.id,
+                      courseName: c.name,
+                    });
+                  }}
+                >
                   <div className="font-medium">{c.name}</div>
                   <div className="text-sm text-gray-500">
-                    {c.question_count} questions &middot; Last accessed: {formatTime(c.last_accessed)}
+                    {c.question_count} questions &middot; Last accessed:{" "}
+                    {formatTime(c.last_accessed)}
                   </div>
                   <div className="text-xs text-gray-400 mt-1">
-                    T:{c.test_count} L:{c.learned_count} M:{c.master_count} Latent:{c.latent_count}
+                    T:{c.test_count} L:{c.learned_count} M:{c.master_count}{" "}
+                    Latent:{c.latent_count}
                   </div>
                 </div>
                 <div className="flex gap-2 ml-4">
-                  <button onClick={() => setScreen({ type: "expert", courseId: c.id, courseName: c.name })} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">Expert</button>
-                  <button onClick={() => setScreen({ type: "course_manage", courseId: c.id })} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">Manage</button>
-                  <button onClick={() => setDeleteId(c.id)} className="text-sm px-3 py-1 text-red-600 bg-red-50 rounded hover:bg-red-100">Delete</button>
+                  <button
+                    onClick={() =>
+                      setScreen({
+                        type: "expert",
+                        courseId: c.id,
+                        courseName: c.name,
+                      })
+                    }
+                    className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+                  >
+                    Expert
+                  </button>
+                  <button
+                    onClick={() =>
+                      setScreen({ type: "course_manage", courseId: c.id })
+                    }
+                    className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+                  >
+                    Manage
+                  </button>
+                  <button
+                    onClick={() => setDeleteId(c.id)}
+                    className="text-sm px-3 py-1 text-red-600 bg-red-50 rounded hover:bg-red-100"
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             ))}
@@ -94,11 +139,24 @@ export function CourseListScreen() {
       <div className="bg-white border rounded-lg p-6">
         <h2 className="text-lg font-semibold mb-3">Create New Course</h2>
         <div className="space-y-3">
-          <input type="text" placeholder="Course name" value={courseName} onChange={(e) => setCourseName(e.target.value)}
-            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <input ref={fileRef} type="file" accept=".json" className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
-          <button onClick={handleCreate} disabled={creating}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50">
+          <input
+            type="text"
+            placeholder="Course name"
+            value={courseName}
+            onChange={(e) => setCourseName(e.target.value)}
+            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            ref={fileRef}
+            type="file"
+            accept=".json"
+            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+          />
+          <button
+            onClick={handleCreate}
+            disabled={creating}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+          >
             {creating ? "Creating..." : "Create Course"}
           </button>
           {error && <p className="text-red-600 text-sm">{error}</p>}
