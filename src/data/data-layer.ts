@@ -180,6 +180,7 @@ export interface IDatabase {
   ): Promise<LogEntry[]>;
   getConfig(): Promise<Configuration>;
   updateConfig(updates: Partial<Configuration>): Promise<void>;
+  loadExternalConfig(): Promise<void>;
   refillTestPoolFromLatent(courseId: string): Promise<number>;
 }
 
@@ -349,6 +350,10 @@ export class DataLayer {
 
   async updateConfig(updates: Partial<Configuration>): Promise<void> {
     return this.db.updateConfig(updates);
+  }
+
+  async loadExternalConfig(): Promise<void> {
+    return this.db.loadExternalConfig();
   }
 
   async refillTestPoolFromLatent(courseId: string): Promise<number> {

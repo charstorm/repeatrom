@@ -979,6 +979,47 @@ export class IndexedDBLayer implements IDatabase {
       gr.onerror = () => reject(new Error(`Failed: ${gr.error}`));
     });
   }
+
+  async loadExternalConfig(): Promise<void> {
+    const CONFIG_KEYS: (keyof Configuration)[] = [
+      "test_pool_target_size",
+      "snooze_incorrect_minutes",
+      "snooze_test_correct_minutes",
+      "snooze_learned_correct_hours",
+      "snooze_master_correct_days",
+      "pool_selection_test_upper",
+      "pool_selection_learned_upper",
+      "strategy_oldest_upper",
+      "strategy_recovery_upper",
+      "promotion_consecutive_correct",
+      "demotion_incorrect_count",
+      "auto_next_correct",
+      "auto_next_delay_ms",
+    ];
+
+    try {
+      const response = await fetch("/repeatrom/config.json");
+      if (!response.ok) {
+        return;
+      }
+      const json = await response.json();
+      if (typeof json !== "object" || json === null) {
+        console.warn("config.json: expected an object");
+        return;
+      }
+      const updates: Partial<Configuration> = {};
+      for (const key of CONFIG_KEYS) {
+        if (key in json && key !== "id") {
+          updates[key] = json[key];
+        }
+      }
+      if (Object.keys(updates).length > 0) {
+        await this.updateConfig(updates);
+      }
+    } catch {
+      // Config file not found or invalid - silently continue with defaults
+    }
+  }
 }
 
 export default IndexedDBLayer;

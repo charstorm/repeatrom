@@ -64,7 +64,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [courses, setCourses] = useState<(CourseMetadata & CourseStats)[]>([]);
 
   useEffect(() => {
-    dataLayer.initialize().then(() => {
+    dataLayer.initialize().then(async () => {
+      await dataLayer.loadExternalConfig();
       setReady(true);
       dataLayer.listCourses().then(setCourses);
     });
