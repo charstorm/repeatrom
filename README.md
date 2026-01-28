@@ -2,6 +2,8 @@
 
 A spaced repetition flashcard system for mastering general knowledge through adaptive multiple-choice question testing.
 
+**[Live Demo](https://charstorm.github.io/repeatrom/)**
+
 ## Overview
 
 Repeatrom uses a two-tier adaptive selection algorithm to present questions at appropriate difficulty levels based on demonstrated competence. Questions move through four mastery pools — Latent, Test, Learned, and Master — with automatic promotion and demotion based on consecutive correct or incorrect answers.
