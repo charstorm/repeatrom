@@ -104,8 +104,8 @@ export class IndexedDBLayer implements IDatabase {
       });
       s.add({
         id: "global",
-        test_pool_target_size: 39,
-        latent_promotion_threshold: 38,
+        test_pool_target_size: 40,
+        latent_promotion_threshold: 39,
         snooze_incorrect_minutes: 1,
         snooze_test_correct_minutes: 10,
         snooze_learned_correct_hours: 24,

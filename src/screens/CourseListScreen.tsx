@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { useApp } from "../context/AppContext.tsx";
-import { ConfirmDialog } from "../components/ConfirmDialog.tsx";
 
 export function CourseListScreen() {
   const { dataLayer, courses, refreshCourses, setScreen } = useApp();
@@ -8,7 +7,6 @@ export function CourseListScreen() {
   const [error, setError] = useState("");
   const [info, setInfo] = useState("");
   const [creating, setCreating] = useState(false);
-  const [deleteId, setDeleteId] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const handleCreate = async () => {
@@ -42,13 +40,6 @@ export function CourseListScreen() {
       setError(`Error: ${e instanceof Error ? e.message : "Unknown error"}`);
     }
     setCreating(false);
-  };
-
-  const handleDelete = async () => {
-    if (!deleteId) return;
-    await dataLayer.deleteCourse(deleteId);
-    setDeleteId(null);
-    await refreshCourses();
   };
 
   const [now, setNow] = useState(() => Date.now());
@@ -118,10 +109,6 @@ export function CourseListScreen() {
                     {c.question_count} questions &middot; Last accessed:{" "}
                     {formatTime(c.last_accessed)}
                   </div>
-                  <div className="text-xs text-gray-400 mt-1">
-                    T:{c.test_count} L:{c.learned_count} M:{c.master_count}{" "}
-                    Latent:{c.latent_count}
-                  </div>
                 </div>
                 <div className="flex gap-2 ml-4">
                   <button
@@ -143,12 +130,6 @@ export function CourseListScreen() {
                     className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
                   >
                     Manage
-                  </button>
-                  <button
-                    onClick={() => setDeleteId(c.id)}
-                    className="text-sm px-3 py-1 text-red-600 bg-red-50 rounded hover:bg-red-100"
-                  >
-                    Delete
                   </button>
                 </div>
               </div>
@@ -205,16 +186,6 @@ export function CourseListScreen() {
         offline.
       </p>
 
-      {deleteId && (
-        <ConfirmDialog
-          title="Delete Course"
-          message="Are you sure you want to delete this course? This action cannot be undone."
-          confirmLabel="Delete"
-          destructive
-          onConfirm={handleDelete}
-          onCancel={() => setDeleteId(null)}
-        />
-      )}
     </div>
   );
 }

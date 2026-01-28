@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useApp } from "../context/AppContext.tsx";
 import type { NextQuestionResult } from "../data/data-layer.ts";
 
@@ -28,24 +28,28 @@ export function StudyScreen({
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
-  const loadedRef = useRef(false);
 
   useEffect(() => {
-    if (loadedRef.current) return;
-    loadedRef.current = true;
     let cancelled = false;
-    dataLayer.findNextQuestion(courseId).then((result) => {
-      if (cancelled) return;
-      if (!result) {
+    dataLayer
+      .findNextQuestion(courseId)
+      .then((result) => {
+        if (cancelled) return;
+        if (!result) {
+          setScreen({ type: "no_questions", courseId, courseName });
+          return;
+        }
+        setQuestionData({
+          result,
+          shuffled: shuffleArray(result.question.options),
+        });
+        setLoading(false);
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        console.error("Failed to load question:", err);
         setScreen({ type: "no_questions", courseId, courseName });
-        return;
-      }
-      setQuestionData({
-        result,
-        shuffled: shuffleArray(result.question.options),
       });
-      setLoading(false);
-    });
     return () => {
       cancelled = true;
     };

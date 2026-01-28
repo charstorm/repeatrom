@@ -113,6 +113,13 @@ export function ExpertScreen({
 
       {tab === "questions" && (
         <div className="space-y-6">
+          <div className="flex gap-4 text-sm text-gray-500">
+            <span>Total <span className="font-medium text-gray-700">{questions.latent.length + questions.test.length + questions.learned.length + questions.master.length}</span></span>
+            <span>Latent <span className="font-medium text-gray-700">{questions.latent.length}</span></span>
+            <span>Test <span className="font-medium text-gray-700">{questions.test.length}</span></span>
+            <span>Learned <span className="font-medium text-gray-700">{questions.learned.length}</span></span>
+            <span>Master <span className="font-medium text-gray-700">{questions.master.length}</span></span>
+          </div>
           {(["master", "learned", "test", "latent"] as Pool[]).map((pool) => (
             <div key={pool}>
               <h3 className="text-lg font-semibold capitalize mb-2">

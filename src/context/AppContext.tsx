@@ -74,6 +74,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setCourses(list);
   }, [dataLayer]);
 
+  useEffect(() => {
+    if (ready && screen.type === "course_list") {
+      refreshCourses();
+    }
+  }, [ready, screen, refreshCourses]);
+
   const processAnswer = useCallback(
     async (
       courseId: string,
