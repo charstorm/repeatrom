@@ -8,10 +8,15 @@ import type {
   Pool,
 } from "../data/data-layer.ts";
 
+type HistoryEntry =
+  | { type: "interaction"; data: Interaction }
+  | { type: "promotion"; data: LogEntry }
+  | { type: "demotion"; data: LogEntry };
+
 interface QuestionData {
   state: QuestionState;
   question: OriginalQuestion;
-  history: Interaction[];
+  history: HistoryEntry[];
 }
 
 export function ExpertScreen({
@@ -44,6 +49,25 @@ export function ExpertScreen({
         master: [],
       };
 
+      // Fetch all logs first to merge into question history
+      const logEntries = await dataLayer.getEventLog(courseId, 500);
+      setLogs(logEntries);
+
+      // Build a map of logs by question_id for quick lookup
+      const logsByQuestionId = new Map<number, LogEntry[]>();
+      for (const log of logEntries) {
+        const qid = log.details?.question_id as number | undefined;
+        if (
+          qid !== undefined &&
+          (log.type === "promotion" || log.type === "demotion")
+        ) {
+          if (!logsByQuestionId.has(qid)) {
+            logsByQuestionId.set(qid, []);
+          }
+          logsByQuestionId.get(qid)!.push(log);
+        }
+      }
+
       for (const pool of pools) {
         const states = await dataLayer.getAllQuestions(courseId, pool);
         for (const state of states) {
@@ -51,17 +75,38 @@ export function ExpertScreen({
             courseId,
             state.question_id,
           );
-          const history = await dataLayer.getQuestionHistory(
+          const interactions = await dataLayer.getQuestionHistory(
             courseId,
             state.question_id,
           );
+          const questionLogs = logsByQuestionId.get(state.question_id) || [];
+
+          // Merge interactions and logs into unified history
+          const history: HistoryEntry[] = [
+            ...interactions.map((i) => ({
+              type: "interaction" as const,
+              data: i,
+            })),
+            ...questionLogs.map((l) => ({
+              type: l.type as "promotion" | "demotion",
+              data: l,
+            })),
+          ];
+
+          // Sort by timestamp descending (newest first)
+          history.sort((a, b) => {
+            const tsA =
+              a.type === "interaction" ? a.data.timestamp : a.data.timestamp;
+            const tsB =
+              b.type === "interaction" ? b.data.timestamp : b.data.timestamp;
+            return tsB - tsA;
+          });
+
           if (question) result[pool].push({ state, question, history });
         }
       }
 
       setQuestions(result);
-      const logEntries = await dataLayer.getEventLog(courseId, 200);
-      setLogs(logEntries);
       setLoading(false);
     })();
   }, [dataLayer, courseId]);
@@ -190,6 +235,11 @@ export function ExpertScreen({
                             <p>
                               Consecutive correct: {state.consecutive_correct}
                             </p>
+                            {state.was_demoted && (
+                              <p className="text-orange-600 font-medium">
+                                Status: Demoted (recovering)
+                              </p>
+                            )}
                             <p>
                               Last shown:{" "}
                               {state.last_shown
@@ -210,15 +260,53 @@ export function ExpertScreen({
                                 History:
                               </p>
                               <div className="text-xs text-gray-400 space-y-0.5 max-h-40 overflow-y-auto">
-                                {history.map((h, i) => (
-                                  <p key={i}>
-                                    {formatDate(h.timestamp)} —{" "}
-                                    {h.correct ? "Correct" : "Wrong"} (
-                                    {h.answer_given}) — {h.selection_strategy} —
-                                    snooze {h.snooze_duration}min — pool:{" "}
-                                    {h.pool_at_time}
-                                  </p>
-                                ))}
+                                {history.map((entry, i) => {
+                                  if (entry.type === "interaction") {
+                                    const h = entry.data;
+                                    return (
+                                      <p key={i}>
+                                        {formatDate(h.timestamp)} — pool:{" "}
+                                        {h.pool_at_time} —{" "}
+                                        {h.correct ? "Correct" : "Wrong"} (
+                                        {h.answer_given}) —{" "}
+                                        {h.selection_strategy} — snooze{" "}
+                                        {h.snooze_duration}min
+                                      </p>
+                                    );
+                                  } else if (entry.type === "promotion") {
+                                    const l = entry.data;
+                                    const from = String(
+                                      l.details?.from ||
+                                        l.details?.source ||
+                                        "",
+                                    );
+                                    const to = String(
+                                      l.details?.to || l.details?.target || "",
+                                    );
+                                    return (
+                                      <p
+                                        key={i}
+                                        className="text-green-600 font-medium"
+                                      >
+                                        {formatDate(l.timestamp)} — PROMOTED:{" "}
+                                        {from} → {to}
+                                      </p>
+                                    );
+                                  } else {
+                                    const l = entry.data;
+                                    const from = String(l.details?.from || "");
+                                    const to = String(l.details?.to || "");
+                                    return (
+                                      <p
+                                        key={i}
+                                        className="text-orange-600 font-medium"
+                                      >
+                                        {formatDate(l.timestamp)} — DEMOTED:{" "}
+                                        {from} → {to}
+                                      </p>
+                                    );
+                                  }
+                                })}
                               </div>
                             </div>
                           )}
