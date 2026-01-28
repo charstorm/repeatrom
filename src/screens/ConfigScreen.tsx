@@ -31,7 +31,8 @@ export function ConfigScreen() {
       <h2 className="text-xl font-bold text-gray-800 mb-6">Settings</h2>
 
       <p className="text-sm text-gray-500 mb-4">
-        When enabled, correct answers automatically advance to the next question after a short delay instead of waiting for a manual tap.
+        When enabled, correct answers automatically advance to the next question
+        after a short delay instead of waiting for a manual tap.
       </p>
 
       <label className="flex items-center gap-3 mb-4">
@@ -45,7 +46,9 @@ export function ConfigScreen() {
       </label>
 
       <label className="block mb-6">
-        <span className="text-gray-700 text-sm">Delay (milliseconds) — default: 1000</span>
+        <span className="text-gray-700 text-sm">
+          Delay (milliseconds) — default: 1000
+        </span>
         <input
           type="number"
           min={200}

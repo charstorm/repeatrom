@@ -38,7 +38,7 @@ Your course data should be a valid JSON array containing question objects with t
 ## Sample Prompt
 
 ```
-Create a comprehensive German language course with 80 multiple-choice questions, 
+Create a comprehensive German language course with 80 multiple-choice questions,
 progressing from beginner to intermediate level.
 
 Requirements:

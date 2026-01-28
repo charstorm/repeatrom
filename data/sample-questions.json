@@ -13,13 +13,23 @@
   },
   {
     "question": "What is the largest ocean on Earth?",
-    "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+    "options": [
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean",
+      "Pacific Ocean"
+    ],
     "correct_option": "Pacific Ocean",
     "explanation": "The Pacific Ocean is the largest ocean, covering about 46.6% of Earth\\'s water surface."
   },
   {
     "question": "Who wrote Romeo and Juliet?",
-    "options": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+    "options": [
+      "Charles Dickens",
+      "William Shakespeare",
+      "Jane Austen",
+      "Mark Twain"
+    ],
     "correct_option": "William Shakespeare",
     "explanation": "Romeo and Juliet was written by William Shakespeare around 1595."
   },
