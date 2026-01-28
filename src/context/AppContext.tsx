@@ -76,9 +76,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (ready && screen.type === "course_list") {
-      refreshCourses();
+      dataLayer.listCourses().then(setCourses);
     }
-  }, [ready, screen, refreshCourses]);
+  }, [ready, screen, dataLayer]);
 
   const processAnswer = useCallback(
     async (
