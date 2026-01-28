@@ -1,11 +1,11 @@
 /**
  * Test file for IndexedDBLayer
  * Comprehensive tests for the IndexedDB implementation of the data layer
- * Run with: bun run repeatrom/test-data-layer-indexdb.ts
+ * Run with: bun run src/data/test-data-layer-indexdb.ts
  */
 
 import { IndexedDBLayer } from "./data-layer-indexdb";
-import { Configuration } from "./data-layer";
+import type { Configuration } from "./data-layer";
 
 // ============================================================================
 // Test Helpers
@@ -314,15 +314,11 @@ async function runTests(): Promise<void> {
 }
 
 // Run the tests
-if (import.meta.main) {
-  runTests()
-    .then(() => {
-      log("Test suite completed successfully");
-      process.exit(0);
-    })
-    .catch((error) => {
-      log(`Test suite failed: ${(error as Error).message}`);
-      console.error(error);
-      process.exit(1);
-    });
-}
+runTests()
+  .then(() => {
+    log("Test suite completed successfully");
+  })
+  .catch((error) => {
+    log(`Test suite failed: ${(error as Error).message}`);
+    console.error(error);
+  });
