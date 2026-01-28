@@ -105,7 +105,6 @@ export class IndexedDBLayer implements IDatabase {
       s.add({
         id: "global",
         test_pool_target_size: 40,
-        latent_promotion_threshold: 39,
         snooze_incorrect_minutes: 1,
         snooze_test_correct_minutes: 5,
         snooze_learned_correct_hours: 1,
@@ -540,6 +539,82 @@ export class IndexedDBLayer implements IDatabase {
     });
   }
 
+  /**
+   * Refills test pool from latent to maintain target size.
+   * Should be called after a question is promoted from test to learned/master.
+   */
+  async refillTestPoolFromLatent(courseId: string): Promise<number> {
+    const config = await this.getConfig();
+    const stats = await this.getCourseStats(courseId);
+
+    if (stats.test_count >= config.test_pool_target_size) {
+      return 0;
+    }
+
+    const latentAvailable = await this.getAvailableQuestions(
+      courseId,
+      "latent",
+    );
+    if (latentAvailable.length === 0) {
+      return 0;
+    }
+
+    latentAvailable.sort((a, b) => a.question_id - b.question_id);
+    const toPromote = Math.min(
+      latentAvailable.length,
+      config.test_pool_target_size - stats.test_count,
+    );
+
+    if (toPromote === 0) {
+      return 0;
+    }
+
+    const db = this.getDB();
+    const tx = db.transaction(
+      [STORE_NAMES.QUESTION_STATES, STORE_NAMES.COURSES, STORE_NAMES.LOGS],
+      "readwrite",
+    );
+
+    const stateStore = tx.objectStore(STORE_NAMES.QUESTION_STATES);
+    for (let i = 0; i < toPromote; i++) {
+      const q = latentAvailable[i];
+      stateStore.put({ ...q, pool: "test" });
+    }
+
+    const statsReq = tx.objectStore(STORE_NAMES.COURSES).get(courseId);
+    statsReq.onsuccess = () => {
+      const cur = statsReq.result as CourseStats;
+      tx.objectStore(STORE_NAMES.COURSES).put({
+        ...cur,
+        latent_count: cur.latent_count - toPromote,
+        test_count: cur.test_count + toPromote,
+      });
+    };
+
+    const timestamp = Date.now();
+    for (let i = 0; i < toPromote; i++) {
+      const q = latentAvailable[i];
+      tx.objectStore(STORE_NAMES.LOGS).add({
+        course_id: courseId,
+        timestamp,
+        type: "promotion" as EventType,
+        details: {
+          question_id: q.question_id,
+          source: "latent",
+          target: "test",
+          reason: "test_pool_refill",
+        },
+      });
+    }
+
+    await new Promise<void>((resolve, reject) => {
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(new Error("Failed to refill test pool"));
+    });
+
+    return toPromote;
+  }
+
   async hideQuestion(courseId: string, questionId: number): Promise<void> {
     const db = this.getDB();
     const tx = db.transaction(
@@ -642,7 +717,8 @@ export class IndexedDBLayer implements IDatabase {
     const config = await this.getConfig();
     const stats = await this.getCourseStats(courseId);
 
-    if (stats.test_count < config.latent_promotion_threshold) {
+    // Fill test pool to target size from latent at session start
+    if (stats.test_count < config.test_pool_target_size) {
       const latentAvailable = await this.getAvailableQuestions(
         courseId,
         "latent",

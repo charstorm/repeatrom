@@ -77,7 +77,6 @@ export interface CourseStats {
 export interface Configuration {
   id: string;
   test_pool_target_size: number;
-  latent_promotion_threshold: number;
   snooze_incorrect_minutes: number;
   snooze_test_correct_minutes: number;
   snooze_learned_correct_hours: number;
@@ -180,6 +179,7 @@ export interface IDatabase {
   ): Promise<LogEntry[]>;
   getConfig(): Promise<Configuration>;
   updateConfig(updates: Partial<Configuration>): Promise<void>;
+  refillTestPoolFromLatent(courseId: string): Promise<number>;
 }
 
 export class DataLayer {
@@ -348,6 +348,10 @@ export class DataLayer {
 
   async updateConfig(updates: Partial<Configuration>): Promise<void> {
     return this.db.updateConfig(updates);
+  }
+
+  async refillTestPoolFromLatent(courseId: string): Promise<number> {
+    return this.db.refillTestPoolFromLatent(courseId);
   }
 
   static validateQuestion(question: unknown): {

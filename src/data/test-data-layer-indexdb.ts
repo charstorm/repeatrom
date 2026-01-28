@@ -247,15 +247,15 @@ async function runTests(): Promise<void> {
       typeof config.test_pool_target_size === "number",
       "Should have test pool target",
     );
-    assert(config.test_pool_target_size === 39, "Should have default value");
+    assert(config.test_pool_target_size === 40, "Should have default value");
     log("✓ Configuration retrieval passed");
 
     log("Testing configuration updates...");
-    const newConfig: Partial<Configuration> = { test_pool_target_size: 40 };
+    const newConfig: Partial<Configuration> = { test_pool_target_size: 50 };
     await db.updateConfig(newConfig);
     const updatedConfig = await db.getConfig();
     assert(
-      updatedConfig.test_pool_target_size === 40,
+      updatedConfig.test_pool_target_size === 50,
       "Should update configuration",
     );
     log("✓ Configuration updates passed");

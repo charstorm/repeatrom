@@ -98,6 +98,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       let newConsecutiveCorrect = state.consecutive_correct;
       let wasDemotedReset = false;
 
+      let needsTestPoolRefill = false;
+
       if (correct) {
         newConsecutiveCorrect += 1;
         if (pool === "test") {
@@ -106,6 +108,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
             newPool = "learned";
             newConsecutiveCorrect = 0;
             wasDemotedReset = true;
+            needsTestPoolRefill = true;
             await dataLayer.logEvent(courseId, "promotion", {
               question_id: state.question_id,
               from: "test",
@@ -196,6 +199,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
       });
 
       await dataLayer.updateLastAccessed(courseId);
+
+      // Refill test pool from latent if a question was promoted from test
+      if (needsTestPoolRefill) {
+        await dataLayer.refillTestPoolFromLatent(courseId);
+      }
 
       return correct;
     },
