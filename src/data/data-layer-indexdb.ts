@@ -230,6 +230,7 @@ export class IndexedDBLayer implements IDatabase {
           hidden: false,
           notes: "",
           consecutive_correct: 0,
+          consecutive_incorrect: 0,
           total_interactions: 0,
           was_demoted: false,
         } satisfies QuestionState);
@@ -371,6 +372,7 @@ export class IndexedDBLayer implements IDatabase {
             hidden: false,
             notes: "",
             consecutive_correct: 0,
+            consecutive_incorrect: 0,
             total_interactions: 0,
             was_demoted: false,
           });

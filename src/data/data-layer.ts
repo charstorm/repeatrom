@@ -34,6 +34,7 @@ export interface QuestionState {
   hidden: boolean;
   notes: string;
   consecutive_correct: number;
+  consecutive_incorrect: number;
   total_interactions: number;
   was_demoted: boolean;
 }

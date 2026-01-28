@@ -96,12 +96,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
       let snoozeDurationMinutes: number;
       let newPool: Pool = pool;
       let newConsecutiveCorrect = state.consecutive_correct;
+      let newConsecutiveIncorrect = state.consecutive_incorrect ?? 0;
       let wasDemotedReset = false;
 
       let needsTestPoolRefill = false;
 
       if (correct) {
         newConsecutiveCorrect += 1;
+        newConsecutiveIncorrect = 0;
         if (pool === "test") {
           snoozeDurationMinutes = config.snooze_test_correct_minutes;
           if (newConsecutiveCorrect >= config.promotion_consecutive_correct) {
@@ -136,16 +138,25 @@ export function AppProvider({ children }: { children: ReactNode }) {
         }
       } else {
         newConsecutiveCorrect = 0;
+        newConsecutiveIncorrect += 1;
         snoozeDurationMinutes = config.snooze_incorrect_minutes;
-        if (pool === "master") {
+        if (
+          pool === "master" &&
+          newConsecutiveIncorrect >= config.demotion_incorrect_count
+        ) {
           newPool = "learned";
+          newConsecutiveIncorrect = 0;
           await dataLayer.logEvent(courseId, "demotion", {
             question_id: state.question_id,
             from: "master",
             to: "learned",
           });
-        } else if (pool === "learned") {
+        } else if (
+          pool === "learned" &&
+          newConsecutiveIncorrect >= config.demotion_incorrect_count
+        ) {
           newPool = "test";
+          newConsecutiveIncorrect = 0;
           await dataLayer.logEvent(courseId, "demotion", {
             question_id: state.question_id,
             from: "learned",
@@ -159,7 +170,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
         snoozeDurationMinutes,
       );
 
-      const wasDemoted = !correct && (pool === "master" || pool === "learned");
+      const wasDemoted =
+        !correct &&
+        newPool !== pool &&
+        (pool === "master" || pool === "learned");
 
       await dataLayer.updateQuestionStateWithPoolTransition(
         courseId,
@@ -169,6 +183,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
           last_shown: now,
           snooze_until: snoozeUntil,
           consecutive_correct: newConsecutiveCorrect,
+          consecutive_incorrect: newConsecutiveIncorrect,
           total_interactions: state.total_interactions + 1,
           ...(wasDemoted
             ? { was_demoted: true }
