@@ -148,7 +148,7 @@ export class IndexedDBLayer implements IDatabase {
       questions.forEach((q, index) => {
         const qid = index + 1;
         qStore.add({ course_id: courseId, id: qid, question: String(q.question), options: Array.isArray(q.options) ? q.options.map(String) : [String(q.options)], correct_option: String(q.correct_option), explanation: String(q.explanation) } satisfies OriginalQuestion);
-        sStore.add({ course_id: courseId, question_id: qid, pool: "latent", last_shown: null, snooze_until: null, hidden: false, notes: "", consecutive_correct: 0, total_interactions: 0 } satisfies QuestionState);
+        sStore.add({ course_id: courseId, question_id: qid, pool: "latent", last_shown: null, snooze_until: null, hidden: false, notes: "", consecutive_correct: 0, total_interactions: 0, was_demoted: false } satisfies QuestionState);
       });
 
       tx.objectStore(STORE_NAMES.LOGS).add({ course_id: courseId, timestamp: now, type: "course_created" as EventType, details: { name, total_questions: questions.length, skipped_questions: errors.length } });
@@ -202,7 +202,7 @@ export class IndexedDBLayer implements IDatabase {
         const cursor = (e.target as IDBRequest).result;
         if (cursor) {
           const state = cursor.value as QuestionState;
-          cursor.update({ ...state, pool: "latent", last_shown: null, snooze_until: null, consecutive_correct: 0, total_interactions: 0 });
+          cursor.update({ ...state, pool: "latent", last_shown: null, snooze_until: null, hidden: false, notes: "", consecutive_correct: 0, total_interactions: 0, was_demoted: false });
           cursor.continue();
         }
       };
@@ -213,12 +213,20 @@ export class IndexedDBLayer implements IDatabase {
         if (cursor) { cursor.delete(); cursor.continue(); }
       };
 
+      // Clear event logs
+      const logIndex = tx.objectStore(STORE_NAMES.LOGS).index("course_id_timestamp");
+      logIndex.openCursor(IDBKeyRange.bound([courseId], [courseId, Infinity])).onsuccess = (e) => {
+        const cursor = (e.target as IDBRequest).result;
+        if (cursor) { cursor.delete(); cursor.continue(); }
+      };
+
       const getReq = tx.objectStore(STORE_NAMES.COURSES).get(courseId);
       getReq.onsuccess = () => {
         const stats = getReq.result as CourseStats;
         tx.objectStore(STORE_NAMES.COURSES).put({ ...stats, latent_count: stats.question_count, test_count: 0, learned_count: 0, master_count: 0 });
       };
 
+      // Log the reset event after clearing old logs
       tx.objectStore(STORE_NAMES.LOGS).add({ course_id: courseId, timestamp: now, type: "course_reset" as EventType, details: { reset_at: now } });
 
       tx.oncomplete = () => resolve();
@@ -268,7 +276,13 @@ export class IndexedDBLayer implements IDatabase {
   }
 
   async hideQuestion(courseId: string, questionId: number): Promise<void> {
+    const state = await this.getQuestionState(courseId, questionId);
     await this.updateQuestionState(courseId, questionId, { hidden: true });
+    if (state) {
+      const stats = await this.getCourseStats(courseId);
+      const poolKey = `${state.pool}_count` as keyof CourseStats;
+      await this.updateCourseStats(courseId, { [poolKey]: (stats[poolKey] as number) - 1 });
+    }
     await this.logEvent(courseId, "question_hidden", { question_id: questionId });
   }
 
@@ -301,6 +315,7 @@ export class IndexedDBLayer implements IDatabase {
 
     if (stats.test_count < config.latent_promotion_threshold) {
       const latentAvailable = await this.getAvailableQuestions(courseId, "latent");
+      latentAvailable.sort((a, b) => a.question_id - b.question_id);
       const toPromote = Math.min(latentAvailable.length, config.test_pool_target_size - stats.test_count);
 
       for (let i = 0; i < toPromote; i++) {
@@ -340,7 +355,7 @@ export class IndexedDBLayer implements IDatabase {
     if (strategy === "oldest") {
       selected = available.reduce((prev, curr) => (prev.last_shown ?? Infinity) < (curr.last_shown ?? Infinity) ? prev : curr);
     } else if (strategy === "recovery") {
-      const recovered = available.filter((s) => s.total_interactions >= 4);
+      const recovered = available.filter((s) => s.was_demoted);
       if (recovered.length > 0) selected = recovered[Math.floor(Math.random() * recovered.length)];
       else strategy = "random";
     }
@@ -369,6 +384,35 @@ export class IndexedDBLayer implements IDatabase {
       db.transaction(STORE_NAMES.QUESTION_STATES, "readonly").objectStore(STORE_NAMES.QUESTION_STATES).index("course_id_pool"),
       IDBKeyRange.bound([courseId, pool], [courseId, pool])
     );
+  }
+
+  async updateCourseStats(courseId: string, updates: Partial<CourseStats>): Promise<void> {
+    const db = this.getDB();
+    return new Promise((resolve, reject) => {
+      const store = db.transaction(STORE_NAMES.COURSES, "readwrite").objectStore(STORE_NAMES.COURSES);
+      const gr = store.get(courseId);
+      gr.onsuccess = () => {
+        const pr = store.put({ ...gr.result, ...updates });
+        pr.onsuccess = () => resolve();
+        pr.onerror = () => reject(new Error(`Failed: ${pr.error}`));
+      };
+      gr.onerror = () => reject(new Error(`Failed: ${gr.error}`));
+    });
+  }
+
+  async updateLastAccessed(courseId: string): Promise<void> {
+    const db = this.getDB();
+    return new Promise((resolve, reject) => {
+      const store = db.transaction(STORE_NAMES.COURSE_METADATA, "readwrite").objectStore(STORE_NAMES.COURSE_METADATA);
+      const gr = store.get(courseId);
+      gr.onsuccess = () => {
+        if (!gr.result) { resolve(); return; }
+        const pr = store.put({ ...gr.result, last_accessed: Date.now() });
+        pr.onsuccess = () => resolve();
+        pr.onerror = () => reject(new Error(`Failed: ${pr.error}`));
+      };
+      gr.onerror = () => reject(new Error(`Failed: ${gr.error}`));
+    });
   }
 
   async logEvent(courseId: string, type: EventType, details: Record<string, unknown>): Promise<void> {

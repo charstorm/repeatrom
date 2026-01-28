@@ -42,8 +42,10 @@ export function CourseListScreen() {
     await refreshCourses();
   };
 
+  const [now] = useState(() => Date.now());
+
   const formatTime = (ts: number) => {
-    const diff = Date.now() - ts;
+    const diff = now - ts;
     const mins = Math.floor(diff / 60000);
     if (mins < 1) return "just now";
     if (mins < 60) return `${mins}m ago`;
@@ -73,7 +75,7 @@ export function CourseListScreen() {
                 </div>
                 <div className="flex gap-2 ml-4">
                   <button onClick={() => setScreen({ type: "expert", courseId: c.id, courseName: c.name })} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">Expert</button>
-                  <button onClick={() => setScreen({ type: "course_manage" })} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">Manage</button>
+                  <button onClick={() => setScreen({ type: "course_manage", courseId: c.id })} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">Manage</button>
                   <button onClick={() => setDeleteId(c.id)} className="text-sm px-3 py-1 text-red-600 bg-red-50 rounded hover:bg-red-100">Delete</button>
                 </div>
               </div>

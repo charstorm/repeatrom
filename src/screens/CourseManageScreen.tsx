@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useApp } from "../context/AppContext.tsx";
 import { ConfirmDialog } from "../components/ConfirmDialog.tsx";
 
-export function CourseManageScreen() {
+export function CourseManageScreen({ focusCourseId }: { focusCourseId?: string }) {
   const { dataLayer, courses, refreshCourses, setScreen } = useApp();
+  const displayCourses = focusCourseId ? courses.filter((c) => c.id === focusCourseId) : courses;
   const [confirm, setConfirm] = useState<{ type: "reset" | "delete"; courseId: string; name: string } | null>(null);
 
   const handleConfirm = async () => {
@@ -24,11 +25,11 @@ export function CourseManageScreen() {
         <button onClick={() => setScreen({ type: "course_list" })} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">Back</button>
       </div>
 
-      {courses.length === 0 ? (
+      {displayCourses.length === 0 ? (
         <p className="text-gray-500">No courses found.</p>
       ) : (
         <div className="space-y-3">
-          {courses.map((c) => (
+          {displayCourses.map((c) => (
             <div key={c.id} className="flex items-center justify-between bg-white border rounded-lg p-4">
               <div>
                 <div className="font-medium">{c.name}</div>

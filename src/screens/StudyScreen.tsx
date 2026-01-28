@@ -1,54 +1,61 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useApp } from "../context/AppContext.tsx";
 import type { NextQuestionResult } from "../data/data-layer.ts";
 
+function shuffleArray(arr: string[]): string[] {
+  const opts = [...arr];
+  for (let i = opts.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [opts[i], opts[j]] = [opts[j], opts[i]];
+  }
+  return opts;
+}
+
+interface QuestionData {
+  result: NextQuestionResult;
+  shuffled: string[];
+}
+
 export function StudyScreen({ courseId, courseName }: { courseId: string; courseName: string }) {
   const { dataLayer, setScreen, processAnswer } = useApp();
-  const [questionResult, setQuestionResult] = useState<NextQuestionResult | null>(null);
+  const [questionData, setQuestionData] = useState<QuestionData | null>(null);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState<string | null>(null);
+  const loadedRef = useRef(false);
 
-  const loadNext = useCallback(async () => {
-    setLoading(true);
-    setSelected(null);
-    const result = await dataLayer.findNextQuestion(courseId);
-    if (!result) {
-      setScreen({ type: "no_questions", courseId, courseName });
-      return;
-    }
-    setQuestionResult(result);
-    setLoading(false);
+  useEffect(() => {
+    if (loadedRef.current) return;
+    loadedRef.current = true;
+    let cancelled = false;
+    dataLayer.findNextQuestion(courseId).then((result) => {
+      if (cancelled) return;
+      if (!result) {
+        setScreen({ type: "no_questions", courseId, courseName });
+        return;
+      }
+      setQuestionData({ result, shuffled: shuffleArray(result.question.options) });
+      setLoading(false);
+    });
+    return () => { cancelled = true; };
   }, [dataLayer, courseId, courseName, setScreen]);
 
-  useEffect(() => { loadNext(); }, [loadNext]);
-
-  const shuffledOptions = useMemo(() => {
-    if (!questionResult) return [];
-    const opts = [...questionResult.question.options];
-    for (let i = opts.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [opts[i], opts[j]] = [opts[j], opts[i]];
-    }
-    return opts;
-  }, [questionResult]);
-
   const handleSubmit = async () => {
-    if (!selected || !questionResult) return;
-    const correct = await processAnswer(courseId, questionResult, selected);
-    setScreen({ type: "feedback", courseId, courseName, result: questionResult, selectedAnswer: selected, correct });
+    if (!selected || !questionData) return;
+    const correct = await processAnswer(courseId, questionData.result, selected);
+    setScreen({ type: "feedback", courseId, courseName, result: questionData.result, selectedAnswer: selected, correct });
   };
 
   const handleDoubleClick = async (option: string) => {
-    if (!questionResult) return;
-    const correct = await processAnswer(courseId, questionResult, option);
-    setScreen({ type: "feedback", courseId, courseName, result: questionResult, selectedAnswer: option, correct });
+    if (!questionData) return;
+    const correct = await processAnswer(courseId, questionData.result, option);
+    setScreen({ type: "feedback", courseId, courseName, result: questionData.result, selectedAnswer: option, correct });
   };
 
   if (loading) {
     return <div className="flex items-center justify-center min-h-screen"><p className="text-gray-500">Loading question...</p></div>;
   }
 
-  if (!questionResult) return null;
+  if (!questionData) return null;
 
   return (
     <div className="max-w-2xl mx-auto p-6">
@@ -58,11 +65,11 @@ export function StudyScreen({ courseId, courseName }: { courseId: string; course
       </div>
 
       <div className="bg-white border rounded-lg p-6 mb-4">
-        <p className="text-lg">{questionResult.question.question}</p>
+        <p className="text-lg">{questionData.result.question.question}</p>
       </div>
 
       <div className="space-y-2 mb-6">
-        {shuffledOptions.map((opt) => (
+        {questionData.shuffled.map((opt) => (
           <button key={opt}
             onClick={() => setSelected(opt)}
             onDoubleClick={() => handleDoubleClick(opt)}

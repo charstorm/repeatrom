@@ -13,7 +13,7 @@ function Router() {
     case "course_list":
       return <CourseListScreen />;
     case "course_manage":
-      return <CourseManageScreen />;
+      return <CourseManageScreen focusCourseId={screen.courseId} />;
     case "study":
       return <StudyScreen courseId={screen.courseId} courseName={screen.courseName} />;
     case "feedback":

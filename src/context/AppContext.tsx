@@ -4,7 +4,7 @@ import { IndexedDBLayer } from "../data/data-layer-indexdb.ts";
 
 export type Screen =
   | { type: "course_list" }
-  | { type: "course_manage" }
+  | { type: "course_manage"; courseId?: string }
   | { type: "study"; courseId: string; courseName: string }
   | { type: "feedback"; courseId: string; courseName: string; result: NextQuestionResult; selectedAnswer: string; correct: boolean }
   | { type: "no_questions"; courseId: string; courseName: string }
@@ -21,6 +21,7 @@ interface AppState {
 
 const AppContext = createContext<AppState | null>(null);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useApp(): AppState {
   const ctx = useContext(AppContext);
   if (!ctx) throw new Error("useApp must be inside AppProvider");
@@ -92,12 +93,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
     const snoozeUntil = DataLayer.calculateSnoozeUntil(now, snoozeDurationMinutes);
 
+    const wasDemoted = !correct && (pool === "master" || pool === "learned");
+
     await dataLayer.updateQuestionState(courseId, state.question_id, {
       pool: newPool,
       last_shown: now,
       snooze_until: snoozeUntil,
       consecutive_correct: newConsecutiveCorrect,
       total_interactions: state.total_interactions + 1,
+      ...(wasDemoted ? { was_demoted: true } : {}),
     });
 
     await dataLayer.recordInteraction(courseId, state.question_id, selectedAnswer, correct, result.strategy, pool, snoozeDurationMinutes);
@@ -110,17 +114,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
       strategy: result.strategy,
     });
 
-    // Update course stats if pool changed
     if (newPool !== pool) {
       const stats = await dataLayer.getCourseStats(courseId);
-      const updates: Partial<CourseStats> = {};
       const poolCountKey = (p: Pool) => `${p}_count` as keyof CourseStats;
-      (updates as Record<string, number>)[poolCountKey(pool)] = (stats[poolCountKey(pool)] as number) - 1;
-      (updates as Record<string, number>)[poolCountKey(newPool)] = (stats[poolCountKey(newPool)] as number) + 1;
-      // We need to update via the DB directly; for simplicity recalculate
-      // Actually the data layer doesn't expose direct stats update, so we'll skip this
-      // The findNextQuestion recalculates stats from question_states anyway
+      await dataLayer.updateCourseStats(courseId, {
+        [poolCountKey(pool)]: (stats[poolCountKey(pool)] as number) - 1,
+        [poolCountKey(newPool)]: (stats[poolCountKey(newPool)] as number) + 1,
+      });
     }
+
+    await dataLayer.updateLastAccessed(courseId);
 
     return correct;
   }, [dataLayer]);

@@ -35,6 +35,7 @@ export interface QuestionState {
   notes: string;
   consecutive_correct: number;
   total_interactions: number;
+  was_demoted: boolean;
 }
 
 export interface Interaction {
@@ -125,6 +126,8 @@ export interface IDatabase {
   findNextQuestion(courseId: string): Promise<NextQuestionResult | null>;
   getAvailableQuestions(courseId: string, pool: Pool): Promise<QuestionState[]>;
   getAllQuestions(courseId: string, pool: Pool): Promise<QuestionState[]>;
+  updateCourseStats(courseId: string, updates: Partial<CourseStats>): Promise<void>;
+  updateLastAccessed(courseId: string): Promise<void>;
   logEvent(courseId: string, type: EventType, details: Record<string, unknown>): Promise<void>;
   getEventLog(courseId: string, limit?: number, offset?: number): Promise<LogEntry[]>;
   getConfig(): Promise<Configuration>;
@@ -204,6 +207,14 @@ export class DataLayer {
 
   async getAllQuestions(courseId: string, pool: Pool): Promise<QuestionState[]> {
     return this.db.getAllQuestions(courseId, pool);
+  }
+
+  async updateCourseStats(courseId: string, updates: Partial<CourseStats>): Promise<void> {
+    return this.db.updateCourseStats(courseId, updates);
+  }
+
+  async updateLastAccessed(courseId: string): Promise<void> {
+    return this.db.updateLastAccessed(courseId);
   }
 
   async logEvent(courseId: string, type: EventType, details: Record<string, unknown>): Promise<void> {
