@@ -244,6 +244,9 @@ export class DataLayer {
     if (!Array.isArray(q.options) || q.options.length < 2) {
       return { valid: false, error: "Options must be an array with at least 2 items" };
     }
+    if (new Set(q.options.map(String)).size !== q.options.length) {
+      return { valid: false, error: "Options must not contain duplicates" };
+    }
     if (typeof q.correct_option !== "string") {
       return { valid: false, error: "Missing or invalid 'correct_option' field" };
     }

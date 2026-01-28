@@ -6,6 +6,7 @@ export function CourseListScreen() {
   const { dataLayer, courses, refreshCourses, setScreen } = useApp();
   const [courseName, setCourseName] = useState("");
   const [error, setError] = useState("");
+  const [info, setInfo] = useState("");
   const [creating, setCreating] = useState(false);
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -18,6 +19,7 @@ export function CourseListScreen() {
     }
     setCreating(true);
     setError("");
+    setInfo("");
     try {
       const text = await file.text();
       const json = JSON.parse(text);
@@ -27,6 +29,11 @@ export function CourseListScreen() {
       } else {
         setCourseName("");
         if (fileRef.current) fileRef.current.value = "";
+        if (result.total_skipped > 0) {
+          setInfo(`Course created: ${result.total_loaded} questions loaded, ${result.total_skipped} skipped due to validation errors.`);
+        } else {
+          setInfo(`Course created: ${result.total_loaded} questions loaded.`);
+        }
         await refreshCourses();
       }
     } catch (e) {
@@ -64,7 +71,7 @@ export function CourseListScreen() {
           <div className="space-y-2">
             {courses.map((c) => (
               <div key={c.id} className="flex items-center justify-between bg-white border rounded-lg p-4">
-                <div className="flex-1 cursor-pointer" onClick={() => setScreen({ type: "study", courseId: c.id, courseName: c.name })}>
+                <div className="flex-1 cursor-pointer" onClick={() => { dataLayer.logEvent(c.id, "session_started", {}); setScreen({ type: "study", courseId: c.id, courseName: c.name }); }}>
                   <div className="font-medium">{c.name}</div>
                   <div className="text-sm text-gray-500">
                     {c.question_count} questions &middot; Last accessed: {formatTime(c.last_accessed)}
@@ -95,6 +102,7 @@ export function CourseListScreen() {
             {creating ? "Creating..." : "Create Course"}
           </button>
           {error && <p className="text-red-600 text-sm">{error}</p>}
+          {info && <p className="text-green-600 text-sm">{info}</p>}
         </div>
       </div>
 

@@ -34,7 +34,7 @@ export function FeedbackScreen({ courseId, courseName, result, selectedAnswer, c
     <div className="max-w-2xl mx-auto p-6">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-lg font-semibold text-gray-700">{courseName}</h2>
-        <button onClick={() => setScreen({ type: "course_list" })} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">End Session</button>
+        <button onClick={() => { dataLayer.logEvent(courseId, "session_ended", {}); setScreen({ type: "course_list" }); }} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">End Session</button>
       </div>
 
       <div className={`rounded-lg p-6 mb-4 ${correct ? "bg-green-50 border border-green-200" : "bg-red-50 border border-red-200"}`}>

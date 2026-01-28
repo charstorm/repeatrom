@@ -276,14 +276,37 @@ export class IndexedDBLayer implements IDatabase {
   }
 
   async hideQuestion(courseId: string, questionId: number): Promise<void> {
-    const state = await this.getQuestionState(courseId, questionId);
-    await this.updateQuestionState(courseId, questionId, { hidden: true });
-    if (state) {
-      const stats = await this.getCourseStats(courseId);
-      const poolKey = `${state.pool}_count` as keyof CourseStats;
-      await this.updateCourseStats(courseId, { [poolKey]: (stats[poolKey] as number) - 1 });
-    }
-    await this.logEvent(courseId, "question_hidden", { question_id: questionId });
+    const db = this.getDB();
+    const tx = db.transaction([STORE_NAMES.QUESTION_STATES, STORE_NAMES.COURSES, STORE_NAMES.LOGS], "readwrite");
+
+    return new Promise((resolve, reject) => {
+      const stateReq = tx.objectStore(STORE_NAMES.QUESTION_STATES).get([courseId, questionId]);
+      stateReq.onsuccess = () => {
+        const state = stateReq.result as QuestionState | undefined;
+        if (state) {
+          tx.objectStore(STORE_NAMES.QUESTION_STATES).put({ ...state, hidden: true });
+
+          const statsReq = tx.objectStore(STORE_NAMES.COURSES).get(courseId);
+          statsReq.onsuccess = () => {
+            const stats = statsReq.result as CourseStats;
+            const poolKey = `${state.pool}_count` as keyof CourseStats;
+            tx.objectStore(STORE_NAMES.COURSES).put({
+              ...stats,
+              [poolKey]: (stats[poolKey] as number) - 1,
+              question_count: stats.question_count - 1,
+            });
+          };
+        }
+      };
+
+      tx.objectStore(STORE_NAMES.LOGS).add({
+        course_id: courseId, timestamp: Date.now(), type: "question_hidden" as EventType,
+        details: { question_id: questionId },
+      });
+
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(new Error(`Transaction failed: ${tx.error}`));
+    });
   }
 
   async updateNotes(courseId: string, questionId: number, notes: string): Promise<void> {
@@ -318,21 +341,28 @@ export class IndexedDBLayer implements IDatabase {
       latentAvailable.sort((a, b) => a.question_id - b.question_id);
       const toPromote = Math.min(latentAvailable.length, config.test_pool_target_size - stats.test_count);
 
-      for (let i = 0; i < toPromote; i++) {
-        await this.updateQuestionState(courseId, latentAvailable[i].question_id, { pool: "test" });
-      }
-
       if (toPromote > 0) {
         const db = this.getDB();
-        const tx = db.transaction(STORE_NAMES.COURSES, "readwrite");
-        const cs = tx.objectStore(STORE_NAMES.COURSES);
-        const gr = cs.get(courseId);
-        gr.onsuccess = () => {
-          const cur = gr.result as CourseStats;
-          cs.put({ ...cur, latent_count: cur.latent_count - toPromote, test_count: cur.test_count + toPromote });
+        const tx = db.transaction([STORE_NAMES.QUESTION_STATES, STORE_NAMES.COURSES, STORE_NAMES.LOGS], "readwrite");
+
+        const stateStore = tx.objectStore(STORE_NAMES.QUESTION_STATES);
+        for (let i = 0; i < toPromote; i++) {
+          const q = latentAvailable[i];
+          stateStore.put({ ...q, pool: "test" });
+        }
+
+        const statsReq = tx.objectStore(STORE_NAMES.COURSES).get(courseId);
+        statsReq.onsuccess = () => {
+          const cur = statsReq.result as CourseStats;
+          tx.objectStore(STORE_NAMES.COURSES).put({ ...cur, latent_count: cur.latent_count - toPromote, test_count: cur.test_count + toPromote });
         };
+
+        tx.objectStore(STORE_NAMES.LOGS).add({
+          course_id: courseId, timestamp: Date.now(), type: "latent_promotion" as EventType,
+          details: { promoted_count: toPromote, source: "latent", target: "test" },
+        });
+
         await new Promise<void>((resolve, reject) => { tx.oncomplete = () => resolve(); tx.onerror = () => reject(new Error("Failed")); });
-        await this.logEvent(courseId, "latent_promotion", { promoted_count: toPromote, source: "latent", target: "test" });
       }
     }
 

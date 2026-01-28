@@ -21,6 +21,7 @@ export function StudyScreen({ courseId, courseName }: { courseId: string; course
   const [questionData, setQuestionData] = useState<QuestionData | null>(null);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
   const loadedRef = useRef(false);
 
   useEffect(() => {
@@ -40,13 +41,15 @@ export function StudyScreen({ courseId, courseName }: { courseId: string; course
   }, [dataLayer, courseId, courseName, setScreen]);
 
   const handleSubmit = async () => {
-    if (!selected || !questionData) return;
+    if (!selected || !questionData || submitting) return;
+    setSubmitting(true);
     const correct = await processAnswer(courseId, questionData.result, selected);
     setScreen({ type: "feedback", courseId, courseName, result: questionData.result, selectedAnswer: selected, correct });
   };
 
   const handleDoubleClick = async (option: string) => {
-    if (!questionData) return;
+    if (!questionData || submitting) return;
+    setSubmitting(true);
     const correct = await processAnswer(courseId, questionData.result, option);
     setScreen({ type: "feedback", courseId, courseName, result: questionData.result, selectedAnswer: option, correct });
   };
@@ -61,7 +64,7 @@ export function StudyScreen({ courseId, courseName }: { courseId: string; course
     <div className="max-w-2xl mx-auto p-6">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-lg font-semibold text-gray-700">{courseName}</h2>
-        <button onClick={() => setScreen({ type: "course_list" })} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">End Session</button>
+        <button onClick={() => { dataLayer.logEvent(courseId, "session_ended", {}); setScreen({ type: "course_list" }); }} className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200">End Session</button>
       </div>
 
       <div className="bg-white border rounded-lg p-6 mb-4">
@@ -69,8 +72,8 @@ export function StudyScreen({ courseId, courseName }: { courseId: string; course
       </div>
 
       <div className="space-y-2 mb-6">
-        {questionData.shuffled.map((opt) => (
-          <button key={opt}
+        {questionData.shuffled.map((opt, idx) => (
+          <button key={idx}
             onClick={() => setSelected(opt)}
             onDoubleClick={() => handleDoubleClick(opt)}
             className={`w-full text-left p-4 rounded-lg border transition ${selected === opt ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200" : "border-gray-200 bg-white hover:bg-gray-50"}`}>
@@ -79,9 +82,9 @@ export function StudyScreen({ courseId, courseName }: { courseId: string; course
         ))}
       </div>
 
-      <button onClick={handleSubmit} disabled={!selected}
+      <button onClick={handleSubmit} disabled={!selected || submitting}
         className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">
-        Submit Answer
+        {submitting ? "Submitting..." : "Submit Answer"}
       </button>
     </div>
   );

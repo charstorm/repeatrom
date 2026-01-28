@@ -11,11 +11,14 @@ export function CourseManageScreen({ focusCourseId }: { focusCourseId?: string }
     if (!confirm) return;
     if (confirm.type === "delete") {
       await dataLayer.deleteCourse(confirm.courseId);
+      setConfirm(null);
+      await refreshCourses();
+      setScreen({ type: "course_list" });
     } else {
       await dataLayer.resetCourse(confirm.courseId);
+      setConfirm(null);
+      await refreshCourses();
     }
-    setConfirm(null);
-    await refreshCourses();
   };
 
   return (

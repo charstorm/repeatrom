@@ -59,6 +59,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     let snoozeDurationMinutes: number;
     let newPool: Pool = pool;
     let newConsecutiveCorrect = state.consecutive_correct;
+    let wasDemotedReset = false;
 
     if (correct) {
       newConsecutiveCorrect += 1;
@@ -67,6 +68,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         if (newConsecutiveCorrect >= config.promotion_consecutive_correct) {
           newPool = "learned";
           newConsecutiveCorrect = 0;
+          wasDemotedReset = true;
           await dataLayer.logEvent(courseId, "promotion", { question_id: state.question_id, from: "test", to: "learned" });
         }
       } else if (pool === "learned") {
@@ -74,6 +76,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         if (newConsecutiveCorrect >= config.promotion_consecutive_correct) {
           newPool = "master";
           newConsecutiveCorrect = 0;
+          wasDemotedReset = true;
           await dataLayer.logEvent(courseId, "promotion", { question_id: state.question_id, from: "learned", to: "master" });
         }
       } else {
@@ -101,7 +104,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       snooze_until: snoozeUntil,
       consecutive_correct: newConsecutiveCorrect,
       total_interactions: state.total_interactions + 1,
-      ...(wasDemoted ? { was_demoted: true } : {}),
+      ...(wasDemoted ? { was_demoted: true } : wasDemotedReset ? { was_demoted: false } : {}),
     });
 
     await dataLayer.recordInteraction(courseId, state.question_id, selectedAnswer, correct, result.strategy, pool, snoozeDurationMinutes);

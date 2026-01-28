@@ -82,7 +82,7 @@ export function NoQuestionsScreen({ courseId, courseName }: { courseId: string; 
         <div className="flex justify-center gap-3">
           <button onClick={() => setScreen({ type: "study", courseId, courseName })}
             className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Try Again</button>
-          <button onClick={() => setScreen({ type: "course_list" })}
+          <button onClick={() => { dataLayer.logEvent(courseId, "session_ended", {}); setScreen({ type: "course_list" }); }}
             className="px-6 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">Exit Session</button>
         </div>
       </div>
