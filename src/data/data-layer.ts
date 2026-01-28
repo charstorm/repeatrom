@@ -88,6 +88,8 @@ export interface Configuration {
   strategy_recovery_upper: number;
   promotion_consecutive_correct: number;
   demotion_incorrect_count: number;
+  auto_next_correct: boolean;
+  auto_next_delay_ms: number;
 }
 
 export interface ValidationError {

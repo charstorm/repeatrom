@@ -29,7 +29,8 @@ export type Screen =
       correct: boolean;
     }
   | { type: "no_questions"; courseId: string; courseName: string }
-  | { type: "expert"; courseId: string; courseName: string };
+  | { type: "expert"; courseId: string; courseName: string }
+  | { type: "config" };
 
 interface AppState {
   dataLayer: DataLayer;

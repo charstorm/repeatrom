@@ -5,6 +5,7 @@ import { FeedbackScreen } from "./screens/FeedbackScreen.tsx";
 import { NoQuestionsScreen } from "./screens/NoQuestionsScreen.tsx";
 import { CourseManageScreen } from "./screens/CourseManageScreen.tsx";
 import { ExpertScreen } from "./screens/ExpertScreen.tsx";
+import { ConfigScreen } from "./screens/ConfigScreen.tsx";
 
 function Router() {
   const { screen } = useApp();
@@ -45,6 +46,8 @@ function Router() {
           courseName={screen.courseName}
         />
       );
+    case "config":
+      return <ConfigScreen />;
   }
 }
 

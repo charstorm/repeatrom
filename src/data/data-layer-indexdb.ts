@@ -116,6 +116,8 @@ export class IndexedDBLayer implements IDatabase {
         strategy_recovery_upper: 50,
         promotion_consecutive_correct: 2,
         demotion_incorrect_count: 1,
+        auto_next_correct: false,
+        auto_next_delay_ms: 1000,
       });
     }
   }
