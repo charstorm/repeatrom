@@ -1,0 +1,3902 @@
+[
+  {
+    "index": 1,
+    "question": "What is the German word for 'cat'?",
+    "options": [
+      "Katze",
+      "Hund",
+      "Vogel",
+      "Fisch",
+      "Pferd"
+    ],
+    "correct_option": "Katze",
+    "explanation": "Katze means 'cat'. Pronounced 'KAH-tseh'. Hund is 'dog', Vogel is 'bird'."
+  },
+  {
+    "index": 2,
+    "question": "Which German word means 'dog'?",
+    "options": [
+      "Katze",
+      "Hund",
+      "Schwein",
+      "Kuh",
+      "Pferd"
+    ],
+    "correct_option": "Hund",
+    "explanation": "Hund means 'dog'. Pronounced 'HOONT'. Common pet in German-speaking countries."
+  },
+  {
+    "index": 3,
+    "question": "What does 'Baum' mean in English?",
+    "options": [
+      "Tree",
+      "Flower",
+      "Bush",
+      "Leaf",
+      "Root"
+    ],
+    "correct_option": "Tree",
+    "explanation": "Baum means 'tree'. Pronounced 'BOWM'. Found in many German landscape descriptions."
+  },
+  {
+    "index": 4,
+    "question": "How do you say 'house' in German?",
+    "options": [
+      "Haus",
+      "Tür",
+      "Fenster",
+      "Dach",
+      "Wand"
+    ],
+    "correct_option": "Haus",
+    "explanation": "Haus means 'house'. Pronounced 'HOUSE'. Tür is 'door', Fenster is 'window'."
+  },
+  {
+    "index": 5,
+    "question": "What is 'Tisch' in English?",
+    "options": [
+      "Chair",
+      "Table",
+      "Bed",
+      "Desk",
+      "Bench"
+    ],
+    "correct_option": "Table",
+    "explanation": "Tisch means 'table'. Pronounced 'TISH'. Common furniture piece in German homes."
+  },
+  {
+    "index": 6,
+    "question": "Which word means 'chair' in German?",
+    "options": [
+      "Tisch",
+      "Stuhl",
+      "Sofa",
+      "Bett",
+      "Schrank"
+    ],
+    "correct_option": "Stuhl",
+    "explanation": "Stuhl means 'chair'. Pronounced 'SHTOOL'. Used for sitting at tables."
+  },
+  {
+    "index": 7,
+    "question": "What does 'Bett' translate to?",
+    "options": [
+      "Pillow",
+      "Blanket",
+      "Bed",
+      "Mattress",
+      "Bedroom"
+    ],
+    "correct_option": "Bed",
+    "explanation": "Bett means 'bed'. Pronounced 'BET'. Essential furniture in any bedroom."
+  },
+  {
+    "index": 8,
+    "question": "How do you say 'door' in German?",
+    "options": [
+      "Fenster",
+      "Tür",
+      "Schloss",
+      "Schlüssel",
+      "Griff"
+    ],
+    "correct_option": "Tür",
+    "explanation": "Tür means 'door'. Pronounced 'TOOR'. Fenster is 'window', Schlüssel is 'key'."
+  },
+  {
+    "index": 9,
+    "question": "What is the German word for 'book'?",
+    "options": [
+      "Buch",
+      "Blatt",
+      "Seite",
+      "Wort",
+      "Brief"
+    ],
+    "correct_option": "Buch",
+    "explanation": "Buch means 'book'. Pronounced 'BOOKH'. Common in libraries and schools."
+  },
+  {
+    "index": 10,
+    "question": "Which German word means 'pen'?",
+    "options": [
+      "Stift",
+      "Papier",
+      "Bleistift",
+      "Radierer",
+      "Tinte"
+    ],
+    "correct_option": "Stift",
+    "explanation": "Stift means 'pen'. Pronounced 'SHTIFT'. Used for writing on paper."
+  },
+  {
+    "index": 11,
+    "question": "What does 'Bleistift' mean in English?",
+    "options": [
+      "Pen",
+      "Pencil",
+      "Eraser",
+      "Brush",
+      "Marker"
+    ],
+    "correct_option": "Pencil",
+    "explanation": "Bleistift means 'pencil'. Pronounced 'BLAY-stift'. Used for writing and drawing."
+  },
+  {
+    "index": 12,
+    "question": "How do you say 'paper' in German?",
+    "options": [
+      "Blatt",
+      "Papier",
+      "Stoff",
+      "Tuch",
+      "Leinwand"
+    ],
+    "correct_option": "Papier",
+    "explanation": "Papier means 'paper'. Pronounced 'pah-PEER'. Used for writing and printing."
+  },
+  {
+    "index": 13,
+    "question": "What is 'Kleid' in English?",
+    "options": [
+      "Shirt",
+      "Pants",
+      "Dress",
+      "Skirt",
+      "Coat"
+    ],
+    "correct_option": "Dress",
+    "explanation": "Kleid means 'dress'. Pronounced 'KLYTE'. Common garment for women."
+  },
+  {
+    "index": 14,
+    "question": "Which word means 'shirt' in German?",
+    "options": [
+      "Hemd",
+      "Hose",
+      "Mantel",
+      "Mütze",
+      "Schal"
+    ],
+    "correct_option": "Hemd",
+    "explanation": "Hemd means 'shirt'. Pronounced 'HEMT'. Worn on the upper body."
+  },
+  {
+    "index": 15,
+    "question": "What does 'Hose' translate to?",
+    "options": [
+      "Shirt",
+      "Pants",
+      "Jacket",
+      "Socks",
+      "Shoes"
+    ],
+    "correct_option": "Pants",
+    "explanation": "Hose means 'pants'. Pronounced 'HOH-zeh'. Worn on the lower body."
+  },
+  {
+    "index": 16,
+    "question": "How do you say 'shoe' in German?",
+    "options": [
+      "Stiefel",
+      "Schuh",
+      "Socke",
+      "Sandale",
+      "Slipper"
+    ],
+    "correct_option": "Schuh",
+    "explanation": "Schuh means 'shoe'. Pronounced 'SHOO'. Worn on the feet."
+  },
+  {
+    "index": 17,
+    "question": "What is the German word for 'hat'?",
+    "options": [
+      "Kappe",
+      "Mütze",
+      "Hut",
+      "Haube",
+      "Helm"
+    ],
+    "correct_option": "Hut",
+    "explanation": "Hut means 'hat'. Pronounced 'HOOT'. Worn on the head for protection."
+  },
+  {
+    "index": 18,
+    "question": "Which German word means 'mother'?",
+    "options": [
+      "Mutter",
+      "Vater",
+      "Schwester",
+      "Bruder",
+      "Oma"
+    ],
+    "correct_option": "Mutter",
+    "explanation": "Mutter means 'mother'. Pronounced 'MOO-ter'. Female parent in a family."
+  },
+  {
+    "index": 19,
+    "question": "What does 'Vater' mean in English?",
+    "options": [
+      "Mother",
+      "Father",
+      "Brother",
+      "Sister",
+      "Grandfather"
+    ],
+    "correct_option": "Father",
+    "explanation": "Vater means 'father'. Pronounced 'FAH-ter'. Male parent in a family."
+  },
+  {
+    "index": 20,
+    "question": "How do you say 'brother' in German?",
+    "options": [
+      "Schwester",
+      "Bruder",
+      "Cousin",
+      "Kusine",
+      "Neffe"
+    ],
+    "correct_option": "Bruder",
+    "explanation": "Bruder means 'brother'. Pronounced 'BROO-der'. Male sibling in family."
+  },
+  {
+    "index": 21,
+    "question": "What is 'Schwester' in English?",
+    "options": [
+      "Brother",
+      "Sister",
+      "Cousin",
+      "Aunt",
+      "Niece"
+    ],
+    "correct_option": "Sister",
+    "explanation": "Schwester means 'sister'. Pronounced 'SHVES-ter'. Female sibling in family."
+  },
+  {
+    "index": 22,
+    "question": "Which German word means 'grandmother'?",
+    "options": [
+      "Großmutter",
+      "Großvater",
+      "Oma",
+      "Opa",
+      "Tante"
+    ],
+    "correct_option": "Großmutter",
+    "explanation": "Großmutter means 'grandmother'. Pronounced 'GROSS-moo-ter'. Parent's mother."
+  },
+  {
+    "index": 23,
+    "question": "What does 'Großvater' translate to?",
+    "options": [
+      "Grandmother",
+      "Grandfather",
+      "Uncle",
+      "Aunt",
+      "Cousin"
+    ],
+    "correct_option": "Grandfather",
+    "explanation": "Großvater means 'grandfather'. Pronounced 'GROSS-fah-ter'. Parent's father."
+  },
+  {
+    "index": 24,
+    "question": "How do you say 'friend' in German?",
+    "options": [
+      "Feind",
+      "Freund",
+      "Bekannte",
+      "Kamerad",
+      "Genosse"
+    ],
+    "correct_option": "Freund",
+    "explanation": "Freund means 'friend'. Pronounced 'FROYNDT'. Close companion or associate."
+  },
+  {
+    "index": 25,
+    "question": "What is the German word for 'teacher'?",
+    "options": [
+      "Lehrer",
+      "Schüler",
+      "Professor",
+      "Dozent",
+      "Instruktor"
+    ],
+    "correct_option": "Lehrer",
+    "explanation": "Lehrer means 'teacher'. Pronounced 'LAY-rer'. Teaches students in school."
+  },
+  {
+    "index": 26,
+    "question": "Which German word means 'student'?",
+    "options": [
+      "Lehrer",
+      "Schüler",
+      "Schriftsteller",
+      "Künstler",
+      "Wissenschaftler"
+    ],
+    "correct_option": "Schüler",
+    "explanation": "Schüler means 'student'. Pronounced 'SHOO-ler'. Learns from a teacher."
+  },
+  {
+    "index": 27,
+    "question": "What does 'Arzt' mean in English?",
+    "options": [
+      "Nurse",
+      "Doctor",
+      "Surgeon",
+      "Dentist",
+      "Therapist"
+    ],
+    "correct_option": "Doctor",
+    "explanation": "Arzt means 'doctor'. Pronounced 'ARTST'. Medical professional who treats patients."
+  },
+  {
+    "index": 28,
+    "question": "How do you say 'nurse' in German?",
+    "options": [
+      "Krankenschwester",
+      "Arzt",
+      "Sanitäter",
+      "Hebamme",
+      "Pfleger"
+    ],
+    "correct_option": "Krankenschwester",
+    "explanation": "Krankenschwester means 'nurse'. Pronounced 'KRANK-en-shves-ter'. Assists doctors in healthcare."
+  },
+  {
+    "index": 29,
+    "question": "What is 'Bäcker' in English?",
+    "options": [
+      "Butcher",
+      "Baker",
+      "Cook",
+      "Chef",
+      "Pastry chef"
+    ],
+    "correct_option": "Baker",
+    "explanation": "Bäcker means 'baker'. Pronounced 'BEH-ker'. Makes bread and pastries."
+  },
+  {
+    "index": 30,
+    "question": "Which German word means 'butcher'?",
+    "options": [
+      "Bäcker",
+      "Metzger",
+      "Fleischer",
+      "Kochmesser",
+      "Schlachter"
+    ],
+    "correct_option": "Metzger",
+    "explanation": "Metzger means 'butcher'. Pronounced 'METS-ger'. Sells meat and meat products."
+  },
+  {
+    "index": 31,
+    "question": "What does 'Brot' translate to?",
+    "options": [
+      "Butter",
+      "Bread",
+      "Cake",
+      "Pastry",
+      "Roll"
+    ],
+    "correct_option": "Bread",
+    "explanation": "Brot means 'bread'. Pronounced 'BROHT'. Staple grain product."
+  },
+  {
+    "index": 32,
+    "question": "How do you say 'meat' in German?",
+    "options": [
+      "Knochen",
+      "Fleisch",
+      "Wurst",
+      "Speck",
+      "Rind"
+    ],
+    "correct_option": "Fleisch",
+    "explanation": "Fleisch means 'meat'. Pronounced 'FLYSH'. Animal protein food."
+  },
+  {
+    "index": 33,
+    "question": "What is the German word for 'fish'?",
+    "options": [
+      "Vogel",
+      "Fisch",
+      "Schnecke",
+      "Krabbe",
+      "Austern"
+    ],
+    "correct_option": "Fisch",
+    "explanation": "Fisch means 'fish'. Pronounced 'FISH'. Water creature for eating."
+  },
+  {
+    "index": 34,
+    "question": "Which German word means 'chicken'?",
+    "options": [
+      "Ente",
+      "Huhn",
+      "Truthahn",
+      "Vogel",
+      "Feder"
+    ],
+    "correct_option": "Huhn",
+    "explanation": "Huhn means 'chicken'. Pronounced 'HOON'. Poultry meat source."
+  },
+  {
+    "index": 35,
+    "question": "What does 'Milch' mean in English?",
+    "options": [
+      "Butter",
+      "Milk",
+      "Cheese",
+      "Cream",
+      "Yogurt"
+    ],
+    "correct_option": "Milk",
+    "explanation": "Milch means 'milk'. Pronounced 'MILKH'. Dairy product from cows."
+  },
+  {
+    "index": 36,
+    "question": "How do you say 'cheese' in German?",
+    "options": [
+      "Butter",
+      "Käse",
+      "Yogurt",
+      "Quark",
+      "Käsekuchen"
+    ],
+    "correct_option": "Käse",
+    "explanation": "Käse means 'cheese'. Pronounced 'KAY-zeh'. Dairy product from milk."
+  },
+  {
+    "index": 37,
+    "question": "What is 'Zucker' in English?",
+    "options": [
+      "Salt",
+      "Sugar",
+      "Spice",
+      "Flour",
+      "Honey"
+    ],
+    "correct_option": "Sugar",
+    "explanation": "Zucker means 'sugar'. Pronounced 'TSOO-ker'. Sweet substance for food."
+  },
+  {
+    "index": 38,
+    "question": "Which German word means 'salt'?",
+    "options": [
+      "Pfeffer",
+      "Salz",
+      "Zucker",
+      "Senf",
+      "Gewürz"
+    ],
+    "correct_option": "Salz",
+    "explanation": "Salz means 'salt'. Pronounced 'ZALTS'. Seasoning mineral for food."
+  },
+  {
+    "index": 39,
+    "question": "What does 'Apfel' mean in English?",
+    "options": [
+      "Birne",
+      "Apfel",
+      "Orange",
+      "Zitrone",
+      "Kirsche"
+    ],
+    "correct_option": "Apfel",
+    "explanation": "Apfel means 'apple'. Pronounced 'AHP-fel'. Common red or green fruit."
+  },
+  {
+    "index": 40,
+    "question": "How do you say 'water' in German?",
+    "options": [
+      "Wasser",
+      "Saft",
+      "Milch",
+      "Tee",
+      "Kaffee"
+    ],
+    "correct_option": "Wasser",
+    "explanation": "Wasser means 'water'. Pronounced 'VAH-ser'. Essential liquid for life."
+  },
+  {
+    "index": 41,
+    "question": "What is the German word for 'coffee'?",
+    "options": [
+      "Tee",
+      "Kaffee",
+      "Schokolade",
+      "Milch",
+      "Saft"
+    ],
+    "correct_option": "Kaffee",
+    "explanation": "Kaffee means 'coffee'. Pronounced 'kah-FAY'. Hot beverage with caffeine."
+  },
+  {
+    "index": 42,
+    "question": "Which German word means 'tea'?",
+    "options": [
+      "Kaffee",
+      "Tee",
+      "Limonade",
+      "Saft",
+      "Wein"
+    ],
+    "correct_option": "Tee",
+    "explanation": "Tee means 'tea'. Pronounced 'TAY'. Hot drink from leaves."
+  },
+  {
+    "index": 43,
+    "question": "What does 'Wein' mean in English?",
+    "options": [
+      "Beer",
+      "Wine",
+      "Whiskey",
+      "Brandy",
+      "Rum"
+    ],
+    "correct_option": "Wine",
+    "explanation": "Wein means 'wine'. Pronounced 'VYN'. Alcoholic drink from grapes."
+  },
+  {
+    "index": 44,
+    "question": "How do you say 'beer' in German?",
+    "options": [
+      "Wein",
+      "Bier",
+      "Schnaps",
+      "Met",
+      "Sake"
+    ],
+    "correct_option": "Bier",
+    "explanation": "Bier means 'beer'. Pronounced 'BEER'. Alcoholic beverage from grain."
+  },
+  {
+    "index": 45,
+    "question": "What is the German adjective for 'big'?",
+    "options": [
+      "Klein",
+      "Groß",
+      "Riesig",
+      "Winzig",
+      "Gigantisch"
+    ],
+    "correct_option": "Groß",
+    "explanation": "Groß means 'big'. Pronounced 'GROSS'. Large in size."
+  },
+  {
+    "index": 46,
+    "question": "Which German adjective means 'small'?",
+    "options": [
+      "Groß",
+      "Klein",
+      "Winzig",
+      "Riesig",
+      "Diminutiv"
+    ],
+    "correct_option": "Klein",
+    "explanation": "Klein means 'small'. Pronounced 'KLYN'. Limited in size."
+  },
+  {
+    "index": 47,
+    "question": "What does 'Lang' mean in English?",
+    "options": [
+      "Short",
+      "Long",
+      "Tall",
+      "Wide",
+      "High"
+    ],
+    "correct_option": "Long",
+    "explanation": "Lang means 'long'. Pronounced 'LAHNG'. Extends considerable distance."
+  },
+  {
+    "index": 48,
+    "question": "How do you say 'short' in German?",
+    "options": [
+      "Lang",
+      "Kurz",
+      "Brief",
+      "Gering",
+      "Knapp"
+    ],
+    "correct_option": "Kurz",
+    "explanation": "Kurz means 'short'. Pronounced 'KOORTZ'. Limited in length."
+  },
+  {
+    "index": 49,
+    "question": "What is the German adjective for 'good'?",
+    "options": [
+      "Schlecht",
+      "Gut",
+      "Vortrefflich",
+      "Ausgezeichnet",
+      "Fabelhaft"
+    ],
+    "correct_option": "Gut",
+    "explanation": "Gut means 'good'. Pronounced 'GOOT'. Of high quality."
+  },
+  {
+    "index": 50,
+    "question": "Which German adjective means 'bad'?",
+    "options": [
+      "Gut",
+      "Schlecht",
+      "Böse",
+      "Ungeheuer",
+      "Furchtbar"
+    ],
+    "correct_option": "Schlecht",
+    "explanation": "Schlecht means 'bad'. Pronounced 'SHLEKHТ'. Of low quality."
+  },
+  {
+    "index": 51,
+    "question": "What does 'Schnell' mean in English?",
+    "options": [
+      "Slow",
+      "Fast",
+      "Quick",
+      "Rapid",
+      "Swift"
+    ],
+    "correct_option": "Fast",
+    "explanation": "Schnell means 'fast'. Pronounced 'SHNEL'. Moving quickly."
+  },
+  {
+    "index": 52,
+    "question": "How do you say 'slow' in German?",
+    "options": [
+      "Schnell",
+      "Langsam",
+      "Träge",
+      "Bedächtig",
+      "Zögernd"
+    ],
+    "correct_option": "Langsam",
+    "explanation": "Langsam means 'slow'. Pronounced 'LAHNG-zahm'. Moving slowly."
+  },
+  {
+    "index": 53,
+    "question": "What is the German adjective for 'hot'?",
+    "options": [
+      "Kalt",
+      "Heiß",
+      "Warm",
+      "Kühl",
+      "Glühend"
+    ],
+    "correct_option": "Heiß",
+    "explanation": "Heiß means 'hot'. Pronounced 'HYS'. High temperature."
+  },
+  {
+    "index": 54,
+    "question": "Which German adjective means 'cold'?",
+    "options": [
+      "Heiß",
+      "Kalt",
+      "Kühl",
+      "Frisch",
+      "Eisig"
+    ],
+    "correct_option": "Kalt",
+    "explanation": "Kalt means 'cold'. Pronounced 'KALT'. Low temperature."
+  },
+  {
+    "index": 55,
+    "question": "What does 'Schön' mean in English?",
+    "options": [
+      "Hässlich",
+      "Schön",
+      "Wunderschön",
+      "Herrlich",
+      "Prächtig"
+    ],
+    "correct_option": "Schön",
+    "explanation": "Schön means 'beautiful'. Pronounced 'SCHÖN'. Pleasing to see."
+  },
+  {
+    "index": 56,
+    "question": "How do you say 'new' in German?",
+    "options": [
+      "Alt",
+      "Neu",
+      "Modern",
+      "Antik",
+      "Vintage"
+    ],
+    "correct_option": "Neu",
+    "explanation": "Neu means 'new'. Pronounced 'NOY'. Recently made."
+  },
+  {
+    "index": 57,
+    "question": "What is the German adjective for 'old'?",
+    "options": [
+      "Neu",
+      "Alt",
+      "Antik",
+      "Archaisch",
+      "Uralt"
+    ],
+    "correct_option": "Alt",
+    "explanation": "Alt means 'old'. Pronounced 'ALT'. Of considerable age."
+  },
+  {
+    "index": 58,
+    "question": "Which German adjective means 'young'?",
+    "options": [
+      "Alt",
+      "Jung",
+      "Unreif",
+      "Jugendlich",
+      "Grün"
+    ],
+    "correct_option": "Jung",
+    "explanation": "Jung means 'young'. Pronounced 'YOUNG'. Of little age."
+  },
+  {
+    "index": 59,
+    "question": "What does 'Hier' mean in English?",
+    "options": [
+      "Dort",
+      "Hier",
+      "Überall",
+      "Irgendwo",
+      "Nirgends"
+    ],
+    "correct_option": "Hier",
+    "explanation": "Hier means 'here'. Pronounced 'HEER'. This place location."
+  },
+  {
+    "index": 60,
+    "question": "How do you say 'there' in German?",
+    "options": [
+      "Hier",
+      "Dort",
+      "Überall",
+      "Irgendwo",
+      "Wohin"
+    ],
+    "correct_option": "Dort",
+    "explanation": "Dort means 'there'. Pronounced 'DORT'. That place location."
+  },
+  {
+    "index": 61,
+    "question": "What is the German adverb for 'today'?",
+    "options": [
+      "Morgen",
+      "Heute",
+      "Gestern",
+      "Übermorgen",
+      "Vorgestern"
+    ],
+    "correct_option": "Heute",
+    "explanation": "Heute means 'today'. Pronounced 'HOY-teh'. This present day."
+  },
+  {
+    "index": 62,
+    "question": "Which German adverb means 'yesterday'?",
+    "options": [
+      "Morgen",
+      "Heute",
+      "Gestern",
+      "Übermorgen",
+      "Vorgestern"
+    ],
+    "correct_option": "Gestern",
+    "explanation": "Gestern means 'yesterday'. Pronounced 'GES-tern'. Previous day."
+  },
+  {
+    "index": 63,
+    "question": "What does 'Morgen' mean in English?",
+    "options": [
+      "Evening",
+      "Morning",
+      "Tomorrow",
+      "Night",
+      "Noon"
+    ],
+    "correct_option": "Tomorrow",
+    "explanation": "Morgen means 'tomorrow'. Pronounced 'MOR-gen'. Following day."
+  },
+  {
+    "index": 64,
+    "question": "How do you say 'always' in German?",
+    "options": [
+      "Nie",
+      "Immer",
+      "Manchmal",
+      "Selten",
+      "Oft"
+    ],
+    "correct_option": "Immer",
+    "explanation": "Immer means 'always'. Pronounced 'IM-mer'. At all times."
+  },
+  {
+    "index": 65,
+    "question": "What is the German adverb for 'never'?",
+    "options": [
+      "Immer",
+      "Nie",
+      "Manchmal",
+      "Selten",
+      "Oft"
+    ],
+    "correct_option": "Nie",
+    "explanation": "Nie means 'never'. Pronounced 'NEE'. Not at any time."
+  },
+  {
+    "index": 66,
+    "question": "Which German adverb means 'sometimes'?",
+    "options": [
+      "Immer",
+      "Nie",
+      "Manchmal",
+      "Selten",
+      "Oft"
+    ],
+    "correct_option": "Manchmal",
+    "explanation": "Manchmal means 'sometimes'. Pronounced 'MANCH-mahl'. Occasionally."
+  },
+  {
+    "index": 67,
+    "question": "What does 'Oft' mean in English?",
+    "options": [
+      "Rarely",
+      "Often",
+      "Seldom",
+      "Sometimes",
+      "Never"
+    ],
+    "correct_option": "Often",
+    "explanation": "Oft means 'often'. Pronounced 'OFT'. Frequently in time."
+  },
+  {
+    "index": 68,
+    "question": "How do you say 'to eat' in German?",
+    "options": [
+      "Trinken",
+      "Essen",
+      "Kochen",
+      "Braten",
+      "Backen"
+    ],
+    "correct_option": "Essen",
+    "explanation": "Essen means 'to eat'. Pronounced 'ES-sen'. Consume food for nutrition."
+  },
+  {
+    "index": 69,
+    "question": "What is the German verb for 'to drink'?",
+    "options": [
+      "Essen",
+      "Trinken",
+      "Füttern",
+      "Saufen",
+      "Gießen"
+    ],
+    "correct_option": "Trinken",
+    "explanation": "Trinken means 'to drink'. Pronounced 'TRIN-ken'. Consume liquids."
+  },
+  {
+    "index": 70,
+    "question": "Which German verb means 'to cook'?",
+    "options": [
+      "Backen",
+      "Kochen",
+      "Braten",
+      "Grillen",
+      "Köcheln"
+    ],
+    "correct_option": "Kochen",
+    "explanation": "Kochen means 'to cook'. Pronounced 'KO-khen'. Prepare food with heat."
+  },
+  {
+    "index": 71,
+    "question": "What does 'Gehen' mean in English?",
+    "options": [
+      "Tanzen",
+      "Gehen",
+      "Schreiten",
+      "Taumeln",
+      "Stapfen"
+    ],
+    "correct_option": "Gehen",
+    "explanation": "Gehen means 'to walk'. Pronounced 'GAY-hen'. Move on foot slowly."
+  },
+  {
+    "index": 72,
+    "question": "How do you say 'to run' in German?",
+    "options": [
+      "Gehen",
+      "Laufen",
+      "Springen",
+      "Tanzen",
+      "Marschieren"
+    ],
+    "correct_option": "Laufen",
+    "explanation": "Laufen means 'to run'. Pronounced 'LOW-fen'. Move quickly on feet."
+  },
+  {
+    "index": 73,
+    "question": "What is the German verb for 'to sleep'?",
+    "options": [
+      "Rest",
+      "Schlafen",
+      "Wake",
+      "Dream",
+      "Snore"
+    ],
+    "correct_option": "Schlafen",
+    "explanation": "Schlafen means 'to sleep'. Pronounced 'SHLAH-fen'. Be in state of sleep."
+  },
+  {
+    "index": 74,
+    "question": "Which German verb means 'to work'?",
+    "options": [
+      "Spielen",
+      "Arbeiten",
+      "Ruhen",
+      "Lernen",
+      "Unterrichten"
+    ],
+    "correct_option": "Arbeiten",
+    "explanation": "Arbeiten means 'to work'. Pronounced 'AR-by-ten'. Do labor or job."
+  },
+  {
+    "index": 75,
+    "question": "What does 'Spielen' mean in English?",
+    "options": [
+      "Arbeiten",
+      "Spielen",
+      "Singen",
+      "Lachen",
+      "Weinen"
+    ],
+    "correct_option": "Spielen",
+    "explanation": "Spielen means 'to play'. Pronounced 'SHPEE-len'. Engage in games."
+  },
+  {
+    "index": 76,
+    "question": "How do you say 'to read' in German?",
+    "options": [
+      "Write",
+      "Lesen",
+      "Speak",
+      "Listen",
+      "Hear"
+    ],
+    "correct_option": "Lesen",
+    "explanation": "Lesen means 'to read'. Pronounced 'LAY-zen'. Look at written text."
+  },
+  {
+    "index": 77,
+    "question": "What is the German verb for 'to write'?",
+    "options": [
+      "Lesen",
+      "Schreiben",
+      "Malen",
+      "Zeichnen",
+      "Tippen"
+    ],
+    "correct_option": "Schreiben",
+    "explanation": "Schreiben means 'to write'. Pronounced 'SHRY-ben'. Put words on paper."
+  },
+  {
+    "index": 78,
+    "question": "Which German verb means 'to speak'?",
+    "options": [
+      "Sprechen",
+      "Hören",
+      "Sagen",
+      "Singen",
+      "Brüllen"
+    ],
+    "correct_option": "Sprechen",
+    "explanation": "Sprechen means 'to speak'. Pronounced 'SHPREKH-en'. Say words aloud."
+  },
+  {
+    "index": 79,
+    "question": "What does 'Sehen' mean in English?",
+    "options": [
+      "Look",
+      "See",
+      "Watch",
+      "Observe",
+      "Stare"
+    ],
+    "correct_option": "See",
+    "explanation": "Sehen means 'to see'. Pronounced 'ZAY-hen'. Perceive with eyes."
+  },
+  {
+    "index": 80,
+    "question": "How do you say 'to give' in German?",
+    "options": [
+      "Nehmen",
+      "Geben",
+      "Schenken",
+      "Spenden",
+      "Verteilen"
+    ],
+    "correct_option": "Geben",
+    "explanation": "Geben means 'to give'. Pronounced 'GAY-ben'. Hand something to someone."
+  },
+  {
+    "index": 81,
+    "question": "What is 'Fenster' in English?",
+    "options": [
+      "Wall",
+      "Window",
+      "Door",
+      "Frame",
+      "Glass"
+    ],
+    "correct_option": "Window",
+    "explanation": "Fenster means 'window'. Pronounced 'FEN-ster'. Allows light into room."
+  },
+  {
+    "index": 82,
+    "question": "Which German word means 'wall'?",
+    "options": [
+      "Dach",
+      "Wand",
+      "Diele",
+      "Boden",
+      "Decke"
+    ],
+    "correct_option": "Wand",
+    "explanation": "Wand means 'wall'. Pronounced 'VANT'. Vertical structure in building."
+  },
+  {
+    "index": 83,
+    "question": "What does 'Dach' translate to?",
+    "options": [
+      "Wall",
+      "Floor",
+      "Ceiling",
+      "Roof",
+      "Attic"
+    ],
+    "correct_option": "Roof",
+    "explanation": "Dach means 'roof'. Pronounced 'DAKH'. Top covering of building."
+  },
+  {
+    "index": 84,
+    "question": "How do you say 'floor' in German?",
+    "options": [
+      "Decke",
+      "Boden",
+      "Untergeschoss",
+      "Ebene",
+      "Stockwerk"
+    ],
+    "correct_option": "Boden",
+    "explanation": "Boden means 'floor'. Pronounced 'BO-den'. Surface you walk on."
+  },
+  {
+    "index": 85,
+    "question": "What is 'Stadt' in English?",
+    "options": [
+      "Street",
+      "City",
+      "Town",
+      "Village",
+      "District"
+    ],
+    "correct_option": "City",
+    "explanation": "Stadt means 'city'. Pronounced 'SHTAHT'. Large urban area with many people."
+  },
+  {
+    "index": 86,
+    "question": "How do you say 'street' in German?",
+    "options": [
+      "Platz",
+      "Straße",
+      "Gasse",
+      "Weg",
+      "Pfad"
+    ],
+    "correct_option": "Straße",
+    "explanation": "Straße means 'street'. Pronounced 'SHTRA-seh'. Road in city for travel."
+  },
+  {
+    "index": 87,
+    "question": "What is 'Park' in German?",
+    "options": [
+      "Forest",
+      "Park",
+      "Garden",
+      "Square",
+      "Plaza"
+    ],
+    "correct_option": "Park",
+    "explanation": "Park means 'park'. Pronounced 'PARK'. Green space for recreation."
+  },
+  {
+    "index": 88,
+    "question": "Which German word means 'mountain'?",
+    "options": [
+      "Hügel",
+      "Berg",
+      "Gebirge",
+      "Gipfel",
+      "Abhang"
+    ],
+    "correct_option": "Berg",
+    "explanation": "Berg means 'mountain'. Pronounced 'BERK'. High elevation of land."
+  },
+  {
+    "index": 89,
+    "question": "What does 'Fluss' translate to?",
+    "options": [
+      "Lake",
+      "River",
+      "Stream",
+      "Ocean",
+      "Pond"
+    ],
+    "correct_option": "River",
+    "explanation": "Fluss means 'river'. Pronounced 'FLOOS'. Body of flowing water."
+  },
+  {
+    "index": 90,
+    "question": "How do you say 'sea' in German?",
+    "options": [
+      "Meer",
+      "Fluss",
+      "Bach",
+      "See",
+      "Bucht"
+    ],
+    "correct_option": "Meer",
+    "explanation": "Meer means 'sea'. Pronounced 'MAYR'. Large body of salt water."
+  },
+  {
+    "index": 91,
+    "question": "What is the German word for 'lake'?",
+    "options": [
+      "Meer",
+      "Fluss",
+      "See",
+      "Bach",
+      "Teich"
+    ],
+    "correct_option": "See",
+    "explanation": "See means 'lake'. Pronounced 'ZAY'. Body of fresh water surrounded by land."
+  },
+  {
+    "index": 92,
+    "question": "Which German word means 'forest'?",
+    "options": [
+      "Baum",
+      "Wald",
+      "Busch",
+      "Gebüsch",
+      "Lichtung"
+    ],
+    "correct_option": "Wald",
+    "explanation": "Wald means 'forest'. Pronounced 'VALT'. Large area covered with trees."
+  },
+  {
+    "index": 93,
+    "question": "What does 'Garten' mean in English?",
+    "options": [
+      "Park",
+      "Forest",
+      "Garden",
+      "Yard",
+      "Farm"
+    ],
+    "correct_option": "Garden",
+    "explanation": "Garten means 'garden'. Pronounced 'GAR-ten'. Place where plants are grown."
+  },
+  {
+    "index": 94,
+    "question": "How do you say 'field' in German?",
+    "options": [
+      "Wiese",
+      "Feld",
+      "Weide",
+      "Auland",
+      "Flur"
+    ],
+    "correct_option": "Feld",
+    "explanation": "Feld means 'field'. Pronounced 'FELT'. Open area of land for cultivation."
+  },
+  {
+    "index": 95,
+    "question": "What is 'Schule' in English?",
+    "options": [
+      "University",
+      "Library",
+      "School",
+      "Classroom",
+      "Campus"
+    ],
+    "correct_option": "School",
+    "explanation": "Schule means 'school'. Pronounced 'SHOO-leh'. Institution where students learn."
+  },
+  {
+    "index": 96,
+    "question": "Which German word means 'hospital'?",
+    "options": [
+      "Apotheke",
+      "Klinik",
+      "Krankenhaus",
+      "Praxis",
+      "Sanatorium"
+    ],
+    "correct_option": "Krankenhaus",
+    "explanation": "Krankenhaus means 'hospital'. Pronounced 'KRANK-en-hows'. Treats sick patients."
+  },
+  {
+    "index": 97,
+    "question": "What does 'Kirche' translate to?",
+    "options": [
+      "Temple",
+      "Church",
+      "Mosque",
+      "Synagogue",
+      "Chapel"
+    ],
+    "correct_option": "Church",
+    "explanation": "Kirche means 'church'. Pronounced 'KIR-keh'. Religious building for worship."
+  },
+  {
+    "index": 98,
+    "question": "How do you say 'library' in German?",
+    "options": [
+      "Museen",
+      "Bibliothek",
+      "Archiv",
+      "Bücherei",
+      "Lesesaal"
+    ],
+    "correct_option": "Bibliothek",
+    "explanation": "Bibliothek means 'library'. Pronounced 'bib-lee-o-TEK'. Houses books and resources."
+  },
+  {
+    "index": 99,
+    "question": "What is the German word for 'restaurant'?",
+    "options": [
+      "Café",
+      "Restaurant",
+      "Kneipe",
+      "Biergarten",
+      "Speisesaal"
+    ],
+    "correct_option": "Restaurant",
+    "explanation": "Restaurant means 'restaurant'. Pronounced 'rés-to-RANT'. Serves food and drinks."
+  },
+  {
+    "index": 100,
+    "question": "Which German word means 'market'?",
+    "options": [
+      "Laden",
+      "Markt",
+      "Geschäft",
+      "Supermarkt",
+      "Basar"
+    ],
+    "correct_option": "Markt",
+    "explanation": "Markt means 'market'. Pronounced 'MARKT'. Place where goods are sold."
+  },
+  {
+    "index": 101,
+    "question": "What does 'Köchin' translate to?",
+    "options": [
+      "Baker",
+      "Cook",
+      "Chef",
+      "Waitress",
+      "Maid"
+    ],
+    "correct_option": "Cook",
+    "explanation": "Köchin means 'female cook'. Pronounced 'KÖ-kin'. Prepares food in kitchen."
+  },
+  {
+    "index": 102,
+    "question": "How do you say 'engineer' in German?",
+    "options": [
+      "Architekt",
+      "Ingenieur",
+      "Techniker",
+      "Mechaniker",
+      "Handwerker"
+    ],
+    "correct_option": "Ingenieur",
+    "explanation": "Ingenieur means 'engineer'. Pronounced 'in-je-NÖR'. Designs and builds structures."
+  },
+  {
+    "index": 103,
+    "question": "What is the German word for 'farmer'?",
+    "options": [
+      "Gärtner",
+      "Landwirt",
+      "Bauer",
+      "Hirte",
+      "Züchter"
+    ],
+    "correct_option": "Bauer",
+    "explanation": "Bauer means 'farmer'. Pronounced 'BOW-er'. Grows crops and raises animals."
+  },
+  {
+    "index": 104,
+    "question": "Which German word means 'musician'?",
+    "options": [
+      "Maler",
+      "Musiker",
+      "Sänger",
+      "Komponist",
+      "Dirigent"
+    ],
+    "correct_option": "Musiker",
+    "explanation": "Musiker means 'musician'. Pronounced 'moo-ZEE-ker'. Plays musical instruments."
+  },
+  {
+    "index": 105,
+    "question": "What does 'Künstler' mean in English?",
+    "options": [
+      "Teacher",
+      "Musician",
+      "Artist",
+      "Painter",
+      "Sculptor"
+    ],
+    "correct_option": "Artist",
+    "explanation": "Künstler means 'artist'. Pronounced 'KOONST-ler'. Creates art and creative works."
+  },
+  {
+    "index": 106,
+    "question": "How do you say 'office' in German?",
+    "options": [
+      "Fabrik",
+      "Büro",
+      "Werkstatt",
+      "Laden",
+      "Geschäft"
+    ],
+    "correct_option": "Büro",
+    "explanation": "Büro means 'office'. Pronounced 'bü-RO'. Workplace for administrative work."
+  },
+  {
+    "index": 107,
+    "question": "What is 'Bahnhof' in English?",
+    "options": [
+      "Airport",
+      "Railway station",
+      "Bus station",
+      "Harbor",
+      "Terminal"
+    ],
+    "correct_option": "Railway station",
+    "explanation": "Bahnhof means 'railway station'. Pronounced 'BAHN-hof'. Where trains arrive and depart."
+  },
+  {
+    "index": 108,
+    "question": "Which German word means 'airport'?",
+    "options": [
+      "Hafen",
+      "Flughafen",
+      "Bahnhof",
+      "Busstation",
+      "Terminal"
+    ],
+    "correct_option": "Flughafen",
+    "explanation": "Flughafen means 'airport'. Pronounced 'FLOOP-hah-fen'. Where planes take off."
+  },
+  {
+    "index": 109,
+    "question": "What does 'Hafen' translate to?",
+    "options": [
+      "Harbor",
+      "Port",
+      "Dock",
+      "Wharf",
+      "Marina"
+    ],
+    "correct_option": "Harbor",
+    "explanation": "Hafen means 'harbor'. Pronounced 'HAH-fen'. Sheltered port for ships."
+  },
+  {
+    "index": 110,
+    "question": "How do you say 'castle' in German?",
+    "options": [
+      "Turm",
+      "Schloss",
+      "Burg",
+      "Festung",
+      "Palast"
+    ],
+    "correct_option": "Schloss",
+    "explanation": "Schloss means 'castle'. Pronounced 'SHLOS'. Large fortified building."
+  },
+  {
+    "index": 111,
+    "question": "What is the German word for 'bridge'?",
+    "options": [
+      "Tor",
+      "Brücke",
+      "Bogen",
+      "Durchgang",
+      "Übergang"
+    ],
+    "correct_option": "Brücke",
+    "explanation": "Brücke means 'bridge'. Pronounced 'BROO-keh'. Crosses over water or roads."
+  },
+  {
+    "index": 112,
+    "question": "Which German word means 'tower'?",
+    "options": [
+      "Schloss",
+      "Turm",
+      "Dach",
+      "Mauer",
+      "Mast"
+    ],
+    "correct_option": "Turm",
+    "explanation": "Turm means 'tower'. Pronounced 'TOORM'. Tall structure pointing upward."
+  },
+  {
+    "index": 113,
+    "question": "What does 'Pfeffer' translate to?",
+    "options": [
+      "Salt",
+      "Pepper",
+      "Spice",
+      "Mustard",
+      "Seasoning"
+    ],
+    "correct_option": "Pepper",
+    "explanation": "Pfeffer means 'pepper'. Pronounced 'PFEF-fer'. Spicy seasoning."
+  },
+  {
+    "index": 114,
+    "question": "How do you say 'oil' in German?",
+    "options": [
+      "Fett",
+      "Öl",
+      "Butter",
+      "Lard",
+      "Schmalz"
+    ],
+    "correct_option": "Öl",
+    "explanation": "Öl means 'oil'. Pronounced 'ÖL'. Liquid fat for cooking."
+  },
+  {
+    "index": 115,
+    "question": "What is the German word for 'butter'?",
+    "options": [
+      "Margarine",
+      "Butter",
+      "Schmalz",
+      "Speck",
+      "Lard"
+    ],
+    "correct_option": "Butter",
+    "explanation": "Butter means 'butter'. Pronounced 'BOO-ter'. Dairy spread for food."
+  },
+  {
+    "index": 116,
+    "question": "What does 'Birne' mean in English?",
+    "options": [
+      "Apple",
+      "Pear",
+      "Plum",
+      "Grape",
+      "Peach"
+    ],
+    "correct_option": "Pear",
+    "explanation": "Birne means 'pear'. Pronounced 'BIR-neh'. Sweet shaped fruit."
+  },
+  {
+    "index": 117,
+    "question": "How do you say 'orange' in German?",
+    "options": [
+      "Zitrone",
+      "Orange",
+      "Apfelsine",
+      "Mandarine",
+      "Klementin"
+    ],
+    "correct_option": "Orange",
+    "explanation": "Orange means 'orange'. Pronounced 'oh-RANZH'. Citrus fruit with orange color."
+  },
+  {
+    "index": 118,
+    "question": "What is 'Tomate' in English?",
+    "options": [
+      "Potato",
+      "Tomato",
+      "Carrot",
+      "Onion",
+      "Garlic"
+    ],
+    "correct_option": "Tomato",
+    "explanation": "Tomate means 'tomato'. Pronounced 'to-MAH-teh'. Red vegetable or fruit."
+  },
+  {
+    "index": 119,
+    "question": "Which German word means 'potato'?",
+    "options": [
+      "Kartoffel",
+      "Rübe",
+      "Kürbis",
+      "Bohne",
+      "Erbse"
+    ],
+    "correct_option": "Kartoffel",
+    "explanation": "Kartoffel means 'potato'. Pronounced 'kar-TAW-fel'. Starchy root vegetable."
+  },
+  {
+    "index": 120,
+    "question": "What does 'Zwiebel' translate to?",
+    "options": [
+      "Garlic",
+      "Onion",
+      "Leek",
+      "Chive",
+      "Shallot"
+    ],
+    "correct_option": "Onion",
+    "explanation": "Zwiebel means 'onion'. Pronounced 'TSVEE-bel'. Vegetable with pungent smell."
+  },
+  {
+    "index": 121,
+    "question": "How do you say 'carrot' in German?",
+    "options": [
+      "Rübe",
+      "Möhre",
+      "Pastinake",
+      "Süßkartoffel",
+      "Steckrübe"
+    ],
+    "correct_option": "Möhre",
+    "explanation": "Möhre means 'carrot'. Pronounced 'MÖ-reh'. Orange root vegetable."
+  },
+  {
+    "index": 122,
+    "question": "What is 'Saft' in English?",
+    "options": [
+      "Drink",
+      "Juice",
+      "Smoothie",
+      "Tea",
+      "Coffee"
+    ],
+    "correct_option": "Juice",
+    "explanation": "Saft means 'juice'. Pronounced 'ZAFT'. Liquid from fruits or vegetables."
+  },
+  {
+    "index": 123,
+    "question": "What does 'Honig' translate to?",
+    "options": [
+      "Sugar",
+      "Honey",
+      "Jam",
+      "Syrup",
+      "Marmalade"
+    ],
+    "correct_option": "Honey",
+    "explanation": "Honig means 'honey'. Pronounced 'HÖ-nig'. Sweet substance made by bees."
+  },
+  {
+    "index": 124,
+    "question": "What does 'Backen' mean in English?",
+    "options": [
+      "Cook",
+      "Bake",
+      "Roast",
+      "Grill",
+      "Fry"
+    ],
+    "correct_option": "Bake",
+    "explanation": "Backen means 'to bake'. Pronounced 'BAH-ken'. Cook in oven."
+  },
+  {
+    "index": 125,
+    "question": "Which German verb means 'to jump'?",
+    "options": [
+      "Hüpfen",
+      "Springen",
+      "Tanzen",
+      "Hopsen",
+      "Laufen"
+    ],
+    "correct_option": "Springen",
+    "explanation": "Springen means 'to jump'. Pronounced 'SHPRIN-gen'. Leap into air."
+  },
+  {
+    "index": 126,
+    "question": "What does 'Tanzen' mean in English?",
+    "options": [
+      "Run",
+      "Walk",
+      "Jump",
+      "Dance",
+      "Skip"
+    ],
+    "correct_option": "Dance",
+    "explanation": "Tanzen means 'to dance'. Pronounced 'TAHN-tsen'. Move rhythmically to music."
+  },
+  {
+    "index": 127,
+    "question": "How do you say 'to sit' in German?",
+    "options": [
+      "Stehen",
+      "Sitzen",
+      "Liegen",
+      "Knien",
+      "Hocken"
+    ],
+    "correct_option": "Sitzen",
+    "explanation": "Sitzen means 'to sit'. Pronounced 'ZIT-sen'. Be seated on a chair."
+  },
+  {
+    "index": 128,
+    "question": "What is the German verb for 'to stand'?",
+    "options": [
+      "Sitzen",
+      "Stehen",
+      "Liegen",
+      "Knien",
+      "Hocken"
+    ],
+    "correct_option": "Stehen",
+    "explanation": "Stehen means 'to stand'. Pronounced 'SHTAY-hen'. Be upright on feet."
+  },
+  {
+    "index": 129,
+    "question": "Which German verb means 'to lie'?",
+    "options": [
+      "Sitzen",
+      "Stehen",
+      "Liegen",
+      "Knien",
+      "Hocken"
+    ],
+    "correct_option": "Liegen",
+    "explanation": "Liegen means 'to lie'. Pronounced 'LEE-gen'. Be in horizontal position."
+  },
+  {
+    "index": 130,
+    "question": "Which German verb means 'to learn'?",
+    "options": [
+      "Lehren",
+      "Lernen",
+      "Studieren",
+      "Unterrichten",
+      "Memorieren"
+    ],
+    "correct_option": "Lernen",
+    "explanation": "Lernen means 'to learn'. Pronounced 'LER-nen'. Acquire knowledge."
+  },
+  {
+    "index": 131,
+    "question": "Which German verb means 'to listen'?",
+    "options": [
+      "Hören",
+      "Anhören",
+      "Horchen",
+      "Lauschen",
+      "Vernehmen"
+    ],
+    "correct_option": "Hören",
+    "explanation": "Hören means 'to listen'. Pronounced 'HÖ-ren'. Perceive sound."
+  },
+  {
+    "index": 132,
+    "question": "How do you say 'to buy' in German?",
+    "options": [
+      "Verkaufen",
+      "Kaufen",
+      "Mieten",
+      "Kosten",
+      "Handeln"
+    ],
+    "correct_option": "Kaufen",
+    "explanation": "Kaufen means 'to buy'. Pronounced 'KOW-fen'. Purchase goods."
+  },
+  {
+    "index": 133,
+    "question": "What is the German verb for 'to sell'?",
+    "options": [
+      "Kaufen",
+      "Verkaufen",
+      "Handeln",
+      "Tauschen",
+      "Anbieten"
+    ],
+    "correct_option": "Verkaufen",
+    "explanation": "Verkaufen means 'to sell'. Pronounced 'fer-KOW-fen'. Exchange for money."
+  },
+  {
+    "index": 134,
+    "question": "What does 'Nehmen' mean in English?",
+    "options": [
+      "Give",
+      "Take",
+      "Bring",
+      "Carry",
+      "Hold"
+    ],
+    "correct_option": "Take",
+    "explanation": "Nehmen means 'to take'. Pronounced 'NAY-men'. Grab something."
+  },
+  {
+    "index": 135,
+    "question": "How do you say 'to bring' in German?",
+    "options": [
+      "Bringen",
+      "Tragen",
+      "Holen",
+      "Führen",
+      "Nehmen"
+    ],
+    "correct_option": "Bringen",
+    "explanation": "Bringen means 'to bring'. Pronounced 'BRIN-gen'. Carry to destination."
+  },
+  {
+    "index": 136,
+    "question": "What is the German verb for 'to carry'?",
+    "options": [
+      "Holen",
+      "Tragen",
+      "Bringen",
+      "Hieven",
+      "Schleppen"
+    ],
+    "correct_option": "Tragen",
+    "explanation": "Tragen means 'to carry'. Pronounced 'TRAH-gen'. Hold and move something."
+  },
+  {
+    "index": 137,
+    "question": "Which German verb means 'to open'?",
+    "options": [
+      "Schließen",
+      "Öffnen",
+      "Aufmachen",
+      "Entriegeln",
+      "Aufschlagen"
+    ],
+    "correct_option": "Öffnen",
+    "explanation": "Öffnen means 'to open'. Pronounced 'ÖF-nen'. Make doorway accessible."
+  },
+  {
+    "index": 138,
+    "question": "What does 'Schließen' mean in English?",
+    "options": [
+      "Open",
+      "Close",
+      "Lock",
+      "Shut",
+      "Seal"
+    ],
+    "correct_option": "Close",
+    "explanation": "Schließen means 'to close'. Pronounced 'SHLEE-sen'. Shut a door."
+  },
+  {
+    "index": 139,
+    "question": "How do you say 'to find' in German?",
+    "options": [
+      "Suchen",
+      "Finden",
+      "Entdecken",
+      "Treffen",
+      "Erreichen"
+    ],
+    "correct_option": "Finden",
+    "explanation": "Finden means 'to find'. Pronounced 'FIN-den'. Locate something."
+  },
+  {
+    "index": 140,
+    "question": "What is the German verb for 'to search'?",
+    "options": [
+      "Finden",
+      "Suchen",
+      "Durchsuchen",
+      "Forschen",
+      "Fahnden"
+    ],
+    "correct_option": "Suchen",
+    "explanation": "Suchen means 'to search'. Pronounced 'ZOO-khen'. Look for something."
+  },
+  {
+    "index": 141,
+    "question": "Which German verb means 'to know'?",
+    "options": [
+      "Verstehen",
+      "Wissen",
+      "Kennen",
+      "Erkennen",
+      "Vergessen"
+    ],
+    "correct_option": "Wissen",
+    "explanation": "Wissen means 'to know'. Pronounced 'VIS-sen'. Have knowledge of fact."
+  },
+  {
+    "index": 142,
+    "question": "What does 'Unterrichten' mean in English?",
+    "options": [
+      "Learn",
+      "Study",
+      "Teach",
+      "Train",
+      "Coach"
+    ],
+    "correct_option": "Teach",
+    "explanation": "Unterrichten means 'to teach'. Pronounced 'oon-ter-RIKH-ten'. Give instruction."
+  },
+  {
+    "index": 143,
+    "question": "How do you say 'to help' in German?",
+    "options": [
+      "Hindern",
+      "Helfen",
+      "Behindern",
+      "Stören",
+      "Hemmen"
+    ],
+    "correct_option": "Helfen",
+    "explanation": "Helfen means 'to help'. Pronounced 'HEL-fen'. Assist someone."
+  },
+  {
+    "index": 144,
+    "question": "What is the German verb for 'to like'?",
+    "options": [
+      "Hassen",
+      "Mögen",
+      "Verabscheuen",
+      "Lieben",
+      "Ablehnen"
+    ],
+    "correct_option": "Mögen",
+    "explanation": "Mögen means 'to like'. Pronounced 'MÖ-gen'. Find pleasant."
+  },
+  {
+    "index": 145,
+    "question": "Which German verb means 'to love'?",
+    "options": [
+      "Hassen",
+      "Lieben",
+      "Mögen",
+      "Verehren",
+      "Anbeten"
+    ],
+    "correct_option": "Lieben",
+    "explanation": "Lieben means 'to love'. Pronounced 'LEE-ben'. Have deep affection."
+  },
+  {
+    "index": 146,
+    "question": "What does 'Hassen' mean in English?",
+    "options": [
+      "Love",
+      "Like",
+      "Hate",
+      "Dislike",
+      "Detest"
+    ],
+    "correct_option": "Hate",
+    "explanation": "Hassen means 'to hate'. Pronounced 'HAH-sen'. Feel intense dislike."
+  },
+  {
+    "index": 147,
+    "question": "How do you say 'to travel' in German?",
+    "options": [
+      "Gehen",
+      "Reisen",
+      "Fahren",
+      "Wandern",
+      "Spazieren"
+    ],
+    "correct_option": "Reisen",
+    "explanation": "Reisen means 'to travel'. Pronounced 'RY-zen'. Journey to new place."
+  },
+  {
+    "index": 148,
+    "question": "What is the German verb for 'to drive'?",
+    "options": [
+      "Gehen",
+      "Fahren",
+      "Reiten",
+      "Segeln",
+      "Fliegen"
+    ],
+    "correct_option": "Fahren",
+    "explanation": "Fahren means 'to drive'. Pronounced 'FAH-ren'. Operate vehicle."
+  },
+  {
+    "index": 149,
+    "question": "Which German verb means 'to fly'?",
+    "options": [
+      "Fahren",
+      "Fliegen",
+      "Schwimmen",
+      "Segeln",
+      "Sinken"
+    ],
+    "correct_option": "Fliegen",
+    "explanation": "Fliegen means 'to fly'. Pronounced 'FLEE-gen'. Move through air."
+  },
+  {
+    "index": 150,
+    "question": "What does 'Schwimmen' mean in English?",
+    "options": [
+      "Fly",
+      "Drive",
+      "Swim",
+      "Sail",
+      "Sink"
+    ],
+    "correct_option": "Swim",
+    "explanation": "Schwimmen means 'to swim'. Pronounced 'SHVIM-men'. Move through water."
+  },
+  {
+    "index": 151,
+    "question": "How do you say 'to laugh' in German?",
+    "options": [
+      "Weinen",
+      "Lachen",
+      "Grinsen",
+      "Kichern",
+      "Brüllen"
+    ],
+    "correct_option": "Lachen",
+    "explanation": "Lachen means 'to laugh'. Pronounced 'LAKH-en'. Express amusement."
+  },
+  {
+    "index": 152,
+    "question": "What is the German verb for 'to cry'?",
+    "options": [
+      "Lachen",
+      "Weinen",
+      "Brüllen",
+      "Heulen",
+      "Jaulen"
+    ],
+    "correct_option": "Weinen",
+    "explanation": "Weinen means 'to cry'. Pronounced 'VY-nen'. Shed tears from emotion."
+  },
+  {
+    "index": 153,
+    "question": "Which German verb means 'to smile'?",
+    "options": [
+      "Grinsen",
+      "Lächeln",
+      "Lachen",
+      "Kichern",
+      "Schnauben"
+    ],
+    "correct_option": "Lächeln",
+    "explanation": "Lächeln means 'to smile'. Pronounced 'LESH-eln'. Show slight happiness."
+  },
+  {
+    "index": 154,
+    "question": "What does 'Denken' mean in English?",
+    "options": [
+      "Speak",
+      "Think",
+      "Know",
+      "Believe",
+      "Understand"
+    ],
+    "correct_option": "Think",
+    "explanation": "Denken means 'to think'. Pronounced 'DENK-en'. Use mind."
+  },
+  {
+    "index": 155,
+    "question": "How do you say 'to remember' in German?",
+    "options": [
+      "Vergessen",
+      "Erinnern",
+      "Bedenken",
+      "Andenken",
+      "Zudenken"
+    ],
+    "correct_option": "Erinnern",
+    "explanation": "Erinnern means 'to remember'. Pronounced 'er-IN-ern'. Recall memory."
+  },
+  {
+    "index": 156,
+    "question": "What is the German verb for 'to forget'?",
+    "options": [
+      "Erinnern",
+      "Vergessen",
+      "Bedenken",
+      "Missachten",
+      "Übersehen"
+    ],
+    "correct_option": "Vergessen",
+    "explanation": "Vergessen means 'to forget'. Pronounced 'fer-GES-sen'. Lose memory."
+  },
+  {
+    "index": 157,
+    "question": "Which German verb means 'to understand'?",
+    "options": [
+      "Sprechen",
+      "Verstehen",
+      "Hören",
+      "Wissen",
+      "Kennen"
+    ],
+    "correct_option": "Verstehen",
+    "explanation": "Verstehen means 'to understand'. Pronounced 'fer-SHTAY-hen'. Comprehend."
+  },
+  {
+    "index": 158,
+    "question": "What does 'Wünschen' mean in English?",
+    "options": [
+      "Want",
+      "Wish",
+      "Desire",
+      "Need",
+      "Require"
+    ],
+    "correct_option": "Wish",
+    "explanation": "Wünschen means 'to wish'. Pronounced 'VOON-shen'. Hope for something."
+  },
+  {
+    "index": 159,
+    "question": "How do you say 'to grow' in German?",
+    "options": [
+      "Schrumpfen",
+      "Wachsen",
+      "Gedeihen",
+      "Entfalten",
+      "Entwickeln"
+    ],
+    "correct_option": "Wachsen",
+    "explanation": "Wachsen means 'to grow'. Pronounced 'VAKH-sen'. Increase in size."
+  },
+  {
+    "index": 160,
+    "question": "What is the German adjective for 'high'?",
+    "options": [
+      "Tief",
+      "Hoch",
+      "Erhöht",
+      "Gespannt",
+      "Gehoben"
+    ],
+    "correct_option": "Hoch",
+    "explanation": "Hoch means 'high'. Pronounced 'HOKH'. Great elevation above ground."
+  },
+  {
+    "index": 161,
+    "question": "Which German adjective means 'low'?",
+    "options": [
+      "Hoch",
+      "Tief",
+      "Flach",
+      "Niedrig",
+      "Unten"
+    ],
+    "correct_option": "Tief",
+    "explanation": "Tief means 'low'. Pronounced 'TYEF'. Close to ground."
+  },
+  {
+    "index": 162,
+    "question": "What does 'Breit' mean in English?",
+    "options": [
+      "Narrow",
+      "Wide",
+      "Thin",
+      "Thick",
+      "Broad"
+    ],
+    "correct_option": "Wide",
+    "explanation": "Breit means 'wide'. Pronounced 'BRYT'. Great extent side to side."
+  },
+  {
+    "index": 163,
+    "question": "How do you say 'narrow' in German?",
+    "options": [
+      "Breit",
+      "Eng",
+      "Schlank",
+      "Dünn",
+      "Spitz"
+    ],
+    "correct_option": "Eng",
+    "explanation": "Eng means 'narrow'. Pronounced 'ENG'. Limited in width."
+  },
+  {
+    "index": 164,
+    "question": "What is the German adjective for 'thick'?",
+    "options": [
+      "Dünn",
+      "Dick",
+      "Fett",
+      "Massiv",
+      "Stabil"
+    ],
+    "correct_option": "Dick",
+    "explanation": "Dick means 'thick'. Pronounced 'DIK'. Great depth or density."
+  },
+  {
+    "index": 165,
+    "question": "Which German adjective means 'thin'?",
+    "options": [
+      "Dick",
+      "Dünn",
+      "Schlank",
+      "Mager",
+      "Spitz"
+    ],
+    "correct_option": "Dünn",
+    "explanation": "Dünn means 'thin'. Pronounced 'DOON'. Small in thickness."
+  },
+  {
+    "index": 166,
+    "question": "What does 'Schwer' mean in English?",
+    "options": [
+      "Light",
+      "Heavy",
+      "Difficult",
+      "Arduous",
+      "Weighty"
+    ],
+    "correct_option": "Heavy",
+    "explanation": "Schwer means 'heavy'. Pronounced 'SHVAYR'. Great weight or mass."
+  },
+  {
+    "index": 167,
+    "question": "How do you say 'light' in German?",
+    "options": [
+      "Schwer",
+      "Leicht",
+      "Hell",
+      "Dünn",
+      "Zart"
+    ],
+    "correct_option": "Leicht",
+    "explanation": "Leicht means 'light'. Pronounced 'LYKT'. Small in weight."
+  },
+  {
+    "index": 168,
+    "question": "What does 'Warm' mean in English?",
+    "options": [
+      "Hot",
+      "Cold",
+      "Warm",
+      "Cool",
+      "Mild"
+    ],
+    "correct_option": "Warm",
+    "explanation": "Warm means 'warm'. Pronounced 'VARM'. Moderately heated."
+  },
+  {
+    "index": 169,
+    "question": "How do you say 'soft' in German?",
+    "options": [
+      "Hart",
+      "Weich",
+      "Zart",
+      "Glatt",
+      "Sanft"
+    ],
+    "correct_option": "Weich",
+    "explanation": "Weich means 'soft'. Pronounced 'VYKH'. Not hard or firm."
+  },
+  {
+    "index": 170,
+    "question": "What is the German adjective for 'hard'?",
+    "options": [
+      "Weich",
+      "Hart",
+      "Fest",
+      "Robust",
+      "Spröde"
+    ],
+    "correct_option": "Hart",
+    "explanation": "Hart means 'hard'. Pronounced 'HART'. Solid and firm."
+  },
+  {
+    "index": 171,
+    "question": "Which German adjective means 'rough'?",
+    "options": [
+      "Glatt",
+      "Rauh",
+      "Gezackt",
+      "Uneben",
+      "Borst"
+    ],
+    "correct_option": "Rauh",
+    "explanation": "Rauh means 'rough'. Pronounced 'ROW'. Not smooth texture."
+  },
+  {
+    "index": 172,
+    "question": "What does 'Glatt' mean in English?",
+    "options": [
+      "Rough",
+      "Smooth",
+      "Bumpy",
+      "Wrinkled",
+      "Uneven"
+    ],
+    "correct_option": "Smooth",
+    "explanation": "Glatt means 'smooth'. Pronounced 'GLAHT'. Even surface texture."
+  },
+  {
+    "index": 173,
+    "question": "How do you say 'wet' in German?",
+    "options": [
+      "Trocken",
+      "Nass",
+      "Feucht",
+      "Gesättigt",
+      "Durchnässt"
+    ],
+    "correct_option": "Nass",
+    "explanation": "Nass means 'wet'. Pronounced 'NAHS'. Covered with liquid."
+  },
+  {
+    "index": 174,
+    "question": "What is the German adjective for 'dry'?",
+    "options": [
+      "Nass",
+      "Trocken",
+      "Feucht",
+      "Dürr",
+      "Verdorrt"
+    ],
+    "correct_option": "Trocken",
+    "explanation": "Trocken means 'dry'. Pronounced 'TROK-ken'. Free of moisture."
+  },
+  {
+    "index": 175,
+    "question": "Which German adjective means 'clean'?",
+    "options": [
+      "Schmutzig",
+      "Sauber",
+      "Rein",
+      "Makellos",
+      "Spottlos"
+    ],
+    "correct_option": "Sauber",
+    "explanation": "Sauber means 'clean'. Pronounced 'ZOW-ber'. Free of dirt."
+  },
+  {
+    "index": 176,
+    "question": "What does 'Schmutzig' mean in English?",
+    "options": [
+      "Clean",
+      "Dirty",
+      "Messy",
+      "Filthy",
+      "Soiled"
+    ],
+    "correct_option": "Dirty",
+    "explanation": "Schmutzig means 'dirty'. Pronounced 'SHMOO-tsig'. Covered with dirt."
+  },
+  {
+    "index": 177,
+    "question": "How do you say 'bright' in German?",
+    "options": [
+      "Dunkel",
+      "Hell",
+      "Leuchtend",
+      "Glänzend",
+      "Strahlend"
+    ],
+    "correct_option": "Hell",
+    "explanation": "Hell means 'bright'. Pronounced 'HEL'. Emitting light."
+  },
+  {
+    "index": 178,
+    "question": "What is the German adjective for 'dark'?",
+    "options": [
+      "Hell",
+      "Dunkel",
+      "Schwarz",
+      "Grau",
+      "Dämmrig"
+    ],
+    "correct_option": "Dunkel",
+    "explanation": "Dunkel means 'dark'. Pronounced 'DOON-kel'. Lacking light."
+  },
+  {
+    "index": 179,
+    "question": "What does 'Hässlich' mean in English?",
+    "options": [
+      "Beautiful",
+      "Ugly",
+      "Pretty",
+      "Attractive",
+      "Handsome"
+    ],
+    "correct_option": "Ugly",
+    "explanation": "Hässlich means 'ugly'. Pronounced 'HES-likh'. Displeasing appearance."
+  },
+  {
+    "index": 180,
+    "question": "What does 'Stark' mean in English?",
+    "options": [
+      "Weak",
+      "Strong",
+      "Mighty",
+      "Robust",
+      "Powerful"
+    ],
+    "correct_option": "Strong",
+    "explanation": "Stark means 'strong'. Pronounced 'SHTARK'. Great strength."
+  },
+  {
+    "index": 181,
+    "question": "How do you say 'weak' in German?",
+    "options": [
+      "Stark",
+      "Schwach",
+      "Zart",
+      "Fragile",
+      "Gebrechlich"
+    ],
+    "correct_option": "Schwach",
+    "explanation": "Schwach means 'weak'. Pronounced 'SHVAKH'. Lacking strength."
+  },
+  {
+    "index": 182,
+    "question": "What is the German adjective for 'cheap'?",
+    "options": [
+      "Teuer",
+      "Billig",
+      "Günstig",
+      "Preiswert",
+      "Spottbillig"
+    ],
+    "correct_option": "Billig",
+    "explanation": "Billig means 'cheap'. Pronounced 'BIL-likh'. Low in price."
+  },
+  {
+    "index": 183,
+    "question": "Which German adjective means 'expensive'?",
+    "options": [
+      "Billig",
+      "Teuer",
+      "Kostspielig",
+      "Wertvoll",
+      "Kostbar"
+    ],
+    "correct_option": "Teuer",
+    "explanation": "Teuer means 'expensive'. Pronounced 'TOY-er'. High in price."
+  },
+  {
+    "index": 184,
+    "question": "What does 'Richtig' mean in English?",
+    "options": [
+      "Wrong",
+      "Right",
+      "Correct",
+      "Accurate",
+      "Proper"
+    ],
+    "correct_option": "Right",
+    "explanation": "Richtig means 'right'. Pronounced 'RIKH-tig'. Correct or proper."
+  },
+  {
+    "index": 185,
+    "question": "How do you say 'wrong' in German?",
+    "options": [
+      "Richtig",
+      "Falsch",
+      "Inkorrekt",
+      "Fehlerhaft",
+      "Unrecht"
+    ],
+    "correct_option": "Falsch",
+    "explanation": "Falsch means 'wrong'. Pronounced 'FALSH'. Not correct."
+  },
+  {
+    "index": 186,
+    "question": "What does 'Oben' mean in English?",
+    "options": [
+      "Below",
+      "Above",
+      "Down",
+      "Under",
+      "Over"
+    ],
+    "correct_option": "Above",
+    "explanation": "Oben means 'above'. Pronounced 'O-ben'. Higher up position."
+  },
+  {
+    "index": 187,
+    "question": "How do you say 'below' in German?",
+    "options": [
+      "Oben",
+      "Unten",
+      "Darunter",
+      "Unter",
+      "Hinten"
+    ],
+    "correct_option": "Unten",
+    "explanation": "Unten means 'below'. Pronounced 'OON-ten'. Lower down position."
+  },
+  {
+    "index": 188,
+    "question": "How do you say 'well' in German?",
+    "options": [
+      "Schlecht",
+      "Gut",
+      "Wohl",
+      "Besser",
+      "Hervorragend"
+    ],
+    "correct_option": "Wohl",
+    "explanation": "Wohl means 'well'. Pronounced 'VOL'. In good manner."
+  },
+  {
+    "index": 189,
+    "question": "What is the German adverb for 'badly'?",
+    "options": [
+      "Gut",
+      "Schlecht",
+      "Wohl",
+      "Besser",
+      "Übel"
+    ],
+    "correct_option": "Schlecht",
+    "explanation": "Schlecht means 'badly'. Pronounced 'SHLEKHТ'. In poor manner."
+  },
+  {
+    "index": 190,
+    "question": "Which German adverb means 'together'?",
+    "options": [
+      "Getrennt",
+      "Zusammen",
+      "Einzeln",
+      "Allein",
+      "Apart"
+    ],
+    "correct_option": "Zusammen",
+    "explanation": "Zusammen means 'together'. Pronounced 'tsoo-ZAH-men'. With others."
+  },
+  {
+    "index": 191,
+    "question": "What does 'Allein' mean in English?",
+    "options": [
+      "Together",
+      "Apart",
+      "Alone",
+      "Separate",
+      "Individual"
+    ],
+    "correct_option": "Alone",
+    "explanation": "Allein means 'alone'. Pronounced 'ah-LYN'. By oneself."
+  },
+  {
+    "index": 192,
+    "question": "How do you say 'very' in German?",
+    "options": [
+      "Etwas",
+      "Sehr",
+      "Wenig",
+      "Ziemlich",
+      "Überaus"
+    ],
+    "correct_option": "Sehr",
+    "explanation": "Sehr means 'very'. Pronounced 'ZAYR'. To great extent."
+  },
+  {
+    "index": 193,
+    "question": "What is the German adverb for 'too'?",
+    "options": [
+      "Zu",
+      "Sehr",
+      "Allzu",
+      "Überaus",
+      "Zu sehr"
+    ],
+    "correct_option": "Zu",
+    "explanation": "Zu means 'too'. Pronounced 'TSOO'. Excessively."
+  },
+  {
+    "index": 194,
+    "question": "Which German adverb means 'enough'?",
+    "options": [
+      "Zu",
+      "Genug",
+      "Mehr",
+      "Weniger",
+      "Ausreichend"
+    ],
+    "correct_option": "Genug",
+    "explanation": "Genug means 'enough'. Pronounced 'geh-NOOK'. Sufficient amount."
+  },
+  {
+    "index": 195,
+    "question": "What does 'Mehr' mean in English?",
+    "options": [
+      "Less",
+      "More",
+      "Enough",
+      "Much",
+      "Many"
+    ],
+    "correct_option": "More",
+    "explanation": "Mehr means 'more'. Pronounced 'MAYR'. Additional quantity."
+  },
+  {
+    "index": 196,
+    "question": "How do you say 'less' in German?",
+    "options": [
+      "Mehr",
+      "Weniger",
+      "Wenig",
+      "Minus",
+      "Geringer"
+    ],
+    "correct_option": "Weniger",
+    "explanation": "Weniger means 'less'. Pronounced 'VAY-ni-ger'. Reduced quantity."
+  },
+  {
+    "index": 197,
+    "question": "What is the German adverb for 'outside'?",
+    "options": [
+      "Innen",
+      "Außen",
+      "Drinnen",
+      "Draußen",
+      "Außerhalb"
+    ],
+    "correct_option": "Außen",
+    "explanation": "Außen means 'outside'. Pronounced 'OW-sen'. Exterior location."
+  },
+  {
+    "index": 198,
+    "question": "Which German adverb means 'inside'?",
+    "options": [
+      "Außen",
+      "Innen",
+      "Drinnen",
+      "Draußen",
+      "Innerhalb"
+    ],
+    "correct_option": "Innen",
+    "explanation": "Innen means 'inside'. Pronounced 'IN-nen'. Interior location."
+  },
+  {
+    "index": 199,
+    "question": "What does 'Rechts' mean in English?",
+    "options": [
+      "Left",
+      "Right",
+      "Straight",
+      "Back",
+      "Forward"
+    ],
+    "correct_option": "Right",
+    "explanation": "Rechts means 'right'. Pronounced 'REKHTS'. Right side direction."
+  },
+  {
+    "index": 200,
+    "question": "How do you say 'left' in German?",
+    "options": [
+      "Rechts",
+      "Links",
+      "Geradeaus",
+      "Zurück",
+      "Vorwärts"
+    ],
+    "correct_option": "Links",
+    "explanation": "Links means 'left'. Pronounced 'LINKS'. Left side direction."
+  },
+  {
+    "index": 201,
+    "question": "What is the German adverb for 'straight'?",
+    "options": [
+      "Rechts",
+      "Links",
+      "Geradeaus",
+      "Zurück",
+      "Vorwärts"
+    ],
+    "correct_option": "Geradeaus",
+    "explanation": "Geradeaus means 'straight'. Pronounced 'geh-RAH-deh-ows'. Forward direction."
+  },
+  {
+    "index": 202,
+    "question": "Which German noun means 'man'?",
+    "options": [
+      "Frau",
+      "Mann",
+      "Mensch",
+      "Herr",
+      "Junge"
+    ],
+    "correct_option": "Mann",
+    "explanation": "Mann means 'man'. Pronounced 'MAHN'. Adult male human."
+  },
+  {
+    "index": 203,
+    "question": "What does 'Frau' mean in English?",
+    "options": [
+      "Man",
+      "Woman",
+      "Wife",
+      "Lady",
+      "Female"
+    ],
+    "correct_option": "Woman",
+    "explanation": "Frau means 'woman'. Pronounced 'FROW'. Adult female human."
+  },
+  {
+    "index": 204,
+    "question": "How do you say 'child' in German?",
+    "options": [
+      "Junge",
+      "Kind",
+      "Mädchen",
+      "Baby",
+      "Kleinkind"
+    ],
+    "correct_option": "Kind",
+    "explanation": "Kind means 'child'. Pronounced 'KINT'. Young human being."
+  },
+  {
+    "index": 205,
+    "question": "What is the German word for 'boy'?",
+    "options": [
+      "Mädchen",
+      "Junge",
+      "Bursche",
+      "Kerl",
+      "Knabe"
+    ],
+    "correct_option": "Junge",
+    "explanation": "Junge means 'boy'. Pronounced 'YOON-geh'. Male child."
+  },
+  {
+    "index": 206,
+    "question": "Which German word means 'girl'?",
+    "options": [
+      "Junge",
+      "Mädchen",
+      "Dame",
+      "Fräulein",
+      "Maid"
+    ],
+    "correct_option": "Mädchen",
+    "explanation": "Mädchen means 'girl'. Pronounced 'MEHT-khen'. Female child."
+  },
+  {
+    "index": 207,
+    "question": "What is the German word for 'uncle'?",
+    "options": [
+      "Tante",
+      "Onkel",
+      "Vetter",
+      "Kusine",
+      "Neffe"
+    ],
+    "correct_option": "Onkel",
+    "explanation": "Onkel means 'uncle'. Pronounced 'ONG-kel'. Parent's brother."
+  },
+  {
+    "index": 208,
+    "question": "Which German word means 'aunt'?",
+    "options": [
+      "Onkel",
+      "Tante",
+      "Vetter",
+      "Kusine",
+      "Nichte"
+    ],
+    "correct_option": "Tante",
+    "explanation": "Tante means 'aunt'. Pronounced 'TAHN-teh'. Parent's sister."
+  },
+  {
+    "index": 209,
+    "question": "What does 'Vetter' mean in English?",
+    "options": [
+      "Cousin female",
+      "Cousin male",
+      "Brother",
+      "Sister",
+      "Nephew"
+    ],
+    "correct_option": "Cousin male",
+    "explanation": "Vetter means 'male cousin'. Pronounced 'FET-ter'. Male relative."
+  },
+  {
+    "index": 210,
+    "question": "How do you say 'female cousin' in German?",
+    "options": [
+      "Vetter",
+      "Kusine",
+      "Nichte",
+      "Neffe",
+      "Verwandte"
+    ],
+    "correct_option": "Kusine",
+    "explanation": "Kusine means 'female cousin'. Pronounced 'koo-ZEE-neh'. Female relative."
+  },
+  {
+    "index": 211,
+    "question": "What is the German word for 'nephew'?",
+    "options": [
+      "Nichte",
+      "Neffe",
+      "Vetter",
+      "Kusine",
+      "Enkel"
+    ],
+    "correct_option": "Neffe",
+    "explanation": "Neffe means 'nephew'. Pronounced 'NEF-feh'. Son of sibling."
+  },
+  {
+    "index": 212,
+    "question": "Which German word means 'niece'?",
+    "options": [
+      "Neffe",
+      "Nichte",
+      "Vetter",
+      "Kusine",
+      "Enkelin"
+    ],
+    "correct_option": "Nichte",
+    "explanation": "Nichte means 'niece'. Pronounced 'NIKH-teh'. Daughter of sibling."
+  },
+  {
+    "index": 213,
+    "question": "What does 'Enkel' mean in English?",
+    "options": [
+      "Grandfather",
+      "Grandmother",
+      "Grandchild",
+      "Great-grandchild",
+      "Descendant"
+    ],
+    "correct_option": "Grandchild",
+    "explanation": "Enkel means 'grandchild'. Pronounced 'ENG-kel'. Child of child."
+  },
+  {
+    "index": 214,
+    "question": "What is the German word for 'granddaughter'?",
+    "options": [
+      "Enkel",
+      "Enkelin",
+      "Ureenkelin",
+      "Adoptivtochter",
+      "Tochter"
+    ],
+    "correct_option": "Enkelin",
+    "explanation": "Enkelin means 'granddaughter'. Pronounced 'ENG-keh-lin'. Daughter of child."
+  },
+  {
+    "index": 215,
+    "question": "How do you say 'person' in German?",
+    "options": [
+      "Mensch",
+      "Leute",
+      "Person",
+      "Individuum",
+      "Persönlichkeit"
+    ],
+    "correct_option": "Person",
+    "explanation": "Person means 'person'. Pronounced 'per-ZON'. Individual human being."
+  },
+  {
+    "index": 216,
+    "question": "What is the German word for 'people'?",
+    "options": [
+      "Person",
+      "Leute",
+      "Volk",
+      "Menge",
+      "Masse"
+    ],
+    "correct_option": "Leute",
+    "explanation": "Leute means 'people'. Pronounced 'LOY-teh'. Multiple human beings."
+  },
+  {
+    "index": 217,
+    "question": "What is 'Schrank' in English?",
+    "options": [
+      "Drawer",
+      "Cabinet",
+      "Shelf",
+      "Closet",
+      "Chest"
+    ],
+    "correct_option": "Cabinet",
+    "explanation": "Schrank means 'cabinet'. Pronounced 'SHRANK'. Furniture for storage."
+  },
+  {
+    "index": 218,
+    "question": "What does 'Küche' translate to?",
+    "options": [
+      "Dining room",
+      "Kitchen",
+      "Pantry",
+      "Cellar",
+      "Storeroom"
+    ],
+    "correct_option": "Kitchen",
+    "explanation": "Küche means 'kitchen'. Pronounced 'KÜ-kheh'. Room for cooking food."
+  },
+  {
+    "index": 219,
+    "question": "How do you say 'bedroom' in German?",
+    "options": [
+      "Wohnzimmer",
+      "Schlafzimmer",
+      "Esszimmer",
+      "Arbeitszimmer",
+      "Gästezimmer"
+    ],
+    "correct_option": "Schlafzimmer",
+    "explanation": "Schlafzimmer means 'bedroom'. Pronounced 'SHLAF-tsim-mer'. Room for sleeping."
+  },
+  {
+    "index": 220,
+    "question": "What is the German word for 'bathroom'?",
+    "options": [
+      "Toilette",
+      "Badezimmer",
+      "Klosett",
+      "Waschraum",
+      "Dusche"
+    ],
+    "correct_option": "Badezimmer",
+    "explanation": "Badezimmer means 'bathroom'. Pronounced 'BAH-deh-tsim-mer'. Room with bath and toilet."
+  },
+  {
+    "index": 221,
+    "question": "Which German word means 'living room'?",
+    "options": [
+      "Esszimmer",
+      "Wohnzimmer",
+      "Vorzimmer",
+      "Stube",
+      "Salon"
+    ],
+    "correct_option": "Wohnzimmer",
+    "explanation": "Wohnzimmer means 'living room'. Pronounced 'VON-tsim-mer'. Main family room."
+  },
+  {
+    "index": 222,
+    "question": "What does 'Flur' mean in English?",
+    "options": [
+      "Stairs",
+      "Hallway",
+      "Landing",
+      "Porch",
+      "Foyer"
+    ],
+    "correct_option": "Hallway",
+    "explanation": "Flur means 'hallway'. Pronounced 'FLOOR'. Passage connecting rooms."
+  },
+  {
+    "index": 223,
+    "question": "How do you say 'stairs' in German?",
+    "options": [
+      "Stufe",
+      "Treppe",
+      "Aufzug",
+      "Leiter",
+      "Rampe"
+    ],
+    "correct_option": "Treppe",
+    "explanation": "Treppe means 'stairs'. Pronounced 'TREP-peh'. Goes between levels."
+  },
+  {
+    "index": 224,
+    "question": "What is the German word for 'ceiling'?",
+    "options": [
+      "Dach",
+      "Decke",
+      "Wand",
+      "Boden",
+      "Balken"
+    ],
+    "correct_option": "Decke",
+    "explanation": "Decke means 'ceiling'. Pronounced 'DEK-keh'. Top inner surface of room."
+  },
+  {
+    "index": 225,
+    "question": "What does 'Tor' mean in English?",
+    "options": [
+      "Door",
+      "Gate",
+      "Wall",
+      "Fence",
+      "Entrance"
+    ],
+    "correct_option": "Gate",
+    "explanation": "Tor means 'gate'. Pronounced 'TOR'. Opens to enclosed area."
+  },
+  {
+    "index": 226,
+    "question": "How do you say 'key' in German?",
+    "options": [
+      "Riegel",
+      "Schlüssel",
+      "Schloss",
+      "Griff",
+      "Klinke"
+    ],
+    "correct_option": "Schlüssel",
+    "explanation": "Schlüssel means 'key'. Pronounced 'SHLOO-sel'. Opens locks."
+  },
+  {
+    "index": 227,
+    "question": "What is 'Lampe' in English?",
+    "options": [
+      "Light",
+      "Lamp",
+      "Bulb",
+      "Shade",
+      "Switch"
+    ],
+    "correct_option": "Lamp",
+    "explanation": "Lampe means 'lamp'. Pronounced 'LAM-peh'. Provides artificial light."
+  },
+  {
+    "index": 228,
+    "question": "Which German word means 'mirror'?",
+    "options": [
+      "Glas",
+      "Spiegel",
+      "Rahmen",
+      "Bild",
+      "Oberfläche"
+    ],
+    "correct_option": "Spiegel",
+    "explanation": "Spiegel means 'mirror'. Pronounced 'SHPEE-gel'. Reflects images."
+  },
+  {
+    "index": 229,
+    "question": "What does 'Bild' translate to?",
+    "options": [
+      "Mirror",
+      "Frame",
+      "Picture",
+      "Painting",
+      "Portrait"
+    ],
+    "correct_option": "Picture",
+    "explanation": "Bild means 'picture'. Pronounced 'BILT'. Visual image or artwork."
+  },
+  {
+    "index": 230,
+    "question": "How do you say 'clock' in German?",
+    "options": [
+      "Uhr",
+      "Zeiger",
+      "Sekunde",
+      "Minute",
+      "Stunde"
+    ],
+    "correct_option": "Uhr",
+    "explanation": "Uhr means 'clock'. Pronounced 'OOR'. Measures time."
+  },
+  {
+    "index": 231,
+    "question": "What is the German word for 'watch'?",
+    "options": [
+      "Uhr",
+      "Zeiger",
+      "Armbanduhr",
+      "Taschen",
+      "Mechanik"
+    ],
+    "correct_option": "Armbanduhr",
+    "explanation": "Armbanduhr means 'watch'. Pronounced 'ARM-bant-oor'. Wristwatch for time."
+  },
+  {
+    "index": 232,
+    "question": "Which German word means 'telephone'?",
+    "options": [
+      "Radio",
+      "Telefon",
+      "Television",
+      "Computer",
+      "Apparat"
+    ],
+    "correct_option": "Telefon",
+    "explanation": "Telefon means 'telephone'. Pronounced 'teh-leh-FON'. For communication."
+  },
+  {
+    "index": 233,
+    "question": "What does 'Radio' mean in German?",
+    "options": [
+      "Television",
+      "Radio",
+      "Telephone",
+      "Computer",
+      "Speaker"
+    ],
+    "correct_option": "Radio",
+    "explanation": "Radio means 'radio'. Pronounced 'RAH-dee-o'. Broadcasts audio programs."
+  },
+  {
+    "index": 234,
+    "question": "How do you say 'television' in German?",
+    "options": [
+      "Radio",
+      "Fernseher",
+      "Kino",
+      "Bildschirm",
+      "Apparat"
+    ],
+    "correct_option": "Fernseher",
+    "explanation": "Fernseher means 'television'. Pronounced 'FERN-zay-er'. Shows video programs."
+  },
+  {
+    "index": 235,
+    "question": "What is 'Computer' in German?",
+    "options": [
+      "Machine",
+      "Computer",
+      "Device",
+      "Maschine",
+      "Apparat"
+    ],
+    "correct_option": "Computer",
+    "explanation": "Computer means 'computer'. Pronounced 'kom-pyoo-TER'. Electronic device."
+  },
+  {
+    "index": 236,
+    "question": "Which German word means 'food'?",
+    "options": [
+      "Getränk",
+      "Speise",
+      "Gericht",
+      "Lebensmittel",
+      "Essen"
+    ],
+    "correct_option": "Essen",
+    "explanation": "Essen means 'food'. Pronounced 'ES-sen'. Nourishment for eating."
+  },
+  {
+    "index": 237,
+    "question": "How do you say 'knife' in German?",
+    "options": [
+      "Gabel",
+      "Messer",
+      "Löffel",
+      "Klinge",
+      "Dolch"
+    ],
+    "correct_option": "Messer",
+    "explanation": "Messer means 'knife'. Pronounced 'MES-ser'. Cutting utensil."
+  },
+  {
+    "index": 238,
+    "question": "Which German word means 'fork'?",
+    "options": [
+      "Messer",
+      "Gabel",
+      "Löffel",
+      "Besteck",
+      "Zahn"
+    ],
+    "correct_option": "Gabel",
+    "explanation": "Gabel means 'fork'. Pronounced 'GAH-bel'. Pronged utensil."
+  },
+  {
+    "index": 239,
+    "question": "What does 'Löffel' mean in English?",
+    "options": [
+      "Knife",
+      "Fork",
+      "Spoon",
+      "Ladle",
+      "Scoop"
+    ],
+    "correct_option": "Spoon",
+    "explanation": "Löffel means 'spoon'. Pronounced 'LÖF-fel'. Eating utensil."
+  },
+  {
+    "index": 240,
+    "question": "How do you say 'glass' in German?",
+    "options": [
+      "Becher",
+      "Glas",
+      "Tasse",
+      "Kelch",
+      "Pokal"
+    ],
+    "correct_option": "Glas",
+    "explanation": "Glas means 'glass'. Pronounced 'GLAH'. Transparent drinking vessel."
+  },
+  {
+    "index": 241,
+    "question": "What is the German word for 'cup'?",
+    "options": [
+      "Glas",
+      "Tasse",
+      "Becher",
+      "Schale",
+      "Kelch"
+    ],
+    "correct_option": "Tasse",
+    "explanation": "Tasse means 'cup'. Pronounced 'TAH-seh'. Small drinking vessel."
+  },
+  {
+    "index": 242,
+    "question": "Which German word means 'plate'?",
+    "options": [
+      "Schüssel",
+      "Platte",
+      "Teller",
+      "Schale",
+      "Becken"
+    ],
+    "correct_option": "Teller",
+    "explanation": "Teller means 'plate'. Pronounced 'TEL-ler'. Flat eating dish."
+  },
+  {
+    "index": 243,
+    "question": "What does 'Topf' mean in English?",
+    "options": [
+      "Plate",
+      "Pan",
+      "Pot",
+      "Bowl",
+      "Kettle"
+    ],
+    "correct_option": "Pot",
+    "explanation": "Topf means 'pot'. Pronounced 'TOPF'. Cooking container."
+  },
+  {
+    "index": 244,
+    "question": "How do you say 'kettle' in German?",
+    "options": [
+      "Topf",
+      "Kessel",
+      "Teekanne",
+      "Krüge",
+      "Kochtopf"
+    ],
+    "correct_option": "Kessel",
+    "explanation": "Kessel means 'kettle'. Pronounced 'KES-sel'. Boils liquid."
+  },
+  {
+    "index": 245,
+    "question": "What does 'König' mean in English?",
+    "options": [
+      "Prince",
+      "King",
+      "Duke",
+      "Emperor",
+      "Monarch"
+    ],
+    "correct_option": "King",
+    "explanation": "König means 'king'. Pronounced 'KÖ-nig'. Male ruler of kingdom."
+  },
+  {
+    "index": 246,
+    "question": "How do you say 'queen' in German?",
+    "options": [
+      "Prinzessin",
+      "Königin",
+      "Herzogin",
+      "Kaiserin",
+      "Fürstin"
+    ],
+    "correct_option": "Königin",
+    "explanation": "Königin means 'queen'. Pronounced 'KÖ-ni-gin'. Female ruler of kingdom."
+  },
+  {
+    "index": 247,
+    "question": "What is the German word for 'prince'?",
+    "options": [
+      "König",
+      "Prinz",
+      "Herzog",
+      "Kaiser",
+      "Fürst"
+    ],
+    "correct_option": "Prinz",
+    "explanation": "Prinz means 'prince'. Pronounced 'PRINTS'. Son of king."
+  },
+  {
+    "index": 248,
+    "question": "Which German word means 'princess'?",
+    "options": [
+      "Prinz",
+      "Prinzessin",
+      "Herzogin",
+      "Kaiserin",
+      "Fürstin"
+    ],
+    "correct_option": "Prinzessin",
+    "explanation": "Prinzessin means 'princess'. Pronounced 'prin-TSES-in'. Daughter of king."
+  },
+  {
+    "index": 249,
+    "question": "What does 'Diener' mean in English?",
+    "options": [
+      "Master",
+      "Servant",
+      "Maid",
+      "Butler",
+      "Attendant"
+    ],
+    "correct_option": "Servant",
+    "explanation": "Diener means 'servant'. Pronounced 'DEE-ner'. Person who serves."
+  },
+  {
+    "index": 250,
+    "question": "How do you say 'soldier' in German?",
+    "options": [
+      "Offizier",
+      "Soldat",
+      "Kriegler",
+      "Kämpfer",
+      "Streiter"
+    ],
+    "correct_option": "Soldat",
+    "explanation": "Soldat means 'soldier'. Pronounced 'zol-DAHT'. Military person."
+  },
+  {
+    "index": 251,
+    "question": "What is the German word for 'merchant'?",
+    "options": [
+      "Kaufmann",
+      "Händler",
+      "Verkäufer",
+      "Trader",
+      "Geschäftsmann"
+    ],
+    "correct_option": "Kaufmann",
+    "explanation": "Kaufmann means 'merchant'. Pronounced 'KAUF-mahn'. Trades goods."
+  },
+  {
+    "index": 252,
+    "question": "Which German word means 'thief'?",
+    "options": [
+      "Dieb",
+      "Diener",
+      "Räuber",
+      "Mörder",
+      "Schurke"
+    ],
+    "correct_option": "Dieb",
+    "explanation": "Dieb means 'thief'. Pronounced 'DEEP'. Steals possessions."
+  },
+  {
+    "index": 253,
+    "question": "What does 'Lügner' mean in English?",
+    "options": [
+      "Liar",
+      "Thief",
+      "Truthful",
+      "Honest",
+      "Sincere"
+    ],
+    "correct_option": "Liar",
+    "explanation": "Lügner means 'liar'. Pronounced 'LÜG-ner'. Person who lies."
+  },
+  {
+    "index": 254,
+    "question": "How do you say 'neighbor' in German?",
+    "options": [
+      "Nachbar",
+      "Nächster",
+      "Mitbewohner",
+      "Nachbarin",
+      "Nachbarschaft"
+    ],
+    "correct_option": "Nachbar",
+    "explanation": "Nachbar means 'neighbor'. Pronounced 'NAKH-bar'. Person living nearby."
+  },
+  {
+    "index": 255,
+    "question": "What is the German word for 'husband'?",
+    "options": [
+      "Frau",
+      "Mann",
+      "Ehemann",
+      "Gatte",
+      "Gemahl"
+    ],
+    "correct_option": "Ehemann",
+    "explanation": "Ehemann means 'husband'. Pronounced 'AY-heh-mahn'. Married male."
+  },
+  {
+    "index": 256,
+    "question": "Which German word means 'wife'?",
+    "options": [
+      "Mann",
+      "Frau",
+      "Ehefrau",
+      "Gattin",
+      "Gemahlin"
+    ],
+    "correct_option": "Ehefrau",
+    "explanation": "Ehefrau means 'wife'. Pronounced 'AY-heh-frow'. Married female."
+  },
+  {
+    "index": 257,
+    "question": "What does 'Witwer' mean in English?",
+    "options": [
+      "Widow",
+      "Widower",
+      "Divorced",
+      "Unmarried",
+      "Single"
+    ],
+    "correct_option": "Widower",
+    "explanation": "Witwer means 'widower'. Pronounced 'VIT-ver'. Widowed male."
+  },
+  {
+    "index": 258,
+    "question": "How do you say 'widow' in German?",
+    "options": [
+      "Witwer",
+      "Witwe",
+      "Scheidung",
+      "Ledig",
+      "Einsam"
+    ],
+    "correct_option": "Witwe",
+    "explanation": "Witwe means 'widow'. Pronounced 'VIT-veh'. Widowed female."
+  },
+  {
+    "index": 259,
+    "question": "Which German word means 'stepmother'?",
+    "options": [
+      "Mutter",
+      "Stiefmutter",
+      "Adoptivmutter",
+      "Pflegemutter",
+      "Großmutter"
+    ],
+    "correct_option": "Stiefmutter",
+    "explanation": "Stiefmutter means 'stepmother'. Pronounced 'SHTIEF-moo-ter'. Remarried mother."
+  },
+  {
+    "index": 260,
+    "question": "What does 'Stiefvater' mean in English?",
+    "options": [
+      "Father",
+      "Stepfather",
+      "Adoptive father",
+      "Foster father",
+      "Grandfather"
+    ],
+    "correct_option": "Stepfather",
+    "explanation": "Stiefvater means 'stepfather'. Pronounced 'SHTIEF-fah-ter'. Remarried father."
+  },
+  {
+    "index": 261,
+    "question": "Which German word means 'nation'?",
+    "options": [
+      "Land",
+      "Nation",
+      "Volk",
+      "Staat",
+      "Reich"
+    ],
+    "correct_option": "Nation",
+    "explanation": "Nation means 'nation'. Pronounced 'nah-TSYON'. Country or people."
+  },
+  {
+    "index": 262,
+    "question": "What does 'Staat' mean in English?",
+    "options": [
+      "Country",
+      "State",
+      "Government",
+      "Nation",
+      "Land"
+    ],
+    "correct_option": "State",
+    "explanation": "Staat means 'state'. Pronounced 'SHTAHT'. Political entity or region."
+  },
+  {
+    "index": 263,
+    "question": "How do you say 'government' in German?",
+    "options": [
+      "Staat",
+      "Regierung",
+      "Politik",
+      "Behörde",
+      "Amt"
+    ],
+    "correct_option": "Regierung",
+    "explanation": "Regierung means 'government'. Pronounced 'reh-GEE-rung'. System of rule."
+  },
+  {
+    "index": 264,
+    "question": "What is the German word for 'president'?",
+    "options": [
+      "König",
+      "Präsident",
+      "Minister",
+      "Kanzler",
+      "Gouverneur"
+    ],
+    "correct_option": "Präsident",
+    "explanation": "Präsident means 'president'. Pronounced 'preh-zee-DENT'. Head of state."
+  },
+  {
+    "index": 265,
+    "question": "Which German word means 'minister'?",
+    "options": [
+      "Präsident",
+      "Minister",
+      "Kanzler",
+      "Gouverneur",
+      "Senator"
+    ],
+    "correct_option": "Minister",
+    "explanation": "Minister means 'minister'. Pronounced 'mi-NIS-ter'. Government official."
+  },
+  {
+    "index": 266,
+    "question": "What does 'Richter' mean in English?",
+    "options": [
+      "Lawyer",
+      "Judge",
+      "Police",
+      "Sheriff",
+      "Bailiff"
+    ],
+    "correct_option": "Judge",
+    "explanation": "Richter means 'judge'. Pronounced 'RIKH-ter'. Presides in court."
+  },
+  {
+    "index": 267,
+    "question": "How do you say 'lawyer' in German?",
+    "options": [
+      "Richter",
+      "Anwalt",
+      "Notar",
+      "Rechtsanwalt",
+      "Advokat"
+    ],
+    "correct_option": "Anwalt",
+    "explanation": "Anwalt means 'lawyer'. Pronounced 'AHN-valt'. Provides legal advice."
+  },
+  {
+    "index": 268,
+    "question": "What is the German word for 'police officer'?",
+    "options": [
+      "Soldat",
+      "Polizist",
+      "Wächter",
+      "Beamte",
+      "Gendarme"
+    ],
+    "correct_option": "Polizist",
+    "explanation": "Polizist means 'police officer'. Pronounced 'po-li-TSIST'. Law enforcement."
+  },
+  {
+    "index": 269,
+    "question": "Which German word means 'clerk'?",
+    "options": [
+      "Beamte",
+      "Angestellte",
+      "Schreiber",
+      "Geschäftsführer",
+      "Bürokrat"
+    ],
+    "correct_option": "Angestellte",
+    "explanation": "Angestellte means 'clerk'. Pronounced 'AHN-geh-shtel-teh'. Office worker."
+  },
+  {
+    "index": 270,
+    "question": "What does 'Arbeiter' mean in English?",
+    "options": [
+      "Manager",
+      "Worker",
+      "Employee",
+      "Laborer",
+      "Craftsman"
+    ],
+    "correct_option": "Worker",
+    "explanation": "Arbeiter means 'worker'. Pronounced 'AR-by-ter'. Performs labor."
+  },
+  {
+    "index": 271,
+    "question": "How do you say 'employer' in German?",
+    "options": [
+      "Arbeitgeber",
+      "Arbeitnehmer",
+      "Angestellte",
+      "Arbeiter",
+      "Vorgesetzter"
+    ],
+    "correct_option": "Arbeitgeber",
+    "explanation": "Arbeitgeber means 'employer'. Pronounced 'AR-byt-gay-ber'. Employs workers."
+  },
+  {
+    "index": 272,
+    "question": "What is the German word for 'employee'?",
+    "options": [
+      "Arbeitgeber",
+      "Arbeitnehmer",
+      "Angestellte",
+      "Arbeiter",
+      "Assistent"
+    ],
+    "correct_option": "Arbeitnehmer",
+    "explanation": "Arbeitnehmer means 'employee'. Pronounced 'AR-byt-nay-mer'. Works for employer."
+  },
+  {
+    "index": 273,
+    "question": "Which German word means 'boss'?",
+    "options": [
+      "Angestellte",
+      "Chef",
+      "Vorgesetzter",
+      "Leiter",
+      "Direktor"
+    ],
+    "correct_option": "Chef",
+    "explanation": "Chef means 'boss'. Pronounced 'SHEF'. Supervises workers."
+  },
+  {
+    "index": 274,
+    "question": "What does 'Schrift' mean in English?",
+    "options": [
+      "Letter",
+      "Script",
+      "Writing",
+      "Handwriting",
+      "Document"
+    ],
+    "correct_option": "Script",
+    "explanation": "Schrift means 'script'. Pronounced 'SHRIFT'. Written form of language."
+  },
+  {
+    "index": 275,
+    "question": "How do you say 'letter' in German?",
+    "options": [
+      "Schrift",
+      "Brief",
+      "Zeichen",
+      "Buchstabe",
+      "Epistel"
+    ],
+    "correct_option": "Brief",
+    "explanation": "Brief means 'letter'. Pronounced 'BRIEF'. Written correspondence."
+  },
+  {
+    "index": 276,
+    "question": "What is the German word for 'postcard'?",
+    "options": [
+      "Brief",
+      "Postkarte",
+      "Paket",
+      "Päckchen",
+      "Umschlag"
+    ],
+    "correct_option": "Postkarte",
+    "explanation": "Postkarte means 'postcard'. Pronounced 'POST-kar-teh'. Mailed card."
+  },
+  {
+    "index": 277,
+    "question": "Which German word means 'package'?",
+    "options": [
+      "Brief",
+      "Paket",
+      "Päckchen",
+      "Bündel",
+      "Koffer"
+    ],
+    "correct_option": "Paket",
+    "explanation": "Paket means 'package'. Pronounced 'pah-KET'. Wrapped bundle."
+  },
+  {
+    "index": 278,
+    "question": "What does 'Koffer' mean in English?",
+    "options": [
+      "Bag",
+      "Suitcase",
+      "Briefcase",
+      "Backpack",
+      "Trunk"
+    ],
+    "correct_option": "Suitcase",
+    "explanation": "Koffer means 'suitcase'. Pronounced 'KOF-fer'. Travel luggage container."
+  },
+  {
+    "index": 279,
+    "question": "What is the German word for 'handbag'?",
+    "options": [
+      "Rucksack",
+      "Handtasche",
+      "Aktentasche",
+      "Umhängetasche",
+      "Beutel"
+    ],
+    "correct_option": "Handtasche",
+    "explanation": "Handtasche means 'handbag'. Pronounced 'HANT-tah-sheh'. Carried by hand."
+  },
+  {
+    "index": 280,
+    "question": "Which German word means 'backpack'?",
+    "options": [
+      "Handtasche",
+      "Rucksack",
+      "Aktentasche",
+      "Ranzen",
+      "Tornister"
+    ],
+    "correct_option": "Rucksack",
+    "explanation": "Rucksack means 'backpack'. Pronounced 'ROOK-zahk'. Worn on back."
+  },
+  {
+    "index": 281,
+    "question": "What does 'Geldbörse' mean in English?",
+    "options": [
+      "Bag",
+      "Purse",
+      "Wallet",
+      "Pouch",
+      "Container"
+    ],
+    "correct_option": "Wallet",
+    "explanation": "Geldbörse means 'wallet'. Pronounced 'GELT-bör-seh'. Carries money."
+  },
+  {
+    "index": 282,
+    "question": "How do you say 'coin' in German?",
+    "options": [
+      "Geld",
+      "Münze",
+      "Schein",
+      "Cent",
+      "Groschen"
+    ],
+    "correct_option": "Münze",
+    "explanation": "Münze means 'coin'. Pronounced 'MOON-tseh'. Metal money."
+  },
+  {
+    "index": 283,
+    "question": "What is the German word for 'banknote'?",
+    "options": [
+      "Münze",
+      "Geldschein",
+      "Schein",
+      "Banknote",
+      "Geld"
+    ],
+    "correct_option": "Geldschein",
+    "explanation": "Geldschein means 'banknote'. Pronounced 'GELT-shyn'. Paper money."
+  },
+  {
+    "index": 284,
+    "question": "Which German word means 'button'?",
+    "options": [
+      "Reißverschluss",
+      "Knopf",
+      "Schnalle",
+      "Verschluss",
+      "Schließe"
+    ],
+    "correct_option": "Knopf",
+    "explanation": "Knopf means 'button'. Pronounced 'KNOPF'. Fastens clothing."
+  },
+  {
+    "index": 285,
+    "question": "What does 'Schnalle' mean in English?",
+    "options": [
+      "Button",
+      "Buckle",
+      "Clasp",
+      "Fastener",
+      "Hook"
+    ],
+    "correct_option": "Buckle",
+    "explanation": "Schnalle means 'buckle'. Pronounced 'SHNAHL-eh'. Fastens belt or strap."
+  },
+  {
+    "index": 286,
+    "question": "How do you say 'string' in German?",
+    "options": [
+      "Schnur",
+      "Seil",
+      "Darm",
+      "Faden",
+      "Kordel"
+    ],
+    "correct_option": "Schnur",
+    "explanation": "Schnur means 'string'. Pronounced 'SHNOOR'. Thin cord."
+  },
+  {
+    "index": 287,
+    "question": "What is the German word for 'rope'?",
+    "options": [
+      "Schnur",
+      "Seil",
+      "Tau",
+      "Kordel",
+      "Strick"
+    ],
+    "correct_option": "Seil",
+    "explanation": "Seil means 'rope'. Pronounced 'ZYL'. Thick cord."
+  },
+  {
+    "index": 288,
+    "question": "Which German word means 'thread'?",
+    "options": [
+      "Schnur",
+      "Faden",
+      "Garn",
+      "Zwirn",
+      "Seil"
+    ],
+    "correct_option": "Faden",
+    "explanation": "Faden means 'thread'. Pronounced 'FAH-den'. Thin strand for sewing."
+  },
+  {
+    "index": 289,
+    "question": "What does 'Knoten' mean in English?",
+    "options": [
+      "Rope",
+      "Knot",
+      "Tie",
+      "Loop",
+      "Braid"
+    ],
+    "correct_option": "Knot",
+    "explanation": "Knoten means 'knot'. Pronounced 'KNO-ten'. Tied cord."
+  },
+  {
+    "index": 290,
+    "question": "How do you say 'nail' in German?",
+    "options": [
+      "Schraube",
+      "Nagel",
+      "Bolzen",
+      "Stift",
+      "Dübel"
+    ],
+    "correct_option": "Nagel",
+    "explanation": "Nagel means 'nail'. Pronounced 'NAH-gel'. Metal fastener."
+  },
+  {
+    "index": 291,
+    "question": "What is the German word for 'screw'?",
+    "options": [
+      "Nagel",
+      "Schraube",
+      "Bolzen",
+      "Stift",
+      "Dübel"
+    ],
+    "correct_option": "Schraube",
+    "explanation": "Schraube means 'screw'. Pronounced 'SHROW-beh'. Twisted fastener."
+  },
+  {
+    "index": 292,
+    "question": "Which German word means 'hammer'?",
+    "options": [
+      "Nagel",
+      "Hammer",
+      "Äxte",
+      "Hacke",
+      "Pickel"
+    ],
+    "correct_option": "Hammer",
+    "explanation": "Hammer means 'hammer'. Pronounced 'HAH-mer'. Striking tool."
+  },
+  {
+    "index": 293,
+    "question": "What does 'Säge' mean in English?",
+    "options": [
+      "Axe",
+      "Saw",
+      "Chisel",
+      "Plane",
+      "File"
+    ],
+    "correct_option": "Saw",
+    "explanation": "Säge means 'saw'. Pronounced 'ZAY-geh'. Cutting tool."
+  },
+  {
+    "index": 294,
+    "question": "How do you say 'ax' in German?",
+    "options": [
+      "Äxte",
+      "Axt",
+      "Beil",
+      "Spaten",
+      "Hacke"
+    ],
+    "correct_option": "Axt",
+    "explanation": "Axt means 'ax'. Pronounced 'AKST'. Chopping tool."
+  },
+  {
+    "index": 295,
+    "question": "What does 'Essen' mean when used as a noun?",
+    "options": [
+      "Getränk",
+      "Speise",
+      "Gericht",
+      "Lebensmittel",
+      "Essen"
+    ],
+    "correct_option": "Essen",
+    "explanation": "Essen means 'food' when used as a noun. Pronounced 'ES-sen'. Nourishment for eating."
+  },
+  {
+    "index": 296,
+    "question": "What is the correct answer for 'Which German word means 'apple'?",
+    "options": [
+      "Birne",
+      "Apfel",
+      "Orange",
+      "Zitrone",
+      "Kirsche"
+    ],
+    "correct_option": "Apfel",
+    "explanation": "Apfel means 'apple'. Pronounced 'AHP-fel'. Common red or green fruit."
+  },
+  {
+    "index": 297,
+    "question": "What is 'Tisch' when describing furniture?",
+    "options": [
+      "Chair",
+      "Table",
+      "Desk",
+      "Cabinet",
+      "Shelf"
+    ],
+    "correct_option": "Table",
+    "explanation": "Tisch means 'table'. Pronounced 'TISH'. Furniture for eating or working."
+  },
+  {
+    "index": 298,
+    "question": "How do you say 'bed' in German?",
+    "options": [
+      "Kissen",
+      "Decke",
+      "Bett",
+      "Matratze",
+      "Kopfende"
+    ],
+    "correct_option": "Bett",
+    "explanation": "Bett means 'bed'. Pronounced 'BET'. Furniture for sleeping."
+  },
+  {
+    "index": 299,
+    "question": "Which German word means 'cupboard'?",
+    "options": [
+      "Regal",
+      "Schublade",
+      "Schrank",
+      "Vitrine",
+      "Kommode"
+    ],
+    "correct_option": "Schrank",
+    "explanation": "Schrank means 'cupboard'. Pronounced 'SHRANK'. Storage furniture with doors."
+  },
+  {
+    "index": 300,
+    "question": "Which German word means 'door' in the context of building entrances?",
+    "options": [
+      "Fenster",
+      "Tür",
+      "Tor",
+      "Öffnung",
+      "Portal"
+    ],
+    "correct_option": "Tür",
+    "explanation": "Tür means 'door'. Pronounced 'TOOR'. Entrance to room or building."
+  }
+]
