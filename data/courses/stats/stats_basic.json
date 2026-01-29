@@ -1,0 +1,2862 @@
+[
+  {
+    "index": 1,
+    "question": "Which among the following is a fundamental probability concept?",
+    "options": [
+      "Sample space",
+      "Subspace",
+      "Deep space",
+      "Intra-space",
+      "Mango juice"
+    ],
+    "correct_option": "Sample space",
+    "explanation": "Sample space is a fundamental probability concept referring to the set of all possible outcomes. Subspace has uses in probability theory. However, deep space refers to outer space regions far from Earth and has nothing to do with probability!"
+  },
+  {
+    "index": 2,
+    "question": "If you toss a fair coin 3 times, what is the size of the sample space?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "correct_option": "8",
+    "explanation": "Each toss has 2 outcomes (H or T). For 3 tosses, the total number of possible outcomes is 2 \u00d7 2 \u00d7 2 = 8. These are: HHH, HHT, HTH, HTT, THH, THT, TTH, TTT."
+  },
+  {
+    "index": 3,
+    "question": "A sample space has 10 equally likely outcomes. What is the probability of any single outcome?",
+    "options": [
+      "0.01",
+      "0.05",
+      "0.1",
+      "0.2",
+      "1.0"
+    ],
+    "correct_option": "0.1",
+    "explanation": "When all outcomes are equally likely, each outcome has probability 1/n where n is the total number of outcomes. Here, 1/10 = 0.1 or 10%."
+  },
+  {
+    "index": 4,
+    "question": "In 100 trials, event A occurred 25 times and event B occurred 40 times. What is the observed probability of event A?",
+    "options": [
+      "0.15",
+      "0.25",
+      "0.40",
+      "0.65",
+      "Cannot be determined"
+    ],
+    "correct_option": "0.25",
+    "explanation": "Observed probability (empirical probability) is calculated as: number of times event occurred / total number of trials. For event A: 25/100 = 0.25."
+  },
+  {
+    "index": 5,
+    "question": "If P(A) = 0.3 and P(B) = 0.4, and A and B are independent events, what is P(A and B)?",
+    "options": [
+      "0.7",
+      "0.12",
+      "0.1",
+      "0.04",
+      "Need more information"
+    ],
+    "correct_option": "0.12",
+    "explanation": "For independent events, P(A and B) = P(A) \u00d7 P(B). Therefore, 0.3 \u00d7 0.4 = 0.12. This is the multiplication rule for independent events."
+  },
+  {
+    "index": 6,
+    "question": "If P(A) = 0.3 and P(B) = 0.4, and A and B are mutually exclusive (disjoint), what is P(A or B)?",
+    "options": [
+      "0.7",
+      "0.12",
+      "0.1",
+      "1.0",
+      "0.58"
+    ],
+    "correct_option": "0.7",
+    "explanation": "For mutually exclusive events, P(A or B) = P(A) + P(B). Therefore, 0.3 + 0.4 = 0.7. Mutually exclusive means the events cannot happen together."
+  },
+  {
+    "index": 7,
+    "question": "Events X and Y are disjoint (mutually exclusive). If P(X) = 0.6 and P(Y) = 0.5, is this scenario possible?",
+    "options": [
+      "Yes, always possible",
+      "No, probabilities sum exceeds 1",
+      "Yes, but only if independent",
+      "Depends on sample space",
+      "Only on Tuesdays"
+    ],
+    "correct_option": "No, probabilities sum exceeds 1",
+    "explanation": "For disjoint events, P(X or Y) = P(X) + P(Y) = 0.6 + 0.5 = 1.1, which exceeds 1. Since probabilities cannot exceed 1, this scenario is impossible."
+  },
+  {
+    "index": 8,
+    "question": "Which among the following is a discrete random variable?",
+    "options": [
+      "Height of students in a class",
+      "Temperature in a room",
+      "Number of heads in 10 coin tosses",
+      "Time taken to run a marathon",
+      "Your enthusiasm for statistics"
+    ],
+    "correct_option": "Number of heads in 10 coin tosses",
+    "explanation": "A discrete random variable takes countable values. Number of heads can only be 0, 1, 2, ... 10 (finite countable values). Height, temperature, and time are continuous. Enthusiasm is not even a random variable!"
+  },
+  {
+    "index": 9,
+    "question": "You roll a fair six-sided die. What is the probability mass function (PMF) value for each outcome?",
+    "options": [
+      "1/6 for each outcome",
+      "1/36 for each outcome",
+      "Depends on the outcome",
+      "6 for each outcome",
+      "Undefined for dice"
+    ],
+    "correct_option": "1/6 for each outcome",
+    "explanation": "For a fair die, each of the 6 outcomes (1, 2, 3, 4, 5, 6) is equally likely. The PMF assigns probability 1/6 to each outcome. This is a uniform discrete distribution."
+  },
+  {
+    "index": 10,
+    "question": "For a discrete random variable X with PMF p(x), what does the sum of p(x) over all possible values of x equal?",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Infinity",
+      "The mean of X"
+    ],
+    "correct_option": "1",
+    "explanation": "The fundamental property of a PMF is that the sum of probabilities over all possible outcomes must equal 1. This ensures we account for all possibilities in the probability space."
+  },
+  {
+    "index": 11,
+    "question": "Which among the following is a continuous random variable?",
+    "options": [
+      "Number of students in a classroom",
+      "Number of cars in a parking lot",
+      "Exact weight of a newborn baby",
+      "Number of emails received today",
+      "Score on a multiple choice test"
+    ],
+    "correct_option": "Exact weight of a newborn baby",
+    "explanation": "A continuous random variable can take any value within a range. Weight can be 3.245 kg, 3.2451 kg, etc. (infinitely many values). The others are countable discrete values."
+  },
+  {
+    "index": 12,
+    "question": "For a continuous random variable with probability density function (PDF) f(x), what does the integral of f(x) over all possible values equal?",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Infinity",
+      "The variance"
+    ],
+    "correct_option": "1",
+    "explanation": "Just like the PMF sums to 1 for discrete variables, the integral of the PDF over its entire domain equals 1. This is the normalization condition for probability distributions."
+  },
+  {
+    "index": 13,
+    "question": "What is the key difference between probability mass function (PMF) and probability density function (PDF)?",
+    "options": [
+      "PMF is for discrete variables, PDF is for continuous variables",
+      "PMF uses integrals, PDF uses summations",
+      "PDF values must be between 0 and 1, PMF values can exceed 1",
+      "They are the same thing with different names",
+      "PMF is heavier than PDF"
+    ],
+    "correct_option": "PMF is for discrete variables, PDF is for continuous variables",
+    "explanation": "PMF applies to discrete random variables (countable outcomes), while PDF applies to continuous random variables (uncountable outcomes). Note: PDF values CAN exceed 1, unlike PMF values!"
+  },
+  {
+    "index": 14,
+    "question": "Given the numbers: 2, 4, 6, 8, 10. What is their mean?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "The average of extremes"
+    ],
+    "correct_option": "6",
+    "explanation": "Mean = sum of all values / count = (2 + 4 + 6 + 8 + 10) / 5 = 30 / 5 = 6."
+  },
+  {
+    "index": 15,
+    "question": "Given the numbers: 1, 3, 7, 9, 10. What is their median?",
+    "options": [
+      "3",
+      "5",
+      "6",
+      "7",
+      "9"
+    ],
+    "correct_option": "7",
+    "explanation": "The median is the middle value when numbers are arranged in order. Since we have 5 numbers (odd count), the median is the 3rd value: 7."
+  },
+  {
+    "index": 16,
+    "question": "Given the numbers: 2, 5, 5, 5, 8, 9, 9. What is the mode?",
+    "options": [
+      "2",
+      "5",
+      "7",
+      "9",
+      "All values equally"
+    ],
+    "correct_option": "5",
+    "explanation": "The mode is the value that appears most frequently. Here, 5 appears three times, while other values appear less frequently."
+  },
+  {
+    "index": 17,
+    "question": "Two datasets both have mean = 50. Dataset A: 48, 49, 50, 51, 52. Dataset B: 10, 30, 50, 70, 90. Which has higher standard deviation?",
+    "options": [
+      "Dataset A",
+      "Dataset B",
+      "Both have same standard deviation",
+      "Cannot determine without exact calculation",
+      "Standard deviation is not defined for these"
+    ],
+    "correct_option": "Dataset B",
+    "explanation": "Standard deviation measures spread from the mean. Dataset B has values much further from the mean (50) compared to Dataset A, where values cluster tightly around 50. Therefore, Dataset B has higher standard deviation."
+  },
+  {
+    "index": 18,
+    "question": "You have measurements from 3 sensors: Sensor A (reliable, error = 1), Sensor B (unreliable, error = 10), Sensor C (moderate, error = 5). What approach gives the best combined estimate?",
+    "options": [
+      "Simple average of all three",
+      "Use only Sensor A",
+      "Weighted average favoring more reliable sensors",
+      "Use the median value",
+      "Throw away all data and guess"
+    ],
+    "correct_option": "Weighted average favoring more reliable sensors",
+    "explanation": "Weighted averaging assigns higher weights to more reliable (lower error) measurements. This gives us a better estimate than simple averaging, which treats unreliable data equally."
+  },
+  {
+    "index": 19,
+    "question": "What is the difference between time averaging and ensemble averaging?",
+    "options": [
+      "Time averaging uses one system over time, ensemble averaging uses many systems at one time",
+      "They are exactly the same thing",
+      "Time averaging is faster",
+      "Ensemble averaging only works on Mondays",
+      "Time averaging uses clocks, ensemble uses orchestras"
+    ],
+    "correct_option": "Time averaging uses one system over time, ensemble averaging uses many systems at one time",
+    "explanation": "Time averaging observes a single system repeatedly over time. Ensemble averaging observes many identical systems simultaneously at one point in time. They are equivalent for ergodic systems."
+  },
+  {
+    "index": 20,
+    "question": "To smooth a noisy time series, which technique is commonly used?",
+    "options": [
+      "Take the maximum value",
+      "Apply a moving average or rolling window",
+      "Randomly delete half the points",
+      "Convert everything to zero",
+      "Use a larger font"
+    ],
+    "correct_option": "Apply a moving average or rolling window",
+    "explanation": "Moving average (or rolling window) smoothing averages nearby points to reduce noise while preserving overall trends. This is a fundamental signal processing technique."
+  },
+  {
+    "index": 21,
+    "question": "If E(X) = 5 and E(Y) = 3, what is E(X + Y)?",
+    "options": [
+      "2",
+      "8",
+      "15",
+      "Cannot determine without knowing if independent",
+      "5.3 (the average)"
+    ],
+    "correct_option": "8",
+    "explanation": "The expectation operator is linear: E(X + Y) = E(X) + E(Y) = 5 + 3 = 8. This holds regardless of whether X and Y are independent or correlated."
+  },
+  {
+    "index": 22,
+    "question": "How is variance related to expectation? For a random variable X, Var(X) equals:",
+    "options": [
+      "E(X) - E(X squared)",
+      "E(X squared) - (E(X)) squared",
+      "E(X) squared",
+      "(E(X)) squared - E(X squared)",
+      "The square root of E(X)"
+    ],
+    "correct_option": "E(X squared) - (E(X)) squared",
+    "explanation": "Variance is defined as Var(X) = E(X squared) - (E(X)) squared. This is the expected value of the squared deviation from the mean, which can be computed using this alternative formula."
+  },
+  {
+    "index": 23,
+    "question": "A Gaussian (normal) distribution is completely specified by which parameters?",
+    "options": [
+      "Mean only",
+      "Variance only",
+      "Mean and variance",
+      "Mean, variance, and skewness",
+      "Just draw a bell curve and hope"
+    ],
+    "correct_option": "Mean and variance",
+    "explanation": "The Gaussian distribution is fully determined by two parameters: mean (mu) which controls location, and variance (sigma squared) which controls spread. Often written as N(mu, sigma squared)."
+  },
+  {
+    "index": 24,
+    "question": "Which distribution would best model the number of customers arriving at a store per hour?",
+    "options": [
+      "Normal distribution",
+      "Uniform distribution",
+      "Poisson distribution",
+      "Exponential distribution",
+      "Customer distribution"
+    ],
+    "correct_option": "Poisson distribution",
+    "explanation": "Poisson distribution models the number of events occurring in a fixed interval of time or space. It is ideal for counting arrivals, calls, defects, etc. when events occur independently at a constant average rate."
+  },
+  {
+    "index": 25,
+    "question": "A basketball player makes 70% of free throws. If she takes 20 free throws, which distribution models the number of successful shots?",
+    "options": [
+      "Normal distribution",
+      "Poisson distribution",
+      "Binomial distribution",
+      "Uniform distribution",
+      "Basketball distribution"
+    ],
+    "correct_option": "Binomial distribution",
+    "explanation": "Binomial distribution models the number of successes in n independent trials, each with probability p of success. Here: n = 20 trials, p = 0.7 success probability."
+  },
+  {
+    "index": 26,
+    "question": "What does the cumulative distribution function (CDF) F(x) represent?",
+    "options": [
+      "The probability that X equals x",
+      "The probability that X is less than or equal to x",
+      "The probability that X is greater than x",
+      "The derivative of the PDF",
+      "Cumulative Definitely Functions"
+    ],
+    "correct_option": "The probability that X is less than or equal to x",
+    "explanation": "The CDF F(x) = P(X <= x) gives the probability that the random variable takes a value less than or equal to x. It accumulates probability from negative infinity up to x."
+  },
+  {
+    "index": 27,
+    "question": "The median of a distribution corresponds to which percentile?",
+    "options": [
+      "25th percentile",
+      "50th percentile",
+      "75th percentile",
+      "100th percentile",
+      "The medium percentile"
+    ],
+    "correct_option": "50th percentile",
+    "explanation": "The median divides the distribution in half: 50% of values fall below it and 50% above it. This is exactly the definition of the 50th percentile."
+  },
+  {
+    "index": 28,
+    "question": "Can a probability density function (PDF) have values greater than 1?",
+    "options": [
+      "No, never - probabilities must be between 0 and 1",
+      "Yes, as long as the integral equals 1",
+      "Only for uniform distributions",
+      "Only on weekends",
+      "Yes, but only slightly above 1"
+    ],
+    "correct_option": "Yes, as long as the integral equals 1",
+    "explanation": "PDF values can exceed 1! The constraint is that the total area under the curve (integral) must equal 1. For example, uniform distribution on [0, 0.5] has PDF = 2 everywhere in that interval."
+  },
+  {
+    "index": 29,
+    "question": "Can a probability density function (PDF) have negative values?",
+    "options": [
+      "Yes, to represent negative probabilities",
+      "No, PDF must be non-negative everywhere",
+      "Only at the tails",
+      "Yes, if the mean is negative",
+      "Only for sad distributions"
+    ],
+    "correct_option": "No, PDF must be non-negative everywhere",
+    "explanation": "A PDF must satisfy f(x) >= 0 for all x. Negative values would imply negative probabilities, which are meaningless. The PDF can be zero but never negative."
+  },
+  {
+    "index": 30,
+    "question": "The first quartile (Q1), median (Q2), and third quartile (Q3) correspond to which percentiles?",
+    "options": [
+      "10th, 50th, 90th",
+      "20th, 50th, 80th",
+      "25th, 50th, 75th",
+      "33rd, 50th, 67th",
+      "Quarter, half, three-quarters of 100"
+    ],
+    "correct_option": "25th, 50th, 75th",
+    "explanation": "Quartiles divide data into four equal parts. Q1 = 25th percentile (25% below), Q2 = median = 50th percentile, Q3 = 75th percentile (75% below, 25% above)."
+  },
+  {
+    "index": 31,
+    "question": "A random variable X is uniformly distributed between 0 and 10. What is P(X = 5)?",
+    "options": [
+      "0.5",
+      "0.1",
+      "1/10",
+      "0 (zero)",
+      "Exactly in the middle"
+    ],
+    "correct_option": "0 (zero)",
+    "explanation": "For continuous distributions, the probability of any single exact value is zero. We can only meaningfully ask about probabilities over intervals, like P(4.9 < X < 5.1)."
+  },
+  {
+    "index": 32,
+    "question": "Heights of adult males follow approximately a normal distribution with mean = 175 cm and standard deviation = 10 cm. What is the z-score for someone 185 cm tall?",
+    "options": [
+      "-1",
+      "0",
+      "1",
+      "10",
+      "1.85"
+    ],
+    "correct_option": "1",
+    "explanation": "Z-score = (value - mean) / standard deviation = (185 - 175) / 10 = 10 / 10 = 1. This means the person is 1 standard deviation above the mean."
+  },
+  {
+    "index": 33,
+    "question": "What does the Central Limit Theorem tell us?",
+    "options": [
+      "All distributions are normal",
+      "The sample mean approaches a normal distribution as sample size increases",
+      "The center of any distribution is the mean",
+      "Limits are central to probability",
+      "Theorems should be centrally located"
+    ],
+    "correct_option": "The sample mean approaches a normal distribution as sample size increases",
+    "explanation": "CLT states that the distribution of sample means approaches normal distribution as sample size increases, regardless of the original distribution shape (with some conditions). This is fundamental to statistical inference."
+  },
+  {
+    "index": 34,
+    "question": "A histogram shows the distribution of exam scores. What does the height of each bar represent?",
+    "options": [
+      "The score value",
+      "The number or proportion of observations in that range",
+      "The probability of that exact score",
+      "The cumulative frequency",
+      "How tall students are"
+    ],
+    "correct_option": "The number or proportion of observations in that range",
+    "explanation": "In a histogram, bar height represents frequency (count) or relative frequency (proportion) of observations falling within that bin or interval."
+  },
+  {
+    "index": 35,
+    "question": "In a box plot, what does the box itself represent?",
+    "options": [
+      "The full range of data",
+      "The interquartile range (Q1 to Q3)",
+      "One standard deviation from mean",
+      "The median only",
+      "A container for statistics"
+    ],
+    "correct_option": "The interquartile range (Q1 to Q3)",
+    "explanation": "The box spans from Q1 (25th percentile) to Q3 (75th percentile), containing the middle 50% of data. The line inside the box marks the median (Q2)."
+  },
+  {
+    "index": 36,
+    "question": "Dataset A: 1, 2, 3, 4, 5, 100. Dataset B: 1, 2, 3, 4, 5, 6. Which statement is true?",
+    "options": [
+      "Both have same mean and median",
+      "A has higher mean, same median as B",
+      "A has higher mean and higher median than B",
+      "Mean and median are not affected by outliers",
+      "Dataset A is 100 times better"
+    ],
+    "correct_option": "A has higher mean, same median as B",
+    "explanation": "The outlier 100 pulls the mean of A much higher (mean = 19.17 vs B = 3.5), but both medians are 3.5 (average of middle two values). This shows mean is sensitive to outliers, median is robust."
+  },
+  {
+    "index": 37,
+    "question": "You have 3 measurements: 10 (variance = 4), 20 (variance = 1), 15 (variance = 9). For precision-weighted averaging, which measurement gets the highest weight?",
+    "options": [
+      "10, because it is smallest",
+      "20, because it has lowest variance",
+      "15, because it is in the middle",
+      "All equal weights",
+      "The one measured on Tuesday"
+    ],
+    "correct_option": "20, because it has lowest variance",
+    "explanation": "Precision-weighted averaging assigns weights inversely proportional to variance (or proportional to precision = 1/variance). Lower variance = higher precision = higher weight. Value 20 has variance = 1 (most precise)."
+  },
+  {
+    "index": 38,
+    "question": "For two random variables X and Y, what does P(X, Y) represent?",
+    "options": [
+      "The sum of their probabilities",
+      "The joint probability of X and Y occurring together",
+      "The conditional probability",
+      "The product of expectations",
+      "X and Y having a conversation"
+    ],
+    "correct_option": "The joint probability of X and Y occurring together",
+    "explanation": "P(X, Y) or P(X and Y) is the joint probability - the probability that both X takes a specific value AND Y takes a specific value simultaneously."
+  },
+  {
+    "index": 39,
+    "question": "The Law of Total Probability states that P(A) equals:",
+    "options": [
+      "P(A and B) + P(A and not B)",
+      "Sum of P(A | B_i) times P(B_i) over all partitions B_i",
+      "P(A) times P(B)",
+      "1 - P(not A)",
+      "The total of all probabilities"
+    ],
+    "correct_option": "Sum of P(A | B_i) times P(B_i) over all partitions B_i",
+    "explanation": "If events B_1, B_2, ... B_n partition the sample space, then P(A) = sum of P(A | B_i) times P(B_i). This breaks down A based on mutually exclusive scenarios."
+  },
+  {
+    "index": 40,
+    "question": "Bayes' Theorem allows us to calculate:",
+    "options": [
+      "P(A | B) from P(B | A), P(A), and P(B)",
+      "P(A and B) from P(A) and P(B)",
+      "P(A or B) from P(A) and P(B)",
+      "The base rate of any event",
+      "What the Reverend Thomas Bayes had for breakfast"
+    ],
+    "correct_option": "P(A | B) from P(B | A), P(A), and P(B)",
+    "explanation": "Bayes' Theorem: P(A | B) = P(B | A) times P(A) / P(B). It allows us to reverse conditional probabilities, going from P(B | A) to P(A | B). Fundamental for updating beliefs with evidence."
+  },
+  {
+    "index": 41,
+    "question": "The chain rule states that P(A and B) equals:",
+    "options": [
+      "P(A) + P(B)",
+      "P(A) times P(B)",
+      "P(A | B) times P(B)",
+      "P(A | B) + P(B | A)",
+      "A chain of probabilities"
+    ],
+    "correct_option": "P(A | B) times P(B)",
+    "explanation": "Chain rule: P(A and B) = P(A | B) times P(B) = P(B | A) times P(A). For multiple variables: P(A and B and C) = P(A) times P(B | A) times P(C | A and B)."
+  },
+  {
+    "index": 42,
+    "question": "Covariance measures:",
+    "options": [
+      "How two variables vary together",
+      "The variance of combined variables",
+      "The correlation coefficient",
+      "The average of two variances",
+      "How variables cover each other"
+    ],
+    "correct_option": "How two variables vary together",
+    "explanation": "Covariance Cov(X, Y) = E[(X - E(X))(Y - E(Y))] measures the joint variability of two variables. Positive means they tend to increase together, negative means inverse relationship."
+  },
+  {
+    "index": 43,
+    "question": "Correlation coefficient is:",
+    "options": [
+      "The same as covariance",
+      "Covariance divided by product of standard deviations",
+      "Always between 0 and 1",
+      "The square root of covariance",
+      "How related two variables feel"
+    ],
+    "correct_option": "Covariance divided by product of standard deviations",
+    "explanation": "Correlation = Cov(X, Y) / (SD(X) times SD(Y)). This normalizes covariance to always fall between -1 and +1, making it easier to interpret the strength of linear relationship."
+  },
+  {
+    "index": 44,
+    "question": "Two random variables X and Y are independent. Which statement is TRUE?",
+    "options": [
+      "They must be uncorrelated",
+      "They must be correlated",
+      "P(X and Y) = P(X) + P(Y)",
+      "Their covariance must be positive",
+      "They refuse to talk to each other"
+    ],
+    "correct_option": "They must be uncorrelated",
+    "explanation": "Independence implies uncorrelated (correlation = 0). However, uncorrelated does NOT imply independent! Independence is a stronger condition: P(X and Y) = P(X) times P(Y) for all values."
+  },
+  {
+    "index": 45,
+    "question": "Two variables X and Y have correlation = 0. Are they necessarily independent?",
+    "options": [
+      "Yes, zero correlation means independence",
+      "No, they could have nonlinear relationship",
+      "Yes, but only if both are normally distributed",
+      "Only if their means are equal",
+      "They are independently uncorrelated"
+    ],
+    "correct_option": "No, they could have nonlinear relationship",
+    "explanation": "Zero correlation only means no LINEAR relationship. Variables can be uncorrelated but dependent through nonlinear relationships. Example: Y = X squared with X symmetric around 0 has zero correlation but clear dependence."
+  },
+  {
+    "index": 46,
+    "question": "The correlation coefficient between two variables is always:",
+    "options": [
+      "Between 0 and 1",
+      "Between -1 and 1",
+      "Between -infinity and infinity",
+      "Positive",
+      "A coefficient"
+    ],
+    "correct_option": "Between -1 and 1",
+    "explanation": "The Pearson correlation coefficient always ranges from -1 (perfect negative linear relationship) through 0 (no linear relationship) to +1 (perfect positive linear relationship)."
+  },
+  {
+    "index": 47,
+    "question": "Rank correlation (like Spearman's) differs from Pearson correlation because it:",
+    "options": [
+      "Can exceed 1",
+      "Uses ranks instead of actual values",
+      "Only works for independent variables",
+      "Is always positive",
+      "Ranks variables by importance"
+    ],
+    "correct_option": "Uses ranks instead of actual values",
+    "explanation": "Rank correlation methods like Spearman's use the ranks (ordering) of data rather than actual values. This makes them robust to outliers and suitable for monotonic (not necessarily linear) relationships."
+  },
+  {
+    "index": 48,
+    "question": "Ice cream sales and drowning deaths are positively correlated. Does this mean ice cream causes drowning?",
+    "options": [
+      "Yes, ice cream causes drowning",
+      "Yes, drowning causes ice cream sales",
+      "No, a confounding variable (temperature/season) affects both",
+      "Yes, but only on beaches",
+      "Correlation always means causation"
+    ],
+    "correct_option": "No, a confounding variable (temperature/season) affects both",
+    "explanation": "Classic example of correlation without causation. Hot weather (confounding variable) increases both ice cream sales AND swimming activity (hence drownings). The relationship is spurious."
+  },
+  {
+    "index": 49,
+    "question": "Coffee consumption and lung cancer are correlated. However, the real cause is:",
+    "options": [
+      "Coffee directly causes lung cancer",
+      "Lung cancer makes people drink coffee",
+      "Smoking (confounding variable) is associated with both coffee drinking and lung cancer",
+      "This correlation is just random",
+      "Coffee beans contain cancer"
+    ],
+    "correct_option": "Smoking (confounding variable) is associated with both coffee drinking and lung cancer",
+    "explanation": "Smokers historically tended to drink more coffee. Smoking causes lung cancer. The coffee-cancer correlation is spurious, driven by the confounding variable (smoking) that affects both."
+  },
+  {
+    "index": 50,
+    "question": "What does the statement 'correlation does not imply causation' mean?",
+    "options": [
+      "Correlated variables never have causal relationships",
+      "Just because two variables are correlated does not mean one causes the other",
+      "Causation always implies correlation",
+      "Correlation and causation are the same thing",
+      "Implies and causes are synonyms"
+    ],
+    "correct_option": "Just because two variables are correlated does not mean one causes the other",
+    "explanation": "Correlation shows association but not directionality or mechanism. X and Y may be correlated because: X causes Y, Y causes X, Z causes both (confounding), or pure coincidence. Additional evidence is needed to establish causation."
+  },
+  {
+    "index": 51,
+    "question": "If E(X) = 10 and E(Y) = 5, what is E(2X + 3Y)?",
+    "options": [
+      "15",
+      "35",
+      "45",
+      "20 + 15Y",
+      "2E(X) + 3E(Y) which needs independence"
+    ],
+    "correct_option": "35",
+    "explanation": "Expectation is linear: E(2X + 3Y) = 2E(X) + 3E(Y) = 2(10) + 3(5) = 20 + 15 = 35. This holds regardless of dependence between X and Y."
+  },
+  {
+    "index": 52,
+    "question": "If X and Y are independent with Var(X) = 4 and Var(Y) = 9, what is Var(X + Y)?",
+    "options": [
+      "5",
+      "13",
+      "36",
+      "Depends on correlation",
+      "The square root of 4 + 9"
+    ],
+    "correct_option": "13",
+    "explanation": "For independent variables: Var(X + Y) = Var(X) + Var(Y) = 4 + 9 = 13. Independence is crucial here - without it, we need: Var(X + Y) = Var(X) + Var(Y) + 2Cov(X,Y)."
+  },
+  {
+    "index": 53,
+    "question": "If X and Y are independent with Var(X) = 4 and Var(Y) = 9, what is Var(X - Y)?",
+    "options": [
+      "-5",
+      "5",
+      "13",
+      "Depends on means",
+      "Cannot subtract variances"
+    ],
+    "correct_option": "13",
+    "explanation": "For independent variables: Var(X - Y) = Var(X) + Var(Y) = 4 + 9 = 13. Note the plus sign! Var(X - Y) = Var(X + (-Y)) = Var(X) + Var(-Y) = Var(X) + Var(Y) since Var(-Y) = Var(Y)."
+  },
+  {
+    "index": 54,
+    "question": "If Var(X) = 16, what is Var(3X)?",
+    "options": [
+      "16",
+      "19",
+      "48",
+      "144",
+      "3 times 16"
+    ],
+    "correct_option": "144",
+    "explanation": "Var(aX) = a squared times Var(X). So Var(3X) = 3 squared times 16 = 9 times 16 = 144. Variance scales with the square of the scaling constant."
+  },
+  {
+    "index": 55,
+    "question": "If E(X) = 5, what is E(3X + 7)?",
+    "options": [
+      "15",
+      "22",
+      "36",
+      "3E(X) + 7 requires more info",
+      "Cannot add constants to expectations"
+    ],
+    "correct_option": "22",
+    "explanation": "E(aX + b) = aE(X) + b. So E(3X + 7) = 3(5) + 7 = 15 + 7 = 22. Expectation passes through linear transformations."
+  },
+  {
+    "index": 56,
+    "question": "You measure X = 10 with uncertainty 2, and Y = 5 with uncertainty 1. If Z = X + Y, what is the uncertainty in Z (assuming independent errors)?",
+    "options": [
+      "3",
+      "2.24",
+      "1",
+      "Cannot add uncertainties",
+      "Uncertain about uncertainty"
+    ],
+    "correct_option": "2.24",
+    "explanation": "For independent measurements, uncertainties add in quadrature: uncertainty(Z) = sqrt(2 squared + 1 squared) = sqrt(4 + 1) = sqrt(5) = 2.24. This is propagation of uncertainty."
+  },
+  {
+    "index": 57,
+    "question": "An estimator is unbiased if:",
+    "options": [
+      "It has zero variance",
+      "Its expected value equals the true parameter value",
+      "It always gives the correct answer",
+      "It treats all data points equally",
+      "It has no political opinions"
+    ],
+    "correct_option": "Its expected value equals the true parameter value",
+    "explanation": "An estimator is unbiased if E(estimator) = true parameter. On average across many samples, it hits the right target. Example: sample mean is an unbiased estimator of population mean."
+  },
+  {
+    "index": 58,
+    "question": "Mean Squared Error (MSE) of an estimator equals:",
+    "options": [
+      "Variance only",
+      "Bias only",
+      "Bias squared + Variance",
+      "Bias + Variance",
+      "The mean of squared errors (duh)"
+    ],
+    "correct_option": "Bias squared + Variance",
+    "explanation": "MSE = (Bias) squared + Variance. This decomposes total error into systematic error (bias squared) and random error (variance). It is the expected squared difference from true value."
+  },
+  {
+    "index": 59,
+    "question": "The standard error of the mean for a sample of size n with population standard deviation sigma is:",
+    "options": [
+      "sigma",
+      "sigma / n",
+      "sigma / sqrt(n)",
+      "sigma times sqrt(n)",
+      "Standard and mean error"
+    ],
+    "correct_option": "sigma / sqrt(n)",
+    "explanation": "Standard error = sigma / sqrt(n). This measures uncertainty in the sample mean. As sample size increases, standard error decreases, giving more precise estimates. Notice the sqrt(n), not n."
+  },
+  {
+    "index": 60,
+    "question": "If you quadruple the sample size, the standard error of the mean:",
+    "options": [
+      "Stays the same",
+      "Halves",
+      "Quarters",
+      "Doubles",
+      "Quadruples"
+    ],
+    "correct_option": "Halves",
+    "explanation": "Standard error is proportional to 1/sqrt(n). If n becomes 4n, standard error becomes sigma/sqrt(4n) = sigma/(2 times sqrt(n)) = (1/2) times original. You need 4 times the data for 2 times the precision!"
+  },
+  {
+    "index": 61,
+    "question": "In hypothesis testing, H0 represents:",
+    "options": [
+      "The alternative hypothesis",
+      "The null hypothesis (status quo or no effect)",
+      "The hypothesis we want to prove",
+      "Half of zero",
+      "Hypothesis zero degrees"
+    ],
+    "correct_option": "The null hypothesis (status quo or no effect)",
+    "explanation": "H0 is the null hypothesis - typically the default position of no effect, no difference, or status quo. We test whether data provides sufficient evidence to reject H0 in favor of H1 (alternative)."
+  },
+  {
+    "index": 62,
+    "question": "In hypothesis testing, H1 (or Ha) represents:",
+    "options": [
+      "The null hypothesis",
+      "The alternative hypothesis (what we suspect or want to show)",
+      "Half of one",
+      "Hypothesis one",
+      "The first hypothesis we test"
+    ],
+    "correct_option": "The alternative hypothesis (what we suspect or want to show)",
+    "explanation": "H1 (or Ha) is the alternative hypothesis - what we suspect is true or are trying to show evidence for. If we reject H0, we accept H1. Examples: a drug has an effect, groups differ, etc."
+  },
+  {
+    "index": 63,
+    "question": "A Type I error (false positive) occurs when:",
+    "options": [
+      "We reject H0 when H0 is actually true",
+      "We fail to reject H0 when H0 is false",
+      "We make a typo in our calculation",
+      "We accept H1 when H1 is false",
+      "We type 'I' instead of '1'"
+    ],
+    "correct_option": "We reject H0 when H0 is actually true",
+    "explanation": "Type I error: rejecting a true null hypothesis (false positive). Like convicting an innocent person. The probability of Type I error is the significance level (alpha), typically 0.05."
+  },
+  {
+    "index": 64,
+    "question": "A Type II error (false negative) occurs when:",
+    "options": [
+      "We reject H0 when H0 is true",
+      "We fail to reject H0 when H0 is actually false",
+      "We make two typos",
+      "We reject H1 when H1 is true",
+      "We type 'II' instead of '2'"
+    ],
+    "correct_option": "We fail to reject H0 when H0 is actually false",
+    "explanation": "Type II error: failing to reject a false null hypothesis (false negative). Like acquitting a guilty person. The probability of Type II error is beta. Power = 1 - beta."
+  },
+  {
+    "index": 65,
+    "question": "Which test would you use to compare means of two independent groups?",
+    "options": [
+      "Chi-square test",
+      "Two-sample t-test",
+      "ANOVA with 50 groups",
+      "Correlation test",
+      "The test of patience"
+    ],
+    "correct_option": "Two-sample t-test",
+    "explanation": "Two-sample (independent) t-test compares means from two independent groups. Example: comparing test scores between two different classes, or treatment vs control groups."
+  },
+  {
+    "index": 66,
+    "question": "Which test would you use to compare means of more than two groups?",
+    "options": [
+      "Multiple t-tests",
+      "ANOVA (Analysis of Variance)",
+      "Chi-square test",
+      "Z-test",
+      "The group test"
+    ],
+    "correct_option": "ANOVA (Analysis of Variance)",
+    "explanation": "ANOVA tests whether means differ across 3+ groups. Using multiple t-tests inflates Type I error rate. ANOVA controls this. If ANOVA is significant, post-hoc tests identify which groups differ."
+  },
+  {
+    "index": 67,
+    "question": "The chi-square test is typically used for:",
+    "options": [
+      "Comparing means of continuous variables",
+      "Testing independence of categorical variables",
+      "Testing normality",
+      "Calculating correlation",
+      "Testing if data is square-shaped"
+    ],
+    "correct_option": "Testing independence of categorical variables",
+    "explanation": "Chi-square test examines whether two categorical variables are independent. Example: Is gender independent of preferred smartphone brand? It compares observed frequencies to expected frequencies under independence."
+  },
+  {
+    "index": 68,
+    "question": "You conduct 100 hypothesis tests, each at significance level 0.05, on data where all null hypotheses are true. How many false positives (Type I errors) do you expect?",
+    "options": [
+      "0",
+      "1",
+      "5",
+      "50",
+      "100"
+    ],
+    "correct_option": "5",
+    "explanation": "With alpha = 0.05, we expect 5% false positives. For 100 tests: 100 times 0.05 = 5 expected Type I errors. This is the multiple testing problem - corrections like Bonferroni are needed."
+  },
+  {
+    "index": 69,
+    "question": "For a distribution, if mean > median, the distribution is likely:",
+    "options": [
+      "Left-skewed (negatively skewed)",
+      "Right-skewed (positively skewed)",
+      "Symmetric",
+      "Uniform",
+      "Mean to the median"
+    ],
+    "correct_option": "Right-skewed (positively skewed)",
+    "explanation": "When mean > median, the distribution has a long right tail pulling the mean upward. Right-skewed (positive skew) has tail toward higher values. Example: income distributions."
+  },
+  {
+    "index": 70,
+    "question": "For a distribution, if mean < median, the distribution is likely:",
+    "options": [
+      "Left-skewed (negatively skewed)",
+      "Right-skewed (positively skewed)",
+      "Symmetric",
+      "Bimodal",
+      "The mean is less than friendly"
+    ],
+    "correct_option": "Left-skewed (negatively skewed)",
+    "explanation": "When mean < median, the distribution has a long left tail pulling the mean downward. Left-skewed (negative skew) has tail toward lower values. The median is more resistant to extreme values."
+  },
+  {
+    "index": 71,
+    "question": "A random variable follows uniform distribution on [0, 1]. What is its mean?",
+    "options": [
+      "0",
+      "0.25",
+      "0.5",
+      "1",
+      "Uniformly uncertain"
+    ],
+    "correct_option": "0.5",
+    "explanation": "For uniform distribution on [a, b], mean = (a + b) / 2. For [0, 1]: mean = (0 + 1) / 2 = 0.5. This is the midpoint, which makes sense for a symmetric uniform distribution."
+  },
+  {
+    "index": 72,
+    "question": "The 75th percentile minus the 25th percentile is called:",
+    "options": [
+      "The range",
+      "The interquartile range (IQR)",
+      "The standard deviation",
+      "Half the range",
+      "The percentile difference"
+    ],
+    "correct_option": "The interquartile range (IQR)",
+    "explanation": "IQR = Q3 - Q1 = 75th percentile - 25th percentile. It measures the spread of the middle 50% of data and is robust to outliers. Used in box plots and outlier detection."
+  },
+  {
+    "index": 73,
+    "question": "Which is more resistant to outliers?",
+    "options": [
+      "Mean",
+      "Median",
+      "Both equally",
+      "Neither",
+      "They both resist outliers equally badly"
+    ],
+    "correct_option": "Median",
+    "explanation": "Median is resistant (robust) to outliers because it depends only on the middle value(s), not all values. Mean uses all values, so extreme outliers can drastically shift it."
+  },
+  {
+    "index": 74,
+    "question": "A paired t-test is used when:",
+    "options": [
+      "Comparing two independent groups",
+      "Comparing before and after measurements on same subjects",
+      "Comparing more than two groups",
+      "Testing pairs of shoes",
+      "Data comes in romantic pairs"
+    ],
+    "correct_option": "Comparing before and after measurements on same subjects",
+    "explanation": "Paired t-test compares two related measurements (paired data): before/after on same subjects, left/right measurements, matched pairs. It tests whether the mean difference is zero."
+  },
+  {
+    "index": 75,
+    "question": "What does a p-value represent?",
+    "options": [
+      "The probability that H0 is true",
+      "The probability of observing data as extreme or more extreme, given H0 is true",
+      "The probability that H1 is true",
+      "The power of the test",
+      "The price value of the test"
+    ],
+    "correct_option": "The probability of observing data as extreme or more extreme, given H0 is true",
+    "explanation": "P-value is the probability of getting results as extreme as (or more extreme than) observed, assuming H0 is true. Small p-value (< 0.05) suggests data is unlikely under H0, so we reject H0."
+  },
+  {
+    "index": 76,
+    "question": "If p-value = 0.03 and significance level alpha = 0.05, we:",
+    "options": [
+      "Fail to reject H0",
+      "Reject H0",
+      "Accept H0",
+      "Need more data",
+      "Reject alpha"
+    ],
+    "correct_option": "Reject H0",
+    "explanation": "Since p-value (0.03) < alpha (0.05), we reject the null hypothesis. The data provides sufficient evidence against H0 at the 5% significance level."
+  },
+  {
+    "index": 77,
+    "question": "Increasing sample size generally:",
+    "options": [
+      "Increases p-value",
+      "Decreases p-value (more power to detect effects)",
+      "Does not affect p-value",
+      "Makes tests invalid",
+      "Increases the size of your desk"
+    ],
+    "correct_option": "Decreases p-value (more power to detect effects)",
+    "explanation": "Larger samples reduce standard error, making it easier to detect true effects (if they exist). This increases statistical power and typically decreases p-values for real effects. However, it does not affect Type I error rate (alpha)."
+  },
+  {
+    "index": 78,
+    "question": "The power of a statistical test is:",
+    "options": [
+      "The probability of Type I error",
+      "The probability of correctly rejecting a false H0",
+      "Always 0.95",
+      "The strength of your computer",
+      "1 - alpha"
+    ],
+    "correct_option": "The probability of correctly rejecting a false H0",
+    "explanation": "Power = 1 - beta = P(reject H0 | H0 is false). It is the probability of detecting an effect when it truly exists. Higher power is better - typically aim for 0.80 or higher."
+  },
+  {
+    "index": 79,
+    "question": "Confidence interval of 95% means:",
+    "options": [
+      "95% of data falls in this interval",
+      "We are 95% confident the interval contains the true parameter",
+      "The parameter has 95% probability of being in the interval",
+      "We are 95% confident in our confidence",
+      "5% of intervals are wrong"
+    ],
+    "correct_option": "We are 95% confident the interval contains the true parameter",
+    "explanation": "If we repeated sampling many times and computed 95% CIs each time, about 95% of those intervals would contain the true parameter. It is about the procedure, not the specific interval or parameter."
+  },
+  {
+    "index": 80,
+    "question": "Which increases the width of a confidence interval?",
+    "options": [
+      "Increasing sample size",
+      "Decreasing confidence level",
+      "Increasing variability in data",
+      "Using a better calculator",
+      "Widening your screen"
+    ],
+    "correct_option": "Increasing variability in data",
+    "explanation": "CI width depends on: standard error (larger variability = wider CI), confidence level (higher confidence = wider CI), and sample size (larger n = narrower CI). More variability means more uncertainty, hence wider intervals."
+  },
+  {
+    "index": 81,
+    "question": "For normal distribution, approximately what percentage of data falls within 1 standard deviation of the mean?",
+    "options": [
+      "50%",
+      "68%",
+      "95%",
+      "99.7%",
+      "One hundred percent uncertain"
+    ],
+    "correct_option": "68%",
+    "explanation": "Empirical rule (68-95-99.7): ~68% within 1 SD, ~95% within 2 SD, ~99.7% within 3 SD. This applies to normal distributions and is useful for understanding spread."
+  },
+  {
+    "index": 82,
+    "question": "For normal distribution, approximately what percentage of data falls within 2 standard deviations of the mean?",
+    "options": [
+      "68%",
+      "95%",
+      "99.7%",
+      "100%",
+      "Twice as much as 1 SD"
+    ],
+    "correct_option": "95%",
+    "explanation": "About 95% of data in a normal distribution falls within 2 standard deviations of the mean (more precisely, 1.96 SD for exactly 95%). This is the basis for many confidence intervals."
+  },
+  {
+    "index": 83,
+    "question": "The exponential distribution is often used to model:",
+    "options": [
+      "Heights of people",
+      "Time between events in a Poisson process",
+      "Exam scores",
+      "Stock prices",
+      "Exponential growth of excitement"
+    ],
+    "correct_option": "Time between events in a Poisson process",
+    "explanation": "Exponential distribution models waiting times between independent events occurring at a constant rate. If events follow Poisson distribution (counts), inter-arrival times follow exponential distribution."
+  },
+  {
+    "index": 84,
+    "question": "The binomial distribution requires:",
+    "options": [
+      "Continuous outcomes",
+      "Fixed number of independent trials with constant success probability",
+      "Normal distribution assumption",
+      "At least 30 samples",
+      "Two binomial coefficients"
+    ],
+    "correct_option": "Fixed number of independent trials with constant success probability",
+    "explanation": "Binomial requirements: (1) fixed number n of trials, (2) each trial has two outcomes (success/failure), (3) trials are independent, (4) constant probability p of success. Counts total successes."
+  },
+  {
+    "index": 85,
+    "question": "As the number of trials increases, binomial distribution approaches:",
+    "options": [
+      "Poisson distribution",
+      "Exponential distribution",
+      "Normal distribution (for fixed p not too extreme)",
+      "Uniform distribution",
+      "A very tired distribution"
+    ],
+    "correct_option": "Normal distribution (for fixed p not too extreme)",
+    "explanation": "By Central Limit Theorem, as n increases (and p is not too close to 0 or 1), binomial distribution approximates normal with mean = np and variance = np(1-p). Rule of thumb: np > 5 and n(1-p) > 5."
+  },
+  {
+    "index": 86,
+    "question": "The standard normal distribution has mean = ? and standard deviation = ?",
+    "options": [
+      "mean = 0, SD = 0",
+      "mean = 0, SD = 1",
+      "mean = 1, SD = 1",
+      "mean = 1, SD = 0",
+      "mean = normal, SD = standard"
+    ],
+    "correct_option": "mean = 0, SD = 1",
+    "explanation": "Standard normal distribution (Z-distribution) has mean = 0 and standard deviation = 1. Any normal distribution can be standardized: Z = (X - mu) / sigma."
+  },
+  {
+    "index": 87,
+    "question": "You have measurements with different precisions. The best estimate combines them using:",
+    "options": [
+      "Simple average",
+      "Median",
+      "Maximum value",
+      "Inverse variance weighting",
+      "The most precise one only"
+    ],
+    "correct_option": "Inverse variance weighting",
+    "explanation": "Inverse variance weighting (precision weighting) assigns weight proportional to 1/variance. More precise (lower variance) measurements get higher weight, giving optimal combined estimate with minimum variance."
+  },
+  {
+    "index": 88,
+    "question": "Regression to the mean describes:",
+    "options": [
+      "Everyone becomes average eventually",
+      "Extreme observations tend to be followed by more moderate ones",
+      "Mean always regresses",
+      "Getting back to average mood",
+      "The mean's tendency to regret"
+    ],
+    "correct_option": "Extreme observations tend to be followed by more moderate ones",
+    "explanation": "Regression to the mean: extreme values on first measurement tend toward the mean on second measurement due to random variation. Does not mean things become average, just that extreme fluctuations tend to moderate."
+  },
+  {
+    "index": 89,
+    "question": "Simpson's paradox occurs when:",
+    "options": [
+      "A trend appears in different groups but reverses when groups are combined",
+      "Homer Simpson does statistics",
+      "Two paradoxes happen simultaneously",
+      "The median exceeds the mean",
+      "Statistics become paradoxical"
+    ],
+    "correct_option": "A trend appears in different groups but reverses when groups are combined",
+    "explanation": "Simpson's paradox: a trend present in separate groups reverses when groups are combined. Classic example: treatment appears worse overall but is actually better within each subgroup. Lurking variables cause this."
+  },
+  {
+    "index": 90,
+    "question": "The law of large numbers states that:",
+    "options": [
+      "Large samples are always better",
+      "Sample mean converges to population mean as sample size increases",
+      "Large numbers follow different laws",
+      "Probability increases with sample size",
+      "Numbers get larger with more samples"
+    ],
+    "correct_option": "Sample mean converges to population mean as sample size increases",
+    "explanation": "Law of Large Numbers: as sample size n approaches infinity, the sample mean approaches the true population mean. This is why larger samples give better estimates (but with diminishing returns)."
+  },
+  {
+    "index": 91,
+    "question": "What does 'iid' stand for in statistics?",
+    "options": [
+      "Independent and identically distributed",
+      "Integrated inverse distribution",
+      "Individual identification data",
+      "Iterative identical design",
+      "I have no idea, indeed"
+    ],
+    "correct_option": "Independent and identically distributed",
+    "explanation": "IID means independent and identically distributed. Each observation is drawn from the same probability distribution and is independent of other observations. This is a common assumption in statistical analysis."
+  },
+  {
+    "index": 92,
+    "question": "What does MLE stand for?",
+    "options": [
+      "Mean Linear Estimate",
+      "Maximum Likelihood Estimation",
+      "Minimum Loss Error",
+      "Multiple Linear Equations",
+      "My Latest Estimate"
+    ],
+    "correct_option": "Maximum Likelihood Estimation",
+    "explanation": "MLE (Maximum Likelihood Estimation) is a method of estimating parameters by finding values that maximize the likelihood of observing the given data. It is one of the most common estimation methods."
+  },
+  {
+    "index": 93,
+    "question": "What does PDF stand for in probability theory?",
+    "options": [
+      "Portable Document Format",
+      "Probability Density Function",
+      "Prior Distribution Function",
+      "Probability Data File",
+      "Pretty Difficult Function"
+    ],
+    "correct_option": "Probability Density Function",
+    "explanation": "In probability, PDF stands for Probability Density Function, used for continuous random variables. (Although in other contexts, PDF can mean Portable Document Format!)"
+  },
+  {
+    "index": 94,
+    "question": "What does PMF stand for?",
+    "options": [
+      "Probability Mass Function",
+      "Probability Mean Function",
+      "Prior Mass Function",
+      "Posterior Mean Function",
+      "Pretty Massive Function"
+    ],
+    "correct_option": "Probability Mass Function",
+    "explanation": "PMF (Probability Mass Function) gives the probability that a discrete random variable equals each possible value. 'Mass' refers to discrete probability concentrated at specific points."
+  },
+  {
+    "index": 95,
+    "question": "What does CDF stand for?",
+    "options": [
+      "Continuous Density Function",
+      "Cumulative Distribution Function",
+      "Central Difference Function",
+      "Categorical Data Function",
+      "Caffeine Deficiency Factor"
+    ],
+    "correct_option": "Cumulative Distribution Function",
+    "explanation": "CDF (Cumulative Distribution Function) gives P(X <= x), accumulating probability from negative infinity up to x. It is defined for both discrete and continuous variables."
+  },
+  {
+    "index": 96,
+    "question": "What does RSS stand for in regression?",
+    "options": [
+      "Regression Sum of Squares",
+      "Residual Sum of Squares",
+      "Random Sample Selection",
+      "Really Simple Statistics",
+      "Root Sum Squared"
+    ],
+    "correct_option": "Residual Sum of Squares",
+    "explanation": "RSS (Residual Sum of Squares) is the sum of squared differences between observed and predicted values. It measures how well the model fits the data - smaller RSS means better fit."
+  },
+  {
+    "index": 97,
+    "question": "What does OLS stand for in regression?",
+    "options": [
+      "Optimal Linear System",
+      "Ordinary Least Squares",
+      "Observed Linear Statistics",
+      "Ordered Likelihood System",
+      "Obviously Least Significant"
+    ],
+    "correct_option": "Ordinary Least Squares",
+    "explanation": "OLS (Ordinary Least Squares) is the standard method for estimating regression coefficients by minimizing the sum of squared residuals. It provides the best linear unbiased estimator under certain conditions."
+  },
+  {
+    "index": 98,
+    "question": "In regression, R-squared measures:",
+    "options": [
+      "The correlation coefficient squared",
+      "The proportion of variance explained by the model",
+      "The number of regressors",
+      "The residual variance",
+      "How square the residuals are"
+    ],
+    "correct_option": "The proportion of variance explained by the model",
+    "explanation": "R-squared (coefficient of determination) indicates the proportion of variance in the dependent variable explained by the independent variables. Ranges from 0 to 1, where 1 means perfect fit."
+  },
+  {
+    "index": 99,
+    "question": "What is the range of R-squared in linear regression?",
+    "options": [
+      "Negative infinity to infinity",
+      "-1 to 1",
+      "0 to 1",
+      "0 to 100",
+      "Whatever feels right"
+    ],
+    "correct_option": "0 to 1",
+    "explanation": "R-squared ranges from 0 (model explains no variance) to 1 (model explains all variance). Note: adjusted R-squared can be negative, but regular R-squared cannot."
+  },
+  {
+    "index": 100,
+    "question": "What does 'homoscedasticity' mean?",
+    "options": [
+      "Constant variance of errors across all levels of independent variable",
+      "Normal distribution of errors",
+      "Independence of observations",
+      "Linear relationship",
+      "Home-based statistical education"
+    ],
+    "correct_option": "Constant variance of errors across all levels of independent variable",
+    "explanation": "Homoscedasticity means constant variance of residuals/errors across predictor values. Its opposite is heteroscedasticity (non-constant variance), which violates a key regression assumption."
+  },
+  {
+    "index": 101,
+    "question": "What does 'multicollinearity' refer to?",
+    "options": [
+      "Multiple correlations in data",
+      "High correlation among predictor variables",
+      "Multiple columns in dataset",
+      "Coloring multiple variables",
+      "Using multiple colors in plots"
+    ],
+    "correct_option": "High correlation among predictor variables",
+    "explanation": "Multicollinearity occurs when predictor variables are highly correlated with each other. This causes problems in regression: unstable coefficients, inflated standard errors, difficulty interpreting individual effects."
+  },
+  {
+    "index": 102,
+    "question": "What is 'autocorrelation'?",
+    "options": [
+      "Correlation with oneself philosophically",
+      "Correlation of a variable with itself at different time points",
+      "Automatic correlation calculation",
+      "Correlation in automobiles",
+      "Self-love in statistics"
+    ],
+    "correct_option": "Correlation of a variable with itself at different time points",
+    "explanation": "Autocorrelation (serial correlation) is correlation between values of the same variable at different times. Common in time series data. Violates independence assumption in standard regression."
+  },
+  {
+    "index": 103,
+    "question": "What does 'degrees of freedom' represent?",
+    "options": [
+      "How free your data is",
+      "Number of independent pieces of information available to estimate parameters",
+      "The freedom to choose any distribution",
+      "Number of variables in dataset",
+      "Political freedom index"
+    ],
+    "correct_option": "Number of independent pieces of information available to estimate parameters",
+    "explanation": "Degrees of freedom (df) is the number of independent values that can vary in analysis. Generally: df = n - number of estimated parameters. Critical for t-distributions, chi-square, F-distributions."
+  },
+  {
+    "index": 104,
+    "question": "What is a 'residual' in regression?",
+    "options": [
+      "What remains after eating",
+      "The difference between observed and predicted values",
+      "The slope coefficient",
+      "The intercept",
+      "Leftover data points"
+    ],
+    "correct_option": "The difference between observed and predicted values",
+    "explanation": "Residual = observed value - predicted value = y - y_hat. Residuals represent the error or unexplained variation. Analyzing residuals helps check model assumptions."
+  },
+  {
+    "index": 105,
+    "question": "The 'intercept' in linear regression represents:",
+    "options": [
+      "The slope of the line",
+      "The predicted value when all predictors equal zero",
+      "Where lines intercept each other",
+      "The correlation coefficient",
+      "When to intercept the data"
+    ],
+    "correct_option": "The predicted value when all predictors equal zero",
+    "explanation": "The intercept (beta_0 or b_0) is the expected value of y when all x variables equal zero. In y = b_0 + b_1*x, b_0 is the y-intercept."
+  },
+  {
+    "index": 106,
+    "question": "What is 'overfitting' in modeling?",
+    "options": [
+      "Model is too large to fit in memory",
+      "Model fits training data too well, performing poorly on new data",
+      "Wearing clothes that are too tight while modeling",
+      "Model has too few parameters",
+      "Fitting too many models"
+    ],
+    "correct_option": "Model fits training data too well, performing poorly on new data",
+    "explanation": "Overfitting occurs when a model learns noise and specific patterns in training data, failing to generalize to new data. Results from too many parameters relative to data. Leads to high variance."
+  },
+  {
+    "index": 107,
+    "question": "What is 'underfitting' in modeling?",
+    "options": [
+      "Model does not fit in memory",
+      "Model is too simple to capture underlying patterns",
+      "Wearing loose clothes while modeling",
+      "Model has too many parameters",
+      "Not enough fitting attempts"
+    ],
+    "correct_option": "Model is too simple to capture underlying patterns",
+    "explanation": "Underfitting occurs when model is too simple to capture the true relationship in data. Results in poor performance on both training and test data. Leads to high bias."
+  },
+  {
+    "index": 108,
+    "question": "What is the 'bias-variance tradeoff'?",
+    "options": [
+      "Trading bias for variance in the stock market",
+      "Balancing model complexity: simpler models have high bias, complex models have high variance",
+      "Choosing between biased and variable data",
+      "A prejudice against variance",
+      "The price of bias in variance units"
+    ],
+    "correct_option": "Balancing model complexity: simpler models have high bias, complex models have high variance",
+    "explanation": "Bias-variance tradeoff: simple models underfit (high bias, low variance), complex models overfit (low bias, high variance). Optimal model balances both to minimize total error. MSE = Bias^2 + Variance."
+  },
+  {
+    "index": 109,
+    "question": "What is 'cross-validation' used for?",
+    "options": [
+      "Validating data twice",
+      "Assessing how model generalizes to independent dataset",
+      "Crossing out invalid data",
+      "Validating across different countries",
+      "Making sure validators agree"
+    ],
+    "correct_option": "Assessing how model generalizes to independent dataset",
+    "explanation": "Cross-validation splits data into training and validation sets to test model performance on unseen data. K-fold CV repeats this k times. Helps detect overfitting and select models."
+  },
+  {
+    "index": 110,
+    "question": "In k-fold cross-validation with k=5, how many times is the model trained?",
+    "options": [
+      "1",
+      "4",
+      "5",
+      "5 factorial",
+      "Until it learns"
+    ],
+    "correct_option": "5",
+    "explanation": "In 5-fold CV, data is split into 5 parts. Model is trained 5 times, each time using 4 parts for training and 1 part for validation. Final performance is averaged over the 5 iterations."
+  },
+  {
+    "index": 111,
+    "question": "What is a 'confusion matrix' used for?",
+    "options": [
+      "When you are confused about matrices",
+      "Evaluating classification model performance",
+      "Matrix multiplication errors",
+      "Confusing the data",
+      "A matrix that causes confusion"
+    ],
+    "correct_option": "Evaluating classification model performance",
+    "explanation": "Confusion matrix shows counts of true positives, true negatives, false positives, and false negatives. Used to calculate metrics like accuracy, precision, recall, F1-score for classification models."
+  },
+  {
+    "index": 112,
+    "question": "What is 'precision' in classification?",
+    "options": [
+      "How precise the measurements are",
+      "TP / (TP + FP) - proportion of positive predictions that are correct",
+      "How many decimals to use",
+      "The exactness of the model",
+      "Being very precise about predictions"
+    ],
+    "correct_option": "TP / (TP + FP) - proportion of positive predictions that are correct",
+    "explanation": "Precision = True Positives / (True Positives + False Positives). Of all cases predicted as positive, what proportion actually are positive? High precision means few false alarms."
+  },
+  {
+    "index": 113,
+    "question": "What is 'recall' (sensitivity) in classification?",
+    "options": [
+      "How well you remember the data",
+      "TP / (TP + FN) - proportion of actual positives correctly identified",
+      "Calling back predictions",
+      "Recalling the model",
+      "Memory of the algorithm"
+    ],
+    "correct_option": "TP / (TP + FN) - proportion of actual positives correctly identified",
+    "explanation": "Recall (Sensitivity, True Positive Rate) = True Positives / (True Positives + False Negatives). Of all actual positive cases, what proportion did we identify? High recall means few missed cases."
+  },
+  {
+    "index": 114,
+    "question": "What is the F1-score?",
+    "options": [
+      "The score on Formula 1 racing statistics",
+      "Harmonic mean of precision and recall",
+      "The first score in a sequence",
+      "Accuracy times 100",
+      "F for Fantastic score"
+    ],
+    "correct_option": "Harmonic mean of precision and recall",
+    "explanation": "F1-score = 2 * (Precision * Recall) / (Precision + Recall). It balances precision and recall into a single metric. Useful when you need to find optimal balance between them. Range: 0 to 1."
+  },
+  {
+    "index": 115,
+    "question": "What is 'specificity' in classification?",
+    "options": [
+      "How specific the model is",
+      "TN / (TN + FP) - proportion of actual negatives correctly identified",
+      "Being very detailed",
+      "Opposite of generality",
+      "How specific predictions are"
+    ],
+    "correct_option": "TN / (TN + FP) - proportion of actual negatives correctly identified",
+    "explanation": "Specificity (True Negative Rate) = True Negatives / (True Negatives + False Positives). Of all actual negative cases, what proportion did we correctly identify as negative? Complements sensitivity."
+  },
+  {
+    "index": 116,
+    "question": "What is 'AUC-ROC'?",
+    "options": [
+      "Area Under Curve of Receiver Operating Characteristic",
+      "A rock that operates receivers",
+      "Average Uncertainty Classification",
+      "Automated Classification",
+      "A unit of classification"
+    ],
+    "correct_option": "Area Under Curve of Receiver Operating Characteristic",
+    "explanation": "AUC-ROC measures classifier performance across all classification thresholds. ROC plots True Positive Rate vs False Positive Rate. AUC = 0.5 means random, AUC = 1.0 means perfect classifier."
+  },
+  {
+    "index": 117,
+    "question": "What does 'stratified sampling' mean?",
+    "options": [
+      "Sampling in layers or strata",
+      "Dividing population into subgroups and sampling from each proportionally",
+      "Sampling strategies",
+      "Strategic sampling",
+      "Sampling with replacement"
+    ],
+    "correct_option": "Dividing population into subgroups and sampling from each proportionally",
+    "explanation": "Stratified sampling divides population into homogeneous subgroups (strata) and samples from each stratum. Ensures representation of all subgroups. Often more precise than simple random sampling."
+  },
+  {
+    "index": 118,
+    "question": "What is 'bootstrapping' in statistics?",
+    "options": [
+      "Pulling oneself up by bootstraps philosophically",
+      "Resampling with replacement to estimate sampling distribution",
+      "The initial startup of statistical software",
+      "Wearing boots while sampling",
+      "Bootstrap method for computers"
+    ],
+    "correct_option": "Resampling with replacement to estimate sampling distribution",
+    "explanation": "Bootstrapping repeatedly resamples (with replacement) from observed data to create many simulated samples. Used to estimate standard errors, confidence intervals, and test statistics when theoretical distributions are unknown."
+  },
+  {
+    "index": 119,
+    "question": "What is a 'sampling distribution'?",
+    "options": [
+      "How samples are distributed geographically",
+      "Distribution of a statistic over all possible samples",
+      "The distribution of the original sample",
+      "How to distribute samples",
+      "Sample distribution function"
+    ],
+    "correct_option": "Distribution of a statistic over all possible samples",
+    "explanation": "Sampling distribution is the probability distribution of a statistic (like sample mean) calculated from all possible samples of size n. Central to inferential statistics. CLT describes sampling distribution of the mean."
+  },
+  {
+    "index": 120,
+    "question": "What is 'statistical significance'?",
+    "options": [
+      "How important statistics are",
+      "Result is unlikely to have occurred by chance alone",
+      "Significance level alpha",
+      "p-value less than 0.05",
+      "When statistics matter significantly"
+    ],
+    "correct_option": "Result is unlikely to have occurred by chance alone",
+    "explanation": "Statistically significant means the observed effect is unlikely under the null hypothesis (typically p < 0.05). Important: statistical significance does not mean practical significance or large effect size!"
+  },
+  {
+    "index": 121,
+    "question": "What is 'effect size'?",
+    "options": [
+      "How large the effect looks",
+      "Quantitative measure of the magnitude of a phenomenon",
+      "The size of your dataset",
+      "The p-value",
+      "How effective the size is"
+    ],
+    "correct_option": "Quantitative measure of the magnitude of a phenomenon",
+    "explanation": "Effect size measures the magnitude of difference or relationship, independent of sample size. Examples: Cohen's d, correlation coefficient. Unlike p-values, effect sizes indicate practical significance."
+  },
+  {
+    "index": 122,
+    "question": "What is Cohen's d?",
+    "options": [
+      "A type of vitamin D",
+      "Standardized measure of effect size for difference between two means",
+      "Cohen's distribution",
+      "A statistical test",
+      "The d in standard deviation"
+    ],
+    "correct_option": "Standardized measure of effect size for difference between two means",
+    "explanation": "Cohen's d = (mean1 - mean2) / pooled standard deviation. Measures effect size in standard deviation units. Rule of thumb: d=0.2 small, d=0.5 medium, d=0.8 large effect."
+  },
+  {
+    "index": 123,
+    "question": "What is a 'lurking variable'?",
+    "options": [
+      "A variable hiding in your data",
+      "An unmeasured variable that influences both predictor and outcome",
+      "A variable you forgot about",
+      "A scary statistical concept",
+      "Variables that lurk in the shadows"
+    ],
+    "correct_option": "An unmeasured variable that influences both predictor and outcome",
+    "explanation": "Lurking (confounding) variable affects both the independent and dependent variables, creating spurious correlation. Example: ice cream sales and drownings both influenced by temperature (lurking variable)."
+  },
+  {
+    "index": 124,
+    "question": "What is a 'dummy variable'?",
+    "options": [
+      "A variable for dummies",
+      "A binary variable representing categorical data",
+      "A fake variable",
+      "A placeholder variable",
+      "Variables that don't talk"
+    ],
+    "correct_option": "A binary variable representing categorical data",
+    "explanation": "Dummy variable (indicator variable) is binary (0 or 1) representing presence/absence of a categorical attribute. For k categories, use k-1 dummy variables to avoid multicollinearity (dummy variable trap)."
+  },
+  {
+    "index": 125,
+    "question": "What is 'interaction effect'?",
+    "options": [
+      "How variables interact socially",
+      "When effect of one variable depends on level of another variable",
+      "Social effects in data",
+      "Interaction between researcher and data",
+      "Variables talking to each other"
+    ],
+    "correct_option": "When effect of one variable depends on level of another variable",
+    "explanation": "Interaction effect occurs when the relationship between predictor X1 and outcome Y changes depending on the value of another predictor X2. Represented in regression as X1*X2 term."
+  },
+  {
+    "index": 126,
+    "question": "What is 'heterogeneity'?",
+    "options": [
+      "Being different or diverse",
+      "Variability in effects across different subgroups or studies",
+      "Genetic diversity",
+      "A type of distribution",
+      "Opposite of homogeneity"
+    ],
+    "correct_option": "Variability in effects across different subgroups or studies",
+    "explanation": "Heterogeneity refers to variability or differences. In meta-analysis, it measures inconsistency of effects across studies. In data, it refers to non-uniform characteristics across observations."
+  },
+  {
+    "index": 127,
+    "question": "What does 'parameter' mean in statistics?",
+    "options": [
+      "A measurement around the perimeter",
+      "A numerical characteristic of a population",
+      "A variable in a model",
+      "Something you set before analysis",
+      "The boundary of acceptable values"
+    ],
+    "correct_option": "A numerical characteristic of a population",
+    "explanation": "A parameter is a fixed (usually unknown) characteristic of a population, like population mean (mu) or standard deviation (sigma). We use statistics from samples to estimate parameters."
+  },
+  {
+    "index": 128,
+    "question": "What does 'statistic' mean (as a noun)?",
+    "options": [
+      "The field of statistics",
+      "A numerical characteristic calculated from sample data",
+      "A single data point",
+      "Any number in statistics",
+      "Something that is static"
+    ],
+    "correct_option": "A numerical characteristic calculated from sample data",
+    "explanation": "A statistic is a value calculated from sample data, like sample mean (x-bar) or sample standard deviation (s). Statistics are used to estimate population parameters. They vary from sample to sample."
+  },
+  {
+    "index": 129,
+    "question": "What is 'kurtosis'?",
+    "options": [
+      "A disease affecting distributions",
+      "A measure of the tailedness of a distribution",
+      "The curtness of statistical answers",
+      "Peak height of a distribution",
+      "A Greek statistical method"
+    ],
+    "correct_option": "A measure of the tailedness of a distribution",
+    "explanation": "Kurtosis measures tail heaviness and peakedness. High kurtosis (leptokurtic) means heavy tails and sharp peak. Low kurtosis (platykurtic) means light tails and flat peak. Normal distribution has kurtosis = 3 (excess kurtosis = 0)."
+  },
+  {
+    "index": 130,
+    "question": "What does 'leptokurtic' mean?",
+    "options": [
+      "A type of ancient statistics",
+      "Distribution with heavy tails and sharp peak (high kurtosis)",
+      "A leaping distribution",
+      "Left-tailed distribution",
+      "Lepto means seven in Greek"
+    ],
+    "correct_option": "Distribution with heavy tails and sharp peak (high kurtosis)",
+    "explanation": "Leptokurtic distribution has kurtosis > 3 (excess kurtosis > 0). Characterized by heavy tails (more outliers) and a sharp central peak. Example: t-distribution with low degrees of freedom."
+  },
+  {
+    "index": 131,
+    "question": "What does 'platykurtic' mean?",
+    "options": [
+      "A plateau-shaped distribution",
+      "Distribution with light tails and flat peak (low kurtosis)",
+      "A flat distribution",
+      "Platy means plate-like",
+      "Distribution on a plateau"
+    ],
+    "correct_option": "Distribution with light tails and flat peak (low kurtosis)",
+    "explanation": "Platykurtic distribution has kurtosis < 3 (excess kurtosis < 0). Characterized by light tails (fewer outliers) and a flat peak. Uniform distribution is an extreme example."
+  },
+  {
+    "index": 132,
+    "question": "What is 'mesokurtic'?",
+    "options": [
+      "Middle-aged kurtosis",
+      "Distribution with kurtosis similar to normal distribution",
+      "A mixed distribution",
+      "Meso means medium",
+      "A Mediterranean distribution"
+    ],
+    "correct_option": "Distribution with kurtosis similar to normal distribution",
+    "explanation": "Mesokurtic distribution has kurtosis \u2248 3 (excess kurtosis \u2248 0), like the normal distribution. It represents the middle ground between leptokurtic and platykurtic distributions."
+  },
+  {
+    "index": 133,
+    "question": "What is a 'quantile'?",
+    "options": [
+      "A small quantum",
+      "A value below which a given proportion of observations fall",
+      "A type of quartile",
+      "Quantitative tile",
+      "A measurable quantity"
+    ],
+    "correct_option": "A value below which a given proportion of observations fall",
+    "explanation": "Quantile is a cut point dividing a probability distribution. The p-quantile is the value below which proportion p of observations fall. Special cases: quartiles (0.25, 0.5, 0.75), percentiles (0.01, 0.02, ...)."
+  },
+  {
+    "index": 134,
+    "question": "What property must a valid probability distribution satisfy?",
+    "options": [
+      "All probabilities must be equal",
+      "Probabilities must sum or integrate to 1",
+      "It must be normal",
+      "It must be symmetric",
+      "It must have mean = 0"
+    ],
+    "correct_option": "Probabilities must sum or integrate to 1",
+    "explanation": "A valid probability distribution must satisfy: (1) all probabilities are non-negative, and (2) sum (discrete) or integral (continuous) of all probabilities equals 1. This ensures total probability is 1."
+  },
+  {
+    "index": 135,
+    "question": "For independent events A and B, P(A and B) equals:",
+    "options": [
+      "P(A) + P(B)",
+      "P(A) * P(B)",
+      "P(A | B)",
+      "P(A or B)",
+      "Cannot be determined"
+    ],
+    "correct_option": "P(A) * P(B)",
+    "explanation": "For independent events, P(A and B) = P(A) * P(B). Independence means occurrence of one event does not affect probability of the other. This is the multiplication rule for independent events."
+  },
+  {
+    "index": 136,
+    "question": "For mutually exclusive events A and B, P(A and B) equals:",
+    "options": [
+      "P(A) + P(B)",
+      "P(A) * P(B)",
+      "0 (zero)",
+      "1",
+      "P(A | B)"
+    ],
+    "correct_option": "0 (zero)",
+    "explanation": "Mutually exclusive (disjoint) events cannot occur together, so P(A and B) = 0. If one happens, the other cannot. Example: getting heads and tails on a single coin flip."
+  },
+  {
+    "index": 137,
+    "question": "What is the complement rule in probability?",
+    "options": [
+      "P(A) + P(not A) = 1",
+      "P(A) = 1 - P(not A)",
+      "Both above statements",
+      "Complimenting good probability",
+      "P(not A) = P(A)"
+    ],
+    "correct_option": "Both above statements",
+    "explanation": "Complement rule: P(not A) = 1 - P(A), or equivalently P(A) + P(not A) = 1. The probability of an event and its complement must sum to 1. Very useful for calculating probabilities."
+  },
+  {
+    "index": 138,
+    "question": "What is a 'moment' in statistics?",
+    "options": [
+      "A brief period of time in analysis",
+      "Expected value of powers of a random variable",
+      "The moment of discovery",
+      "A momentary statistic",
+      "When statistics become important"
+    ],
+    "correct_option": "Expected value of powers of a random variable",
+    "explanation": "The k-th moment is E(X^k). First moment = mean, second central moment = variance, third central moment relates to skewness, fourth to kurtosis. Moments characterize distribution shape."
+  },
+  {
+    "index": 139,
+    "question": "What is the 'mode' of a distribution?",
+    "options": [
+      "The average value",
+      "The most frequently occurring value or peak",
+      "The middle value",
+      "The method of analysis",
+      "The fashionable value"
+    ],
+    "correct_option": "The most frequently occurring value or peak",
+    "explanation": "Mode is the value that appears most frequently (discrete) or the peak of the distribution (continuous). A distribution can be unimodal (one peak), bimodal (two peaks), or multimodal."
+  },
+  {
+    "index": 140,
+    "question": "What is a 'bimodal distribution'?",
+    "options": [
+      "A distribution with two modes or peaks",
+      "Distribution of two variables",
+      "Modal distribution twice",
+      "A binary distribution",
+      "Distribution using two methods"
+    ],
+    "correct_option": "A distribution with two modes or peaks",
+    "explanation": "Bimodal distribution has two distinct peaks or modes. Often indicates mixture of two different populations. Example: distribution of heights combining men and women would show two peaks."
+  },
+  {
+    "index": 141,
+    "question": "What does 'ergodic' mean?",
+    "options": [
+      "Related to energy",
+      "Time average equals ensemble average",
+      "A type of periodic behavior",
+      "Ergonomic statistics",
+      "Greek for 'good work'"
+    ],
+    "correct_option": "Time average equals ensemble average",
+    "explanation": "An ergodic system has the property that time averages equal ensemble averages. One long observation of a single system is equivalent to observing many systems at one time. Important in statistical mechanics and time series."
+  },
+  {
+    "index": 142,
+    "question": "What is 'stationarity' in time series?",
+    "options": [
+      "The series stays in one location",
+      "Statistical properties do not change over time",
+      "The series is not moving",
+      "Standing still",
+      "Stationary office supplies"
+    ],
+    "correct_option": "Statistical properties do not change over time",
+    "explanation": "A stationary time series has constant mean, variance, and autocorrelation structure over time. Most time series methods assume or require stationarity. Non-stationary series may need differencing or detrending."
+  },
+  {
+    "index": 143,
+    "question": "What is 'white noise' in time series?",
+    "options": [
+      "Noise that is white in color",
+      "Sequence of uncorrelated random variables with zero mean and constant variance",
+      "Background noise",
+      "Noise from white sources",
+      "Statistical snow"
+    ],
+    "correct_option": "Sequence of uncorrelated random variables with zero mean and constant variance",
+    "explanation": "White noise is a random sequence where each value is independent, has zero mean, and constant variance. It represents pure randomness with no pattern. Residuals in good time series models should resemble white noise."
+  },
+  {
+    "index": 144,
+    "question": "What is 'heteroscedasticity'?",
+    "options": [
+      "Different types of schedules",
+      "Non-constant variance of errors across observations",
+      "Diverse data sources",
+      "Multiple scales",
+      "Hetero means different, schedule means timing"
+    ],
+    "correct_option": "Non-constant variance of errors across observations",
+    "explanation": "Heteroscedasticity means error variance changes across predictor values (opposite of homoscedasticity). Common in real data. Violates regression assumptions. Can use weighted least squares or robust standard errors."
+  },
+  {
+    "index": 145,
+    "question": "What is the 'likelihood function'?",
+    "options": [
+      "How likely something is",
+      "Probability of observed data as function of parameters",
+      "The function of likelihood",
+      "A likable function",
+      "Functional likelihood"
+    ],
+    "correct_option": "Probability of observed data as function of parameters",
+    "explanation": "Likelihood function L(theta | data) gives probability of observing the data for different parameter values theta. Maximum Likelihood Estimation finds theta that maximizes L. Note: likelihood is not a probability distribution over theta."
+  },
+  {
+    "index": 146,
+    "question": "What is a 'prior distribution' in Bayesian statistics?",
+    "options": [
+      "The distribution before analysis",
+      "Initial beliefs about parameters before seeing data",
+      "The previous distribution",
+      "Distribution with priority",
+      "Distribution from prior studies"
+    ],
+    "correct_option": "Initial beliefs about parameters before seeing data",
+    "explanation": "Prior distribution represents initial beliefs or knowledge about parameters before observing data. Combined with data (likelihood) via Bayes' theorem to get posterior distribution. Can be informative or non-informative."
+  },
+  {
+    "index": 147,
+    "question": "What is a 'posterior distribution' in Bayesian statistics?",
+    "options": [
+      "The distribution behind everything",
+      "Updated beliefs about parameters after seeing data",
+      "The final distribution",
+      "Distribution at the posterior",
+      "Distribution after the prior"
+    ],
+    "correct_option": "Updated beliefs about parameters after seeing data",
+    "explanation": "Posterior distribution represents updated beliefs about parameters after observing data. Calculated using Bayes' theorem: Posterior proportional to Likelihood times Prior. It combines prior knowledge with observed evidence."
+  },
+  {
+    "index": 148,
+    "question": "What is a 'credible interval' in Bayesian statistics?",
+    "options": [
+      "An interval you can believe",
+      "An interval containing parameter with specified posterior probability",
+      "A believable confidence interval",
+      "An interval with credibility",
+      "Incredible intervals"
+    ],
+    "correct_option": "An interval containing parameter with specified posterior probability",
+    "explanation": "A 95% credible intervalcontains the true parameter with 95% probability (given the data and prior). Different interpretation than frequentist confidence interval. More intuitive: direct probability statement about parameter."
+  },
+  {
+    "index": 149,
+    "question": "What does 'conjugate prior' mean in Bayesian statistics?",
+    "options": [
+      "Married priors",
+      "Prior and posterior are in same distribution family",
+      "Connected priors",
+      "Priors that conjugate verbs",
+      "Grammatically correct priors"
+    ],
+    "correct_option": "Prior and posterior are in same distribution family",
+    "explanation": "Conjugate prior: when combined with likelihood, produces posterior in same distribution family as prior. Makes calculations easier. Example: Beta prior with Binomial likelihood gives Beta posterior."
+  },
+  {
+    "index": 150,
+    "question": "What is 'Markov Chain Monte Carlo (MCMC)'?",
+    "options": [
+      "A chain named after Markov in Monte Carlo",
+      "Computational method for sampling from complex probability distributions",
+      "Monte Carlo simulations in chains",
+      "A Markov chain in Monaco",
+      "Chaining multiple Monte Carlos"
+    ],
+    "correct_option": "Computational method for sampling from complex probability distributions",
+    "explanation": "MCMC uses Markov chains to sample from complex probability distributions (especially posteriors in Bayesian analysis). Algorithms like Metropolis-Hastings and Gibbs sampling allow inference when direct calculation is intractable."
+  },
+  {
+    "index": 151,
+    "question": "You flip a fair coin 10 times and get 10 heads. What is the probability of getting heads on the 11th flip?",
+    "options": [
+      "Much less than 0.5 (tails is due)",
+      "Exactly 0.5",
+      "Much more than 0.5 (hot streak continues)",
+      "Depends on the coin's mood",
+      "Zero, the coin is broken"
+    ],
+    "correct_option": "Exactly 0.5",
+    "explanation": "This tests the gambler's fallacy. Each flip is independent - the coin has no memory. Past results do not affect future flips. The probability remains 0.5 regardless of previous outcomes."
+  },
+  {
+    "index": 152,
+    "question": "A test for a rare disease (1% prevalence) is 99% accurate. You test positive. What is the approximate probability you actually have the disease?",
+    "options": [
+      "99%",
+      "Around 50%",
+      "Around 9-10%",
+      "1%",
+      "Definitely diseased"
+    ],
+    "correct_option": "Around 9-10%",
+    "explanation": "This is a classic Bayes' theorem problem showing base rate neglect. With 1% prevalence and 99% accuracy, most positives are false positives! Out of 10,000 people: 100 have disease (99 test positive), 9,900 don't (99 test positive as false positives). So 99/(99+99) \u2248 50%, but accounting for specificity gives ~9-10%."
+  },
+  {
+    "index": 153,
+    "question": "You are on a game show. Behind one of three doors is a car, behind the others are goats. You pick door 1. The host (who knows what's behind each door) opens door 3, revealing a goat. Should you switch to door 2?",
+    "options": [
+      "No, it's 50-50 now",
+      "Yes, switching gives 2/3 probability of winning",
+      "Doesn't matter",
+      "Depends on if you like goats",
+      "Switch only if you really want the car"
+    ],
+    "correct_option": "Yes, switching gives 2/3 probability of winning",
+    "explanation": "The Monty Hall problem! Initially, you had 1/3 chance. The host's action (always revealing a goat from the non-chosen doors) gives you information. If you switch, you win whenever your initial choice was wrong (2/3 of the time). Staying wins only if your initial choice was right (1/3)."
+  },
+  {
+    "index": 154,
+    "question": "A city has 100,000 people. 1,000 are criminals. A surveillance system correctly identifies criminals 90% of the time and incorrectly flags innocents 1% of the time. You are flagged. What is the approximate probability you are a criminal?",
+    "options": [
+      "90%",
+      "50%",
+      "Less than 10%",
+      "1%",
+      "Definitely a criminal"
+    ],
+    "correct_option": "Less than 10%",
+    "explanation": "Base rate problem! Criminals flagged: 1,000 \u00d7 0.9 = 900. Innocents flagged: 99,000 \u00d7 0.01 = 990. Total flagged: 1,890. P(criminal | flagged) = 900/1,890 \u2248 47.6%. Even with 90% accuracy, most flagged people are innocent due to the base rate!"
+  },
+  {
+    "index": 155,
+    "question": "Two groups have the same mean test score (75). Group A scores: 74, 75, 76. Group B scores: 0, 75, 150. Which statement is most accurate?",
+    "options": [
+      "The groups performed identically",
+      "Mean tells the full story",
+      "Group B has much higher variance, mean alone is misleading",
+      "Group A is better because scores are realistic",
+      "Both groups are average"
+    ],
+    "correct_option": "Group B has much higher variance, mean alone is misleading",
+    "explanation": "This shows why mean alone is insufficient. Both have mean 75, but Group B has extreme variance. Mean is pulled by outliers while most of Group B scored very differently. Always consider spread and distribution shape, not just central tendency."
+  },
+  {
+    "index": 156,
+    "question": "A researcher tests 20 different hypotheses at alpha = 0.05. None are true. How many false positives (Type I errors) should they expect?",
+    "options": [
+      "0",
+      "1",
+      "5",
+      "10",
+      "20"
+    ],
+    "correct_option": "1",
+    "explanation": "With alpha = 0.05 and 20 tests, expected false positives = 20 \u00d7 0.05 = 1. This is the multiple comparisons problem. Testing many hypotheses inflates overall Type I error rate. Corrections like Bonferroni adjust for this."
+  },
+  {
+    "index": 157,
+    "question": "Countries with more chocolate consumption have more Nobel Prize winners per capita. Therefore:",
+    "options": [
+      "Eating chocolate causes Nobel Prizes",
+      "Nobel Prizes cause chocolate consumption",
+      "A third variable (like wealth or education) likely affects both",
+      "This is purely coincidental",
+      "Chocolate contains Nobel Prize molecules"
+    ],
+    "correct_option": "A third variable (like wealth or education) likely affects both",
+    "explanation": "Classic spurious correlation! Wealthy, educated countries both consume more chocolate AND invest more in science/education, producing more laureates. The correlation is real but not causal. Never conclude causation from correlation alone."
+  },
+  {
+    "index": 158,
+    "question": "A study finds that people who take vitamin C have fewer colds. Does vitamin C prevent colds?",
+    "options": [
+      "Yes, definitely",
+      "Yes, the study proves it",
+      "Not necessarily - people who take vitamins might be more health-conscious overall",
+      "No, vitamins don't work",
+      "Only if taken on Tuesdays"
+    ],
+    "correct_option": "Not necessarily - people who take vitamins might be more health-conscious overall",
+    "explanation": "This is an observational study with potential confounding. Vitamin-takers might exercise more, eat better, wash hands more, etc. These confounders could explain fewer colds. Only randomized controlled trials can establish causation by controlling for confounders."
+  },
+  {
+    "index": 159,
+    "question": "You have two job offers. Company A: salary is 50k, everyone makes 50k. Company B: salary is 60k, but average is 200k (a few executives make millions). Where do you earn more?",
+    "options": [
+      "Company A",
+      "Company B",
+      "Same amount",
+      "Need more information",
+      "At Company B you are richer because average is higher"
+    ],
+    "correct_option": "Company B",
+    "explanation": "You earn 60k at B vs 50k at A, so B pays more. But this tests understanding of how means can be misleading. At B, you are below average (due to outliers pulling mean up), while at A you are average. Your actual salary matters, not position relative to mean!"
+  },
+  {
+    "index": 160,
+    "question": "A basketball player makes 5 shots in a row. Commentator says 'He has a hot hand!' Is this evidence of a real hot hand effect?",
+    "options": [
+      "Yes, clearly on a streak",
+      "No, random sequences naturally have clusters",
+      "Yes, probability of 5 in a row is low",
+      "Only if he continues",
+      "Hot hands are scientifically proven"
+    ],
+    "correct_option": "No, random sequences naturally have clusters",
+    "explanation": "Humans see patterns in randomness. Even with constant 50% shooting, streaks of 5 occur regularly by chance. We must compare observed streak frequency to what randomness predicts. Most 'hot hand' observations are pattern recognition bias, though some debate continues."
+  },
+  {
+    "index": 161,
+    "question": "Study A (n=10): drug effect significant (p=0.04). Study B (n=10,000): same drug, effect significant (p=0.04). Which is more convincing?",
+    "options": [
+      "Study A, found it with less data",
+      "Study B, larger sample is more reliable",
+      "Both equally - same p-value",
+      "Study A, more efficient",
+      "Neither, p-values are meaningless"
+    ],
+    "correct_option": "Study B, larger sample is more reliable",
+    "explanation": "Same p-value with larger sample means: (1) more precise estimate, (2) narrower confidence interval, (3) more likely to replicate, (4) less influenced by outliers. Study B's finding is more robust and trustworthy, even with identical p-value."
+  },
+  {
+    "index": 162,
+    "question": "Two drugs both reduce symptoms by 20%. Drug A reduces symptoms from 60% to 40%. Drug B reduces from 10% to 8%. Which sounds more impressive?",
+    "options": [
+      "Drug A - absolute reduction is larger",
+      "Drug B - relative reduction is same",
+      "Both exactly the same",
+      "Drug A because 60% is bigger",
+      "Drug B because it is harder to reduce already low rates"
+    ],
+    "correct_option": "Drug A - absolute reduction is larger",
+    "explanation": "Both have 20% relative reduction, but absolute reductions differ: A helps 20% of patients, B helps 2%. Absolute risk reduction matters more for clinical significance. Relative risk often used in marketing to make small effects seem large. Always ask: what is the absolute difference?"
+  },
+  {
+    "index": 163,
+    "question": "You read: '90% of dentists recommend this toothpaste!' Should you be impressed?",
+    "options": [
+      "Yes, overwhelming majority",
+      "No - what was the question asked?",
+      "Yes, dentists are experts",
+      "No, only if 100%",
+      "Depends on the toothpaste brand"
+    ],
+    "correct_option": "No - what was the question asked?",
+    "explanation": "Critical question: did they ask 'Would you recommend this?' or 'Would you recommend this OR any toothpaste?' If latter, 90% means little. Also: sample size, who funded study, which dentists asked? Statistics can mislead when context is hidden."
+  },
+  {
+    "index": 164,
+    "question": "Average human has slightly less than 2 legs. This statement is:",
+    "options": [
+      "False, humans have exactly 2 legs",
+      "True, due to amputations and birth defects",
+      "False, you cannot have fractional legs",
+      "True, evolution is reducing leg count",
+      "A trick question about averages"
+    ],
+    "correct_option": "True, due to amputations and birth defects",
+    "explanation": "Technically true! Some people have 0 or 1 leg (amputations, birth defects), no one has 3+. So population mean is slightly below 2.0. This shows that average is not always a typical value, and highlights importance of understanding what statistics actually measure."
+  },
+  {
+    "index": 165,
+    "question": "A treatment has p-value = 0.049 (just significant). Researcher runs study again, gets p = 0.051 (just not significant). What likely happened?",
+    "options": [
+      "The treatment stopped working",
+      "Results are contradictory",
+      "Random sampling variation - both are near the boundary",
+      "One study is wrong",
+      "P-values are unreliable"
+    ],
+    "correct_option": "Random sampling variation - both are near the boundary",
+    "explanation": "P-values near 0.05 boundary are unstable and sensitive to sampling variation. The dichotomy (significant vs not) at 0.05 is arbitrary. Both results suggest weak evidence. Better to report effect sizes and confidence intervals rather than obsess over p < 0.05 threshold."
+  },
+  {
+    "index": 166,
+    "question": "Hospital A has 90% surgery success rate (100 surgeries). Hospital B has 85% success rate (1000 surgeries). Which would you choose?",
+    "options": [
+      "A, higher success rate",
+      "B, much larger sample gives more reliable estimate",
+      "A, they are clearly better",
+      "Doesn't matter, both are good",
+      "Flip a coin"
+    ],
+    "correct_option": "B, much larger sample gives more reliable estimate",
+    "explanation": "Hospital A's rate could easily be luck with small sample. B's rate is based on 10x more data, so more reliable. Also, B might handle harder cases (selection bias). The 5% difference could be random variation. Larger samples give more stable estimates of true quality."
+  },
+  {
+    "index": 167,
+    "question": "A survey finds 70% support a policy, margin of error \u00b13%. The true support is most likely:",
+    "options": [
+      "Exactly 70%",
+      "Between 67% and 73%",
+      "Could be anywhere from 0% to 100%",
+      "At least 70%",
+      "Margin of error means nothing"
+    ],
+    "correct_option": "Between 67% and 73%",
+    "explanation": "Margin of error gives a confidence interval (typically 95%). We are 95% confident true value is in [67%, 73%]. It accounts for sampling variability. Note: this assumes random sampling and does not account for other biases like non-response or question wording."
+  },
+  {
+    "index": 168,
+    "question": "Data shows students who study with music score 10% lower on tests. Conclusion?",
+    "options": [
+      "Music impairs learning",
+      "Music causes lower scores",
+      "Students who struggle might use music to cope (reverse causation)",
+      "Music is bad for education",
+      "Ban music while studying"
+    ],
+    "correct_option": "Students who struggle might use music to cope (reverse causation)",
+    "explanation": "Observational correlation allows multiple explanations: (1) music impairs focus (forward causation), (2) struggling students seek music for motivation (reverse causation), (3) some third factor affects both. Cannot determine causation from correlation alone. Need experiments with random assignment."
+  },
+  {
+    "index": 169,
+    "question": "A coin has been flipped 1000 times: 600 heads, 400 tails. Is the coin fair?",
+    "options": [
+      "No, definitely biased",
+      "Yes, close enough to 500-500",
+      "Cannot tell without a statistical test",
+      "No, should be exactly 500-500",
+      "Coins cannot be biased"
+    ],
+    "correct_option": "Cannot tell without a statistical test",
+    "explanation": "Even fair coins show deviation from 50-50 due to sampling variation. Need a hypothesis test (like binomial test) to determine if 600-400 is within expected random variation or suggests true bias. Rule of thumb: more than ~2-3 standard deviations away suggests bias."
+  },
+  {
+    "index": 170,
+    "question": "Dataset: 1, 2, 3, 4, 5, 100. The value 100 is:",
+    "options": [
+      "An error that must be removed",
+      "An outlier that may or may not be valid",
+      "The most important value",
+      "Proof the data is wrong",
+      "A data point having a bad day"
+    ],
+    "correct_option": "An outlier that may or may not be valid",
+    "explanation": "Outliers are not automatically errors! They might be: (1) legitimate extreme values, (2) measurement errors, (3) data entry mistakes, (4) different population. Investigate before removing. Outliers often contain important information about rare events or data quality issues."
+  },
+  {
+    "index": 171,
+    "question": "A medical treatment shows 'statistically significant benefit' (p < 0.05) but effect size is tiny (0.1% improvement). Should you use it?",
+    "options": [
+      "Yes, it's significant",
+      "No, effect is too small to matter practically",
+      "Yes, significance means it works",
+      "Depends on cost, side effects, alternatives",
+      "Significance always trumps effect size"
+    ],
+    "correct_option": "Depends on cost, side effects, alternatives",
+    "explanation": "Statistical significance \u2260 practical significance. With large samples, tiny effects become 'significant' but may be clinically meaningless. Decision depends on: effect size, costs, risks, alternatives. A 0.1% benefit might matter if treatment is free and harmless, but not if expensive and risky."
+  },
+  {
+    "index": 172,
+    "question": "Crime rate dropped 50% after new policy. Is the policy effective?",
+    "options": [
+      "Yes, definitely",
+      "Maybe - need to check if crime was already declining",
+      "Yes, 50% is huge",
+      "No, correlation is not causation",
+      "Politicians lie about statistics"
+    ],
+    "correct_option": "Maybe - need to check if crime was already declining",
+    "explanation": "Post hoc ergo propter hoc fallacy (after this, therefore because of this). Crime might have been declining due to other factors (economy, demographics, prior policies). Need to compare to control areas without the policy, and account for pre-existing trends. Timing \u2260 causation."
+  },
+  {
+    "index": 173,
+    "question": "Regression model has R-squared = 0.95. This means:",
+    "options": [
+      "The model is definitely correct",
+      "Model explains 95% of variance, but might overfit",
+      "95% accuracy",
+      "Model is perfect",
+      "Can predict perfectly 95% of the time"
+    ],
+    "correct_option": "Model explains 95% of variance, but might overfit",
+    "explanation": "High R-squared means good fit to training data but: (1) might be overfit (poor generalization), (2) doesn't mean model is correct/causal, (3) can be inflated by including many predictors. Always validate on test data. High R-squared \u2260 good predictive model."
+  },
+  {
+    "index": 174,
+    "question": "Two variables are uncorrelated (r = 0). This means:",
+    "options": [
+      "They are independent",
+      "No relationship exists",
+      "No linear relationship, but might have nonlinear relationship",
+      "One does not cause the other",
+      "They are unrelated"
+    ],
+    "correct_option": "No linear relationship, but might have nonlinear relationship",
+    "explanation": "Correlation only measures linear relationships. r = 0 means no linear association but: (1) strong nonlinear relationships possible (e.g., Y = X\u00b2), (2) relationships might exist in subgroups. Uncorrelated \u2260 independent. Always visualize data, don't rely solely on correlation."
+  },
+  {
+    "index": 175,
+    "question": "A study surveys people leaving the gym about their exercise habits. What is the main problem?",
+    "options": [
+      "Too few participants",
+      "Sample bias - only captures people who go to gyms",
+      "Wrong questions",
+      "Should survey at home",
+      "Gym people lie"
+    ],
+    "correct_option": "Sample bias - only captures people who go to gyms",
+    "explanation": "Selection bias! People at gyms are not representative of general population. Misses non-exercisers, home exercisers, outdoor exercisers. Results cannot generalize to broader population. Where and how you sample critically affects representativeness and validity of conclusions."
+  },
+  {
+    "index": 176,
+    "question": "Website A has 10% conversion rate (100 visitors). Website B has 11% conversion rate (10,000 visitors). Which is performing better?",
+    "options": [
+      "A is performing better",
+      "B is performing better, difference is likely real",
+      "Both are essentially the same",
+      "Cannot compare different sample sizes",
+      "A, because percentages are comparable"
+    ],
+    "correct_option": "B is performing better, difference is likely real",
+    "explanation": "With n=100, A's rate has huge uncertainty (could easily be 5-15% by chance). With n=10,000, B's estimate is very stable. The 1% difference is likely real, not noise. Larger samples give more reliable estimates. A might just be lucky; B's performance is more trustworthy."
+  },
+  {
+    "index": 177,
+    "question": "A predictive model is 95% accurate on training data but 60% on new data. What happened?",
+    "options": [
+      "New data is different",
+      "Overfitting - model learned noise in training data",
+      "Model broke",
+      "Training data was wrong",
+      "60% is still good"
+    ],
+    "correct_option": "Overfitting - model learned noise in training data",
+    "explanation": "Classic overfitting! Model memorized training data (including noise) rather than learning general patterns. Large gap between training and test performance is red flag. Need simpler model, regularization, more data, or cross-validation. Training accuracy alone is meaningless."
+  },
+  {
+    "index": 178,
+    "question": "A researcher finds p = 0.06 and concludes 'no effect found'. Is this correct?",
+    "options": [
+      "Yes, p > 0.05 means no effect",
+      "No, p = 0.06 still suggests possible effect, just not conventionally significant",
+      "Yes, failed to reject null",
+      "No, should use 0.10 threshold",
+      "Depends on journal requirements"
+    ],
+    "correct_option": "No, p = 0.06 still suggests possible effect, just not conventionally significant",
+    "explanation": "P = 0.06 vs 0.04 is meaningless difference. The 0.05 threshold is arbitrary. P = 0.06 suggests some evidence for effect (6% chance under null). Better to report effect size, confidence interval, and interpret strength of evidence rather than declaring binary 'effect/no effect' based on arbitrary cutoff."
+  },
+  {
+    "index": 179,
+    "question": "Data shows height and income are positively correlated. Why might this be?",
+    "options": [
+      "Tall people are smarter",
+      "Height causes higher income",
+      "Confidence, health, discrimination, or other factors link both",
+      "Tall people can reach higher paying jobs literally",
+      "Income causes height growth"
+    ],
+    "correct_option": "Confidence, health, discrimination, or other factors link both",
+    "explanation": "Multiple possible explanations: (1) childhood nutrition affects both height and cognitive development, (2) height affects confidence and social perceptions, (3) discrimination/bias, (4) health factors, (5) reverse causation unlikely. Correlation has many possible causal structures. Single correlation cannot determine mechanism."
+  },
+  {
+    "index": 180,
+    "question": "You see headline: 'People who drink coffee live longer!' Should you start drinking coffee?",
+    "options": [
+      "Yes, coffee extends life",
+      "Maybe - but need to know if correlation or causation",
+      "Yes, science proved it",
+      "No, headlines always lie",
+      "Only if you like coffee"
+    ],
+    "correct_option": "Maybe - but need to know if correlation or causation",
+    "explanation": "Critical questions: (1) Observational or experimental study? (2) Confounders controlled? (3) Effect size? (4) Publication bias? Coffee drinkers might be wealthier, have better healthcare, different lifestyle. Or coffee might have real benefits. Need full study details, not just headline. Beware media sensationalism."
+  },
+  {
+    "index": 181,
+    "question": "A test has sensitivity = 99% and specificity = 99%. Is it a good test?",
+    "options": [
+      "Yes, 99% is excellent",
+      "Depends on disease prevalence and consequences of errors",
+      "No, needs 100%",
+      "Yes, very accurate",
+      "Depends on the population"
+    ],
+    "correct_option": "Depends on disease prevalence and consequences of errors",
+    "explanation": "Even with 99% sensitivity and specificity, false positives can dominate if disease is rare (base rate problem). Also consider: Are false negatives worse than false positives? For rare diseases, 99% might give mostly false positives. For screening tests, need extremely high specificity."
+  },
+  {
+    "index": 182,
+    "question": "Study finds strong correlation between shoe size and reading ability in children. Explanation?",
+    "options": [
+      "Big feet cause better reading",
+      "Better readers develop bigger feet",
+      "Age is a confounding variable affecting both",
+      "Purely coincidental",
+      "Shoes contain educational materials"
+    ],
+    "correct_option": "Age is a confounding variable affecting both",
+    "explanation": "Classic confounding! Age affects both variables: older children have bigger feet AND read better. The correlation is spurious. Shoe size does not cause reading ability. When variables correlate, always ask: 'What else might be causing both?' Confounders create spurious correlations."
+  },
+  {
+    "index": 183,
+    "question": "A company's revenue increased 200% after hiring a new CEO. Did the CEO cause this?",
+    "options": [
+      "Yes, 200% is huge",
+      "Not necessarily - might be broader economic trends, prior investments paying off, etc.",
+      "Yes, timing proves causation",
+      "No, CEOs do not matter",
+      "200% is impossible"
+    ],
+    "correct_option": "Not necessarily - might be broader economic trends, prior investments paying off, etc.",
+    "explanation": "Post hoc fallacy again. Need to consider: (1) industry trends (all competitors up?), (2) prior initiatives maturing, (3) market conditions, (4) seasonal factors. Compare to control (similar companies). Temporal association \u2260 causation. Could be coincidence or many factors."
+  },
+  {
+    "index": 184,
+    "question": "You run 100 A/B tests. 5 show significant improvements (p < 0.05). How many are likely real?",
+    "options": [
+      "All 5",
+      "Around 0 - all likely false positives",
+      "2-3",
+      "5, significance means real",
+      "Cannot determine"
+    ],
+    "correct_option": "Around 0 - all likely false positives",
+    "explanation": "If no real effects exist, expect 5% false positives: 100 \u00d7 0.05 = 5. So all 5 'significant' results could be Type I errors. Multiple testing problem! Need correction (Bonferroni, FDR) or replication. This is why p-hacking and data dredging are dangerous."
+  },
+  {
+    "index": 185,
+    "question": "Dataset has mean = 50, median = 40. What does this tell you about the distribution shape?",
+    "options": [
+      "Right-skewed (positive skew) - high values pulling mean up",
+      "Left-skewed",
+      "Symmetric",
+      "Bimodal",
+      "Mean is wrong"
+    ],
+    "correct_option": "Right-skewed (positive skew) - high values pulling mean up",
+    "explanation": "Mean > median indicates right skew (long right tail). High outliers pull mean upward while median resists. Example: income distributions, home prices. Always visualize data - single statistics can hide important distribution features. Skewness affects which central tendency measure to report."
+  },
+  {
+    "index": 186,
+    "question": "Medical test: 95% confidence interval for treatment effect is [-2%, +8%]. What does this mean?",
+    "options": [
+      "Treatment definitely works",
+      "Treatment might help (8%) or harm (2%)",
+      "We are 95% confident true effect is in this range, which includes no effect (0%)",
+      "Treatment is useless",
+      "Need more data"
+    ],
+    "correct_option": "We are 95% confident true effect is in this range, which includes no effect (0%)",
+    "explanation": "CI contains zero, meaning result is not statistically significant. True effect could be small harm (-2%), no effect (0%), or small benefit (+8%). We cannot rule out no effect. This is more informative than p-value alone - shows magnitude of uncertainty."
+  },
+  {
+    "index": 187,
+    "question": "Two classrooms: Room A average = 80, SD = 2. Room B average = 80, SD = 20. Which teacher should be concerned?",
+    "options": [
+      "Teacher A - low variance is suspicious",
+      "Teacher B - high variance indicates struggling students mixed with high achievers",
+      "Neither, same average",
+      "Both equally",
+      "Teacher with more students"
+    ],
+    "correct_option": "Teacher B - high variance indicates struggling students mixed with high achievers",
+    "explanation": "Same mean, but B has huge inequality. B has students scoring 40 and 120 (if following normal distribution), while A has consistent ~78-82. Teacher B might need differentiated instruction. High variance suggests teacher is not reaching all students equally. Mean alone masks important information."
+  },
+  {
+    "index": 188,
+    "question": "A psychology study cannot be replicated - original found effect (p=0.03), replication found no effect (p=0.12). What is most likely?",
+    "options": [
+      "Original study was fraud",
+      "Replication was done wrong",
+      "Original effect was borderline and may have been false positive or overestimate",
+      "Psychology is not real science",
+      "P-values are broken"
+    ],
+    "correct_option": "Original effect was borderline and may have been false positive or overestimate",
+    "explanation": "Publication bias favors positive results. P = 0.03 is marginally significant (could be false positive). Original might have: p-hacked, found lucky sample, or measured inflated effect. Replication crisis shows many published findings do not replicate. Borderline results should be viewed skeptically until replicated."
+  },
+  {
+    "index": 189,
+    "question": "You have 1000 data points, remove 10 outliers, and now your p-value is significant. Is this acceptable?",
+    "options": [
+      "Yes, outliers are errors",
+      "No, unless outliers were clearly errors - otherwise this is p-hacking",
+      "Yes, cleaner data is better",
+      "No, never remove data",
+      "Yes, 10 out of 1000 is trivial"
+    ],
+    "correct_option": "No, unless outliers were clearly errors - otherwise this is p-hacking",
+    "explanation": "Removing outliers to achieve significance is p-hacking unless you have legitimate a priori reasons (measurement error, wrong population). If outliers are valid extreme values, removing them biases results. Document all decisions before seeing results. 'Try with/without outliers' and report only favorable result is scientific misconduct."
+  },
+  {
+    "index": 190,
+    "question": "Average global temperature increased 1\u00b0C in 100 years. Is this a large change?",
+    "options": [
+      "No, 1\u00b0C is tiny",
+      "Yes, in climate terms this is dramatic",
+      "No, daily temperature varies much more",
+      "Yes, because it's average",
+      "Depends on where you live"
+    ],
+    "correct_option": "Yes, in climate terms this is dramatic",
+    "explanation": "Context matters! 1\u00b0C sounds small but: (1) it's global average (some regions much more), (2) represents enormous energy increase, (3) last ice age was only ~5\u00b0C colder, (4) rate of change is unprecedented. Absolute numbers need context - statistical thinking requires domain knowledge to interpret magnitude properly."
+  },
+  {
+    "index": 191,
+    "question": "A new drug shows 'significant improvement' in 8 out of 10 patients. The company concludes the drug works. What is the main concern?",
+    "options": [
+      "Sample size too small - need larger study for reliable conclusion",
+      "8 out of 10 is not significant",
+      "Should be 10 out of 10",
+      "The drug definitely works",
+      "Need exactly 100 patients"
+    ],
+    "correct_option": "Sample size too small - need larger study for reliable conclusion",
+    "explanation": "With only 10 patients, results are highly unstable. Could easily be random variation or placebo effect. 8/10 sounds impressive but has wide confidence intervals. Small samples give unreliable estimates prone to false positives. Need adequate statistical power - typically much larger samples for drug trials."
+  },
+  {
+    "index": 192,
+    "question": "You analyze survey data and find that people who own dogs are happier. You conclude dogs make people happy. What is wrong with this reasoning?",
+    "options": [
+      "Dogs definitely make people happy",
+      "Nothing wrong",
+      "Reverse causation - happy people might be more likely to get dogs",
+      "Dogs cannot affect happiness",
+      "Sample bias only"
+    ],
+    "correct_option": "Reverse causation - happy people might be more likely to get dogs",
+    "explanation": "Causal direction is unclear. Possibilities: (1) dogs increase happiness (forward causation), (2) happy people choose to get dogs (reverse causation), (3) third factor like income/health affects both. Observational data cannot distinguish these. Only randomized trials (randomly assigning dogs) could establish causation."
+  },
+  {
+    "index": 193,
+    "question": "A report states: 'Risk of disease X increased by 50% among users of product Y.' Should you panic?",
+    "options": [
+      "Yes, 50% increase is huge",
+      "No, need to know baseline risk - 50% of what?",
+      "Yes, stop using product Y immediately",
+      "No, 50% is not that much",
+      "Depends on the product"
+    ],
+    "correct_option": "No, need to know baseline risk - 50% of what?",
+    "explanation": "Relative risk without baseline is meaningless! If baseline risk is 0.0001%, a 50% increase makes it 0.00015% (still tiny). If baseline is 20%, increase to 30% is substantial. Media often reports relative risk to sensationalize. Always ask: 'What is the absolute risk?' Relative percentages can be manipulated to mislead."
+  },
+  {
+    "index": 194,
+    "question": "Stock market analyst correctly predicts market direction 6 out of 10 times. Is this evidence of skill?",
+    "options": [
+      "Yes, better than chance",
+      "No, 60% could easily be random with small sample",
+      "Yes, 60% accuracy is impressive",
+      "No, needs to be 100%",
+      "Depends on market conditions"
+    ],
+    "correct_option": "No, 60% could easily be random with small sample",
+    "explanation": "Random guessing gives 50% accuracy. 60% is only slightly above chance and well within random variation with 10 predictions. Need: (1) many more predictions, (2) statistical test, (3) comparison to naive baseline. Also beware selection bias - only successful analysts get publicity. Most 'expert predictions' perform no better than chance long-term."
+  },
+  {
+    "index": 195,
+    "question": "Study: 'Students who attend tutoring have lower grades.' Conclusion: tutoring harms academic performance. Is this valid?",
+    "options": [
+      "Yes, data shows it clearly",
+      "No, struggling students self-select into tutoring (confounding by indication)",
+      "Yes, tutoring is ineffective",
+      "No, sample size probably too small",
+      "Tutoring causes lower grades"
+    ],
+    "correct_option": "No, struggling students self-select into tutoring (confounding by indication)",
+    "explanation": "Classic confounding! Students seek tutoring BECAUSE they are struggling. Lower grades cause tutoring, not vice versa. Without tutoring, they might do even worse. Need to compare similar struggling students (matched controls or randomization) to isolate tutoring effect. Selection bias makes observational studies of interventions extremely tricky."
+  },
+  {
+    "index": 196,
+    "question": "Researcher measures reaction time with precision of 0.001 seconds and reports mean = 0.547392 seconds. What is the issue?",
+    "options": [
+      "Too precise, should round appropriately given measurement uncertainty and sample size",
+      "Should be even more precise",
+      "Nothing wrong with precision",
+      "Should use whole seconds",
+      "Decimals are always bad"
+    ],
+    "correct_option": "Too precise, should round appropriately given measurement uncertainty and sample size",
+    "explanation": "False precision! Reporting 6 decimal places implies certainty that doesn't exist. With measurement error and sampling variability, meaningful precision is probably 2-3 significant figures (e.g., 0.55 seconds). Over-reporting precision misleads readers about accuracy. Precision of reported result should reflect actual measurement and statistical precision."
+  },
+  {
+    "index": 197,
+    "question": "Two algorithms: Algorithm A is 99.9% accurate. Algorithm B is 90% accurate. Which is better for detecting rare fraudulent transactions (0.1% of cases)?",
+    "options": [
+      "Algorithm A, much higher accuracy",
+      "Need to know true positive and false positive rates - accuracy alone is misleading",
+      "Algorithm A obviously",
+      "Algorithm B, lower accuracy avoids overfitting",
+      "Same, both are good"
+    ],
+    "correct_option": "Need to know true positive and false positive rates - accuracy alone is misleading",
+    "explanation": "Accuracy paradox! With 0.1% fraud rate, algorithm that labels everything 'not fraud' achieves 99.9% accuracy but catches zero fraud. Need to examine: precision, recall, F1-score, confusion matrix. For imbalanced classes, accuracy is a terrible metric. Algorithm B might actually catch more fraud despite lower overall accuracy."
+  },
+  {
+    "index": 198,
+    "question": "You run an A/B test. Version A: 100 users, 10 conversions (10%). Version B: 10,000 users, 950 conversions (9.5%). Which should you choose?",
+    "options": [
+      "Version A, higher conversion rate",
+      "Version B, much more data makes the estimate reliable despite lower rate",
+      "Version A, percentage is what matters",
+      "Both are essentially the same",
+      "Run more tests"
+    ],
+    "correct_option": "Version B, much more data makes the estimate reliable despite lower rate",
+    "explanation": "A's 10% is based on tiny sample (could be 5-15% easily). B's 9.5% is rock-solid with 10,000 users. The 0.5% difference is tiny and A's apparent advantage is likely noise. B is the safer choice - reliable estimate trumps noisy higher number. This is why big tech companies need large samples for A/B tests."
+  },
+  {
+    "index": 199,
+    "question": "Historical data shows that every recession was preceded by interest rate increases. Therefore, interest rate increases cause recessions. Is this sound reasoning?",
+    "options": [
+      "Yes, pattern proves causation",
+      "No, correlation in time series does not prove causation",
+      "Yes, if it always happens",
+      "No, need more recessions to analyze",
+      "Central banks control everything"
+    ],
+    "correct_option": "No, correlation in time series does not prove causation",
+    "explanation": "Multiple issues: (1) interest rates might rise in response to overheating economy that would crash anyway, (2) both might be caused by third factors, (3) survivorship bias - looking only at cases where recession occurred, (4) small sample of recessions. Temporal precedence helps but does not prove causation. Confounding and reverse causation still possible."
+  },
+  {
+    "index": 200,
+    "question": "A model predicts house prices with 95% accuracy on training data. When deployed, homeowners complain predictions are wildly wrong. Most likely cause?",
+    "options": [
+      "Homeowners are wrong about their home values",
+      "Model was trained on different time period or region - distribution shift",
+      "95% should be perfect",
+      "Model needs retraining daily",
+      "Computers cannot make mistakes"
+    ],
+    "correct_option": "Model was trained on different time period or region - distribution shift",
+    "explanation": "Distribution shift! Training data (e.g., 2010-2020 sales) differs from deployment data (current market, different locations, new types of homes). Models assume train and test distributions match. When they don't: performance collapses. Other issues: overfitting, concept drift, missing features. Real-world deployment always differs from controlled training conditions."
+  },
+  {
+    "index": 201,
+    "question": "You are designing a spam filter. Would you optimize for high precision or high recall?",
+    "options": [
+      "High precision - avoid marking legitimate emails as spam",
+      "High recall - catch all spam even if some legitimate emails are flagged",
+      "Both equally",
+      "Neither matters",
+      "Maximize accuracy only"
+    ],
+    "correct_option": "High precision - avoid marking legitimate emails as spam",
+    "explanation": "For spam filters, false positives (legitimate email marked spam) are worse than false negatives (spam in inbox). Missing important emails has serious consequences. Better to let some spam through than block legitimate mail. This illustrates that optimization depends on cost asymmetry of errors - not all mistakes are equally bad."
+  },
+  {
+    "index": 202,
+    "question": "You are testing a new cancer screening test. Would you prioritize high sensitivity or high specificity?",
+    "options": [
+      "High sensitivity - catch all potential cancer cases even with false positives",
+      "High specificity - avoid false alarms",
+      "Both equally important",
+      "Depends on treatment availability",
+      "Whichever is easier to achieve"
+    ],
+    "correct_option": "High sensitivity - catch all potential cancer cases even with false positives",
+    "explanation": "For cancer screening, missing a case (false negative) can be fatal. False positives lead to additional testing but catch treatable cases early. Screening tests prioritize sensitivity to avoid missing disease. Confirmatory tests then prioritize specificity. Different stages of diagnosis require different optimization - context determines the right metric."
+  },
+  {
+    "index": 203,
+    "question": "You have 1000 samples to train a machine learning model. How should you split the data?",
+    "options": [
+      "100% training - use all data",
+      "50% train, 50% test",
+      "70-80% train, 20-30% test, use cross-validation",
+      "90% train, 10% test",
+      "Depends on coin flip"
+    ],
+    "correct_option": "70-80% train, 20-30% test, use cross-validation",
+    "explanation": "Standard practice: 70-80% train, 20-30% test provides good balance. With only 1000 samples, use k-fold cross-validation on training set to maximize data usage while getting reliable performance estimates. Never test on training data (overfitting). Never train on test data (data leakage). Test set must remain untouched until final evaluation."
+  },
+  {
+    "index": 204,
+    "question": "Your classification model achieves 99% accuracy but your boss is unhappy. What might be the problem?",
+    "options": [
+      "Boss has unrealistic expectations",
+      "Dataset is imbalanced - 99% accuracy might mean model predicts majority class always",
+      "99% is perfect, boss is wrong",
+      "Need 100% accuracy",
+      "Accuracy is the wrong metric for this problem"
+    ],
+    "correct_option": "Dataset is imbalanced - 99% accuracy might mean model predicts majority class always",
+    "explanation": "With imbalanced data (e.g., 1% fraud, 99% legitimate), predicting 'all legitimate' gives 99% accuracy but zero fraud detection. Accuracy is misleading for imbalanced classes. Need to examine: confusion matrix, precision/recall for minority class, F1-score, ROC-AUC. Always understand class distribution before choosing evaluation metrics."
+  },
+  {
+    "index": 205,
+    "question": "You are analyzing customer churn. Historical data shows 5% churn rate. Your model predicts 4.8% churn. Is this a good model?",
+    "options": [
+      "Yes, very close to actual rate",
+      "Cannot tell - need to know if model identifies the RIGHT customers who will churn",
+      "Yes, low error",
+      "No, should be exactly 5%",
+      "Predicting average is always good"
+    ],
+    "correct_option": "Cannot tell - need to know if model identifies the RIGHT customers who will churn",
+    "explanation": "Model could achieve 4.8% by randomly selecting customers (useless) or by accurately identifying high-risk customers (valuable). Matching overall rate is trivial. What matters: does model correctly identify WHICH specific customers will churn? Evaluate using individual predictions, not aggregate statistics. Need precision, recall, and calibration metrics."
+  },
+  {
+    "index": 206,
+    "question": "You are running an A/B test for a website redesign. After 1 day, Version B is winning (p=0.03). What should you do?",
+    "options": [
+      "Stop test, deploy Version B immediately",
+      "Continue test to planned sample size - early stopping inflates false positive rate",
+      "Stop test, Version A wins",
+      "Extend test indefinitely",
+      "Flip a coin"
+    ],
+    "correct_option": "Continue test to planned sample size - early stopping inflates false positive rate",
+    "explanation": "Early stopping (peeking) inflates Type I error rate. P-values fluctuate randomly early in test. If you stop when p < 0.05 by chance, you bias results. Either: (1) pre-specify sample size and stopping rules, or (2) use sequential testing methods that account for multiple looks. Undisciplined peeking is a common A/B testing mistake."
+  },
+  {
+    "index": 207,
+    "question": "You need to predict rare equipment failures (0.01% rate) in a factory. Which metric should you NOT primarily rely on?",
+    "options": [
+      "Accuracy",
+      "Recall (sensitivity)",
+      "Precision",
+      "F1-score",
+      "Confusion matrix"
+    ],
+    "correct_option": "Accuracy",
+    "explanation": "With 0.01% failure rate, predicting 'no failure' always gives 99.99% accuracy but is useless. For rare events, accuracy is meaningless. Focus on: recall (catch all failures), precision (minimize false alarms), F1-score (balance both), and cost-sensitive metrics. Rare event detection requires specialized evaluation approaches."
+  },
+  {
+    "index": 208,
+    "question": "You build a model to predict loan defaults. It works well on historical data (2010-2020) but fails in 2024. Most likely reason?",
+    "options": [
+      "Model is broken",
+      "Economic conditions changed - distribution shift",
+      "2024 data is wrong",
+      "Model expired",
+      "Need to retrain on same old data"
+    ],
+    "correct_option": "Economic conditions changed - distribution shift",
+    "explanation": "Distribution shift! Economic conditions, interest rates, employment patterns, lending standards change over time. Models trained on one era may not generalize to another. Financial models especially suffer from this. Solution: retrain regularly on recent data, monitor performance drift, adapt to regime changes, incorporate domain knowledge about structural shifts."
+  },
+  {
+    "index": 209,
+    "question": "You want to estimate average income in your city. You survey people at a luxury shopping mall. What is the main problem?",
+    "options": [
+      "Too few people",
+      "Sampling bias - mall shoppers are not representative of entire city",
+      "Wrong questions",
+      "Should use online survey",
+      "Malls are dying"
+    ],
+    "correct_option": "Sampling bias - mall shoppers are not representative of entire city",
+    "explanation": "Sampling location introduces severe bias. Luxury mall attracts higher-income shoppers, systematically excluding lower-income residents. Results will overestimate city average. For representative samples: random sampling, stratified sampling by neighborhood/income, or weighting to match city demographics. Where you sample is as important as sample size."
+  },
+  {
+    "index": 210,
+    "question": "You are analyzing experiment data. Subject 1 completes task in 2 seconds. Subject 50 takes 180 seconds. What should you do?",
+    "options": [
+      "Remove Subject 50 as outlier",
+      "Investigate Subject 50 - might be valid (struggling) or invalid (distracted)",
+      "Keep all data always",
+      "Use median instead of mean",
+      "Remove both extremes"
+    ],
+    "correct_option": "Investigate Subject 50 - might be valid (struggling) or invalid (distracted)",
+    "explanation": "Never blindly remove outliers. Investigate: Was subject distracted/interrupted? Misunderstood instructions? Represents real struggling population? Equipment malfunction? If valid, outlier contains important information. If invalid, document exclusion criteria. Report analyses with and without outliers. Transparency about data handling maintains scientific integrity."
+  },
+  {
+    "index": 211,
+    "question": "You need to compare three teaching methods. You assign Method A to morning classes, Method B to afternoon classes, Method C to evening classes. What is wrong?",
+    "options": [
+      "Need more methods",
+      "Confounding - time of day affects performance independent of teaching method",
+      "Should use only two methods",
+      "Nothing wrong",
+      "Need bigger classes"
+    ],
+    "correct_option": "Confounding - time of day affects performance independent of teaching method",
+    "explanation": "Time of day confounds teaching method. Morning students might be more alert, evening students tired, regardless of method. Cannot separate method effect from time effect. Solution: randomize students to methods regardless of class time, or control for time statistically. Proper experimental design requires randomization to avoid confounding."
+  },
+  {
+    "index": 212,
+    "question": "Your recommendation system suggests products users end up buying 30% of the time. Is this good?",
+    "options": [
+      "Yes, 30% is high",
+      "Cannot tell without knowing baseline - what percentage buy without recommendations?",
+      "No, should be 50%",
+      "Yes, better than random",
+      "Need 100% success"
+    ],
+    "correct_option": "Cannot tell without knowing baseline - what percentage buy without recommendations?",
+    "explanation": "Need baseline for comparison. If users buy recommended products 30% but buy random products 25%, improvement is tiny. If baseline is 5%, improvement is substantial. Always compare to relevant baseline: random selection, naive algorithm, previous system, or control group. Absolute performance numbers are meaningless without context."
+  },
+  {
+    "index": 213,
+    "question": "You are testing a new drug. 100 patients receive drug, 100 receive placebo. Results: drug group improves 60%, placebo group improves 55%. Conclusion?",
+    "options": [
+      "Drug works",
+      "Drug does not work, 5% difference is tiny",
+      "Cannot conclude without statistical test - might be random variation",
+      "Placebo is almost as good",
+      "Need more patients"
+    ],
+    "correct_option": "Cannot conclude without statistical test - might be random variation",
+    "explanation": "5% difference could be real or random noise. Need hypothesis test (e.g., chi-square, two-proportion test) to determine if difference is statistically significant. Also consider: effect size, clinical significance, costs, side effects. With n=100 each, this difference might or might not be significant. Never conclude from raw percentages alone - always test."
+  },
+  {
+    "index": 214,
+    "question": "You build a sentiment analysis model. It performs well on movie reviews but poorly on tweets. Why?",
+    "options": [
+      "Tweets are too short",
+      "Domain shift - language patterns differ between movies reviews and tweets",
+      "Twitter users are illogical",
+      "Model is broken",
+      "Need more training data"
+    ],
+    "correct_option": "Domain shift - language patterns differ between movies reviews and tweets",
+    "explanation": "Models trained on one domain (movie reviews: formal, structured) often fail on another (tweets: informal, abbreviations, sarcasm, slang). Vocabulary, style, length, context differ. Solution: train on target domain data, use domain adaptation techniques, or create domain-agnostic features. Never assume a model trained on one domain will generalize to another."
+  },
+  {
+    "index": 215,
+    "question": "You want to measure if a new feature increases user engagement. You launch it to all users and compare engagement before vs after. What is the problem?",
+    "options": [
+      "Nothing wrong",
+      "No control group - cannot separate feature effect from time trends, seasonality, external events",
+      "Should measure longer",
+      "Need more users",
+      "Before-after is the gold standard"
+    ],
+    "correct_option": "No control group - cannot separate feature effect from time trends, seasonality, external events",
+    "explanation": "Without control group, cannot isolate feature effect. Engagement might change due to: seasonality, competitor actions, news events, platform changes, marketing. Proper design: A/B test with control group not receiving feature. Control group accounts for external factors, isolating feature's causal effect. Before-after designs are weak for causal inference."
+  },
+  {
+    "index": 216,
+    "question": "You analyze user data and find that users who engage with Feature X have 50% higher retention. Should you promote Feature X?",
+    "options": [
+      "Yes, clearly drives retention",
+      "Not necessarily - engaged users might naturally use Feature X more (reverse causation)",
+      "Yes, correlation is enough",
+      "No, 50% is not significant",
+      "Run an advertisement campaign"
+    ],
+    "correct_option": "Not necessarily - engaged users might naturally use Feature X more (reverse causation)",
+    "explanation": "Reverse causation! Engaged users might use Feature X because they are already engaged, not vice versa. Feature X might be result, not cause. To test causality: run experiment randomly exposing users to Feature X. Observational correlation in user behavior is highly prone to selection bias and reverse causation."
+  },
+  {
+    "index": 217,
+    "question": "Your fraud detection model has 95% precision and 60% recall. How should you improve it for better business outcomes?",
+    "options": [
+      "Increase precision further",
+      "Increase recall - catching more fraud is likely more valuable than reducing false positives",
+      "Keep as is, 95% precision is excellent",
+      "Aim for 100% in both",
+      "Focus on accuracy"
+    ],
+    "correct_option": "Increase recall - catching more fraud is likely more valuable than reducing false positives",
+    "explanation": "60% recall means missing 40% of fraud (costly!). 95% precision means few false alarms. In fraud detection, missing fraud (false negatives) typically costs more than investigating false alarms. Optimize for recall, even at cost of some precision. Right metric depends on business cost of different error types. Always align ML metrics with business objectives."
+  },
+  {
+    "index": 218,
+    "question": "You are comparing two machine learning models. Model A: simple linear regression. Model B: complex neural network. Both achieve similar test accuracy. Which should you deploy?",
+    "options": [
+      "Model B, more sophisticated",
+      "Model A, simpler models are easier to interpret, maintain, and debug",
+      "Model B, neural networks are always better",
+      "Doesn't matter, same accuracy",
+      "Use both"
+    ],
+    "correct_option": "Model A, simpler models are easier to interpret, maintain, and debug",
+    "explanation": "Occam's Razor: prefer simpler models when performance is similar. Linear regression is: interpretable (understand feature effects), fast, easy to maintain, less prone to overfitting, easier to explain to stakeholders. Neural networks add complexity without benefit here. Always consider: interpretability, maintenance, computational cost, not just accuracy."
+  },
+  {
+    "index": 219,
+    "question": "You are A/B testing two versions of a checkout page. After 10,000 users, no significant difference (p=0.4). What should you conclude?",
+    "options": [
+      "Versions are identical",
+      "No evidence of difference with this sample size - might need more data or effect is too small to matter",
+      "Test failed",
+      "Keep Version A",
+      "Test forever"
+    ],
+    "correct_option": "No evidence of difference with this sample size - might need more data or effect is too small to matter",
+    "explanation": "Absence of evidence is not evidence of absence. Either: (1) true difference is very small (not worth detecting), or (2) need larger sample for adequate power. Calculate: what effect size could you detect with n=10,000 at 80% power? If you would have detected meaningful effects, conclude versions are practically equivalent. Power analysis guides interpretation of non-significant results."
+  },
+  {
+    "index": 220,
+    "question": "You train a model on data from January-November to predict December sales. The model fails badly. Most likely issue?",
+    "options": [
+      "Model is bad",
+      "December has different patterns - holidays, year-end, seasonality not captured",
+      "Not enough training data",
+      "December data is wrong",
+      "Use a different algorithm"
+    ],
+    "correct_option": "December has different patterns - holidays, year-end, seasonality not captured",
+    "explanation": "Temporal distribution shift! December has unique patterns: holidays, shopping behavior, end-of-year effects. Training on Jan-Nov cannot capture December-specific patterns. For time series: include previous December data, encode seasonality explicitly, use domain knowledge about special periods. Always consider whether test period has fundamentally different characteristics than training period."
+  }
+]
