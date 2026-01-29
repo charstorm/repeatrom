@@ -204,8 +204,7 @@ export function CourseListScreen() {
           </button>
           {error && <p className="text-red-600 text-sm">{error}</p>}
           {info && <p className="text-green-600 text-sm">{info}</p>}
-          <p className="text-sm text-gray-500">
-            Need help?{" "}
+          <div className="text-sm text-gray-500 flex flex-col gap-1">
             <a
               href="https://github.com/charstorm/repeatrom/blob/main/data/creating_a_new_course.md"
               target="_blank"
@@ -214,7 +213,15 @@ export function CourseListScreen() {
             >
               Learn how to create course data
             </a>
-          </p>
+            <a
+              href="https://github.com/charstorm/repeatrom/tree/main/data/courses"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Browse existing courses
+            </a>
+          </div>
         </div>
       </div>
 
