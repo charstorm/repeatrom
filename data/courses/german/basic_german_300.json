@@ -49,7 +49,7 @@
       "Wand"
     ],
     "correct_option": "Haus",
-    "explanation": "Haus means 'house'. Pronounced 'HOUSE'. Tür is 'door', Fenster is 'window'."
+    "explanation": "Haus means 'house'. Pronounced 'HOWS'. Tür is 'door', Fenster is 'window'."
   },
   {
     "index": 5,
@@ -62,7 +62,7 @@
       "Bench"
     ],
     "correct_option": "Table",
-    "explanation": "Tisch means 'table'. Pronounced 'TISH'. Common furniture piece in German homes."
+    "explanation": "Tisch means 'table'. Pronounced 'TISH'. Common furniture piece for eating or working."
   },
   {
     "index": 6,
@@ -88,7 +88,7 @@
       "Bedroom"
     ],
     "correct_option": "Bed",
-    "explanation": "Bett means 'bed'. Pronounced 'BET'. Essential furniture in any bedroom."
+    "explanation": "Bett means 'bed'. Pronounced 'BET'. Essential furniture for sleeping."
   },
   {
     "index": 8,
@@ -497,14 +497,14 @@
     "index": 39,
     "question": "What does 'Apfel' mean in English?",
     "options": [
-      "Birne",
-      "Apfel",
+      "Pear",
+      "Apple",
       "Orange",
-      "Zitrone",
-      "Kirsche"
+      "Lemon",
+      "Cherry"
     ],
-    "correct_option": "Apfel",
-    "explanation": "Apfel means 'apple'. Pronounced 'AHP-fel'. Common red or green fruit."
+    "correct_option": "Apple",
+    "explanation": "Apfel means 'apple'. Pronounced 'AHP-fel'. Common red or green fruit, rich in nutrients."
   },
   {
     "index": 40,
@@ -543,7 +543,7 @@
       "Wein"
     ],
     "correct_option": "Tee",
-    "explanation": "Tee means 'tea'. Pronounced 'TAY'. Hot drink from leaves."
+    "explanation": "Tee means 'tea'. Pronounced 'TAY'. Hot drink made from leaves."
   },
   {
     "index": 43,
@@ -556,7 +556,7 @@
       "Rum"
     ],
     "correct_option": "Wine",
-    "explanation": "Wein means 'wine'. Pronounced 'VYN'. Alcoholic drink from grapes."
+    "explanation": "Wein means 'wine'. Pronounced 'VYN'. Alcoholic drink made from grapes."
   },
   {
     "index": 44,
@@ -569,7 +569,7 @@
       "Sake"
     ],
     "correct_option": "Bier",
-    "explanation": "Bier means 'beer'. Pronounced 'BEER'. Alcoholic beverage from grain."
+    "explanation": "Bier means 'beer'. Pronounced 'BEER'. Alcoholic beverage brewed from grain."
   },
   {
     "index": 45,
@@ -582,7 +582,7 @@
       "Gigantisch"
     ],
     "correct_option": "Groß",
-    "explanation": "Groß means 'big'. Pronounced 'GROSS'. Large in size."
+    "explanation": "Groß means 'big'. Pronounced 'GROSS'. Large in size or extent."
   },
   {
     "index": 46,
@@ -634,7 +634,7 @@
       "Fabelhaft"
     ],
     "correct_option": "Gut",
-    "explanation": "Gut means 'good'. Pronounced 'GOOT'. Of high quality."
+    "explanation": "Gut means 'good'. Pronounced 'GOOT'. Of high quality or favorable nature."
   },
   {
     "index": 50,
@@ -647,7 +647,7 @@
       "Furchtbar"
     ],
     "correct_option": "Schlecht",
-    "explanation": "Schlecht means 'bad'. Pronounced 'SHLEKHТ'. Of low quality."
+    "explanation": "Schlecht means 'bad'. Pronounced 'SHLEKHТ'. Of low quality or unfavorable."
   },
   {
     "index": 51,
@@ -660,7 +660,7 @@
       "Swift"
     ],
     "correct_option": "Fast",
-    "explanation": "Schnell means 'fast'. Pronounced 'SHNEL'. Moving quickly."
+    "explanation": "Schnell means 'fast'. Pronounced 'SHNEL'. Moving quickly or at high speed."
   },
   {
     "index": 52,
@@ -673,7 +673,7 @@
       "Zögernd"
     ],
     "correct_option": "Langsam",
-    "explanation": "Langsam means 'slow'. Pronounced 'LAHNG-zahm'. Moving slowly."
+    "explanation": "Langsam means 'slow'. Pronounced 'LAHNG-zahm'. Moving at reduced speed."
   },
   {
     "index": 53,
@@ -686,7 +686,7 @@
       "Glühend"
     ],
     "correct_option": "Heiß",
-    "explanation": "Heiß means 'hot'. Pronounced 'HYS'. High temperature."
+    "explanation": "Heiß means 'hot'. Pronounced 'HYS'. High temperature or intense heat."
   },
   {
     "index": 54,
@@ -699,20 +699,20 @@
       "Eisig"
     ],
     "correct_option": "Kalt",
-    "explanation": "Kalt means 'cold'. Pronounced 'KALT'. Low temperature."
+    "explanation": "Kalt means 'cold'. Pronounced 'KALT'. Low temperature condition."
   },
   {
     "index": 55,
     "question": "What does 'Schön' mean in English?",
     "options": [
-      "Hässlich",
-      "Schön",
-      "Wunderschön",
-      "Herrlich",
-      "Prächtig"
+      "Ugly",
+      "Beautiful",
+      "Pretty",
+      "Attractive",
+      "Handsome"
     ],
-    "correct_option": "Schön",
-    "explanation": "Schön means 'beautiful'. Pronounced 'SCHÖN'. Pleasing to see."
+    "correct_option": "Beautiful",
+    "explanation": "Schön means 'beautiful'. Pronounced 'SCHÖN'. Pleasing or attractive in appearance."
   },
   {
     "index": 56,
@@ -725,7 +725,7 @@
       "Vintage"
     ],
     "correct_option": "Neu",
-    "explanation": "Neu means 'new'. Pronounced 'NOY'. Recently made."
+    "explanation": "Neu means 'new'. Pronounced 'NOY'. Recently made or acquired."
   },
   {
     "index": 57,
@@ -738,7 +738,7 @@
       "Uralt"
     ],
     "correct_option": "Alt",
-    "explanation": "Alt means 'old'. Pronounced 'ALT'. Of considerable age."
+    "explanation": "Alt means 'old'. Pronounced 'ALT'. Of considerable age or ancient origin."
   },
   {
     "index": 58,
@@ -751,20 +751,20 @@
       "Grün"
     ],
     "correct_option": "Jung",
-    "explanation": "Jung means 'young'. Pronounced 'YOUNG'. Of little age."
+    "explanation": "Jung means 'young'. Pronounced 'YOUNG'. Of little age or early stage."
   },
   {
     "index": 59,
     "question": "What does 'Hier' mean in English?",
     "options": [
-      "Dort",
-      "Hier",
-      "Überall",
-      "Irgendwo",
-      "Nirgends"
+      "There",
+      "Here",
+      "Everywhere",
+      "Somewhere",
+      "Nowhere"
     ],
-    "correct_option": "Hier",
-    "explanation": "Hier means 'here'. Pronounced 'HEER'. This place location."
+    "correct_option": "Here",
+    "explanation": "Hier means 'here'. Pronounced 'HEER'. This place or current location."
   },
   {
     "index": 60,
@@ -777,7 +777,7 @@
       "Wohin"
     ],
     "correct_option": "Dort",
-    "explanation": "Dort means 'there'. Pronounced 'DORT'. That place location."
+    "explanation": "Dort means 'there'. Pronounced 'DORT'. That place or distant location."
   },
   {
     "index": 61,
@@ -803,20 +803,20 @@
       "Vorgestern"
     ],
     "correct_option": "Gestern",
-    "explanation": "Gestern means 'yesterday'. Pronounced 'GES-tern'. Previous day."
+    "explanation": "Gestern means 'yesterday'. Pronounced 'GES-tern'. The day before today."
   },
   {
     "index": 63,
-    "question": "What does 'Morgen' mean in English?",
+    "question": "What does 'Morgen' mean in English when referring to a future day?",
     "options": [
-      "Evening",
-      "Morning",
+      "Next weekend",
       "Tomorrow",
-      "Night",
-      "Noon"
+      "Day after tomorrow",
+      "Coming monday",
+      "Next week"
     ],
     "correct_option": "Tomorrow",
-    "explanation": "Morgen means 'tomorrow'. Pronounced 'MOR-gen'. Following day."
+    "explanation": "Morgen means 'tomorrow'. Pronounced 'MOR-gen'. The day after today. (Note: 'Morgen' can also mean 'morning' when referring to time of day, but in the context of future days, it means 'tomorrow'.)"
   },
   {
     "index": 64,
@@ -829,7 +829,7 @@
       "Oft"
     ],
     "correct_option": "Immer",
-    "explanation": "Immer means 'always'. Pronounced 'IM-mer'. At all times."
+    "explanation": "Immer means 'always'. Pronounced 'IM-mer'. At all times without exception."
   },
   {
     "index": 65,
@@ -842,7 +842,7 @@
       "Oft"
     ],
     "correct_option": "Nie",
-    "explanation": "Nie means 'never'. Pronounced 'NEE'. Not at any time."
+    "explanation": "Nie means 'never'. Pronounced 'NEE'. Not at any time whatsoever."
   },
   {
     "index": 66,
@@ -855,7 +855,7 @@
       "Oft"
     ],
     "correct_option": "Manchmal",
-    "explanation": "Manchmal means 'sometimes'. Pronounced 'MANCH-mahl'. Occasionally."
+    "explanation": "Manchmal means 'sometimes'. Pronounced 'MANCH-mahl'. Occasionally or at intervals."
   },
   {
     "index": 67,
@@ -868,7 +868,7 @@
       "Never"
     ],
     "correct_option": "Often",
-    "explanation": "Oft means 'often'. Pronounced 'OFT'. Frequently in time."
+    "explanation": "Oft means 'often'. Pronounced 'OFT'. Frequently in time or on many occasions."
   },
   {
     "index": 68,
@@ -881,7 +881,7 @@
       "Backen"
     ],
     "correct_option": "Essen",
-    "explanation": "Essen means 'to eat'. Pronounced 'ES-sen'. Consume food for nutrition."
+    "explanation": "Essen means 'to eat'. Pronounced 'ES-sen'. Consume food for nutrition and sustenance."
   },
   {
     "index": 69,
@@ -894,7 +894,7 @@
       "Gießen"
     ],
     "correct_option": "Trinken",
-    "explanation": "Trinken means 'to drink'. Pronounced 'TRIN-ken'. Consume liquids."
+    "explanation": "Trinken means 'to drink'. Pronounced 'TRIN-ken'. Consume liquids or beverages."
   },
   {
     "index": 70,
@@ -911,16 +911,16 @@
   },
   {
     "index": 71,
-    "question": "What does 'Gehen' mean in English?",
+    "question": "What does the verb 'Gehen' mean in English?",
     "options": [
-      "Tanzen",
-      "Gehen",
-      "Schreiten",
-      "Taumeln",
-      "Stapfen"
+      "To walk",
+      "To run",
+      "To dance",
+      "To cook",
+      "To move"
     ],
-    "correct_option": "Gehen",
-    "explanation": "Gehen means 'to walk'. Pronounced 'GAY-hen'. Move on foot slowly."
+    "correct_option": "To walk",
+    "explanation": "Gehen means 'to walk' or 'to go'. Pronounced 'GAY-hen'."
   },
   {
     "index": 72,
@@ -933,20 +933,20 @@
       "Marschieren"
     ],
     "correct_option": "Laufen",
-    "explanation": "Laufen means 'to run'. Pronounced 'LOW-fen'. Move quickly on feet."
+    "explanation": "Laufen means 'to run'. Pronounced 'LOW-fen'. Move quickly on feet at speed."
   },
   {
     "index": 73,
     "question": "What is the German verb for 'to sleep'?",
     "options": [
-      "Rest",
+      "Ruhen",
       "Schlafen",
-      "Wake",
-      "Dream",
-      "Snore"
+      "Wachen",
+      "Träumen",
+      "Schnnarchen"
     ],
     "correct_option": "Schlafen",
-    "explanation": "Schlafen means 'to sleep'. Pronounced 'SHLAH-fen'. Be in state of sleep."
+    "explanation": "Schlafen means 'to sleep'. Pronounced 'SHLAH-fen'. Be in a state of sleep or rest."
   },
   {
     "index": 74,
@@ -959,33 +959,33 @@
       "Unterrichten"
     ],
     "correct_option": "Arbeiten",
-    "explanation": "Arbeiten means 'to work'. Pronounced 'AR-by-ten'. Do labor or job."
+    "explanation": "Arbeiten means 'to work'. Pronounced 'AR-by-ten'. Do labor, employment, or job."
   },
   {
     "index": 75,
     "question": "What does 'Spielen' mean in English?",
     "options": [
-      "Arbeiten",
-      "Spielen",
-      "Singen",
-      "Lachen",
-      "Weinen"
+      "To work",
+      "To play",
+      "To sing",
+      "To laugh",
+      "To cry"
     ],
-    "correct_option": "Spielen",
-    "explanation": "Spielen means 'to play'. Pronounced 'SHPEE-len'. Engage in games."
+    "correct_option": "To play",
+    "explanation": "Spielen means 'to play'. Pronounced 'SHPEE-len'. Engage in games or recreational activity."
   },
   {
     "index": 76,
     "question": "How do you say 'to read' in German?",
     "options": [
-      "Write",
+      "Schreiben",
       "Lesen",
-      "Speak",
-      "Listen",
-      "Hear"
+      "Sprechen",
+      "Hören",
+      "Sehen"
     ],
     "correct_option": "Lesen",
-    "explanation": "Lesen means 'to read'. Pronounced 'LAY-zen'. Look at written text."
+    "explanation": "Lesen means 'to read'. Pronounced 'LAY-zen'. Look at and comprehend written text."
   },
   {
     "index": 77,
@@ -998,7 +998,7 @@
       "Tippen"
     ],
     "correct_option": "Schreiben",
-    "explanation": "Schreiben means 'to write'. Pronounced 'SHRY-ben'. Put words on paper."
+    "explanation": "Schreiben means 'to write'. Pronounced 'SHRY-ben'. Put words or letters on paper."
   },
   {
     "index": 78,
@@ -1011,20 +1011,20 @@
       "Brüllen"
     ],
     "correct_option": "Sprechen",
-    "explanation": "Sprechen means 'to speak'. Pronounced 'SHPREKH-en'. Say words aloud."
+    "explanation": "Sprechen means 'to speak'. Pronounced 'SHPREKH-en'. Say words aloud or communicate orally."
   },
   {
     "index": 79,
     "question": "What does 'Sehen' mean in English?",
     "options": [
-      "Look",
-      "See",
-      "Watch",
-      "Observe",
-      "Stare"
+      "To look",
+      "To see",
+      "To watch",
+      "To observe",
+      "To stare"
     ],
-    "correct_option": "See",
-    "explanation": "Sehen means 'to see'. Pronounced 'ZAY-hen'. Perceive with eyes."
+    "correct_option": "To see",
+    "explanation": "Sehen means 'to see'. Pronounced 'ZAY-hen'. Perceive with the eyes."
   },
   {
     "index": 80,
@@ -1037,7 +1037,7 @@
       "Verteilen"
     ],
     "correct_option": "Geben",
-    "explanation": "Geben means 'to give'. Pronounced 'GAY-ben'. Hand something to someone."
+    "explanation": "Geben means 'to give'. Pronounced 'GAY-ben'. Hand something to someone or provide."
   },
   {
     "index": 81,
@@ -1050,7 +1050,7 @@
       "Glass"
     ],
     "correct_option": "Window",
-    "explanation": "Fenster means 'window'. Pronounced 'FEN-ster'. Allows light into room."
+    "explanation": "Fenster means 'window'. Pronounced 'FEN-ster'. Opens to allow light into a room."
   },
   {
     "index": 82,
@@ -1063,7 +1063,7 @@
       "Decke"
     ],
     "correct_option": "Wand",
-    "explanation": "Wand means 'wall'. Pronounced 'VANT'. Vertical structure in building."
+    "explanation": "Wand means 'wall'. Pronounced 'VANT'. Vertical structure in a building."
   },
   {
     "index": 83,
@@ -1076,7 +1076,7 @@
       "Attic"
     ],
     "correct_option": "Roof",
-    "explanation": "Dach means 'roof'. Pronounced 'DAKH'. Top covering of building."
+    "explanation": "Dach means 'roof'. Pronounced 'DAKH'. Top covering that protects a building."
   },
   {
     "index": 84,
@@ -1089,7 +1089,7 @@
       "Stockwerk"
     ],
     "correct_option": "Boden",
-    "explanation": "Boden means 'floor'. Pronounced 'BO-den'. Surface you walk on."
+    "explanation": "Boden means 'floor'. Pronounced 'BO-den'. Surface you walk on in a room."
   },
   {
     "index": 85,
@@ -1102,7 +1102,7 @@
       "District"
     ],
     "correct_option": "City",
-    "explanation": "Stadt means 'city'. Pronounced 'SHTAHT'. Large urban area with many people."
+    "explanation": "Stadt means 'city'. Pronounced 'SHTAHT'. Large urban area with many people and buildings."
   },
   {
     "index": 86,
@@ -1115,7 +1115,7 @@
       "Pfad"
     ],
     "correct_option": "Straße",
-    "explanation": "Straße means 'street'. Pronounced 'SHTRA-seh'. Road in city for travel."
+    "explanation": "Straße means 'street'. Pronounced 'SHTRA-seh'. Road in a city for travel and traffic."
   },
   {
     "index": 87,
@@ -1128,7 +1128,7 @@
       "Plaza"
     ],
     "correct_option": "Park",
-    "explanation": "Park means 'park'. Pronounced 'PARK'. Green space for recreation."
+    "explanation": "Park means 'park'. Pronounced 'PARK'. Green public space for recreation."
   },
   {
     "index": 88,
@@ -1141,7 +1141,7 @@
       "Abhang"
     ],
     "correct_option": "Berg",
-    "explanation": "Berg means 'mountain'. Pronounced 'BERK'. High elevation of land."
+    "explanation": "Berg means 'mountain'. Pronounced 'BERK'. High elevation of land above sea level."
   },
   {
     "index": 89,
@@ -1154,7 +1154,7 @@
       "Pond"
     ],
     "correct_option": "River",
-    "explanation": "Fluss means 'river'. Pronounced 'FLOOS'. Body of flowing water."
+    "explanation": "Fluss means 'river'. Pronounced 'FLOOS'. Large body of flowing water."
   },
   {
     "index": 90,
@@ -1171,16 +1171,16 @@
   },
   {
     "index": 91,
-    "question": "What is the German word for 'lake'?",
+    "question": "What is the German word for 'the lake'?",
     "options": [
-      "Meer",
-      "Fluss",
-      "See",
-      "Bach",
-      "Teich"
+      "das Meer",
+      "der Fluss",
+      "der See",
+      "die See",
+      "der Teich"
     ],
-    "correct_option": "See",
-    "explanation": "See means 'lake'. Pronounced 'ZAY'. Body of fresh water surrounded by land."
+    "correct_option": "der See",
+    "explanation": "der See means 'the lake' - a body of fresh water surrounded by land. Pronounced 'ZAY'. Note: die See (feminine) means 'the sea/ocean', so the article is crucial! das Meer also means 'the sea/ocean', der Fluss means 'the river', and der Teich means 'the pond'."
   },
   {
     "index": 92,
@@ -1193,7 +1193,7 @@
       "Lichtung"
     ],
     "correct_option": "Wald",
-    "explanation": "Wald means 'forest'. Pronounced 'VALT'. Large area covered with trees."
+    "explanation": "Wald means 'forest'. Pronounced 'VALT'. Large area densely covered with trees."
   },
   {
     "index": 93,
@@ -1206,7 +1206,7 @@
       "Farm"
     ],
     "correct_option": "Garden",
-    "explanation": "Garten means 'garden'. Pronounced 'GAR-ten'. Place where plants are grown."
+    "explanation": "Garten means 'garden'. Pronounced 'GAR-ten'. Place where plants are grown deliberately."
   },
   {
     "index": 94,
@@ -1245,7 +1245,7 @@
       "Sanatorium"
     ],
     "correct_option": "Krankenhaus",
-    "explanation": "Krankenhaus means 'hospital'. Pronounced 'KRANK-en-hows'. Treats sick patients."
+    "explanation": "Krankenhaus means 'hospital'. Pronounced 'KRANK-en-hows'. Medical facility that treats sick patients."
   },
   {
     "index": 97,
@@ -1258,7 +1258,7 @@
       "Chapel"
     ],
     "correct_option": "Church",
-    "explanation": "Kirche means 'church'. Pronounced 'KIR-keh'. Religious building for worship."
+    "explanation": "Kirche means 'church'. Pronounced 'KIR-keh'. Religious building for Christian worship."
   },
   {
     "index": 98,
@@ -1271,7 +1271,7 @@
       "Lesesaal"
     ],
     "correct_option": "Bibliothek",
-    "explanation": "Bibliothek means 'library'. Pronounced 'bib-lee-o-TEK'. Houses books and resources."
+    "explanation": "Bibliothek means 'library'. Pronounced 'bib-lee-o-TEK'. Institution housing books and resources."
   },
   {
     "index": 99,
@@ -1284,7 +1284,7 @@
       "Speisesaal"
     ],
     "correct_option": "Restaurant",
-    "explanation": "Restaurant means 'restaurant'. Pronounced 'rés-to-RANT'. Serves food and drinks."
+    "explanation": "Restaurant means 'restaurant'. Pronounced 'rés-to-RANT'. Commercial establishment serving food and drinks."
   },
   {
     "index": 100,
@@ -1297,7 +1297,7 @@
       "Basar"
     ],
     "correct_option": "Markt",
-    "explanation": "Markt means 'market'. Pronounced 'MARKT'. Place where goods are sold."
+    "explanation": "Markt means 'market'. Pronounced 'MARKT'. Place where goods are bought and sold."
   },
   {
     "index": 101,
@@ -1310,7 +1310,7 @@
       "Maid"
     ],
     "correct_option": "Cook",
-    "explanation": "Köchin means 'female cook'. Pronounced 'KÖ-kin'. Prepares food in kitchen."
+    "explanation": "Köchin means 'female cook'. Pronounced 'KÖ-kin'. Woman who prepares food in kitchen."
   },
   {
     "index": 102,
@@ -1323,7 +1323,7 @@
       "Handwerker"
     ],
     "correct_option": "Ingenieur",
-    "explanation": "Ingenieur means 'engineer'. Pronounced 'in-je-NÖR'. Designs and builds structures."
+    "explanation": "Ingenieur means 'engineer'. Pronounced 'in-je-NÖR'. Professional who designs and builds structures."
   },
   {
     "index": 103,
@@ -1336,7 +1336,7 @@
       "Züchter"
     ],
     "correct_option": "Bauer",
-    "explanation": "Bauer means 'farmer'. Pronounced 'BOW-er'. Grows crops and raises animals."
+    "explanation": "Bauer means 'farmer'. Pronounced 'BOW-er'. Person who grows crops and raises animals."
   },
   {
     "index": 104,
@@ -1349,7 +1349,7 @@
       "Dirigent"
     ],
     "correct_option": "Musiker",
-    "explanation": "Musiker means 'musician'. Pronounced 'moo-ZEE-ker'. Plays musical instruments."
+    "explanation": "Musiker means 'musician'. Pronounced 'moo-ZEE-ker'. Person who plays musical instruments."
   },
   {
     "index": 105,
@@ -1362,7 +1362,7 @@
       "Sculptor"
     ],
     "correct_option": "Artist",
-    "explanation": "Künstler means 'artist'. Pronounced 'KOONST-ler'. Creates art and creative works."
+    "explanation": "Künstler means 'artist'. Pronounced 'KOONST-ler'. Person who creates art and creative works."
   },
   {
     "index": 106,
@@ -1375,7 +1375,7 @@
       "Geschäft"
     ],
     "correct_option": "Büro",
-    "explanation": "Büro means 'office'. Pronounced 'bü-RO'. Workplace for administrative work."
+    "explanation": "Büro means 'office'. Pronounced 'bü-RO'. Workplace for administrative and clerical work."
   },
   {
     "index": 107,
@@ -1388,7 +1388,7 @@
       "Terminal"
     ],
     "correct_option": "Railway station",
-    "explanation": "Bahnhof means 'railway station'. Pronounced 'BAHN-hof'. Where trains arrive and depart."
+    "explanation": "Bahnhof means 'railway station'. Pronounced 'BAHN-hof'. Station where trains arrive and depart."
   },
   {
     "index": 108,
@@ -1401,7 +1401,7 @@
       "Terminal"
     ],
     "correct_option": "Flughafen",
-    "explanation": "Flughafen means 'airport'. Pronounced 'FLOOP-hah-fen'. Where planes take off."
+    "explanation": "Flughafen means 'airport'. Pronounced 'FLOOP-hah-fen'. Location where planes take off and land."
   },
   {
     "index": 109,
@@ -1414,20 +1414,20 @@
       "Marina"
     ],
     "correct_option": "Harbor",
-    "explanation": "Hafen means 'harbor'. Pronounced 'HAH-fen'. Sheltered port for ships."
+    "explanation": "Hafen means 'harbor'. Pronounced 'HAH-fen'. Sheltered port facility for ships."
   },
   {
     "index": 110,
     "question": "How do you say 'castle' in German?",
     "options": [
-      "Turm",
-      "Schloss",
-      "Burg",
-      "Festung",
-      "Palast"
+      "der Turm",
+      "das Schloss",
+      "der Palast",
+      "das Haus",
+      "die Kirche"
     ],
-    "correct_option": "Schloss",
-    "explanation": "Schloss means 'castle'. Pronounced 'SHLOS'. Large fortified building."
+    "correct_option": "das Schloss",
+    "explanation": "das Schloss means 'castle' or 'palace' - a grand, ornate residence. Pronounced 'SHLOS'. Note: das Schloss can also mean 'lock'. der Turm means 'tower', der Palast means 'palace', das Haus means 'house', and die Kirche means 'church'."
   },
   {
     "index": 111,
@@ -1440,7 +1440,7 @@
       "Übergang"
     ],
     "correct_option": "Brücke",
-    "explanation": "Brücke means 'bridge'. Pronounced 'BROO-keh'. Crosses over water or roads."
+    "explanation": "Brücke means 'bridge'. Pronounced 'BROO-keh'. Structure that crosses over water or roads."
   },
   {
     "index": 112,
@@ -1466,7 +1466,7 @@
       "Seasoning"
     ],
     "correct_option": "Pepper",
-    "explanation": "Pfeffer means 'pepper'. Pronounced 'PFEF-fer'. Spicy seasoning."
+    "explanation": "Pfeffer means 'pepper'. Pronounced 'PFEF-fer'. Spicy seasoning made from peppercorns."
   },
   {
     "index": 114,
@@ -1479,7 +1479,7 @@
       "Schmalz"
     ],
     "correct_option": "Öl",
-    "explanation": "Öl means 'oil'. Pronounced 'ÖL'. Liquid fat for cooking."
+    "explanation": "Öl means 'oil'. Pronounced 'ÖL'. Liquid fat used for cooking and food preparation."
   },
   {
     "index": 115,
@@ -1492,7 +1492,7 @@
       "Lard"
     ],
     "correct_option": "Butter",
-    "explanation": "Butter means 'butter'. Pronounced 'BOO-ter'. Dairy spread for food."
+    "explanation": "Butter means 'butter'. Pronounced 'BOO-ter'. Dairy spread made from milk."
   },
   {
     "index": 116,
@@ -1505,7 +1505,7 @@
       "Peach"
     ],
     "correct_option": "Pear",
-    "explanation": "Birne means 'pear'. Pronounced 'BIR-neh'. Sweet shaped fruit."
+    "explanation": "Birne means 'pear'. Pronounced 'BIR-neh'. Sweet bell-shaped fruit."
   },
   {
     "index": 117,
@@ -1531,7 +1531,7 @@
       "Garlic"
     ],
     "correct_option": "Tomato",
-    "explanation": "Tomate means 'tomato'. Pronounced 'to-MAH-teh'. Red vegetable or fruit."
+    "explanation": "Tomate means 'tomato'. Pronounced 'to-MAH-teh'. Red vegetable used in cooking."
   },
   {
     "index": 119,
@@ -1544,7 +1544,7 @@
       "Erbse"
     ],
     "correct_option": "Kartoffel",
-    "explanation": "Kartoffel means 'potato'. Pronounced 'kar-TAW-fel'. Starchy root vegetable."
+    "explanation": "Kartoffel means 'potato'. Pronounced 'kar-TAW-fel'. Starchy root vegetable staple."
   },
   {
     "index": 120,
@@ -1557,7 +1557,7 @@
       "Shallot"
     ],
     "correct_option": "Onion",
-    "explanation": "Zwiebel means 'onion'. Pronounced 'TSVEE-bel'. Vegetable with pungent smell."
+    "explanation": "Zwiebel means 'onion'. Pronounced 'TSVEE-bel'. Vegetable with pungent smell and flavor."
   },
   {
     "index": 121,
@@ -1570,7 +1570,7 @@
       "Steckrübe"
     ],
     "correct_option": "Möhre",
-    "explanation": "Möhre means 'carrot'. Pronounced 'MÖ-reh'. Orange root vegetable."
+    "explanation": "Möhre means 'carrot'. Pronounced 'MÖ-reh'. Orange root vegetable high in vitamin A."
   },
   {
     "index": 122,
@@ -1583,7 +1583,7 @@
       "Coffee"
     ],
     "correct_option": "Juice",
-    "explanation": "Saft means 'juice'. Pronounced 'ZAFT'. Liquid from fruits or vegetables."
+    "explanation": "Saft means 'juice'. Pronounced 'ZAFT'. Liquid extracted from fruits or vegetables."
   },
   {
     "index": 123,
@@ -1596,20 +1596,20 @@
       "Marmalade"
     ],
     "correct_option": "Honey",
-    "explanation": "Honig means 'honey'. Pronounced 'HÖ-nig'. Sweet substance made by bees."
+    "explanation": "Honig means 'honey'. Pronounced 'HÖ-nig'. Sweet substance produced by bees."
   },
   {
     "index": 124,
     "question": "What does 'Backen' mean in English?",
     "options": [
-      "Cook",
-      "Bake",
-      "Roast",
-      "Grill",
-      "Fry"
+      "To cook",
+      "To bake",
+      "To roast",
+      "To grill",
+      "To fry"
     ],
-    "correct_option": "Bake",
-    "explanation": "Backen means 'to bake'. Pronounced 'BAH-ken'. Cook in oven."
+    "correct_option": "To bake",
+    "explanation": "Backen means 'to bake'. Pronounced 'BAH-ken'. Cook in an oven with dry heat."
   },
   {
     "index": 125,
@@ -1622,20 +1622,20 @@
       "Laufen"
     ],
     "correct_option": "Springen",
-    "explanation": "Springen means 'to jump'. Pronounced 'SHPRIN-gen'. Leap into air."
+    "explanation": "Springen means 'to jump'. Pronounced 'SHPRIN-gen'. Leap into the air with force."
   },
   {
     "index": 126,
     "question": "What does 'Tanzen' mean in English?",
     "options": [
-      "Run",
-      "Walk",
-      "Jump",
-      "Dance",
-      "Skip"
+      "To run",
+      "To walk",
+      "To jump",
+      "To dance",
+      "To skip"
     ],
-    "correct_option": "Dance",
-    "explanation": "Tanzen means 'to dance'. Pronounced 'TAHN-tsen'. Move rhythmically to music."
+    "correct_option": "To dance",
+    "explanation": "Tanzen means 'to dance'. Pronounced 'TAHN-tsen'. Move rhythmically in time to music."
   },
   {
     "index": 127,
@@ -1648,7 +1648,7 @@
       "Hocken"
     ],
     "correct_option": "Sitzen",
-    "explanation": "Sitzen means 'to sit'. Pronounced 'ZIT-sen'. Be seated on a chair."
+    "explanation": "Sitzen means 'to sit'. Pronounced 'ZIT-sen'. Be seated on a chair or surface."
   },
   {
     "index": 128,
@@ -1661,7 +1661,7 @@
       "Hocken"
     ],
     "correct_option": "Stehen",
-    "explanation": "Stehen means 'to stand'. Pronounced 'SHTAY-hen'. Be upright on feet."
+    "explanation": "Stehen means 'to stand'. Pronounced 'SHTAY-hen'. Be upright on one's feet."
   },
   {
     "index": 129,
@@ -1674,7 +1674,7 @@
       "Hocken"
     ],
     "correct_option": "Liegen",
-    "explanation": "Liegen means 'to lie'. Pronounced 'LEE-gen'. Be in horizontal position."
+    "explanation": "Liegen means 'to lie'. Pronounced 'LEE-gen'. Be in a horizontal or reclining position."
   },
   {
     "index": 130,
@@ -1687,7 +1687,7 @@
       "Memorieren"
     ],
     "correct_option": "Lernen",
-    "explanation": "Lernen means 'to learn'. Pronounced 'LER-nen'. Acquire knowledge."
+    "explanation": "Lernen means 'to learn'. Pronounced 'LER-nen'. Acquire knowledge or skills."
   },
   {
     "index": 131,
@@ -1700,7 +1700,7 @@
       "Vernehmen"
     ],
     "correct_option": "Hören",
-    "explanation": "Hören means 'to listen'. Pronounced 'HÖ-ren'. Perceive sound."
+    "explanation": "Hören means 'to listen'. Pronounced 'HÖ-ren'. Perceive sound with ears."
   },
   {
     "index": 132,
@@ -1713,7 +1713,7 @@
       "Handeln"
     ],
     "correct_option": "Kaufen",
-    "explanation": "Kaufen means 'to buy'. Pronounced 'KOW-fen'. Purchase goods."
+    "explanation": "Kaufen means 'to buy'. Pronounced 'KOW-fen'. Purchase goods or commodities."
   },
   {
     "index": 133,
@@ -1732,14 +1732,14 @@
     "index": 134,
     "question": "What does 'Nehmen' mean in English?",
     "options": [
-      "Give",
-      "Take",
-      "Bring",
-      "Carry",
-      "Hold"
+      "To give",
+      "To take",
+      "To bring",
+      "To carry",
+      "To hold"
     ],
-    "correct_option": "Take",
-    "explanation": "Nehmen means 'to take'. Pronounced 'NAY-men'. Grab something."
+    "correct_option": "To take",
+    "explanation": "Nehmen means 'to take'. Pronounced 'NAY-men'. Grab or grasp something."
   },
   {
     "index": 135,
@@ -1752,7 +1752,7 @@
       "Nehmen"
     ],
     "correct_option": "Bringen",
-    "explanation": "Bringen means 'to bring'. Pronounced 'BRIN-gen'. Carry to destination."
+    "explanation": "Bringen means 'to bring'. Pronounced 'BRIN-gen'. Carry something to a destination."
   },
   {
     "index": 136,
@@ -1765,7 +1765,7 @@
       "Schleppen"
     ],
     "correct_option": "Tragen",
-    "explanation": "Tragen means 'to carry'. Pronounced 'TRAH-gen'. Hold and move something."
+    "explanation": "Tragen means 'to carry'. Pronounced 'TRAH-gen'. Hold and move something with effort."
   },
   {
     "index": 137,
@@ -1778,20 +1778,20 @@
       "Aufschlagen"
     ],
     "correct_option": "Öffnen",
-    "explanation": "Öffnen means 'to open'. Pronounced 'ÖF-nen'. Make doorway accessible."
+    "explanation": "Öffnen means 'to open'. Pronounced 'ÖF-nen'. Make a doorway or opening accessible."
   },
   {
     "index": 138,
     "question": "What does 'Schließen' mean in English?",
     "options": [
-      "Open",
-      "Close",
-      "Lock",
-      "Shut",
-      "Seal"
+      "To open",
+      "To close",
+      "To lock",
+      "To shut",
+      "To seal"
     ],
-    "correct_option": "Close",
-    "explanation": "Schließen means 'to close'. Pronounced 'SHLEE-sen'. Shut a door."
+    "correct_option": "To close",
+    "explanation": "Schließen means 'to close'. Pronounced 'SHLEE-sen'. Shut a door or opening."
   },
   {
     "index": 139,
@@ -1804,7 +1804,7 @@
       "Erreichen"
     ],
     "correct_option": "Finden",
-    "explanation": "Finden means 'to find'. Pronounced 'FIN-den'. Locate something."
+    "explanation": "Finden means 'to find'. Pronounced 'FIN-den'. Locate or discover something."
   },
   {
     "index": 140,
@@ -1817,11 +1817,11 @@
       "Fahnden"
     ],
     "correct_option": "Suchen",
-    "explanation": "Suchen means 'to search'. Pronounced 'ZOO-khen'. Look for something."
+    "explanation": "Suchen means 'to search'. Pronounced 'ZOO-khen'. Look carefully for something."
   },
   {
     "index": 141,
-    "question": "Which German verb means 'to know'?",
+    "question": "Which German verb means 'to know' (facts/information)?",
     "options": [
       "Verstehen",
       "Wissen",
@@ -1830,20 +1830,20 @@
       "Vergessen"
     ],
     "correct_option": "Wissen",
-    "explanation": "Wissen means 'to know'. Pronounced 'VIS-sen'. Have knowledge of fact."
+    "explanation": "Wissen means 'to know'. Pronounced 'VIS-sen'. Have knowledge of a fact or information."
   },
   {
     "index": 142,
     "question": "What does 'Unterrichten' mean in English?",
     "options": [
-      "Learn",
-      "Study",
-      "Teach",
-      "Train",
-      "Coach"
+      "To learn",
+      "To study",
+      "To teach",
+      "To train",
+      "To coach"
     ],
-    "correct_option": "Teach",
-    "explanation": "Unterrichten means 'to teach'. Pronounced 'oon-ter-RIKH-ten'. Give instruction."
+    "correct_option": "To teach",
+    "explanation": "Unterrichten means 'to teach'. Pronounced 'oon-ter-RIKH-ten'. Give instruction to students."
   },
   {
     "index": 143,
@@ -1856,7 +1856,7 @@
       "Hemmen"
     ],
     "correct_option": "Helfen",
-    "explanation": "Helfen means 'to help'. Pronounced 'HEL-fen'. Assist someone."
+    "explanation": "Helfen means 'to help'. Pronounced 'HEL-fen'. Assist or aid someone."
   },
   {
     "index": 144,
@@ -1869,7 +1869,7 @@
       "Ablehnen"
     ],
     "correct_option": "Mögen",
-    "explanation": "Mögen means 'to like'. Pronounced 'MÖ-gen'. Find pleasant."
+    "explanation": "Mögen means 'to like'. Pronounced 'MÖ-gen'. Find pleasant or agreeable."
   },
   {
     "index": 145,
@@ -1882,20 +1882,20 @@
       "Anbeten"
     ],
     "correct_option": "Lieben",
-    "explanation": "Lieben means 'to love'. Pronounced 'LEE-ben'. Have deep affection."
+    "explanation": "Lieben means 'to love'. Pronounced 'LEE-ben'. Have deep affection for someone."
   },
   {
     "index": 146,
     "question": "What does 'Hassen' mean in English?",
     "options": [
-      "Love",
-      "Like",
-      "Hate",
-      "Dislike",
-      "Detest"
+      "To love",
+      "To like",
+      "To hate",
+      "To dislike",
+      "To detest"
     ],
-    "correct_option": "Hate",
-    "explanation": "Hassen means 'to hate'. Pronounced 'HAH-sen'. Feel intense dislike."
+    "correct_option": "To hate",
+    "explanation": "Hassen means 'to hate'. Pronounced 'HAH-sen'. Feel intense dislike or animosity."
   },
   {
     "index": 147,
@@ -1908,7 +1908,7 @@
       "Spazieren"
     ],
     "correct_option": "Reisen",
-    "explanation": "Reisen means 'to travel'. Pronounced 'RY-zen'. Journey to new place."
+    "explanation": "Reisen means 'to travel'. Pronounced 'RY-zen'. Journey to a new place or destination."
   },
   {
     "index": 148,
@@ -1921,7 +1921,7 @@
       "Fliegen"
     ],
     "correct_option": "Fahren",
-    "explanation": "Fahren means 'to drive'. Pronounced 'FAH-ren'. Operate vehicle."
+    "explanation": "Fahren means 'to drive'. Pronounced 'FAH-ren'. Operate a vehicle on roads."
   },
   {
     "index": 149,
@@ -1934,20 +1934,20 @@
       "Sinken"
     ],
     "correct_option": "Fliegen",
-    "explanation": "Fliegen means 'to fly'. Pronounced 'FLEE-gen'. Move through air."
+    "explanation": "Fliegen means 'to fly'. Pronounced 'FLEE-gen'. Move through the air using wings."
   },
   {
     "index": 150,
     "question": "What does 'Schwimmen' mean in English?",
     "options": [
-      "Fly",
-      "Drive",
-      "Swim",
-      "Sail",
-      "Sink"
+      "To fly",
+      "To drive",
+      "To swim",
+      "To sail",
+      "To sink"
     ],
-    "correct_option": "Swim",
-    "explanation": "Schwimmen means 'to swim'. Pronounced 'SHVIM-men'. Move through water."
+    "correct_option": "To swim",
+    "explanation": "Schwimmen means 'to swim'. Pronounced 'SHVIM-men'. Move through water with strokes."
   },
   {
     "index": 151,
@@ -1960,7 +1960,7 @@
       "Brüllen"
     ],
     "correct_option": "Lachen",
-    "explanation": "Lachen means 'to laugh'. Pronounced 'LAKH-en'. Express amusement."
+    "explanation": "Lachen means 'to laugh'. Pronounced 'LAKH-en'. Express amusement or joy audibly."
   },
   {
     "index": 152,
@@ -1973,7 +1973,7 @@
       "Jaulen"
     ],
     "correct_option": "Weinen",
-    "explanation": "Weinen means 'to cry'. Pronounced 'VY-nen'. Shed tears from emotion."
+    "explanation": "Weinen means 'to cry'. Pronounced 'VY-nen'. Shed tears from sadness or emotion."
   },
   {
     "index": 153,
@@ -1986,20 +1986,20 @@
       "Schnauben"
     ],
     "correct_option": "Lächeln",
-    "explanation": "Lächeln means 'to smile'. Pronounced 'LESH-eln'. Show slight happiness."
+    "explanation": "Lächeln means 'to smile'. Pronounced 'LESH-eln'. Show slight happiness with lips."
   },
   {
     "index": 154,
     "question": "What does 'Denken' mean in English?",
     "options": [
-      "Speak",
-      "Think",
-      "Know",
-      "Believe",
-      "Understand"
+      "To speak",
+      "To think",
+      "To know",
+      "To believe",
+      "To understand"
     ],
-    "correct_option": "Think",
-    "explanation": "Denken means 'to think'. Pronounced 'DENK-en'. Use mind."
+    "correct_option": "To think",
+    "explanation": "Denken means 'to think'. Pronounced 'DENK-en'. Use one's mind to reason."
   },
   {
     "index": 155,
@@ -2012,7 +2012,7 @@
       "Zudenken"
     ],
     "correct_option": "Erinnern",
-    "explanation": "Erinnern means 'to remember'. Pronounced 'er-IN-ern'. Recall memory."
+    "explanation": "Erinnern means 'to remember'. Pronounced 'er-IN-ern'. Recall a memory from past."
   },
   {
     "index": 156,
@@ -2025,7 +2025,7 @@
       "Übersehen"
     ],
     "correct_option": "Vergessen",
-    "explanation": "Vergessen means 'to forget'. Pronounced 'fer-GES-sen'. Lose memory."
+    "explanation": "Vergessen means 'to forget'. Pronounced 'fer-GES-sen'. Lose memory of something."
   },
   {
     "index": 157,
@@ -2038,20 +2038,20 @@
       "Kennen"
     ],
     "correct_option": "Verstehen",
-    "explanation": "Verstehen means 'to understand'. Pronounced 'fer-SHTAY-hen'. Comprehend."
+    "explanation": "Verstehen means 'to understand'. Pronounced 'fer-SHTAY-hen'. Comprehend meaning."
   },
   {
     "index": 158,
     "question": "What does 'Wünschen' mean in English?",
     "options": [
-      "Want",
-      "Wish",
-      "Desire",
-      "Need",
-      "Require"
+      "To want",
+      "To wish",
+      "To desire",
+      "To need",
+      "To require"
     ],
-    "correct_option": "Wish",
-    "explanation": "Wünschen means 'to wish'. Pronounced 'VOON-shen'. Hope for something."
+    "correct_option": "To wish",
+    "explanation": "Wünschen means 'to wish'. Pronounced 'VOON-shen'. Hope for something eagerly."
   },
   {
     "index": 159,
@@ -2064,7 +2064,7 @@
       "Entwickeln"
     ],
     "correct_option": "Wachsen",
-    "explanation": "Wachsen means 'to grow'. Pronounced 'VAKH-sen'. Increase in size."
+    "explanation": "Wachsen means 'to grow'. Pronounced 'VAKH-sen'. Increase in size or develop."
   },
   {
     "index": 160,
@@ -2077,20 +2077,20 @@
       "Gehoben"
     ],
     "correct_option": "Hoch",
-    "explanation": "Hoch means 'high'. Pronounced 'HOKH'. Great elevation above ground."
+    "explanation": "Hoch means 'high'. Pronounced 'HOKH'. Great elevation above ground level."
   },
   {
     "index": 161,
     "question": "Which German adjective means 'low'?",
     "options": [
       "Hoch",
-      "Tief",
+      "Klein",
       "Flach",
       "Niedrig",
       "Unten"
     ],
-    "correct_option": "Tief",
-    "explanation": "Tief means 'low'. Pronounced 'TYEF'. Close to ground."
+    "correct_option": "Niedrig",
+    "explanation": "Niedrig means 'low'. Pronounced 'NEE-drig'. Not high or at a small height or level. Hoch means 'high', Klein means 'small', Flach means 'flat', and Kurz means 'short'."
   },
   {
     "index": 162,
@@ -2103,7 +2103,7 @@
       "Broad"
     ],
     "correct_option": "Wide",
-    "explanation": "Breit means 'wide'. Pronounced 'BRYT'. Great extent side to side."
+    "explanation": "Breit means 'wide'. Pronounced 'BRYT'. Great extent from side to side."
   },
   {
     "index": 163,
@@ -2116,7 +2116,7 @@
       "Spitz"
     ],
     "correct_option": "Eng",
-    "explanation": "Eng means 'narrow'. Pronounced 'ENG'. Limited in width."
+    "explanation": "Eng means 'narrow'. Pronounced 'ENG'. Limited in width or space."
   },
   {
     "index": 164,
@@ -2129,7 +2129,7 @@
       "Stabil"
     ],
     "correct_option": "Dick",
-    "explanation": "Dick means 'thick'. Pronounced 'DIK'. Great depth or density."
+    "explanation": "Dick means 'thick'. Pronounced 'DIK'. Great depth, density, or substance."
   },
   {
     "index": 165,
@@ -2142,7 +2142,7 @@
       "Spitz"
     ],
     "correct_option": "Dünn",
-    "explanation": "Dünn means 'thin'. Pronounced 'DOON'. Small in thickness."
+    "explanation": "Dünn means 'thin'. Pronounced 'DOON'. Small in thickness or depth."
   },
   {
     "index": 166,
@@ -2155,11 +2155,11 @@
       "Weighty"
     ],
     "correct_option": "Heavy",
-    "explanation": "Schwer means 'heavy'. Pronounced 'SHVAYR'. Great weight or mass."
+    "explanation": "Schwer means 'heavy'. Pronounced 'SHVAYR'. Of great weight or mass."
   },
   {
     "index": 167,
-    "question": "How do you say 'light' in German?",
+    "question": "How do you say 'light (in weight)' in German?",
     "options": [
       "Schwer",
       "Leicht",
@@ -2168,7 +2168,7 @@
       "Zart"
     ],
     "correct_option": "Leicht",
-    "explanation": "Leicht means 'light'. Pronounced 'LYKT'. Small in weight."
+    "explanation": "Leicht means 'light'. Pronounced 'LYKT'. Small in weight (not 'Licht' which means light/illumination)."
   },
   {
     "index": 168,
@@ -2181,7 +2181,7 @@
       "Mild"
     ],
     "correct_option": "Warm",
-    "explanation": "Warm means 'warm'. Pronounced 'VARM'. Moderately heated."
+    "explanation": "Warm means 'warm'. Pronounced 'VARM'. Moderately heated or pleasant temperature."
   },
   {
     "index": 169,
@@ -2194,7 +2194,7 @@
       "Sanft"
     ],
     "correct_option": "Weich",
-    "explanation": "Weich means 'soft'. Pronounced 'VYKH'. Not hard or firm."
+    "explanation": "Weich means 'soft'. Pronounced 'VYKH'. Not hard, firm, or rigid."
   },
   {
     "index": 170,
@@ -2207,7 +2207,7 @@
       "Spröde"
     ],
     "correct_option": "Hart",
-    "explanation": "Hart means 'hard'. Pronounced 'HART'. Solid and firm."
+    "explanation": "Hart means 'hard'. Pronounced 'HART'. Solid, firm, or difficult to compress."
   },
   {
     "index": 171,
@@ -2220,7 +2220,7 @@
       "Borst"
     ],
     "correct_option": "Rauh",
-    "explanation": "Rauh means 'rough'. Pronounced 'ROW'. Not smooth texture."
+    "explanation": "Rauh means 'rough'. Pronounced 'ROW'. Not smooth in texture or surface."
   },
   {
     "index": 172,
@@ -2233,7 +2233,7 @@
       "Uneven"
     ],
     "correct_option": "Smooth",
-    "explanation": "Glatt means 'smooth'. Pronounced 'GLAHT'. Even surface texture."
+    "explanation": "Glatt means 'smooth'. Pronounced 'GLAHT'. Even, polished surface texture."
   },
   {
     "index": 173,
@@ -2246,7 +2246,7 @@
       "Durchnässt"
     ],
     "correct_option": "Nass",
-    "explanation": "Nass means 'wet'. Pronounced 'NAHS'. Covered with liquid."
+    "explanation": "Nass means 'wet'. Pronounced 'NAHS'. Covered or saturated with liquid."
   },
   {
     "index": 174,
@@ -2259,7 +2259,7 @@
       "Verdorrt"
     ],
     "correct_option": "Trocken",
-    "explanation": "Trocken means 'dry'. Pronounced 'TROK-ken'. Free of moisture."
+    "explanation": "Trocken means 'dry'. Pronounced 'TROK-ken'. Free of moisture or liquids."
   },
   {
     "index": 175,
@@ -2269,10 +2269,10 @@
       "Sauber",
       "Rein",
       "Makellos",
-      "Spottlos"
+      "Spotlos"
     ],
     "correct_option": "Sauber",
-    "explanation": "Sauber means 'clean'. Pronounced 'ZOW-ber'. Free of dirt."
+    "explanation": "Sauber means 'clean'. Pronounced 'ZOW-ber'. Free from dirt or contamination."
   },
   {
     "index": 176,
@@ -2285,7 +2285,7 @@
       "Soiled"
     ],
     "correct_option": "Dirty",
-    "explanation": "Schmutzig means 'dirty'. Pronounced 'SHMOO-tsig'. Covered with dirt."
+    "explanation": "Schmutzig means 'dirty'. Pronounced 'SHMOO-tsig'. Covered with dirt or soil."
   },
   {
     "index": 177,
@@ -2298,7 +2298,7 @@
       "Strahlend"
     ],
     "correct_option": "Hell",
-    "explanation": "Hell means 'bright'. Pronounced 'HEL'. Emitting light."
+    "explanation": "Hell means 'bright'. Pronounced 'HEL'. Emitting or filled with light."
   },
   {
     "index": 178,
@@ -2311,7 +2311,7 @@
       "Dämmrig"
     ],
     "correct_option": "Dunkel",
-    "explanation": "Dunkel means 'dark'. Pronounced 'DOON-kel'. Lacking light."
+    "explanation": "Dunkel means 'dark'. Pronounced 'DOON-kel'. Lacking light or illumination."
   },
   {
     "index": 179,
@@ -2324,7 +2324,7 @@
       "Handsome"
     ],
     "correct_option": "Ugly",
-    "explanation": "Hässlich means 'ugly'. Pronounced 'HES-likh'. Displeasing appearance."
+    "explanation": "Hässlich means 'ugly'. Pronounced 'HES-likh'. Unpleasing in appearance."
   },
   {
     "index": 180,
@@ -2337,7 +2337,7 @@
       "Powerful"
     ],
     "correct_option": "Strong",
-    "explanation": "Stark means 'strong'. Pronounced 'SHTARK'. Great strength."
+    "explanation": "Stark means 'strong'. Pronounced 'SHTARK'. Possessing great strength or power."
   },
   {
     "index": 181,
@@ -2350,7 +2350,7 @@
       "Gebrechlich"
     ],
     "correct_option": "Schwach",
-    "explanation": "Schwach means 'weak'. Pronounced 'SHVAKH'. Lacking strength."
+    "explanation": "Schwach means 'weak'. Pronounced 'SHVAKH'. Lacking in strength or power."
   },
   {
     "index": 182,
@@ -2363,7 +2363,7 @@
       "Spottbillig"
     ],
     "correct_option": "Billig",
-    "explanation": "Billig means 'cheap'. Pronounced 'BIL-likh'. Low in price."
+    "explanation": "Billig means 'cheap'. Pronounced 'BIL-likh'. Low in price or cost."
   },
   {
     "index": 183,
@@ -2376,7 +2376,7 @@
       "Kostbar"
     ],
     "correct_option": "Teuer",
-    "explanation": "Teuer means 'expensive'. Pronounced 'TOY-er'. High in price."
+    "explanation": "Teuer means 'expensive'. Pronounced 'TOY-er'. High in price or cost."
   },
   {
     "index": 184,
@@ -2389,7 +2389,7 @@
       "Proper"
     ],
     "correct_option": "Right",
-    "explanation": "Richtig means 'right'. Pronounced 'RIKH-tig'. Correct or proper."
+    "explanation": "Richtig means 'right' or 'correct'. Pronounced 'RIKH-tig'. In accordance with facts."
   },
   {
     "index": 185,
@@ -2402,7 +2402,7 @@
       "Unrecht"
     ],
     "correct_option": "Falsch",
-    "explanation": "Falsch means 'wrong'. Pronounced 'FALSH'. Not correct."
+    "explanation": "Falsch means 'wrong'. Pronounced 'FALSH'. Not correct or accurate."
   },
   {
     "index": 186,
@@ -2415,7 +2415,7 @@
       "Over"
     ],
     "correct_option": "Above",
-    "explanation": "Oben means 'above'. Pronounced 'O-ben'. Higher up position."
+    "explanation": "Oben means 'above'. Pronounced 'O-ben'. In a higher position or location."
   },
   {
     "index": 187,
@@ -2428,20 +2428,20 @@
       "Hinten"
     ],
     "correct_option": "Unten",
-    "explanation": "Unten means 'below'. Pronounced 'OON-ten'. Lower down position."
+    "explanation": "Unten means 'below'. Pronounced 'OON-ten'. In a lower position or location."
   },
   {
     "index": 188,
-    "question": "How do you say 'well' in German?",
+    "question": "How do you say 'well' (in the manner of doing something) in German?",
     "options": [
       "Schlecht",
       "Gut",
-      "Wohl",
+      "Genug",
       "Besser",
       "Hervorragend"
     ],
-    "correct_option": "Wohl",
-    "explanation": "Wohl means 'well'. Pronounced 'VOL'. In good manner."
+    "correct_option": "Gut",
+    "explanation": "Gut means 'good' or 'well'. Pronounced 'GOOT'. Used to describe doing something in a good or satisfactory manner (e.g., 'Er singt gut' = 'He sings well')."
   },
   {
     "index": 189,
@@ -2454,7 +2454,7 @@
       "Übel"
     ],
     "correct_option": "Schlecht",
-    "explanation": "Schlecht means 'badly'. Pronounced 'SHLEKHТ'. In poor manner."
+    "explanation": "Schlecht means 'badly'. Pronounced 'SHLEKHТ'. In a poor or unsatisfactory manner."
   },
   {
     "index": 190,
@@ -2467,7 +2467,7 @@
       "Apart"
     ],
     "correct_option": "Zusammen",
-    "explanation": "Zusammen means 'together'. Pronounced 'tsoo-ZAH-men'. With others."
+    "explanation": "Zusammen means 'together'. Pronounced 'tsoo-ZAH-men'. With others or in union."
   },
   {
     "index": 191,
@@ -2480,7 +2480,7 @@
       "Individual"
     ],
     "correct_option": "Alone",
-    "explanation": "Allein means 'alone'. Pronounced 'ah-LYN'. By oneself."
+    "explanation": "Allein means 'alone'. Pronounced 'ah-LYN'. By oneself without others."
   },
   {
     "index": 192,
@@ -2493,7 +2493,7 @@
       "Überaus"
     ],
     "correct_option": "Sehr",
-    "explanation": "Sehr means 'very'. Pronounced 'ZAYR'. To great extent."
+    "explanation": "Sehr means 'very'. Pronounced 'ZAYR'. To a great extent or degree."
   },
   {
     "index": 193,
@@ -2506,7 +2506,7 @@
       "Zu sehr"
     ],
     "correct_option": "Zu",
-    "explanation": "Zu means 'too'. Pronounced 'TSOO'. Excessively."
+    "explanation": "Zu means 'too'. Pronounced 'TSOO'. To an excessive or extreme degree."
   },
   {
     "index": 194,
@@ -2519,7 +2519,7 @@
       "Ausreichend"
     ],
     "correct_option": "Genug",
-    "explanation": "Genug means 'enough'. Pronounced 'geh-NOOK'. Sufficient amount."
+    "explanation": "Genug means 'enough'. Pronounced 'geh-NOOK'. Adequate or sufficient amount."
   },
   {
     "index": 195,
@@ -2532,7 +2532,7 @@
       "Many"
     ],
     "correct_option": "More",
-    "explanation": "Mehr means 'more'. Pronounced 'MAYR'. Additional quantity."
+    "explanation": "Mehr means 'more'. Pronounced 'MAYR'. An additional or greater quantity."
   },
   {
     "index": 196,
@@ -2545,7 +2545,7 @@
       "Geringer"
     ],
     "correct_option": "Weniger",
-    "explanation": "Weniger means 'less'. Pronounced 'VAY-ni-ger'. Reduced quantity."
+    "explanation": "Weniger means 'less'. Pronounced 'VAY-ni-ger'. A reduced or smaller quantity."
   },
   {
     "index": 197,
@@ -2558,7 +2558,7 @@
       "Außerhalb"
     ],
     "correct_option": "Außen",
-    "explanation": "Außen means 'outside'. Pronounced 'OW-sen'. Exterior location."
+    "explanation": "Außen means 'outside'. Pronounced 'OW-sen'. On the exterior or outer location."
   },
   {
     "index": 198,
@@ -2571,7 +2571,7 @@
       "Innerhalb"
     ],
     "correct_option": "Innen",
-    "explanation": "Innen means 'inside'. Pronounced 'IN-nen'. Interior location."
+    "explanation": "Innen means 'inside'. Pronounced 'IN-nen'. On the interior or inner location."
   },
   {
     "index": 199,
@@ -2584,7 +2584,7 @@
       "Forward"
     ],
     "correct_option": "Right",
-    "explanation": "Rechts means 'right'. Pronounced 'REKHTS'. Right side direction."
+    "explanation": "Rechts means 'right'. Pronounced 'REKHTS'. Direction to the right side."
   },
   {
     "index": 200,
@@ -2597,7 +2597,7 @@
       "Vorwärts"
     ],
     "correct_option": "Links",
-    "explanation": "Links means 'left'. Pronounced 'LINKS'. Left side direction."
+    "explanation": "Links means 'left'. Pronounced 'LINKS'. Direction to the left side."
   },
   {
     "index": 201,
@@ -2610,7 +2610,7 @@
       "Vorwärts"
     ],
     "correct_option": "Geradeaus",
-    "explanation": "Geradeaus means 'straight'. Pronounced 'geh-RAH-deh-ows'. Forward direction."
+    "explanation": "Geradeaus means 'straight'. Pronounced 'geh-RAH-deh-ows'. In a forward direction."
   },
   {
     "index": 202,
@@ -2623,7 +2623,7 @@
       "Junge"
     ],
     "correct_option": "Mann",
-    "explanation": "Mann means 'man'. Pronounced 'MAHN'. Adult male human."
+    "explanation": "Mann means 'man'. Pronounced 'MAHN'. Adult male human being."
   },
   {
     "index": 203,
@@ -2636,7 +2636,7 @@
       "Female"
     ],
     "correct_option": "Woman",
-    "explanation": "Frau means 'woman'. Pronounced 'FROW'. Adult female human."
+    "explanation": "Frau means 'woman'. Pronounced 'FROW'. Adult female human being."
   },
   {
     "index": 204,
@@ -2662,7 +2662,7 @@
       "Knabe"
     ],
     "correct_option": "Junge",
-    "explanation": "Junge means 'boy'. Pronounced 'YOON-geh'. Male child."
+    "explanation": "Junge means 'boy'. Pronounced 'YOON-geh'. Young male child."
   },
   {
     "index": 206,
@@ -2675,7 +2675,7 @@
       "Maid"
     ],
     "correct_option": "Mädchen",
-    "explanation": "Mädchen means 'girl'. Pronounced 'MEHT-khen'. Female child."
+    "explanation": "Mädchen means 'girl'. Pronounced 'MEHT-khen'. Young female child."
   },
   {
     "index": 207,
@@ -2688,7 +2688,7 @@
       "Neffe"
     ],
     "correct_option": "Onkel",
-    "explanation": "Onkel means 'uncle'. Pronounced 'ONG-kel'. Parent's brother."
+    "explanation": "Onkel means 'uncle'. Pronounced 'ONG-kel'. Parent's brother or male relative."
   },
   {
     "index": 208,
@@ -2701,7 +2701,7 @@
       "Nichte"
     ],
     "correct_option": "Tante",
-    "explanation": "Tante means 'aunt'. Pronounced 'TAHN-teh'. Parent's sister."
+    "explanation": "Tante means 'aunt'. Pronounced 'TAHN-teh'. Parent's sister or female relative."
   },
   {
     "index": 209,
@@ -2714,7 +2714,7 @@
       "Nephew"
     ],
     "correct_option": "Cousin male",
-    "explanation": "Vetter means 'male cousin'. Pronounced 'FET-ter'. Male relative."
+    "explanation": "Vetter means 'male cousin'. Pronounced 'FET-ter'. Male relative in same generation."
   },
   {
     "index": 210,
@@ -2727,7 +2727,7 @@
       "Verwandte"
     ],
     "correct_option": "Kusine",
-    "explanation": "Kusine means 'female cousin'. Pronounced 'koo-ZEE-neh'. Female relative."
+    "explanation": "Kusine means 'female cousin'. Pronounced 'koo-ZEE-neh'. Female relative in same generation."
   },
   {
     "index": 211,
@@ -2740,7 +2740,7 @@
       "Enkel"
     ],
     "correct_option": "Neffe",
-    "explanation": "Neffe means 'nephew'. Pronounced 'NEF-feh'. Son of sibling."
+    "explanation": "Neffe means 'nephew'. Pronounced 'NEF-feh'. Son of one's sibling."
   },
   {
     "index": 212,
@@ -2753,7 +2753,7 @@
       "Enkelin"
     ],
     "correct_option": "Nichte",
-    "explanation": "Nichte means 'niece'. Pronounced 'NIKH-teh'. Daughter of sibling."
+    "explanation": "Nichte means 'niece'. Pronounced 'NIKH-teh'. Daughter of one's sibling."
   },
   {
     "index": 213,
@@ -2766,7 +2766,7 @@
       "Descendant"
     ],
     "correct_option": "Grandchild",
-    "explanation": "Enkel means 'grandchild'. Pronounced 'ENG-kel'. Child of child."
+    "explanation": "Enkel means 'grandchild'. Pronounced 'ENG-kel'. Child of one's child."
   },
   {
     "index": 214,
@@ -2779,7 +2779,7 @@
       "Tochter"
     ],
     "correct_option": "Enkelin",
-    "explanation": "Enkelin means 'granddaughter'. Pronounced 'ENG-keh-lin'. Daughter of child."
+    "explanation": "Enkelin means 'granddaughter'. Pronounced 'ENG-keh-lin'. Daughter of one's child."
   },
   {
     "index": 215,
@@ -2805,7 +2805,7 @@
       "Masse"
     ],
     "correct_option": "Leute",
-    "explanation": "Leute means 'people'. Pronounced 'LOY-teh'. Multiple human beings."
+    "explanation": "Leute means 'people'. Pronounced 'LOY-teh'. Multiple human beings collectively."
   },
   {
     "index": 217,
@@ -2818,7 +2818,7 @@
       "Chest"
     ],
     "correct_option": "Cabinet",
-    "explanation": "Schrank means 'cabinet'. Pronounced 'SHRANK'. Furniture for storage."
+    "explanation": "Schrank means 'cabinet'. Pronounced 'SHRANK'. Furniture with doors for storage."
   },
   {
     "index": 218,
@@ -2831,7 +2831,7 @@
       "Storeroom"
     ],
     "correct_option": "Kitchen",
-    "explanation": "Küche means 'kitchen'. Pronounced 'KÜ-kheh'. Room for cooking food."
+    "explanation": "Küche means 'kitchen'. Pronounced 'KÜ-kheh'. Room where food is prepared."
   },
   {
     "index": 219,
@@ -2870,7 +2870,7 @@
       "Salon"
     ],
     "correct_option": "Wohnzimmer",
-    "explanation": "Wohnzimmer means 'living room'. Pronounced 'VON-tsim-mer'. Main family room."
+    "explanation": "Wohnzimmer means 'living room'. Pronounced 'VON-tsim-mer'. Main family gathering space."
   },
   {
     "index": 222,
@@ -2883,7 +2883,7 @@
       "Foyer"
     ],
     "correct_option": "Hallway",
-    "explanation": "Flur means 'hallway'. Pronounced 'FLOOR'. Passage connecting rooms."
+    "explanation": "Flur means 'hallway'. Pronounced 'FLOOR'. Passage connecting rooms in home."
   },
   {
     "index": 223,
@@ -2896,7 +2896,7 @@
       "Rampe"
     ],
     "correct_option": "Treppe",
-    "explanation": "Treppe means 'stairs'. Pronounced 'TREP-peh'. Goes between levels."
+    "explanation": "Treppe means 'stairs'. Pronounced 'TREP-peh'. Steps connecting different levels."
   },
   {
     "index": 224,
@@ -2909,7 +2909,7 @@
       "Balken"
     ],
     "correct_option": "Decke",
-    "explanation": "Decke means 'ceiling'. Pronounced 'DEK-keh'. Top inner surface of room."
+    "explanation": "Decke means 'ceiling'. Pronounced 'DEK-keh'. Top inner surface of a room."
   },
   {
     "index": 225,
@@ -2922,7 +2922,7 @@
       "Entrance"
     ],
     "correct_option": "Gate",
-    "explanation": "Tor means 'gate'. Pronounced 'TOR'. Opens to enclosed area."
+    "explanation": "Tor means 'gate'. Pronounced 'TOR'. Large opening or entrance to enclosed area."
   },
   {
     "index": 226,
@@ -2935,7 +2935,7 @@
       "Klinke"
     ],
     "correct_option": "Schlüssel",
-    "explanation": "Schlüssel means 'key'. Pronounced 'SHLOO-sel'. Opens locks."
+    "explanation": "Schlüssel means 'key'. Pronounced 'SHLOO-sel'. Opens locks and doors."
   },
   {
     "index": 227,
@@ -2948,7 +2948,7 @@
       "Switch"
     ],
     "correct_option": "Lamp",
-    "explanation": "Lampe means 'lamp'. Pronounced 'LAM-peh'. Provides artificial light."
+    "explanation": "Lampe means 'lamp'. Pronounced 'LAM-peh'. Device that provides light."
   },
   {
     "index": 228,
@@ -2961,7 +2961,7 @@
       "Oberfläche"
     ],
     "correct_option": "Spiegel",
-    "explanation": "Spiegel means 'mirror'. Pronounced 'SHPEE-gel'. Reflects images."
+    "explanation": "Spiegel means 'mirror'. Pronounced 'SHPEE-gel'. Reflects images of objects."
   },
   {
     "index": 229,
@@ -2987,20 +2987,20 @@
       "Stunde"
     ],
     "correct_option": "Uhr",
-    "explanation": "Uhr means 'clock'. Pronounced 'OOR'. Measures time."
+    "explanation": "Uhr means 'clock'. Pronounced 'OOR'. Device that measures time."
   },
   {
     "index": 231,
-    "question": "What is the German word for 'watch'?",
+    "question": "What is the German word for 'wristwatch'?",
     "options": [
       "Uhr",
       "Zeiger",
       "Armbanduhr",
-      "Taschen",
-      "Mechanik"
+      "Taschenuhr",
+      "Zeitmesser"
     ],
     "correct_option": "Armbanduhr",
-    "explanation": "Armbanduhr means 'watch'. Pronounced 'ARM-bant-oor'. Wristwatch for time."
+    "explanation": "Armbanduhr means 'wristwatch'. Pronounced 'ARM-bant-oor'. Watch worn on wrist."
   },
   {
     "index": 232,
@@ -3008,12 +3008,12 @@
     "options": [
       "Radio",
       "Telefon",
-      "Television",
+      "Fernsehen",
       "Computer",
       "Apparat"
     ],
     "correct_option": "Telefon",
-    "explanation": "Telefon means 'telephone'. Pronounced 'teh-leh-FON'. For communication."
+    "explanation": "Telefon means 'telephone'. Pronounced 'teh-leh-FON'. Device for communication."
   },
   {
     "index": 233,
@@ -3026,7 +3026,7 @@
       "Speaker"
     ],
     "correct_option": "Radio",
-    "explanation": "Radio means 'radio'. Pronounced 'RAH-dee-o'. Broadcasts audio programs."
+    "explanation": "Radio means 'radio'. Pronounced 'RAH-dee-o'. Device that broadcasts audio programs."
   },
   {
     "index": 234,
@@ -3039,20 +3039,20 @@
       "Apparat"
     ],
     "correct_option": "Fernseher",
-    "explanation": "Fernseher means 'television'. Pronounced 'FERN-zay-er'. Shows video programs."
+    "explanation": "Fernseher means 'television'. Pronounced 'FERN-zay-er'. Device for watching programs."
   },
   {
     "index": 235,
     "question": "What is 'Computer' in German?",
     "options": [
-      "Machine",
-      "Computer",
-      "Device",
       "Maschine",
-      "Apparat"
+      "Computer",
+      "Gerät",
+      "Komponente",
+      "Vorrichtung"
     ],
     "correct_option": "Computer",
-    "explanation": "Computer means 'computer'. Pronounced 'kom-pyoo-TER'. Electronic device."
+    "explanation": "Computer means 'computer'. Pronounced 'kom-pyoo-TER'. Electronic computing device."
   },
   {
     "index": 236,
@@ -3065,7 +3065,7 @@
       "Essen"
     ],
     "correct_option": "Essen",
-    "explanation": "Essen means 'food'. Pronounced 'ES-sen'. Nourishment for eating."
+    "explanation": "Essen means 'food'. Pronounced 'ES-sen'. Edible nourishment for sustenance."
   },
   {
     "index": 237,
@@ -3078,7 +3078,7 @@
       "Dolch"
     ],
     "correct_option": "Messer",
-    "explanation": "Messer means 'knife'. Pronounced 'MES-ser'. Cutting utensil."
+    "explanation": "Messer means 'knife'. Pronounced 'MES-ser'. Cutting utensil with blade."
   },
   {
     "index": 238,
@@ -3091,7 +3091,7 @@
       "Zahn"
     ],
     "correct_option": "Gabel",
-    "explanation": "Gabel means 'fork'. Pronounced 'GAH-bel'. Pronged utensil."
+    "explanation": "Gabel means 'fork'. Pronounced 'GAH-bel'. Eating utensil with tines."
   },
   {
     "index": 239,
@@ -3104,7 +3104,7 @@
       "Scoop"
     ],
     "correct_option": "Spoon",
-    "explanation": "Löffel means 'spoon'. Pronounced 'LÖF-fel'. Eating utensil."
+    "explanation": "Löffel means 'spoon'. Pronounced 'LÖF-fel'. Eating utensil with rounded bowl."
   },
   {
     "index": 240,
@@ -3130,7 +3130,7 @@
       "Kelch"
     ],
     "correct_option": "Tasse",
-    "explanation": "Tasse means 'cup'. Pronounced 'TAH-seh'. Small drinking vessel."
+    "explanation": "Tasse means 'cup'. Pronounced 'TAH-seh'. Small drinking vessel with handle."
   },
   {
     "index": 242,
@@ -3156,7 +3156,7 @@
       "Kettle"
     ],
     "correct_option": "Pot",
-    "explanation": "Topf means 'pot'. Pronounced 'TOPF'. Cooking container."
+    "explanation": "Topf means 'pot'. Pronounced 'TOPF'. Container for cooking food."
   },
   {
     "index": 244,
@@ -3169,7 +3169,7 @@
       "Kochtopf"
     ],
     "correct_option": "Kessel",
-    "explanation": "Kessel means 'kettle'. Pronounced 'KES-sel'. Boils liquid."
+    "explanation": "Kessel means 'kettle'. Pronounced 'KES-sel'. Vessel for boiling water."
   },
   {
     "index": 245,
@@ -3182,7 +3182,7 @@
       "Monarch"
     ],
     "correct_option": "King",
-    "explanation": "König means 'king'. Pronounced 'KÖ-nig'. Male ruler of kingdom."
+    "explanation": "König means 'king'. Pronounced 'KÖ-nig'. Male ruler of a kingdom."
   },
   {
     "index": 246,
@@ -3195,7 +3195,7 @@
       "Fürstin"
     ],
     "correct_option": "Königin",
-    "explanation": "Königin means 'queen'. Pronounced 'KÖ-ni-gin'. Female ruler of kingdom."
+    "explanation": "Königin means 'queen'. Pronounced 'KÖ-ni-gin'. Female ruler of a kingdom."
   },
   {
     "index": 247,
@@ -3208,7 +3208,7 @@
       "Fürst"
     ],
     "correct_option": "Prinz",
-    "explanation": "Prinz means 'prince'. Pronounced 'PRINTS'. Son of king."
+    "explanation": "Prinz means 'prince'. Pronounced 'PRINTS'. Son of a king or royal heir."
   },
   {
     "index": 248,
@@ -3221,7 +3221,7 @@
       "Fürstin"
     ],
     "correct_option": "Prinzessin",
-    "explanation": "Prinzessin means 'princess'. Pronounced 'prin-TSES-in'. Daughter of king."
+    "explanation": "Prinzessin means 'princess'. Pronounced 'prin-TSES-in'. Daughter of king or queen."
   },
   {
     "index": 249,
@@ -3234,7 +3234,7 @@
       "Attendant"
     ],
     "correct_option": "Servant",
-    "explanation": "Diener means 'servant'. Pronounced 'DEE-ner'. Person who serves."
+    "explanation": "Diener means 'servant'. Pronounced 'DEE-ner'. Person who serves others."
   },
   {
     "index": 250,
@@ -3247,7 +3247,7 @@
       "Streiter"
     ],
     "correct_option": "Soldat",
-    "explanation": "Soldat means 'soldier'. Pronounced 'zol-DAHT'. Military person."
+    "explanation": "Soldat means 'soldier'. Pronounced 'zol-DAHT'. Military person in armed forces."
   },
   {
     "index": 251,
@@ -3260,7 +3260,7 @@
       "Geschäftsmann"
     ],
     "correct_option": "Kaufmann",
-    "explanation": "Kaufmann means 'merchant'. Pronounced 'KAUF-mahn'. Trades goods."
+    "explanation": "Kaufmann means 'merchant'. Pronounced 'KAUF-mahn'. Person who buys and sells goods."
   },
   {
     "index": 252,
@@ -3273,20 +3273,20 @@
       "Schurke"
     ],
     "correct_option": "Dieb",
-    "explanation": "Dieb means 'thief'. Pronounced 'DEEP'. Steals possessions."
+    "explanation": "Dieb means 'thief'. Pronounced 'DEEP'. Person who steals possessions."
   },
   {
     "index": 253,
     "question": "What does 'Lügner' mean in English?",
     "options": [
+      "Truthful person",
       "Liar",
-      "Thief",
-      "Truthful",
-      "Honest",
-      "Sincere"
+      "Honest person",
+      "Sincere person",
+      "Reliable person"
     ],
     "correct_option": "Liar",
-    "explanation": "Lügner means 'liar'. Pronounced 'LÜG-ner'. Person who lies."
+    "explanation": "Lügner means 'liar'. Pronounced 'LÜG-ner'. Person who tells falsehoods."
   },
   {
     "index": 254,
@@ -3312,7 +3312,7 @@
       "Gemahl"
     ],
     "correct_option": "Ehemann",
-    "explanation": "Ehemann means 'husband'. Pronounced 'AY-heh-mahn'. Married male."
+    "explanation": "Ehemann means 'husband'. Pronounced 'AY-heh-mahn'. Married male person."
   },
   {
     "index": 256,
@@ -3325,7 +3325,7 @@
       "Gemahlin"
     ],
     "correct_option": "Ehefrau",
-    "explanation": "Ehefrau means 'wife'. Pronounced 'AY-heh-frow'. Married female."
+    "explanation": "Ehefrau means 'wife'. Pronounced 'AY-heh-frow'. Married female person."
   },
   {
     "index": 257,
@@ -3333,12 +3333,12 @@
     "options": [
       "Widow",
       "Widower",
-      "Divorced",
-      "Unmarried",
-      "Single"
+      "Divorced man",
+      "Unmarried man",
+      "Single man"
     ],
     "correct_option": "Widower",
-    "explanation": "Witwer means 'widower'. Pronounced 'VIT-ver'. Widowed male."
+    "explanation": "Witwer means 'widower'. Pronounced 'VIT-ver'. Widowed male person."
   },
   {
     "index": 258,
@@ -3351,7 +3351,7 @@
       "Einsam"
     ],
     "correct_option": "Witwe",
-    "explanation": "Witwe means 'widow'. Pronounced 'VIT-veh'. Widowed female."
+    "explanation": "Witwe means 'widow'. Pronounced 'VIT-veh'. Widowed female person."
   },
   {
     "index": 259,
@@ -3364,7 +3364,7 @@
       "Großmutter"
     ],
     "correct_option": "Stiefmutter",
-    "explanation": "Stiefmutter means 'stepmother'. Pronounced 'SHTIEF-moo-ter'. Remarried mother."
+    "explanation": "Stiefmutter means 'stepmother'. Pronounced 'SHTIEF-moo-ter'. Remarried mother figure."
   },
   {
     "index": 260,
@@ -3377,7 +3377,7 @@
       "Grandfather"
     ],
     "correct_option": "Stepfather",
-    "explanation": "Stiefvater means 'stepfather'. Pronounced 'SHTIEF-fah-ter'. Remarried father."
+    "explanation": "Stiefvater means 'stepfather'. Pronounced 'SHTIEF-fah-ter'. Remarried father figure."
   },
   {
     "index": 261,
@@ -3390,7 +3390,7 @@
       "Reich"
     ],
     "correct_option": "Nation",
-    "explanation": "Nation means 'nation'. Pronounced 'nah-TSYON'. Country or people."
+    "explanation": "Nation means 'nation'. Pronounced 'nah-TSYON'. Country and its people."
   },
   {
     "index": 262,
@@ -3416,7 +3416,7 @@
       "Amt"
     ],
     "correct_option": "Regierung",
-    "explanation": "Regierung means 'government'. Pronounced 'reh-GEE-rung'. System of rule."
+    "explanation": "Regierung means 'government'. Pronounced 'reh-GEE-rung'. System of political authority."
   },
   {
     "index": 264,
@@ -3429,7 +3429,7 @@
       "Gouverneur"
     ],
     "correct_option": "Präsident",
-    "explanation": "Präsident means 'president'. Pronounced 'preh-zee-DENT'. Head of state."
+    "explanation": "Präsident means 'president'. Pronounced 'preh-zee-DENT'. Head of state or organization."
   },
   {
     "index": 265,
@@ -3442,7 +3442,7 @@
       "Senator"
     ],
     "correct_option": "Minister",
-    "explanation": "Minister means 'minister'. Pronounced 'mi-NIS-ter'. Government official."
+    "explanation": "Minister means 'minister'. Pronounced 'mi-NIS-ter'. Senior government official."
   },
   {
     "index": 266,
@@ -3450,12 +3450,12 @@
     "options": [
       "Lawyer",
       "Judge",
-      "Police",
+      "Police officer",
       "Sheriff",
       "Bailiff"
     ],
     "correct_option": "Judge",
-    "explanation": "Richter means 'judge'. Pronounced 'RIKH-ter'. Presides in court."
+    "explanation": "Richter means 'judge'. Pronounced 'RIKH-ter'. Official who presides in court."
   },
   {
     "index": 267,
@@ -3468,7 +3468,7 @@
       "Advokat"
     ],
     "correct_option": "Anwalt",
-    "explanation": "Anwalt means 'lawyer'. Pronounced 'AHN-valt'. Provides legal advice."
+    "explanation": "Anwalt means 'lawyer'. Pronounced 'AHN-valt'. Legal professional who advises."
   },
   {
     "index": 268,
@@ -3481,11 +3481,11 @@
       "Gendarme"
     ],
     "correct_option": "Polizist",
-    "explanation": "Polizist means 'police officer'. Pronounced 'po-li-TSIST'. Law enforcement."
+    "explanation": "Polizist means 'police officer'. Pronounced 'po-li-TSIST'. Law enforcement professional."
   },
   {
     "index": 269,
-    "question": "Which German word means 'clerk'?",
+    "question": "Which German word means 'office worker' or 'clerk'?",
     "options": [
       "Beamte",
       "Angestellte",
@@ -3494,7 +3494,7 @@
       "Bürokrat"
     ],
     "correct_option": "Angestellte",
-    "explanation": "Angestellte means 'clerk'. Pronounced 'AHN-geh-shtel-teh'. Office worker."
+    "explanation": "Angestellte means 'office worker/clerk'. Pronounced 'AHN-geh-shtel-teh'. Person employed in office."
   },
   {
     "index": 270,
@@ -3507,7 +3507,7 @@
       "Craftsman"
     ],
     "correct_option": "Worker",
-    "explanation": "Arbeiter means 'worker'. Pronounced 'AR-by-ter'. Performs labor."
+    "explanation": "Arbeiter means 'worker'. Pronounced 'AR-by-ter'. Person who performs labor."
   },
   {
     "index": 271,
@@ -3520,7 +3520,7 @@
       "Vorgesetzter"
     ],
     "correct_option": "Arbeitgeber",
-    "explanation": "Arbeitgeber means 'employer'. Pronounced 'AR-byt-gay-ber'. Employs workers."
+    "explanation": "Arbeitgeber means 'employer'. Pronounced 'AR-byt-gay-ber'. Person who employs workers."
   },
   {
     "index": 272,
@@ -3533,7 +3533,7 @@
       "Assistent"
     ],
     "correct_option": "Arbeitnehmer",
-    "explanation": "Arbeitnehmer means 'employee'. Pronounced 'AR-byt-nay-mer'. Works for employer."
+    "explanation": "Arbeitnehmer means 'employee'. Pronounced 'AR-byt-nay-mer'. Person employed by employer."
   },
   {
     "index": 273,
@@ -3546,24 +3546,24 @@
       "Direktor"
     ],
     "correct_option": "Chef",
-    "explanation": "Chef means 'boss'. Pronounced 'SHEF'. Supervises workers."
+    "explanation": "Chef means 'boss'. Pronounced 'SHEF'. Person who supervises workers."
   },
   {
     "index": 274,
     "question": "What does 'Schrift' mean in English?",
     "options": [
-      "Letter",
-      "Script",
+      "Speech",
       "Writing",
-      "Handwriting",
-      "Document"
+      "Language",
+      "Book",
+      "Pronunciation"
     ],
-    "correct_option": "Script",
-    "explanation": "Schrift means 'script'. Pronounced 'SHRIFT'. Written form of language."
+    "correct_option": "Writing",
+    "explanation": "Schrift means 'writing' or 'script'. Pronounced 'SHRIFT'. Refers to written text, a writing system, or a typeface/font."
   },
   {
     "index": 275,
-    "question": "How do you say 'letter' in German?",
+    "question": "How do you say 'letter' (written message) in German?",
     "options": [
       "Schrift",
       "Brief",
@@ -3572,7 +3572,7 @@
       "Epistel"
     ],
     "correct_option": "Brief",
-    "explanation": "Brief means 'letter'. Pronounced 'BRIEF'. Written correspondence."
+    "explanation": "Brief means 'letter'. Pronounced 'BRIEF'. Written correspondence or message."
   },
   {
     "index": 276,
@@ -3585,7 +3585,7 @@
       "Umschlag"
     ],
     "correct_option": "Postkarte",
-    "explanation": "Postkarte means 'postcard'. Pronounced 'POST-kar-teh'. Mailed card."
+    "explanation": "Postkarte means 'postcard'. Pronounced 'POST-kar-teh'. Card sent through mail."
   },
   {
     "index": 277,
@@ -3598,7 +3598,7 @@
       "Koffer"
     ],
     "correct_option": "Paket",
-    "explanation": "Paket means 'package'. Pronounced 'pah-KET'. Wrapped bundle."
+    "explanation": "Paket means 'package'. Pronounced 'pah-KET'. Wrapped bundle of items."
   },
   {
     "index": 278,
@@ -3624,7 +3624,7 @@
       "Beutel"
     ],
     "correct_option": "Handtasche",
-    "explanation": "Handtasche means 'handbag'. Pronounced 'HANT-tah-sheh'. Carried by hand."
+    "explanation": "Handtasche means 'handbag'. Pronounced 'HANT-tah-sheh'. Carried in hand for personal items."
   },
   {
     "index": 280,
@@ -3637,7 +3637,7 @@
       "Tornister"
     ],
     "correct_option": "Rucksack",
-    "explanation": "Rucksack means 'backpack'. Pronounced 'ROOK-zahk'. Worn on back."
+    "explanation": "Rucksack means 'backpack'. Pronounced 'ROOK-zahk'. Carried on the back."
   },
   {
     "index": 281,
@@ -3650,7 +3650,7 @@
       "Container"
     ],
     "correct_option": "Wallet",
-    "explanation": "Geldbörse means 'wallet'. Pronounced 'GELT-bör-seh'. Carries money."
+    "explanation": "Geldbörse means 'wallet'. Pronounced 'GELT-bör-seh'. Carries money and cards."
   },
   {
     "index": 282,
@@ -3663,7 +3663,7 @@
       "Groschen"
     ],
     "correct_option": "Münze",
-    "explanation": "Münze means 'coin'. Pronounced 'MOON-tseh'. Metal money."
+    "explanation": "Münze means 'coin'. Pronounced 'MOON-tseh'. Metal money of small value."
   },
   {
     "index": 283,
@@ -3676,7 +3676,7 @@
       "Geld"
     ],
     "correct_option": "Geldschein",
-    "explanation": "Geldschein means 'banknote'. Pronounced 'GELT-shyn'. Paper money."
+    "explanation": "Geldschein means 'banknote'. Pronounced 'GELT-shyn'. Paper money of larger value."
   },
   {
     "index": 284,
@@ -3689,7 +3689,7 @@
       "Schließe"
     ],
     "correct_option": "Knopf",
-    "explanation": "Knopf means 'button'. Pronounced 'KNOPF'. Fastens clothing."
+    "explanation": "Knopf means 'button'. Pronounced 'KNOPF'. Fastener on clothing."
   },
   {
     "index": 285,
@@ -3715,7 +3715,7 @@
       "Kordel"
     ],
     "correct_option": "Schnur",
-    "explanation": "Schnur means 'string'. Pronounced 'SHNOOR'. Thin cord."
+    "explanation": "Schnur means 'string'. Pronounced 'SHNOOR'. Thin cord for tying."
   },
   {
     "index": 287,
@@ -3728,7 +3728,7 @@
       "Strick"
     ],
     "correct_option": "Seil",
-    "explanation": "Seil means 'rope'. Pronounced 'ZYL'. Thick cord."
+    "explanation": "Seil means 'rope'. Pronounced 'ZYL'. Thick cord for securing."
   },
   {
     "index": 288,
@@ -3741,7 +3741,7 @@
       "Seil"
     ],
     "correct_option": "Faden",
-    "explanation": "Faden means 'thread'. Pronounced 'FAH-den'. Thin strand for sewing."
+    "explanation": "Faden means 'thread'. Pronounced 'FAH-den'. Fine strand for sewing."
   },
   {
     "index": 289,
@@ -3754,7 +3754,7 @@
       "Braid"
     ],
     "correct_option": "Knot",
-    "explanation": "Knoten means 'knot'. Pronounced 'KNO-ten'. Tied cord."
+    "explanation": "Knoten means 'knot'. Pronounced 'KNO-ten'. Tied cord or rope."
   },
   {
     "index": 290,
@@ -3767,7 +3767,7 @@
       "Dübel"
     ],
     "correct_option": "Nagel",
-    "explanation": "Nagel means 'nail'. Pronounced 'NAH-gel'. Metal fastener."
+    "explanation": "Nagel means 'nail'. Pronounced 'NAH-gel'. Metal fastener hammered in."
   },
   {
     "index": 291,
@@ -3780,7 +3780,7 @@
       "Dübel"
     ],
     "correct_option": "Schraube",
-    "explanation": "Schraube means 'screw'. Pronounced 'SHROW-beh'. Twisted fastener."
+    "explanation": "Schraube means 'screw'. Pronounced 'SHROW-beh'. Twisted metal fastener."
   },
   {
     "index": 292,
@@ -3793,7 +3793,7 @@
       "Pickel"
     ],
     "correct_option": "Hammer",
-    "explanation": "Hammer means 'hammer'. Pronounced 'HAH-mer'. Striking tool."
+    "explanation": "Hammer means 'hammer'. Pronounced 'HAH-mer'. Tool for striking nails."
   },
   {
     "index": 293,
@@ -3806,11 +3806,11 @@
       "File"
     ],
     "correct_option": "Saw",
-    "explanation": "Säge means 'saw'. Pronounced 'ZAY-geh'. Cutting tool."
+    "explanation": "Säge means 'saw'. Pronounced 'ZAY-geh'. Tool for cutting materials."
   },
   {
     "index": 294,
-    "question": "How do you say 'ax' in German?",
+    "question": "How do you say 'axe' in German?",
     "options": [
       "Äxte",
       "Axt",
@@ -3819,63 +3819,63 @@
       "Hacke"
     ],
     "correct_option": "Axt",
-    "explanation": "Axt means 'ax'. Pronounced 'AKST'. Chopping tool."
+    "explanation": "Axt means 'axe'. Pronounced 'AKST'. Tool for chopping wood."
   },
   {
     "index": 295,
-    "question": "What does 'Essen' mean when used as a noun?",
+    "question": "What does the German noun 'Essen' mean?",
     "options": [
-      "Getränk",
-      "Speise",
-      "Gericht",
-      "Lebensmittel",
-      "Essen"
+      "Drink",
+      "Food",
+      "Meal",
+      "Dish",
+      "Nourishment"
     ],
-    "correct_option": "Essen",
-    "explanation": "Essen means 'food' when used as a noun. Pronounced 'ES-sen'. Nourishment for eating."
+    "correct_option": "Food",
+    "explanation": "Essen (noun) means 'food'. Pronounced 'ES-sen'. Edible substance for nutrition."
   },
   {
     "index": 296,
-    "question": "What is the correct answer for 'Which German word means 'apple'?",
+    "question": "In German, what does 'Stift' mean?",
     "options": [
-      "Birne",
-      "Apfel",
-      "Orange",
-      "Zitrone",
-      "Kirsche"
+      "Paint",
+      "Pen",
+      "Stick",
+      "Eraser",
+      "Paper"
     ],
-    "correct_option": "Apfel",
-    "explanation": "Apfel means 'apple'. Pronounced 'AHP-fel'. Common red or green fruit."
+    "correct_option": "Pen",
+    "explanation": "Stift means 'pen' or 'pencil'. Pronounced 'SHTIFT'. A general term for writing/drawing instruments like Kugelschreiber (ballpoint pen) or Bleistift (pencil)."
   },
   {
     "index": 297,
-    "question": "What is 'Tisch' when describing furniture?",
+    "question": "What is the German word for writing material you write on?",
     "options": [
-      "Chair",
-      "Table",
-      "Desk",
-      "Cabinet",
-      "Shelf"
+      "Stoff",
+      "Papier",
+      "Blatt",
+      "Tuch",
+      "Leinwand"
     ],
-    "correct_option": "Table",
-    "explanation": "Tisch means 'table'. Pronounced 'TISH'. Furniture for eating or working."
+    "correct_option": "Papier",
+    "explanation": "Papier means 'paper'. Pronounced 'pah-PEER'. Material for writing and printing."
   },
   {
     "index": 298,
-    "question": "How do you say 'bed' in German?",
+    "question": "What does 'Bett' mean when discussing bedroom furniture?",
     "options": [
-      "Kissen",
-      "Decke",
-      "Bett",
-      "Matratze",
-      "Kopfende"
+      "Pillow",
+      "Blanket",
+      "Bed",
+      "Mattress",
+      "Bedroom"
     ],
-    "correct_option": "Bett",
+    "correct_option": "Bed",
     "explanation": "Bett means 'bed'. Pronounced 'BET'. Furniture for sleeping."
   },
   {
     "index": 299,
-    "question": "Which German word means 'cupboard'?",
+    "question": "What is the German word for furniture used to store clothes?",
     "options": [
       "Regal",
       "Schublade",
@@ -3884,11 +3884,11 @@
       "Kommode"
     ],
     "correct_option": "Schrank",
-    "explanation": "Schrank means 'cupboard'. Pronounced 'SHRANK'. Storage furniture with doors."
+    "explanation": "Schrank means 'cabinet/wardrobe'. Pronounced 'SHRANK'. Storage for clothing and items."
   },
   {
     "index": 300,
-    "question": "Which German word means 'door' in the context of building entrances?",
+    "question": "Which German word refers to an opening to enter a building or room?",
     "options": [
       "Fenster",
       "Tür",
