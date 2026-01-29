@@ -1,12 +1,24 @@
 import { useState, useRef, useEffect } from "react";
 import { useApp } from "../context/AppContext.tsx";
 
+interface SkippedQuestion {
+  question: string;
+  reason: string;
+}
+
+interface SkipReport {
+  totalFound: number;
+  totalSkipped: number;
+  skippedQuestions: SkippedQuestion[];
+}
+
 export function CourseListScreen() {
   const { dataLayer, courses, refreshCourses, setScreen } = useApp();
   const [courseName, setCourseName] = useState("");
   const [error, setError] = useState("");
   const [info, setInfo] = useState("");
   const [creating, setCreating] = useState(false);
+  const [skipReport, setSkipReport] = useState<SkipReport | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const handleCreate = async () => {
@@ -28,9 +40,16 @@ export function CourseListScreen() {
         setCourseName("");
         if (fileRef.current) fileRef.current.value = "";
         if (result.total_skipped > 0) {
-          setInfo(
-            `Course created: ${result.total_loaded} questions loaded, ${result.total_skipped} skipped due to validation errors.`,
-          );
+          setSkipReport({
+            totalFound: result.total_loaded + result.total_skipped,
+            totalSkipped: result.total_skipped,
+            skippedQuestions: result.validation_errors.map((e) => ({
+              question: Array.isArray(json) && json[e.index]?.question
+                ? String(json[e.index].question)
+                : `(question #${e.index + 1})`,
+              reason: e.reason,
+            })),
+          });
         } else {
           setInfo(`Course created: ${result.total_loaded} questions loaded.`);
         }
@@ -206,6 +225,34 @@ export function CourseListScreen() {
         entirely in your browser — no server, no account, no data leaves your
         device. Your progress is always private and available offline.
       </p>
+
+      {skipReport && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-xl p-6 max-w-lg w-full mx-4 max-h-[80vh] flex flex-col">
+            <h3 className="text-lg font-semibold mb-2">Course Created</h3>
+            <div className="text-sm text-gray-700 mb-3 space-y-1">
+              <p>Questions found: {skipReport.totalFound}</p>
+              <p>Questions skipped: {skipReport.totalSkipped}</p>
+            </div>
+            <div className="text-sm font-medium mb-1">Skipped questions:</div>
+            <ul className="text-sm text-gray-600 overflow-y-auto flex-1 mb-4 space-y-1">
+              {skipReport.skippedQuestions.map((e, i) => (
+                <li key={i}>
+                  "{e.question}" &mdash; {e.reason}
+                </li>
+              ))}
+            </ul>
+            <div className="flex justify-end">
+              <button
+                onClick={() => setSkipReport(null)}
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
