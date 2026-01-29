@@ -109,10 +109,12 @@ export class IndexedDBLayer implements IDatabase {
         snooze_test_correct_minutes: 5,
         snooze_learned_correct_hours: 1,
         snooze_master_correct_days: 2,
-        pool_selection_test_upper: 75,
-        pool_selection_learned_upper: 95,
-        strategy_oldest_upper: 33,
-        strategy_recovery_upper: 50,
+        pool_weight_test: 12,
+        pool_weight_learned: 4,
+        pool_weight_master: 1,
+        pool_penalty_threshold: 8,
+        strategy_oldest_pct: 30,
+        strategy_demoted_pct: 30,
         promotion_consecutive_correct: 2,
         demotion_incorrect_count: 1,
         auto_next_correct: false,
@@ -790,46 +792,63 @@ export class IndexedDBLayer implements IDatabase {
       }
     }
 
-    const rand = Math.random() * 100;
-    let selectedPool: Pool =
-      rand < config.pool_selection_test_upper
-        ? "test"
-        : rand < config.pool_selection_learned_upper
-          ? "learned"
-          : "master";
+    // Pool selection: weighted random with penalty for small pools
+    const pools: Pool[] = ["test", "learned", "master"];
+    const baseWeights: Record<string, number> = {
+      test: config.pool_weight_test,
+      learned: config.pool_weight_learned,
+      master: config.pool_weight_master,
+    };
+    const threshold = config.pool_penalty_threshold;
 
-    let available = await this.getAvailableQuestions(courseId, selectedPool);
-    if (available.length === 0) {
-      for (const pool of ["test", "learned", "master"] as Pool[]) {
-        available = await this.getAvailableQuestions(courseId, pool);
-        if (available.length > 0) {
-          selectedPool = pool;
-          break;
-        }
+    const poolData: { pool: Pool; available: QuestionState[]; weight: number }[] = [];
+    for (const pool of pools) {
+      const avail = await this.getAvailableQuestions(courseId, pool);
+      if (avail.length === 0) continue;
+      const penalty = avail.length >= threshold ? 1 : avail.length / threshold;
+      poolData.push({ pool, available: avail, weight: baseWeights[pool] * penalty });
+    }
+    if (poolData.length === 0) return null;
+
+    const totalWeight = poolData.reduce((sum, p) => sum + p.weight, 0);
+    const rand = Math.random() * totalWeight;
+    let cumulative = 0;
+    let chosen = poolData[0];
+    for (const entry of poolData) {
+      cumulative += entry.weight;
+      if (rand < cumulative) {
+        chosen = entry;
+        break;
       }
     }
-    if (available.length === 0) return null;
+    const available = chosen.available;
 
+    // Question selection: oldest / oldest-demoted / random
     const strategyRand = Math.random() * 100;
-    let strategy: SelectionStrategy =
-      strategyRand < config.strategy_oldest_upper
-        ? "oldest"
-        : strategyRand < config.strategy_recovery_upper
-          ? "recovery"
-          : "random";
-
+    let strategy: SelectionStrategy;
     let selected: QuestionState | null = null;
-    if (strategy === "oldest") {
+
+    if (strategyRand < config.strategy_oldest_pct) {
+      strategy = "oldest";
       selected = available.reduce((prev, curr) =>
         (prev.last_shown ?? Infinity) < (curr.last_shown ?? Infinity)
           ? prev
           : curr,
       );
-    } else if (strategy === "recovery") {
-      const recovered = available.filter((s) => s.was_demoted);
-      if (recovered.length > 0)
-        selected = recovered[Math.floor(Math.random() * recovered.length)];
-      else strategy = "random";
+    } else if (strategyRand < config.strategy_oldest_pct + config.strategy_demoted_pct) {
+      strategy = "recovery";
+      const demoted = available.filter((s) => s.was_demoted);
+      if (demoted.length > 0) {
+        selected = demoted.reduce((prev, curr) =>
+          (prev.last_shown ?? Infinity) < (curr.last_shown ?? Infinity)
+            ? prev
+            : curr,
+        );
+      } else {
+        strategy = "random";
+      }
+    } else {
+      strategy = "random";
     }
     if (strategy === "random" || !selected) {
       selected = available[Math.floor(Math.random() * available.length)];
@@ -987,10 +1006,12 @@ export class IndexedDBLayer implements IDatabase {
       "snooze_test_correct_minutes",
       "snooze_learned_correct_hours",
       "snooze_master_correct_days",
-      "pool_selection_test_upper",
-      "pool_selection_learned_upper",
-      "strategy_oldest_upper",
-      "strategy_recovery_upper",
+      "pool_weight_test",
+      "pool_weight_learned",
+      "pool_weight_master",
+      "pool_penalty_threshold",
+      "strategy_oldest_pct",
+      "strategy_demoted_pct",
       "promotion_consecutive_correct",
       "demotion_incorrect_count",
       "auto_next_correct",

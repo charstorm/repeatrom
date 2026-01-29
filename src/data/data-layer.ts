@@ -82,10 +82,12 @@ export interface Configuration {
   snooze_test_correct_minutes: number;
   snooze_learned_correct_hours: number;
   snooze_master_correct_days: number;
-  pool_selection_test_upper: number;
-  pool_selection_learned_upper: number;
-  strategy_oldest_upper: number;
-  strategy_recovery_upper: number;
+  pool_weight_test: number;
+  pool_weight_learned: number;
+  pool_weight_master: number;
+  pool_penalty_threshold: number;
+  strategy_oldest_pct: number;
+  strategy_demoted_pct: number;
   promotion_consecutive_correct: number;
   demotion_incorrect_count: number;
   auto_next_correct: boolean;
