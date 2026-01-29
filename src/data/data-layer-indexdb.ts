@@ -549,16 +549,17 @@ export class IndexedDBLayer implements IDatabase {
    */
   async refillTestPoolFromLatent(courseId: string): Promise<number> {
     const config = await this.getConfig();
-    const stats = await this.getCourseStats(courseId);
 
-    if (stats.test_count >= config.test_pool_target_size) {
+    // Count actual test pool questions instead of relying on denormalized stats
+    const actualTestQuestions = await this.getAllQuestions(courseId, "test");
+    const actualTestCount = actualTestQuestions.filter((q) => !q.hidden).length;
+
+    if (actualTestCount >= config.test_pool_target_size) {
       return 0;
     }
 
-    const latentAvailable = await this.getAvailableQuestions(
-      courseId,
-      "latent",
-    );
+    const latentAll = await this.getAllQuestions(courseId, "latent");
+    const latentAvailable = latentAll.filter((s) => !s.hidden);
     if (latentAvailable.length === 0) {
       return 0;
     }
@@ -566,7 +567,7 @@ export class IndexedDBLayer implements IDatabase {
     latentAvailable.sort((a, b) => a.question_id - b.question_id);
     const toPromote = Math.min(
       latentAvailable.length,
-      config.test_pool_target_size - stats.test_count,
+      config.test_pool_target_size - actualTestCount,
     );
 
     if (toPromote === 0) {
@@ -614,6 +615,8 @@ export class IndexedDBLayer implements IDatabase {
     await new Promise<void>((resolve, reject) => {
       tx.oncomplete = () => resolve();
       tx.onerror = () => reject(new Error("Failed to refill test pool"));
+      tx.onabort = () =>
+        reject(new Error(`Refill transaction aborted: ${tx.error}`));
     });
 
     return toPromote;
@@ -626,13 +629,18 @@ export class IndexedDBLayer implements IDatabase {
       "readwrite",
     );
 
-    return new Promise((resolve, reject) => {
+    let hiddenFromTestPool = false;
+
+    await new Promise<void>((resolve, reject) => {
       const stateReq = tx
         .objectStore(STORE_NAMES.QUESTION_STATES)
         .get([courseId, questionId]);
       stateReq.onsuccess = () => {
         const state = stateReq.result as QuestionState | undefined;
         if (state) {
+          if (state.pool === "test") {
+            hiddenFromTestPool = true;
+          }
           tx.objectStore(STORE_NAMES.QUESTION_STATES).put({
             ...state,
             hidden: true,
@@ -661,6 +669,10 @@ export class IndexedDBLayer implements IDatabase {
       tx.oncomplete = () => resolve();
       tx.onerror = () => reject(new Error(`Transaction failed: ${tx.error}`));
     });
+
+    if (hiddenFromTestPool) {
+      await this.refillTestPoolFromLatent(courseId);
+    }
   }
 
   async updateNotes(
@@ -719,78 +731,9 @@ export class IndexedDBLayer implements IDatabase {
 
   async findNextQuestion(courseId: string): Promise<NextQuestionResult | null> {
     const config = await this.getConfig();
-    const stats = await this.getCourseStats(courseId);
 
-    // Fill test pool to target size from latent at session start
-    if (stats.test_count < config.test_pool_target_size) {
-      const latentAvailable = await this.getAvailableQuestions(
-        courseId,
-        "latent",
-      );
-      latentAvailable.sort((a, b) => a.question_id - b.question_id);
-      const toPromote = Math.min(
-        latentAvailable.length,
-        config.test_pool_target_size - stats.test_count,
-      );
-
-      if (toPromote > 0) {
-        const db = this.getDB();
-        const tx = db.transaction(
-          [STORE_NAMES.QUESTION_STATES, STORE_NAMES.COURSES, STORE_NAMES.LOGS],
-          "readwrite",
-        );
-
-        const stateStore = tx.objectStore(STORE_NAMES.QUESTION_STATES);
-        for (let i = 0; i < toPromote; i++) {
-          const q = latentAvailable[i];
-          stateStore.put({ ...q, pool: "test" });
-        }
-
-        const statsReq = tx.objectStore(STORE_NAMES.COURSES).get(courseId);
-        statsReq.onsuccess = () => {
-          const cur = statsReq.result as CourseStats;
-          tx.objectStore(STORE_NAMES.COURSES).put({
-            ...cur,
-            latent_count: cur.latent_count - toPromote,
-            test_count: cur.test_count + toPromote,
-          });
-        };
-
-        const timestamp = Date.now();
-
-        // Log each individual question promotion
-        for (let i = 0; i < toPromote; i++) {
-          const q = latentAvailable[i];
-          tx.objectStore(STORE_NAMES.LOGS).add({
-            course_id: courseId,
-            timestamp,
-            type: "promotion" as EventType,
-            details: {
-              question_id: q.question_id,
-              source: "latent",
-              target: "test",
-            },
-          });
-        }
-
-        // Log batch event for summary
-        tx.objectStore(STORE_NAMES.LOGS).add({
-          course_id: courseId,
-          timestamp,
-          type: "latent_promotion" as EventType,
-          details: {
-            promoted_count: toPromote,
-            source: "latent",
-            target: "test",
-          },
-        });
-
-        await new Promise<void>((resolve, reject) => {
-          tx.oncomplete = () => resolve();
-          tx.onerror = () => reject(new Error("Failed"));
-        });
-      }
-    }
+    // Fill test pool to target size from latent
+    await this.refillTestPoolFromLatent(courseId);
 
     // Pool selection: weighted random with penalty for small pools
     const pools: Pool[] = ["test", "learned", "master"];
@@ -801,12 +744,20 @@ export class IndexedDBLayer implements IDatabase {
     };
     const threshold = config.pool_penalty_threshold;
 
-    const poolData: { pool: Pool; available: QuestionState[]; weight: number }[] = [];
+    const poolData: {
+      pool: Pool;
+      available: QuestionState[];
+      weight: number;
+    }[] = [];
     for (const pool of pools) {
       const avail = await this.getAvailableQuestions(courseId, pool);
       if (avail.length === 0) continue;
       const penalty = avail.length >= threshold ? 1 : avail.length / threshold;
-      poolData.push({ pool, available: avail, weight: baseWeights[pool] * penalty });
+      poolData.push({
+        pool,
+        available: avail,
+        weight: baseWeights[pool] * penalty,
+      });
     }
     if (poolData.length === 0) return null;
 
@@ -835,7 +786,10 @@ export class IndexedDBLayer implements IDatabase {
           ? prev
           : curr,
       );
-    } else if (strategyRand < config.strategy_oldest_pct + config.strategy_demoted_pct) {
+    } else if (
+      strategyRand <
+      config.strategy_oldest_pct + config.strategy_demoted_pct
+    ) {
       strategy = "recovery";
       const demoted = available.filter((s) => s.was_demoted);
       if (demoted.length > 0) {

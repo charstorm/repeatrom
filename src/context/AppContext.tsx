@@ -11,10 +11,9 @@ import {
   type CourseMetadata,
   type CourseStats,
   type NextQuestionResult,
-  type Pool,
-  type Configuration,
 } from "../data/data-layer.ts";
 import { IndexedDBLayer } from "../data/data-layer-indexdb.ts";
+import { processAnswerPure } from "../data/answer-processor.ts";
 
 export type Screen =
   | { type: "course_list" }
@@ -88,140 +87,48 @@ export function AppProvider({ children }: { children: ReactNode }) {
       result: NextQuestionResult,
       selectedAnswer: string,
     ): Promise<boolean> => {
-      const correct = selectedAnswer === result.question.correct_option;
       const now = Date.now();
-      const config: Configuration = await dataLayer.getConfig();
-      const state = result.state;
-      const pool = state.pool as Pool;
+      const config = await dataLayer.getConfig();
+      const ar = processAnswerPure(result, selectedAnswer, config, now);
 
-      let snoozeDurationMinutes: number;
-      let newPool: Pool = pool;
-      let newConsecutiveCorrect = state.consecutive_correct;
-      let newConsecutiveIncorrect = state.consecutive_incorrect ?? 0;
-      let wasDemotedReset = false;
-
-      let needsTestPoolRefill = false;
-
-      if (correct) {
-        newConsecutiveCorrect += 1;
-        newConsecutiveIncorrect = 0;
-        if (pool === "test") {
-          snoozeDurationMinutes = config.snooze_test_correct_minutes;
-          if (newConsecutiveCorrect >= config.promotion_consecutive_correct) {
-            newPool = "learned";
-            newConsecutiveCorrect = 0;
-            wasDemotedReset = true;
-            needsTestPoolRefill = true;
-            await dataLayer.logEvent(courseId, "promotion", {
-              question_id: state.question_id,
-              from: "test",
-              to: "learned",
-            });
-          }
-        } else if (pool === "learned") {
-          snoozeDurationMinutes = DataLayer.hoursToMinutes(
-            config.snooze_learned_correct_hours,
-          );
-          if (newConsecutiveCorrect >= config.promotion_consecutive_correct) {
-            newPool = "master";
-            newConsecutiveCorrect = 0;
-            wasDemotedReset = true;
-            await dataLayer.logEvent(courseId, "promotion", {
-              question_id: state.question_id,
-              from: "learned",
-              to: "master",
-            });
-          }
-        } else {
-          snoozeDurationMinutes = DataLayer.daysToMinutes(
-            config.snooze_master_correct_days,
-          );
-        }
-      } else {
-        newConsecutiveCorrect = 0;
-        newConsecutiveIncorrect += 1;
-        snoozeDurationMinutes = config.snooze_incorrect_minutes;
-        if (
-          pool === "master" &&
-          newConsecutiveIncorrect >= config.demotion_incorrect_count
-        ) {
-          newPool = "learned";
-          newConsecutiveIncorrect = 0;
-          await dataLayer.logEvent(courseId, "demotion", {
-            question_id: state.question_id,
-            from: "master",
-            to: "learned",
-          });
-        } else if (
-          pool === "learned" &&
-          newConsecutiveIncorrect >= config.demotion_incorrect_count
-        ) {
-          newPool = "test";
-          newConsecutiveIncorrect = 0;
-          await dataLayer.logEvent(courseId, "demotion", {
-            question_id: state.question_id,
-            from: "learned",
-            to: "test",
-          });
-        }
+      // Log promotion/demotion events
+      for (const event of ar.events) {
+        await dataLayer.logEvent(courseId, event.type, event.details);
       }
-
-      const snoozeUntil = DataLayer.calculateSnoozeUntil(
-        now,
-        snoozeDurationMinutes,
-      );
-
-      const wasDemoted =
-        !correct &&
-        newPool !== pool &&
-        (pool === "master" || pool === "learned");
 
       await dataLayer.updateQuestionStateWithPoolTransition(
         courseId,
-        state.question_id,
-        {
-          pool: newPool,
-          last_shown: now,
-          snooze_until: snoozeUntil,
-          consecutive_correct: newConsecutiveCorrect,
-          consecutive_incorrect: newConsecutiveIncorrect,
-          total_interactions: state.total_interactions + 1,
-          ...(wasDemoted
-            ? { was_demoted: true }
-            : wasDemotedReset
-              ? { was_demoted: false }
-              : {}),
-        },
-        pool,
-        newPool,
+        result.state.question_id,
+        ar.stateUpdates,
+        ar.oldPool,
+        ar.newPool,
       );
 
       await dataLayer.recordInteraction(
         courseId,
-        state.question_id,
+        result.state.question_id,
         selectedAnswer,
-        correct,
+        ar.correct,
         result.strategy,
-        pool,
-        snoozeDurationMinutes,
+        ar.oldPool,
+        ar.snoozeDurationMinutes,
       );
       await dataLayer.logEvent(courseId, "user_interaction", {
-        question_id: state.question_id,
+        question_id: result.state.question_id,
         answer: selectedAnswer,
-        correct,
-        pool,
-        new_pool: newPool,
+        correct: ar.correct,
+        pool: ar.oldPool,
+        new_pool: ar.newPool,
         strategy: result.strategy,
       });
 
       await dataLayer.updateLastAccessed(courseId);
 
-      // Refill test pool from latent if a question was promoted from test
-      if (needsTestPoolRefill) {
+      if (ar.needsTestPoolRefill) {
         await dataLayer.refillTestPoolFromLatent(courseId);
       }
 
-      return correct;
+      return ar.correct;
     },
     [dataLayer],
   );

@@ -44,9 +44,10 @@ export function CourseListScreen() {
             totalFound: result.total_loaded + result.total_skipped,
             totalSkipped: result.total_skipped,
             skippedQuestions: result.validation_errors.map((e) => ({
-              question: Array.isArray(json) && json[e.index]?.question
-                ? String(json[e.index].question)
-                : `(question #${e.index + 1})`,
+              question:
+                Array.isArray(json) && json[e.index]?.question
+                  ? String(json[e.index].question)
+                  : `(question #${e.index + 1})`,
               reason: e.reason,
             })),
           });

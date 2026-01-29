@@ -3,7 +3,7 @@
 You can use AI assistants (ChatGPT, Claude, Gemini, or similar tools) to generate course content in JSON format.
 Use the following prompt. For most cases, you will only need to edit the `Course Config` section.
 
-```
+````
 # Task
 Create questions in JSON format for the topic and difficulty level specified in the `Course Config` section.
 
@@ -32,17 +32,20 @@ Example JSON:
     "explanation": "Danke means 'thank you' in German. Bitte means 'please' or 'you are welcome'."
   }
 ]
-```
+````
 
 ## Instructions
+
 - Difficulty of questions should increase progressively
 
 ## Course Config
+
 Topic: Basic German Vocabulary
 Focus: nouns, verbs, adjectives, adverbs, places, tasks, relationships, jobs, titles
 Avoid: Words close to English words
 Number of Questions: 75
 Difficulty: beginner to intermediate
+
 ```
 
 ## Tips

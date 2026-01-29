@@ -41,6 +41,7 @@ Selects which pool (test, learned, master) to draw the next question from. Each 
 ### Question Selection (strategy mix)
 
 Once a pool is chosen, a question is selected using one of three strategies, chosen by random percentage thresholds:
+
 - **Oldest** (`strategy_oldest_pct=30`): Picks the question with the oldest `last_shown` timestamp (or never-shown first).
 - **Recovery** (`strategy_demoted_pct=30`): Picks the oldest question that has `was_demoted=true`. Falls back to random if no demoted questions exist.
 - **Random** (remaining 40%): Picks a uniformly random question from the available pool.
