@@ -19,25 +19,7 @@ import type {
   NextQuestionResult,
 } from "./data-layer.ts";
 import { DataLayer } from "./data-layer.ts";
-
-const DEFAULT_CONFIG: Configuration = {
-  id: "global",
-  test_pool_target_size: 40,
-  snooze_incorrect_minutes: 1,
-  snooze_test_correct_minutes: 5,
-  snooze_learned_correct_hours: 1,
-  snooze_master_correct_days: 2,
-  pool_weight_test: 12,
-  pool_weight_learned: 4,
-  pool_weight_master: 1,
-  pool_penalty_threshold: 8,
-  strategy_oldest_pct: 30,
-  strategy_demoted_pct: 30,
-  promotion_consecutive_correct: 2,
-  demotion_incorrect_count: 1,
-  auto_next_correct: false,
-  auto_next_delay_ms: 1000,
-};
+import { DEFAULT_CONFIG } from "./default-config.ts";
 
 export class InMemoryDatabase implements IDatabase {
   private initialized = false;

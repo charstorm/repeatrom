@@ -15,65 +15,35 @@
   {
     "index": 2,
     "question": "If you toss a fair coin 3 times, what is the size of the sample space?",
-    "options": [
-      "2",
-      "4",
-      "6",
-      "8",
-      "10"
-    ],
+    "options": ["2", "4", "6", "8", "10"],
     "correct_option": "8",
     "explanation": "Each toss has 2 outcomes (H or T). For 3 tosses, the total number of possible outcomes is 2 \u00d7 2 \u00d7 2 = 8. These are: HHH, HHT, HTH, HTT, THH, THT, TTH, TTT."
   },
   {
     "index": 3,
     "question": "A sample space has 10 equally likely outcomes. What is the probability of any single outcome?",
-    "options": [
-      "0.01",
-      "0.05",
-      "0.1",
-      "0.2",
-      "1.0"
-    ],
+    "options": ["0.01", "0.05", "0.1", "0.2", "1.0"],
     "correct_option": "0.1",
     "explanation": "When all outcomes are equally likely, each outcome has probability 1/n where n is the total number of outcomes. Here, 1/10 = 0.1 or 10%."
   },
   {
     "index": 4,
     "question": "In 100 trials, event A occurred 25 times and event B occurred 40 times. What is the observed probability of event A?",
-    "options": [
-      "0.15",
-      "0.25",
-      "0.40",
-      "0.65",
-      "Cannot be determined"
-    ],
+    "options": ["0.15", "0.25", "0.40", "0.65", "Cannot be determined"],
     "correct_option": "0.25",
     "explanation": "Observed probability (empirical probability) is calculated as: number of times event occurred / total number of trials. For event A: 25/100 = 0.25."
   },
   {
     "index": 5,
     "question": "If P(A) = 0.3 and P(B) = 0.4, and A and B are independent events, what is P(A and B)?",
-    "options": [
-      "0.7",
-      "0.12",
-      "0.1",
-      "0.04",
-      "Need more information"
-    ],
+    "options": ["0.7", "0.12", "0.1", "0.04", "Need more information"],
     "correct_option": "0.12",
     "explanation": "For independent events, P(A and B) = P(A) \u00d7 P(B). Therefore, 0.3 \u00d7 0.4 = 0.12. This is the multiplication rule for independent events."
   },
   {
     "index": 6,
     "question": "If P(A) = 0.3 and P(B) = 0.4, and A and B are mutually exclusive (disjoint), what is P(A or B)?",
-    "options": [
-      "0.7",
-      "0.12",
-      "0.1",
-      "1.0",
-      "0.58"
-    ],
+    "options": ["0.7", "0.12", "0.1", "1.0", "0.58"],
     "correct_option": "0.7",
     "explanation": "For mutually exclusive events, P(A or B) = P(A) + P(B). Therefore, 0.3 + 0.4 = 0.7. Mutually exclusive means the events cannot happen together."
   },
@@ -119,13 +89,7 @@
   {
     "index": 10,
     "question": "For a discrete random variable X with PMF p(x), what does the sum of p(x) over all possible values of x equal?",
-    "options": [
-      "0",
-      "0.5",
-      "1",
-      "Infinity",
-      "The mean of X"
-    ],
+    "options": ["0", "0.5", "1", "Infinity", "The mean of X"],
     "correct_option": "1",
     "explanation": "The fundamental property of a PMF is that the sum of probabilities over all possible outcomes must equal 1. This ensures we account for all possibilities in the probability space."
   },
@@ -145,13 +109,7 @@
   {
     "index": 12,
     "question": "For a continuous random variable with probability density function (PDF) f(x), what does the integral of f(x) over all possible values equal?",
-    "options": [
-      "0",
-      "0.5",
-      "1",
-      "Infinity",
-      "The variance"
-    ],
+    "options": ["0", "0.5", "1", "Infinity", "The variance"],
     "correct_option": "1",
     "explanation": "Just like the PMF sums to 1 for discrete variables, the integral of the PDF over its entire domain equals 1. This is the normalization condition for probability distributions."
   },
@@ -171,39 +129,21 @@
   {
     "index": 14,
     "question": "Given the numbers: 2, 4, 6, 8, 10. What is their mean?",
-    "options": [
-      "5",
-      "6",
-      "7",
-      "8",
-      "The average of extremes"
-    ],
+    "options": ["5", "6", "7", "8", "The average of extremes"],
     "correct_option": "6",
     "explanation": "Mean = sum of all values / count = (2 + 4 + 6 + 8 + 10) / 5 = 30 / 5 = 6."
   },
   {
     "index": 15,
     "question": "Given the numbers: 1, 3, 7, 9, 10. What is their median?",
-    "options": [
-      "3",
-      "5",
-      "6",
-      "7",
-      "9"
-    ],
+    "options": ["3", "5", "6", "7", "9"],
     "correct_option": "7",
     "explanation": "The median is the middle value when numbers are arranged in order. Since we have 5 numbers (odd count), the median is the 3rd value: 7."
   },
   {
     "index": 16,
     "question": "Given the numbers: 2, 5, 5, 5, 8, 9, 9. What is the mode?",
-    "options": [
-      "2",
-      "5",
-      "7",
-      "9",
-      "All values equally"
-    ],
+    "options": ["2", "5", "7", "9", "All values equally"],
     "correct_option": "5",
     "explanation": "The mode is the value that appears most frequently. Here, 5 appears three times, while other values appear less frequently."
   },
@@ -392,26 +332,14 @@
   {
     "index": 31,
     "question": "A random variable X is uniformly distributed between 0 and 10. What is P(X = 5)?",
-    "options": [
-      "0.5",
-      "0.1",
-      "1/10",
-      "0 (zero)",
-      "Exactly in the middle"
-    ],
+    "options": ["0.5", "0.1", "1/10", "0 (zero)", "Exactly in the middle"],
     "correct_option": "0 (zero)",
     "explanation": "For continuous distributions, the probability of any single exact value is zero. We can only meaningfully ask about probabilities over intervals, like P(4.9 < X < 5.1)."
   },
   {
     "index": 32,
     "question": "Heights of adult males follow approximately a normal distribution with mean = 175 cm and standard deviation = 10 cm. What is the z-score for someone 185 cm tall?",
-    "options": [
-      "-1",
-      "0",
-      "1",
-      "10",
-      "1.85"
-    ],
+    "options": ["-1", "0", "1", "10", "1.85"],
     "correct_option": "1",
     "explanation": "Z-score = (value - mean) / standard deviation = (185 - 175) / 10 = 10 / 10 = 1. This means the person is 1 standard deviation above the mean."
   },
@@ -691,13 +619,7 @@
   {
     "index": 54,
     "question": "If Var(X) = 16, what is Var(3X)?",
-    "options": [
-      "16",
-      "19",
-      "48",
-      "144",
-      "3 times 16"
-    ],
+    "options": ["16", "19", "48", "144", "3 times 16"],
     "correct_option": "144",
     "explanation": "Var(aX) = a squared times Var(X). So Var(3X) = 3 squared times 16 = 9 times 16 = 144. Variance scales with the square of the scaling constant."
   },
@@ -873,13 +795,7 @@
   {
     "index": 68,
     "question": "You conduct 100 hypothesis tests, each at significance level 0.05, on data where all null hypotheses are true. How many false positives (Type I errors) do you expect?",
-    "options": [
-      "0",
-      "1",
-      "5",
-      "50",
-      "100"
-    ],
+    "options": ["0", "1", "5", "50", "100"],
     "correct_option": "5",
     "explanation": "With alpha = 0.05, we expect 5% false positives. For 100 tests: 100 times 0.05 = 5 expected Type I errors. This is the multiple testing problem - corrections like Bonferroni are needed."
   },
@@ -912,13 +828,7 @@
   {
     "index": 71,
     "question": "A random variable follows uniform distribution on [0, 1]. What is its mean?",
-    "options": [
-      "0",
-      "0.25",
-      "0.5",
-      "1",
-      "Uniformly uncertain"
-    ],
+    "options": ["0", "0.25", "0.5", "1", "Uniformly uncertain"],
     "correct_option": "0.5",
     "explanation": "For uniform distribution on [a, b], mean = (a + b) / 2. For [0, 1]: mean = (0 + 1) / 2 = 0.5. This is the midpoint, which makes sense for a symmetric uniform distribution."
   },
@@ -1042,26 +952,14 @@
   {
     "index": 81,
     "question": "For normal distribution, approximately what percentage of data falls within 1 standard deviation of the mean?",
-    "options": [
-      "50%",
-      "68%",
-      "95%",
-      "99.7%",
-      "One hundred percent uncertain"
-    ],
+    "options": ["50%", "68%", "95%", "99.7%", "One hundred percent uncertain"],
     "correct_option": "68%",
     "explanation": "Empirical rule (68-95-99.7): ~68% within 1 SD, ~95% within 2 SD, ~99.7% within 3 SD. This applies to normal distributions and is useful for understanding spread."
   },
   {
     "index": 82,
     "question": "For normal distribution, approximately what percentage of data falls within 2 standard deviations of the mean?",
-    "options": [
-      "68%",
-      "95%",
-      "99.7%",
-      "100%",
-      "Twice as much as 1 SD"
-    ],
+    "options": ["68%", "95%", "99.7%", "100%", "Twice as much as 1 SD"],
     "correct_option": "95%",
     "explanation": "About 95% of data in a normal distribution falls within 2 standard deviations of the mean (more precisely, 1.96 SD for exactly 95%). This is the basis for many confidence intervals."
   },
@@ -1419,13 +1317,7 @@
   {
     "index": 110,
     "question": "In k-fold cross-validation with k=5, how many times is the model trained?",
-    "options": [
-      "1",
-      "4",
-      "5",
-      "5 factorial",
-      "Until it learns"
-    ],
+    "options": ["1", "4", "5", "5 factorial", "Until it learns"],
     "correct_option": "5",
     "explanation": "In 5-fold CV, data is split into 5 parts. Model is trained 5 times, each time using 4 parts for training and 1 part for validation. Final performance is averaged over the 5 iterations."
   },
@@ -1757,13 +1649,7 @@
   {
     "index": 136,
     "question": "For mutually exclusive events A and B, P(A and B) equals:",
-    "options": [
-      "P(A) + P(B)",
-      "P(A) * P(B)",
-      "0 (zero)",
-      "1",
-      "P(A | B)"
-    ],
+    "options": ["P(A) + P(B)", "P(A) * P(B)", "0 (zero)", "1", "P(A | B)"],
     "correct_option": "0 (zero)",
     "explanation": "Mutually exclusive (disjoint) events cannot occur together, so P(A and B) = 0. If one happens, the other cannot. Example: getting heads and tails on a single coin flip."
   },
@@ -1991,13 +1877,7 @@
   {
     "index": 154,
     "question": "A city has 100,000 people. 1,000 are criminals. A surveillance system correctly identifies criminals 90% of the time and incorrectly flags innocents 1% of the time. You are flagged. What is the approximate probability you are a criminal?",
-    "options": [
-      "90%",
-      "50%",
-      "Less than 10%",
-      "1%",
-      "Definitely a criminal"
-    ],
+    "options": ["90%", "50%", "Less than 10%", "1%", "Definitely a criminal"],
     "correct_option": "Less than 10%",
     "explanation": "Base rate problem! Criminals flagged: 1,000 \u00d7 0.9 = 900. Innocents flagged: 99,000 \u00d7 0.01 = 990. Total flagged: 1,890. P(criminal | flagged) = 900/1,890 \u2248 47.6%. Even with 90% accuracy, most flagged people are innocent due to the base rate!"
   },
@@ -2017,13 +1897,7 @@
   {
     "index": 156,
     "question": "A researcher tests 20 different hypotheses at alpha = 0.05. None are true. How many false positives (Type I errors) should they expect?",
-    "options": [
-      "0",
-      "1",
-      "5",
-      "10",
-      "20"
-    ],
+    "options": ["0", "1", "5", "10", "20"],
     "correct_option": "1",
     "explanation": "With alpha = 0.05 and 20 tests, expected false positives = 20 \u00d7 0.05 = 1. This is the multiple comparisons problem. Testing many hypotheses inflates overall Type I error rate. Corrections like Bonferroni adjust for this."
   },
