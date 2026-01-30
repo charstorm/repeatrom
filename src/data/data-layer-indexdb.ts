@@ -957,7 +957,7 @@ export class IndexedDBLayer implements IDatabase {
     ];
 
     try {
-      const response = await fetch("/repeatrom/config.json");
+      const response = await fetch(`/repeatrom/config.json?v=${Date.now()}`);
       if (!response.ok) {
         return;
       }
