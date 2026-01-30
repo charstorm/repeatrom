@@ -13,7 +13,14 @@ interface SkipReport {
 }
 
 export function CourseListScreen() {
-  const { dataLayer, courses, refreshCourses, setScreen } = useApp();
+  const {
+    dataLayer,
+    courses,
+    refreshCourses,
+    setScreen,
+    urlCourseMessage,
+    clearUrlCourseMessage,
+  } = useApp();
   const [courseName, setCourseName] = useState("");
   const [error, setError] = useState("");
   const [info, setInfo] = useState("");
@@ -125,6 +132,24 @@ export function CourseListScreen() {
           </a>
         </div>
       </div>
+
+      {urlCourseMessage && (
+        <div
+          className={`mb-4 p-4 rounded-lg flex items-start justify-between ${
+            urlCourseMessage.type === "success"
+              ? "bg-green-50 text-green-800 border border-green-200"
+              : "bg-red-50 text-red-800 border border-red-200"
+          }`}
+        >
+          <span className="text-sm">{urlCourseMessage.text}</span>
+          <button
+            onClick={clearUrlCourseMessage}
+            className="ml-3 text-lg leading-none opacity-60 hover:opacity-100"
+          >
+            &times;
+          </button>
+        </div>
+      )}
 
       {courses.length > 0 && (
         <div className="mb-8">

@@ -42,6 +42,8 @@ interface AppState {
     result: NextQuestionResult,
     selectedAnswer: string,
   ) => Promise<boolean>;
+  urlCourseMessage: { type: "success" | "error"; text: string } | null;
+  clearUrlCourseMessage: () => void;
 }
 
 const AppContext = createContext<AppState | null>(null);
@@ -61,12 +63,81 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
   const [screen, setScreen] = useState<Screen>({ type: "course_list" });
   const [courses, setCourses] = useState<(CourseMetadata & CourseStats)[]>([]);
+  const [urlCourseMessage, setUrlCourseMessage] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
+  const clearUrlCourseMessage = useCallback(
+    () => setUrlCourseMessage(null),
+    [],
+  );
 
   useEffect(() => {
     dataLayer.initialize().then(async () => {
       await dataLayer.loadExternalConfig();
       setReady(true);
-      dataLayer.listCourses().then(setCourses);
+      const list = await dataLayer.listCourses();
+      setCourses(list);
+
+      // Check URL params for course creation
+      const params = new URLSearchParams(window.location.search);
+      const courseName = params.get("course_name");
+      const coursePath = params.get("course_path");
+      if (courseName && coursePath) {
+        // Clean URL params immediately
+        const cleanUrl = window.location.pathname + window.location.hash;
+        window.history.replaceState(null, "", cleanUrl);
+
+        let url: string;
+        if (
+          coursePath.startsWith("http://") ||
+          coursePath.startsWith("https://")
+        ) {
+          url = coursePath;
+        } else if (coursePath.startsWith("courses/")) {
+          url =
+            "https://raw.githubusercontent.com/charstorm/repeatrom/refs/heads/deploy/data/" +
+            coursePath;
+        } else {
+          setUrlCourseMessage({
+            type: "error",
+            text: `Course creation failed: unknown path "${coursePath}". Download the JSON and load manually.`,
+          });
+          return;
+        }
+
+        try {
+          const resp = await fetch(url);
+          if (!resp.ok) {
+            throw new Error(
+              `Failed to fetch: ${resp.status} ${resp.statusText}`,
+            );
+          }
+          const json = await resp.json();
+          const result = await dataLayer.createCourse(courseName, json);
+          if (result.total_loaded === 0) {
+            setUrlCourseMessage({
+              type: "error",
+              text: `Course "${courseName}" creation failed: no valid questions found (${result.total_skipped} skipped).`,
+            });
+          } else {
+            const skippedNote =
+              result.total_skipped > 0
+                ? ` (${result.total_skipped} questions skipped)`
+                : "";
+            setUrlCourseMessage({
+              type: "success",
+              text: `Course "${courseName}" created with ${result.total_loaded} questions.${skippedNote}`,
+            });
+            setCourses(await dataLayer.listCourses());
+          }
+        } catch (e) {
+          setUrlCourseMessage({
+            type: "error",
+            text: `Course "${courseName}" creation failed: ${e instanceof Error ? e.message : "Unknown error"}`,
+          });
+        }
+      }
     });
   }, [dataLayer]);
 
@@ -150,6 +221,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
         courses,
         refreshCourses,
         processAnswer,
+        urlCourseMessage,
+        clearUrlCourseMessage,
       }}
     >
       {children}

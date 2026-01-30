@@ -2,11 +2,22 @@ import { useState, useEffect } from "react";
 import { useApp } from "../context/AppContext.tsx";
 import type { Configuration } from "../data/data-layer.ts";
 
+function buildShareLink(name: string, path: string): string {
+  const base = window.location.origin + window.location.pathname;
+  const params = new URLSearchParams();
+  params.set("course_name", name);
+  params.set("course_path", path);
+  return base + "?" + params.toString();
+}
+
 export function ConfigScreen() {
   const { dataLayer, setScreen } = useApp();
   const [config, setConfig] = useState<Configuration | null>(null);
   const [autoNextCorrect, setAutoNextCorrect] = useState(false);
   const [autoNextDelayMs, setAutoNextDelayMs] = useState(1000);
+  const [shareName, setShareName] = useState("");
+  const [sharePath, setSharePath] = useState("");
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     dataLayer.getConfig().then((c) => {
@@ -75,6 +86,67 @@ export function ConfigScreen() {
           Cancel
         </button>
       </div>
+
+      <hr className="my-6 border-gray-200" />
+
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">
+        Share Course Link
+      </h3>
+      <p className="text-sm text-gray-500 mb-4">
+        Generate a shareable link that creates a course from a hosted JSON file.
+        The path can be a full URL or a relative path starting with{" "}
+        <code className="bg-gray-100 px-1 rounded">courses/</code>.
+      </p>
+
+      <label className="block mb-3">
+        <span className="text-gray-700 text-sm">Course Name</span>
+        <input
+          type="text"
+          placeholder="e.g. Basic German"
+          value={shareName}
+          onChange={(e) => setShareName(e.target.value)}
+          className="mt-1 block w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </label>
+
+      <label className="block mb-4">
+        <span className="text-gray-700 text-sm">Course Data Path</span>
+        <input
+          type="text"
+          placeholder="e.g. courses/german/basic_german_300.json"
+          value={sharePath}
+          onChange={(e) => setSharePath(e.target.value)}
+          className="mt-1 block w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </label>
+
+      {shareName.trim() && sharePath.trim() && (
+        <div className="mb-4">
+          <span className="text-gray-700 text-sm block mb-1">
+            Shareable Link
+          </span>
+          <div className="flex gap-2">
+            <input
+              type="text"
+              readOnly
+              value={buildShareLink(shareName.trim(), sharePath.trim())}
+              className="flex-1 px-3 py-2 border rounded-lg bg-gray-50 text-sm text-gray-700"
+            />
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  buildShareLink(shareName.trim(), sharePath.trim()),
+                );
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              }}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm"
+            >
+              {copied ? "Copied!" : "Copy"}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
