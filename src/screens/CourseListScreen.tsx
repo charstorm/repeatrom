@@ -40,7 +40,10 @@ export function CourseListScreen() {
     try {
       const text = await file.text();
       const json = JSON.parse(text);
-      const result = await dataLayer.createCourse(courseName.trim(), json);
+      const result = await dataLayer.createCourse(courseName.trim(), json, {
+        method: "file_upload",
+        filename: file.name,
+      });
       if (result.total_loaded === 0) {
         setError(`No valid questions found. ${result.total_skipped} skipped.`);
       } else {

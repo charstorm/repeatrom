@@ -142,6 +142,7 @@ export class IndexedDBLayer implements IDatabase {
   async createCourse(
     name: string,
     questionsJson: unknown,
+    createdVia?: import("./data-layer.ts").CourseCreatedVia,
   ): Promise<CourseCreationResult> {
     const db = this.getDB();
     const courseId = this.generateUUID();
@@ -182,6 +183,7 @@ export class IndexedDBLayer implements IDatabase {
         name,
         created_at: now,
         last_accessed: now,
+        ...(createdVia ? { created_via: createdVia } : {}),
       });
       tx.objectStore(STORE_NAMES.COURSES).add({
         id: courseId,

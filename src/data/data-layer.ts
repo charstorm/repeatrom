@@ -59,11 +59,16 @@ export interface LogEntry {
   details: Record<string, unknown>;
 }
 
+export type CourseCreatedVia =
+  | { method: "file_upload"; filename: string }
+  | { method: "url"; course_name: string; course_path: string };
+
 export interface CourseMetadata {
   id: string;
   name: string;
   created_at: number;
   last_accessed: number;
+  created_via?: CourseCreatedVia;
 }
 
 export interface CourseStats {
@@ -118,6 +123,7 @@ export interface IDatabase {
   createCourse(
     name: string,
     questionsJson: unknown,
+    createdVia?: CourseCreatedVia,
   ): Promise<CourseCreationResult>;
   listCourses(): Promise<(CourseMetadata & CourseStats)[]>;
   deleteCourse(courseId: string): Promise<void>;
@@ -204,8 +210,9 @@ export class DataLayer {
   async createCourse(
     name: string,
     questionsJson: unknown,
+    createdVia?: CourseCreatedVia,
   ): Promise<CourseCreationResult> {
-    return this.db.createCourse(name, questionsJson);
+    return this.db.createCourse(name, questionsJson, createdVia);
   }
 
   async listCourses(): Promise<(CourseMetadata & CourseStats)[]> {

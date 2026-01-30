@@ -88,6 +88,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
         const cleanUrl = window.location.pathname + window.location.hash;
         window.history.replaceState(null, "", cleanUrl);
 
+        // Skip if a course already exists that was created via URL with same name and path
+        const alreadyExists = list.some(
+          (c) =>
+            c.created_via?.method === "url" &&
+            c.created_via.course_name === courseName &&
+            c.created_via.course_path === coursePath,
+        );
+        if (alreadyExists) {
+          return;
+        }
+
         let url: string;
         if (
           coursePath.startsWith("http://") ||
@@ -114,7 +125,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
             );
           }
           const json = await resp.json();
-          const result = await dataLayer.createCourse(courseName, json);
+          const createdVia = {
+            method: "url" as const,
+            course_name: courseName,
+            course_path: coursePath,
+          };
+          const result = await dataLayer.createCourse(
+            courseName,
+            json,
+            createdVia,
+          );
           if (result.total_loaded === 0) {
             setUrlCourseMessage({
               type: "error",
