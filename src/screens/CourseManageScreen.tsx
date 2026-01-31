@@ -34,10 +34,10 @@ export function CourseManageScreen({
   return (
     <div className="max-w-2xl mx-auto p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">Course Management</h1>
+        <h1 className="text-2xl font-bold text-cyan-700">Course Management</h1>
         <button
           onClick={() => setScreen({ type: "course_list" })}
-          className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+          className="text-sm px-3 py-1 text-cyan-700 bg-cyan-50 rounded hover:bg-cyan-100"
         >
           Back
         </button>
@@ -50,7 +50,7 @@ export function CourseManageScreen({
           {displayCourses.map((c) => (
             <div
               key={c.id}
-              className="flex items-center justify-between bg-white border rounded-lg p-4"
+              className="flex items-center justify-between bg-white border border-cyan-200 rounded-xl shadow-sm p-4"
             >
               <div>
                 <div className="font-medium">{c.name}</div>

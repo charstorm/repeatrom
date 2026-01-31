@@ -60,13 +60,13 @@ export function FeedbackScreen({
   return (
     <div className="max-w-2xl mx-auto p-6">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-lg font-semibold text-gray-700">{courseName}</h2>
+        <h2 className="text-lg font-semibold text-cyan-700">{courseName}</h2>
         <button
           onClick={() => {
             dataLayer.logEvent(courseId, "session_ended", {});
             setScreen({ type: "course_list" });
           }}
-          className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+          className="text-sm px-3 py-1 text-cyan-700 bg-cyan-50 rounded hover:bg-cyan-100"
         >
           End Session
         </button>
@@ -97,18 +97,18 @@ export function FeedbackScreen({
         </p>
       </div>
 
-      <div className="bg-white border rounded-lg p-6 mb-4">
+      <div className="bg-white border border-cyan-200 rounded-xl shadow-sm p-6 mb-4">
         <h4 className="font-semibold text-gray-700 mb-2">Explanation</h4>
         <p className="text-gray-600">{result.question.explanation}</p>
       </div>
 
-      <div className="bg-white border rounded-lg p-6 mb-6">
+      <div className="bg-white border border-cyan-200 rounded-xl shadow-sm p-6 mb-6">
         <div className="flex justify-between items-center mb-2">
           <h4 className="font-semibold text-gray-700">Personal Notes</h4>
           {!editingNotes && (
             <button
               onClick={() => setEditingNotes(true)}
-              className="text-sm text-blue-600 hover:text-blue-700"
+              className="text-sm text-cyan-600 hover:text-cyan-700"
             >
               Edit
             </button>
@@ -120,13 +120,13 @@ export function FeedbackScreen({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               rows={3}
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-cyan-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
               placeholder="Add your notes..."
             />
             <div className="flex gap-2 mt-2">
               <button
                 onClick={saveNotes}
-                className="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700"
+                className="px-3 py-1 bg-cyan-600 text-white rounded text-sm hover:bg-cyan-700"
               >
                 Save
               </button>
@@ -135,7 +135,7 @@ export function FeedbackScreen({
                   setNotes(result.state.notes);
                   setEditingNotes(false);
                 }}
-                className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-sm hover:bg-gray-200"
+                className="px-3 py-1 bg-cyan-50 text-cyan-700 rounded text-sm hover:bg-cyan-100"
               >
                 Cancel
               </button>
@@ -149,7 +149,7 @@ export function FeedbackScreen({
       {autoNextCountdown !== null && (
         <div className="flex items-center gap-2 mb-3">
           <svg
-            className="w-5 h-5 text-blue-500 animate-spin"
+            className="w-5 h-5 text-cyan-500 animate-spin"
             fill="none"
             viewBox="0 0 24 24"
           >
@@ -176,7 +176,7 @@ export function FeedbackScreen({
       <div className="flex gap-3">
         <button
           onClick={nextQuestion}
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          className="px-6 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700"
         >
           Next Question
         </button>

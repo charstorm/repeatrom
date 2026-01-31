@@ -92,11 +92,11 @@ export function CourseListScreen() {
   return (
     <div className="max-w-2xl mx-auto p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">RepeatRom</h1>
+        <h1 className="text-2xl font-bold text-cyan-700">RepeatRom</h1>
         <div className="flex items-center gap-3">
           <button
             onClick={() => setScreen({ type: "config" })}
-            className="text-gray-500 hover:text-gray-700"
+            className="text-cyan-500 hover:text-cyan-700"
             title="Settings"
           >
             <svg
@@ -122,7 +122,7 @@ export function CourseListScreen() {
             href="https://github.com/charstorm/repeatrom/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-gray-700"
+            className="text-cyan-500 hover:text-cyan-700"
             title="View on GitHub"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -156,12 +156,14 @@ export function CourseListScreen() {
 
       {courses.length > 0 && (
         <div className="mb-8">
-          <h2 className="text-lg font-semibold mb-3">Your Courses</h2>
+          <h2 className="text-lg font-semibold mb-3 text-cyan-800">
+            Your Courses
+          </h2>
           <div className="space-y-2">
             {courses.map((c) => (
               <div
                 key={c.id}
-                className="flex items-center justify-between bg-white border rounded-lg p-4"
+                className="flex items-center justify-between bg-white border border-cyan-200 rounded-xl shadow-sm p-4"
               >
                 <div
                   className="flex-1 cursor-pointer"
@@ -189,7 +191,7 @@ export function CourseListScreen() {
                         courseName: c.name,
                       })
                     }
-                    className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+                    className="text-sm px-3 py-1 text-cyan-700 bg-cyan-50 rounded hover:bg-cyan-100"
                   >
                     Expert
                   </button>
@@ -197,7 +199,7 @@ export function CourseListScreen() {
                     onClick={() =>
                       setScreen({ type: "course_manage", courseId: c.id })
                     }
-                    className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+                    className="text-sm px-3 py-1 text-cyan-700 bg-cyan-50 rounded hover:bg-cyan-100"
                   >
                     Manage
                   </button>
@@ -216,18 +218,18 @@ export function CourseListScreen() {
               placeholder="Course name"
               value={courseName}
               onChange={(e) => setCourseName(e.target.value)}
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-cyan-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
             <input
               ref={fileRef}
               type="file"
               accept=".json"
-              className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+              className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-cyan-50 file:text-cyan-700 hover:file:bg-cyan-100"
             />
             <button
               onClick={handleCreate}
               disabled={creating}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+              className="px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 disabled:opacity-50"
             >
               {creating ? "Creating..." : "Create Course"}
             </button>
@@ -238,7 +240,7 @@ export function CourseListScreen() {
                 href="https://github.com/charstorm/repeatrom/blob/main/data/creating_a_new_course.md"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
+                className="text-cyan-600 hover:underline"
               >
                 Learn how to create course data
               </a>
@@ -246,7 +248,7 @@ export function CourseListScreen() {
                 href="https://github.com/charstorm/repeatrom/tree/main/data/courses"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
+                className="text-cyan-600 hover:underline"
               >
                 Browse existing courses
               </a>
@@ -255,14 +257,16 @@ export function CourseListScreen() {
         );
         return courses.length > 0 ? (
           <details className="mt-6">
-            <summary className="text-base text-gray-500 cursor-pointer hover:text-gray-700">
+            <summary className="text-base text-cyan-600 cursor-pointer hover:text-cyan-800">
               Create New Course
             </summary>
             <div className="mt-3">{formContent}</div>
           </details>
         ) : (
           <div>
-            <h2 className="text-lg font-semibold mb-3">Create New Course</h2>
+            <h2 className="text-lg font-semibold mb-3 text-cyan-800">
+              Create New Course
+            </h2>
             {formContent}
           </div>
         );
@@ -295,7 +299,7 @@ export function CourseListScreen() {
             <div className="flex justify-end">
               <button
                 onClick={() => setSkipReport(null)}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                className="px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700"
               >
                 OK
               </button>

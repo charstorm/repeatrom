@@ -132,10 +132,10 @@ export function ExpertScreen({
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex items-center justify-between mb-4">
-        <h1 className="text-2xl font-bold">Expert View: {courseName}</h1>
+        <h2 className="text-xl font-bold text-cyan-700">{courseName}</h2>
         <button
           onClick={() => setScreen({ type: "course_list" })}
-          className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+          className="text-sm px-3 py-1 text-cyan-700 bg-cyan-50 rounded hover:bg-cyan-100"
         >
           Back
         </button>
@@ -144,13 +144,13 @@ export function ExpertScreen({
       <div className="flex gap-2 mb-6">
         <button
           onClick={() => setTab("questions")}
-          className={`px-4 py-2 rounded-lg text-sm font-medium ${tab === "questions" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700"}`}
+          className={`px-4 py-2 rounded-lg text-sm font-medium ${tab === "questions" ? "bg-cyan-600 text-white" : "bg-cyan-50 text-cyan-700"}`}
         >
           Questions
         </button>
         <button
           onClick={() => setTab("logs")}
-          className={`px-4 py-2 rounded-lg text-sm font-medium ${tab === "logs" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700"}`}
+          className={`px-4 py-2 rounded-lg text-sm font-medium ${tab === "logs" ? "bg-cyan-600 text-white" : "bg-cyan-50 text-cyan-700"}`}
         >
           Event Log
         </button>
@@ -208,7 +208,7 @@ export function ExpertScreen({
                   {questions[pool].map(({ state, question, history }) => (
                     <div
                       key={state.question_id}
-                      className="bg-white border rounded p-3"
+                      className="bg-white border border-cyan-200 rounded-xl shadow-sm p-3"
                     >
                       <div
                         className="flex justify-between items-start cursor-pointer"
@@ -230,7 +230,7 @@ export function ExpertScreen({
                         </div>
                       </div>
                       {expanded.has(state.question_id) && (
-                        <div className="mt-3 pl-4 border-l-2 border-gray-200">
+                        <div className="mt-3 pl-4 border-l-2 border-cyan-200">
                           <div className="text-xs text-gray-500 space-y-1 mb-2">
                             <p>
                               Consecutive correct: {state.consecutive_correct}
@@ -322,7 +322,7 @@ export function ExpertScreen({
       )}
 
       {tab === "logs" && (
-        <div className="bg-white border rounded-lg p-4 max-h-[70vh] overflow-y-auto">
+        <div className="bg-white border border-cyan-200 rounded-xl shadow-sm p-4 max-h-[70vh] overflow-y-auto">
           {logs.length === 0 ? (
             <p className="text-gray-400">No events logged.</p>
           ) : (

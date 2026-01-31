@@ -39,7 +39,7 @@ export function ConfigScreen() {
 
   return (
     <div className="max-w-md mx-auto p-6">
-      <h2 className="text-xl font-bold text-gray-800 mb-6">Settings</h2>
+      <h2 className="text-xl font-bold text-cyan-700 mb-6">Settings</h2>
 
       <p className="text-sm text-gray-500 mb-4">
         When enabled, correct answers automatically advance to the next question
@@ -68,28 +68,28 @@ export function ConfigScreen() {
           value={autoNextDelayMs}
           placeholder="1000"
           onChange={(e) => setAutoNextDelayMs(Number(e.target.value))}
-          className="mt-1 block w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="mt-1 block w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
         />
       </label>
 
       <div className="flex gap-3">
         <button
           onClick={save}
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          className="px-6 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700"
         >
           Save
         </button>
         <button
           onClick={() => setScreen({ type: "course_list" })}
-          className="px-6 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200"
+          className="px-6 py-2 bg-cyan-50 text-cyan-700 rounded-lg hover:bg-cyan-100"
         >
           Cancel
         </button>
       </div>
 
-      <hr className="my-6 border-gray-200" />
+      <hr className="my-6 border-cyan-200" />
 
-      <h3 className="text-lg font-semibold text-gray-800 mb-2">
+      <h3 className="text-lg font-semibold text-cyan-800 mb-2">
         Share Course Link
       </h3>
       <p className="text-sm text-gray-500 mb-4">
@@ -105,7 +105,7 @@ export function ConfigScreen() {
           placeholder="e.g. Basic German"
           value={shareName}
           onChange={(e) => setShareName(e.target.value)}
-          className="mt-1 block w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="mt-1 block w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
         />
       </label>
 
@@ -116,7 +116,7 @@ export function ConfigScreen() {
           placeholder="e.g. courses/german/basic_german_300.json"
           value={sharePath}
           onChange={(e) => setSharePath(e.target.value)}
-          className="mt-1 block w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="mt-1 block w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
         />
       </label>
 
@@ -140,7 +140,7 @@ export function ConfigScreen() {
                 setCopied(true);
                 setTimeout(() => setCopied(false), 2000);
               }}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm"
+              className="px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 text-sm"
             >
               {copied ? "Copied!" : "Copy"}
             </button>

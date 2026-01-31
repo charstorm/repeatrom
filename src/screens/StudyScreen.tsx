@@ -100,19 +100,19 @@ export function StudyScreen({
   return (
     <div className="max-w-2xl mx-auto p-6">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-lg font-semibold text-gray-700">{courseName}</h2>
+        <h2 className="text-lg font-semibold text-cyan-700">{courseName}</h2>
         <button
           onClick={() => {
             dataLayer.logEvent(courseId, "session_ended", {});
             setScreen({ type: "course_list" });
           }}
-          className="text-sm px-3 py-1 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+          className="text-sm px-3 py-1 text-cyan-700 bg-cyan-50 rounded hover:bg-cyan-100"
         >
           End Session
         </button>
       </div>
 
-      <div className="bg-white border rounded-lg p-6 mb-4">
+      <div className="bg-white border border-cyan-200 rounded-xl shadow-sm p-6 mb-4">
         <p className="text-lg">{questionData.result.question.question}</p>
       </div>
 
@@ -122,7 +122,7 @@ export function StudyScreen({
             key={idx}
             onClick={() => setSelected(opt)}
             onDoubleClick={() => handleDoubleClick(opt)}
-            className={`w-full text-left p-4 rounded-lg border transition ${selected === opt ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200" : "border-gray-200 bg-white hover:bg-gray-50"}`}
+            className={`w-full text-left p-4 rounded-lg border transition ${selected === opt ? "border-cyan-500 bg-cyan-50 ring-2 ring-cyan-200" : "border-cyan-200 bg-white hover:bg-cyan-50"}`}
           >
             {opt}
           </button>
@@ -132,7 +132,7 @@ export function StudyScreen({
       <button
         onClick={handleSubmit}
         disabled={!selected || submitting}
-        className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="px-6 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {submitting ? "Submitting..." : "Submit Answer"}
       </button>

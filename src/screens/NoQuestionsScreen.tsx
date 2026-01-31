@@ -76,15 +76,15 @@ export function NoQuestionsScreen({
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <div className="bg-white border rounded-lg p-8 text-center">
-        <h2 className="text-xl font-semibold mb-3 text-gray-700">
+      <div className="bg-white border border-cyan-200 rounded-xl shadow-sm p-8 text-center">
+        <h2 className="text-xl font-semibold mb-3 text-cyan-700">
           No Questions Available
         </h2>
         <p className="text-gray-500 mb-2">
           All questions are currently snoozed.
         </p>
         {secondsLeft !== null && secondsLeft > 0 && (
-          <p className="text-blue-600 font-medium mb-6">
+          <p className="text-cyan-600 font-medium mb-6">
             Next question available in {formatCountdown(secondsLeft)}
           </p>
         )}
@@ -94,7 +94,7 @@ export function NoQuestionsScreen({
         <div className="flex justify-center gap-3">
           <button
             onClick={() => setScreen({ type: "study", courseId, courseName })}
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+            className="px-6 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700"
           >
             Try Again
           </button>
@@ -103,7 +103,7 @@ export function NoQuestionsScreen({
               dataLayer.logEvent(courseId, "session_ended", {});
               setScreen({ type: "course_list" });
             }}
-            className="px-6 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200"
+            className="px-6 py-2 bg-cyan-50 text-cyan-700 rounded-lg hover:bg-cyan-100"
           >
             Exit Session
           </button>
