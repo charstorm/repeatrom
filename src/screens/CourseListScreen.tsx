@@ -208,51 +208,65 @@ export function CourseListScreen() {
         </div>
       )}
 
-      <div className="bg-white border rounded-lg p-6">
-        <h2 className="text-lg font-semibold mb-3">Create New Course</h2>
-        <div className="space-y-3">
-          <input
-            type="text"
-            placeholder="Course name"
-            value={courseName}
-            onChange={(e) => setCourseName(e.target.value)}
-            className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <input
-            ref={fileRef}
-            type="file"
-            accept=".json"
-            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-          />
-          <button
-            onClick={handleCreate}
-            disabled={creating}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
-          >
-            {creating ? "Creating..." : "Create Course"}
-          </button>
-          {error && <p className="text-red-600 text-sm">{error}</p>}
-          {info && <p className="text-green-600 text-sm">{info}</p>}
-          <div className="text-sm text-gray-500 flex flex-col gap-1">
-            <a
-              href="https://github.com/charstorm/repeatrom/blob/main/data/creating_a_new_course.md"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
+      {(() => {
+        const formContent = (
+          <div className="space-y-3">
+            <input
+              type="text"
+              placeholder="Course name"
+              value={courseName}
+              onChange={(e) => setCourseName(e.target.value)}
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+              ref={fileRef}
+              type="file"
+              accept=".json"
+              className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+            />
+            <button
+              onClick={handleCreate}
+              disabled={creating}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
             >
-              Learn how to create course data
-            </a>
-            <a
-              href="https://github.com/charstorm/repeatrom/tree/main/data/courses"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              Browse existing courses
-            </a>
+              {creating ? "Creating..." : "Create Course"}
+            </button>
+            {error && <p className="text-red-600 text-sm">{error}</p>}
+            {info && <p className="text-green-600 text-sm">{info}</p>}
+            <div className="text-sm text-gray-500 flex flex-col gap-1">
+              <a
+                href="https://github.com/charstorm/repeatrom/blob/main/data/creating_a_new_course.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Learn how to create course data
+              </a>
+              <a
+                href="https://github.com/charstorm/repeatrom/tree/main/data/courses"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Browse existing courses
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
+        );
+        return courses.length > 0 ? (
+          <details className="mt-6">
+            <summary className="text-base text-gray-500 cursor-pointer hover:text-gray-700">
+              Create New Course
+            </summary>
+            <div className="mt-3">{formContent}</div>
+          </details>
+        ) : (
+          <div>
+            <h2 className="text-lg font-semibold mb-3">Create New Course</h2>
+            {formContent}
+          </div>
+        );
+      })()}
 
       <p className="mt-8 text-sm text-gray-500 leading-relaxed">
         RepeatRom helps you memorize anything using spaced repetition
