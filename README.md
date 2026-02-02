@@ -2,7 +2,12 @@
 
 A spaced repetition flashcard system for mastering general knowledge through adaptive multiple-choice question testing.
 
-**[Live Demo](https://charstorm.github.io/repeatrom/)**
+#### Demo
+
+- [Basic German](https://charstorm.github.io/repeatrom/?course_name=German+Basics&course_path=courses%2Fgerman%2Fbasic_german_300.json)
+- [Probability and Statistics](https://charstorm.github.io/repeatrom/?course_name=Basic+Stats&course_path=courses%2Fstats%2Fstats_basic.json)
+
+Note: Both use LLM generated course materials. You can find them under `data/courses`.
 
 ## Overview
 
