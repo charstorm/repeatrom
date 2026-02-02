@@ -65,7 +65,7 @@ export function CourseManageScreen({
                   }
                   className="text-sm px-3 py-1 text-orange-600 bg-orange-50 rounded hover:bg-orange-100"
                 >
-                  Reset Progress
+                  Reset
                 </button>
                 <button
                   onClick={() =>
@@ -73,7 +73,7 @@ export function CourseManageScreen({
                   }
                   className="text-sm px-3 py-1 text-red-600 bg-red-50 rounded hover:bg-red-100"
                 >
-                  Delete Course
+                  Delete
                 </button>
               </div>
             </div>

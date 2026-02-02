@@ -176,7 +176,9 @@ export function CourseListScreen() {
                     });
                   }}
                 >
-                  <div className="font-medium">{c.name}</div>
+                  <div className="font-medium text-cyan-700 hover:text-cyan-800 hover:underline transition-colors">
+                    {c.name}
+                  </div>
                   <div className="text-sm text-gray-500">
                     {c.question_count} questions &middot; Last accessed:{" "}
                     {formatTime(c.last_accessed)}
@@ -191,17 +193,43 @@ export function CourseListScreen() {
                         courseName: c.name,
                       })
                     }
-                    className="text-sm px-3 py-1 text-cyan-700 bg-cyan-50 rounded hover:bg-cyan-100"
+                    className="p-2 text-cyan-700 bg-cyan-50 rounded-lg hover:bg-cyan-100 transition-colors"
+                    title="Expert mode"
                   >
-                    Expert
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      />
+                    </svg>
                   </button>
                   <button
                     onClick={() =>
                       setScreen({ type: "course_manage", courseId: c.id })
                     }
-                    className="text-sm px-3 py-1 text-cyan-700 bg-cyan-50 rounded hover:bg-cyan-100"
+                    className="p-2 text-cyan-700 bg-cyan-50 rounded-lg hover:bg-cyan-100 transition-colors"
+                    title="Manage course"
                   >
-                    Manage
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"
+                      />
+                    </svg>
                   </button>
                 </div>
               </div>
